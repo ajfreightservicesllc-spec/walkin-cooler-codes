@@ -1,0 +1,481 @@
+[
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "AL01",
+    "title": "High box temperature alarm",
+    "meaning": "The walk-in box temperature has stayed above the programmed High Box Temperature alarm setpoint (default 50F cooler / 40F freezer) longer than the alarm delay time (default 60 minutes). The light bar turns red and AL01 shows on the OLED display.",
+    "diy_steps": [
+      "Check that all doors are fully closed and door gaskets seal tight",
+      "Ask staff whether product was just loaded — warm product can trip this alarm temporarily",
+      "Look at the evaporator coil inside the box for heavy ice buildup",
+      "Check the outdoor/condensing unit: breaker on, fans spinning, coil free of dirt, leaves and boxes blocking airflow",
+      "Verify no one left the unit in Service or Product Load mode"
+    ],
+    "when_to_call": "If temperature does not start falling within an hour after these checks, call a refrigeration technician — product is at risk.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "AL02",
+    "title": "Low box temperature alarm",
+    "meaning": "Box temperature has dropped below the Low Box Temperature alarm setpoint (default 30F cooler / 20F freezer) for longer than the alarm delay time. In a cooler this risks freezing product.",
+    "diy_steps": [
+      "Verify the box temperature setpoint was not accidentally changed on the controller",
+      "Move product away from the evaporator discharge air if it is freezing",
+      "Note the displayed box temp and compare it against a separate thermometer in the box"
+    ],
+    "when_to_call": "Call a technician if the setpoint is correct but the system keeps running too cold — the temperature sensor or control may be faulty.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "AL03",
+    "title": "System startup failure",
+    "meaning": "Shown only when the condensing unit control circuit is wired to the controller. The system pumped down and could not restart — typically a compressor safety (high/low pressure, oil pressure) keeps tripping.",
+    "diy_steps": [
+      "Check the condensing unit breaker and disconnect are on",
+      "Check the condenser coil for dirt and blocked airflow, and confirm condenser fans run",
+      "Make sure nothing is stacked around the condensing unit restricting air"
+    ],
+    "when_to_call": "Call a technician promptly — repeated safety trips point to pressure, refrigerant, or compressor problems that require gauges and training.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "AL04",
+    "title": "Input fault (sensor failure alarm)",
+    "meaning": "One of the key control inputs — box temperature sensor (ER01), suction temperature sensor (ER03), or suction pressure transducer (ER04) — has failed or is disconnected, so the controller cannot run the system normally.",
+    "diy_steps": [
+      "Check the controller display for the companion error code (ER01, ER03 or ER04) to identify which sensor faulted",
+      "Power-cycle the unit at the breaker once to see if the fault clears",
+      "Record the code and the box temperature for the service call"
+    ],
+    "when_to_call": "Call a technician the same day — a failed sensor or transducer must be tested and replaced.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "AL06",
+    "title": "Door open alarm",
+    "meaning": "The walk-in door switch has reported the door open longer than the programmed Door Open Alarm Time (default 60 minutes). A related high box temperature alarm may follow.",
+    "diy_steps": [
+      "Close the walk-in door fully and confirm it latches",
+      "Check the door gasket and sweep for damage that keeps the door from sealing",
+      "Check that nothing (pallets, cords, product) is propping the door open",
+      "Verify the door switch on the frame is not knocked loose or misaligned"
+    ],
+    "when_to_call": "If the alarm stays on with the door verifiably closed, have a technician check the door switch and its setting (normally open vs. normally closed).",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "AL12",
+    "title": "A2L refrigerant leak mitigation active",
+    "meaning": "On A2L-refrigerant unit coolers, the Refrigerant Detection System (RDS) has measured a refrigerant concentration at the regulatory mitigation level and has taken over the unit to run mitigation actions. The light bar turns red.",
+    "diy_steps": [
+      "Keep people out of the walk-in box and ventilate the area",
+      "Do not create ignition sources near the unit (open flames, sparking tools)",
+      "Do not silence or bypass the alarm"
+    ],
+    "when_to_call": "Call a refrigeration technician immediately — this indicates a probable refrigerant leak of a mildly flammable (A2L) refrigerant.",
+    "safety_flag": "A2L refrigerant leak — flammability hazard; evacuate the box, ventilate, no ignition sources, call for service immediately.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER01",
+    "title": "Box temperature sensor error",
+    "meaning": "The room/box temperature sensor is reading out of range, shorted, or disconnected. The light bar shows yellow and the controller may fall back to another sensor to keep running.",
+    "diy_steps": [
+      "Note whether the box is still holding temperature with a separate thermometer",
+      "Power-cycle at the breaker once to see if the error clears",
+      "Do not unplug or reroute sensor wiring yourself"
+    ],
+    "when_to_call": "Call a technician to test the sensor and its connections; per the manual it is replaced if its reading does not match a reference thermometer.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER02",
+    "title": "Coil temperature sensor error",
+    "meaning": "The evaporator coil (defrost termination) sensor has failed or is disconnected. Defrost cycles may not terminate correctly, which can lead to an iced-up coil.",
+    "diy_steps": [
+      "Visually check the evaporator coil for ice buildup",
+      "Note how often the unit has been going into defrost",
+      "Record the error and box temperature for the service visit"
+    ],
+    "when_to_call": "Call a technician — the manual's fix is to check the sensor and connections and replace as needed.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER03",
+    "title": "Evaporator suction temperature sensor error",
+    "meaning": "The suction line temperature sensor at the evaporator has failed or is disconnected. The controller uses this sensor to calculate superheat and drive the electric expansion valve, so cooling control is degraded.",
+    "diy_steps": [
+      "Confirm the box is still holding temperature",
+      "Power-cycle once at the breaker to see if the error clears",
+      "Log the code for the technician"
+    ],
+    "when_to_call": "Call a technician to test and replace the sensor — superheat control depends on it.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER04",
+    "title": "Evaporator suction pressure transducer error",
+    "meaning": "The suction pressure transducer has failed or is disconnected. Like ER03, this breaks the controller's superheat calculation for the expansion valve.",
+    "diy_steps": [
+      "Confirm the box is holding temperature and note any warming trend",
+      "Power-cycle once at the breaker",
+      "Do not touch refrigerant lines or the transducer"
+    ],
+    "when_to_call": "Call a technician — replacing a pressure transducer is refrigerant-side work.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER11",
+    "title": "Control circuit error (condensing unit safety tripped)",
+    "meaning": "Shown only when the condensing unit is wired to the controller. A safety in the condensing unit control circuit has opened — the manual lists low pressure, high pressure, oil pressure, compressor module, or phase loss as causes.",
+    "diy_steps": [
+      "Check the condensing unit breaker and power",
+      "Check the condenser coil is clean and its fans are running with unobstructed airflow",
+      "Look at the evaporator coil for heavy icing",
+      "Note whether the compressor is short-cycling (starting and stopping repeatedly)"
+    ],
+    "when_to_call": "Call a technician — diagnosing which safety tripped (pressure, oil, phase) requires gauges and electrical testing.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER14",
+    "title": "Power supply voltage low",
+    "meaning": "The 24V control power feeding the iRC board has dropped below the minimum (about 22V per the manual). Usually a building supply-voltage or transformer issue.",
+    "diy_steps": [
+      "Check whether other equipment on the same circuit is also acting up (brownout clue)",
+      "Check the breaker feeding the unit is fully on",
+      "Note whether the error appears at certain times of day (heavy building load)"
+    ],
+    "when_to_call": "Call a technician or electrician to measure primary power and the control transformer tap.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER15",
+    "title": "Power supply voltage high",
+    "meaning": "The 24V control power feeding the iRC board is above the maximum (about 30V per the manual), usually a wrong transformer tap or high building voltage.",
+    "diy_steps": [
+      "Record when the error occurs and whether it is constant or intermittent",
+      "Do not open the control panel"
+    ],
+    "when_to_call": "Call a technician or electrician — overvoltage can damage the control board and the transformer tap may need changing.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER16",
+    "title": "Low superheat error",
+    "meaning": "The controller measured suction superheat below its minimum safe value for 2 minutes; it shuts the unit down briefly, displays the error, then restarts. Causes in the manual include an iced coil, expansion valve problems, or a bad sensor reading.",
+    "diy_steps": [
+      "Visually check the evaporator coil for ice buildup",
+      "Note whether the unit keeps stopping and restarting",
+      "Confirm evaporator fans are running"
+    ],
+    "when_to_call": "If the error repeats, call a technician — persistent low superheat risks flooding liquid refrigerant back to the compressor.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER19",
+    "title": "Replace controller clock battery",
+    "meaning": "The coin-cell battery that keeps the controller's clock is low or missing. The system still cools, but time-based logs and defrost schedules can be affected after a power loss.",
+    "diy_steps": [
+      "Note the error — cooling is not immediately at risk",
+      "Schedule the battery replacement rather than treating it as an emergency"
+    ],
+    "when_to_call": "Have a technician replace the coin-cell battery on the control board at the next service visit.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER22",
+    "title": "User interface (iRC UI) failure",
+    "meaning": "The controller board has lost proper communication with its display/user interface module, usually a ribbon-cable connection issue per the manual.",
+    "diy_steps": [
+      "Power-cycle the unit once at the breaker",
+      "Check whether the unit is still cooling normally despite the display fault"
+    ],
+    "when_to_call": "Call a technician to reseat or replace the UI ribbon harness or the UI module.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER23",
+    "title": "Board communication error",
+    "meaning": "Communication between the iRC control board and the user interface has faulted. The manual's remedy is checking the ribbon cable and power-cycling.",
+    "diy_steps": [
+      "Power-cycle the unit once at the breaker",
+      "Confirm the unit still cools and note if the error returns"
+    ],
+    "when_to_call": "If the error returns after a power cycle, have a technician check the ribbon connection and boards.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER25",
+    "title": "System connection lost (multi-evaporator communication)",
+    "meaning": "An evaporator controller on a multi-unit system lost its communication link with the rest of the system — typically damaged, reversed-polarity, or improperly shielded communication wiring per the manual.",
+    "diy_steps": [
+      "Power-cycle the affected unit once",
+      "Check that no communication cable was recently disturbed, pinched, or unplugged during other work",
+      "Note which evaporator's light bar is flashing"
+    ],
+    "when_to_call": "Call a technician to check the communication wiring polarity and shield grounding.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "ER32",
+    "title": "A2L refrigerant early warning",
+    "meaning": "The Refrigerant Detection System on an A2L unit cooler has detected refrigerant at an early-warning level; the display shows a yellow light bar. The manual directs checking unit cooler piping for leaks (the code's -X suffix identifies which leak sensor).",
+    "diy_steps": [
+      "Ventilate the area and limit access to the walk-in box",
+      "Avoid ignition sources near the equipment",
+      "Do not reset or bypass the detection system yourself"
+    ],
+    "when_to_call": "Call a refrigeration technician promptly — a refrigerant leak must be found and repaired.",
+    "safety_flag": "Possible A2L (mildly flammable) refrigerant leak — ventilate, no ignition sources, service call required.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "intelliGen iF/iRC controller",
+    "code": "IN01",
+    "title": "Too many defrosts (information code)",
+    "meaning": "Informational notice: the unit has run 8 consecutive defrost cycles that each lasted under 5 minutes, suggesting the defrost schedule is more frequent than the coil needs.",
+    "diy_steps": [
+      "Visually confirm the coil is staying clear of ice between defrosts",
+      "Note the current defrost schedule shown on the controller for the technician"
+    ],
+    "when_to_call": "Mention it at the next service visit so the defrost schedule can be optimized; it is not an emergency.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "A1",
+    "title": "High box temperature alarm",
+    "meaning": "Room temperature has exceeded the programmed Alarm High (ALH, default 50F cooler / 5F freezer) value for longer than the Alarm Time (ALt, default 60 minutes). The alarm clears automatically once box temperature drops back below the setpoint.",
+    "diy_steps": [
+      "Check doors are closed and gaskets seal",
+      "Ask whether warm product was just loaded",
+      "Look for heavy ice on the evaporator coil",
+      "Check the condensing unit breaker, fans, and that the condenser coil is clean with clear airflow"
+    ],
+    "when_to_call": "If the box does not start pulling down within an hour, call a refrigeration technician.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "A2",
+    "title": "Low box temperature alarm",
+    "meaning": "Room temperature has dropped below the programmed Alarm Low (ALL, default 30F cooler / -15F freezer) value for longer than the Alarm Time. Clears automatically when temperature rises back above the setpoint.",
+    "diy_steps": [
+      "Verify the box setpoint on the controller was not changed",
+      "Move product away from the evaporator airstream if it is freezing",
+      "Compare the displayed temperature with a separate thermometer"
+    ],
+    "when_to_call": "Call a technician if the setpoint is correct but the system keeps overcooling — the room sensor or board may be faulty.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "A3",
+    "title": "System start-up failure",
+    "meaning": "The compressor pumped down and tried to restart every 4 minutes; after 4 unsuccessful attempts the A3 code is displayed while the system keeps trying. Per the manual, placing the system in Service mode or turning off power clears the alarm once the cause is fixed.",
+    "diy_steps": [
+      "Check the condensing unit has power (breaker/disconnect on)",
+      "Check the condenser coil for dirt and blocked airflow and confirm the fans run",
+      "Listen for the compressor repeatedly attempting to start"
+    ],
+    "when_to_call": "Call a technician — repeated restart failures usually mean a pressure or oil safety is tripping and needs diagnosis.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "A4",
+    "title": "Input fault (sensor or transducer failure)",
+    "meaning": "The box temperature sensor, suction temperature sensor, or pressure transducer is open or not installed. Per the manual the alarm clears only when the failed room sensor, suction sensor, or pressure transducer is replaced, and the system will not restart until the fault is cleared.",
+    "diy_steps": [
+      "Note the box temperature and start monitoring it — the system may be down",
+      "Check the display for a companion E-code (E1, E3, or E4) identifying which sensor failed",
+      "Move sensitive product to backup refrigeration if the box is warming"
+    ],
+    "when_to_call": "Call a technician the same day — a sensor or transducer must be tested and replaced before the system will run.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "E1",
+    "title": "Room temperature sensor error",
+    "meaning": "The room (box) temperature sensor is shorted, open, or not installed. Per the manual the system pumps down and will not restart until this fault is cleared.",
+    "diy_steps": [
+      "Monitor box temperature with a separate thermometer",
+      "Reset the circuit breaker once — the manual notes the system restarts when the fault is cleared or the breaker reset",
+      "Move product if the box is warming"
+    ],
+    "when_to_call": "Call a technician to check the sensor and board connection and replace as needed.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "E2",
+    "title": "Defrost temperature sensor error",
+    "meaning": "The defrost (coil) temperature sensor is shorted, open, or not installed. Defrost cycles may not terminate properly, which can let the evaporator coil ice over.",
+    "diy_steps": [
+      "Visually check the evaporator coil for ice buildup",
+      "Note how the box temperature trends over the next few hours",
+      "Record the code for the service call"
+    ],
+    "when_to_call": "Call a technician to check the sensor and board connection and replace as needed.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "E3",
+    "title": "Suction temperature sensor error",
+    "meaning": "The suction temperature sensor is shorted, open, or not installed. The system pumps down and will not restart until the fault is cleared, because this sensor is needed for superheat control of the expansion valve.",
+    "diy_steps": [
+      "Monitor box temperature — the system is likely off",
+      "Reset the breaker once to see if it was a transient fault",
+      "Move product to backup cold storage if needed"
+    ],
+    "when_to_call": "Call a technician the same day to replace the sensor.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "E4",
+    "title": "Suction pressure transducer error",
+    "meaning": "The suction pressure transducer is shorted, open, or not installed. Like E3 this stops normal operation until fixed — the system pumps down and stays off.",
+    "diy_steps": [
+      "Monitor box temperature and plan for product protection",
+      "Reset the breaker once",
+      "Do not touch refrigerant lines or the transducer"
+    ],
+    "when_to_call": "Call a technician the same day — transducer replacement is refrigerant-side work.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "E6",
+    "title": "Low superheat error",
+    "meaning": "Measured superheat fell below the safe minimum; the system shuts down briefly, displays the error, then restarts itself. The manual's causes include an iced coil, expansion valve trouble, defrost problems, or bad sensor readings.",
+    "diy_steps": [
+      "Check the evaporator coil for ice",
+      "Note whether the unit repeatedly stops and restarts",
+      "Confirm evaporator fans run in cooling mode"
+    ],
+    "when_to_call": "If E6 repeats, call a technician — chronic low superheat can flood the compressor with liquid refrigerant and destroy it.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "E7",
+    "title": "Compressor shut down (safety switch open)",
+    "meaning": "A compressor safety opened — the manual lists the high pressure switch, low pressure switch, or oil pressure switch. The system pumps down and retries up to four times before closing the alarm contacts.",
+    "diy_steps": [
+      "Check the condenser coil is clean and its fans are running — a dirty or blocked condenser trips the high pressure switch",
+      "Remove anything blocking airflow around the condensing unit",
+      "Check the evaporator coil for heavy icing",
+      "Note whether the compressor is hot or repeatedly clicking on and off"
+    ],
+    "when_to_call": "If it trips again after airflow is cleared, call a technician — pressure and oil safeties need gauge diagnosis.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II refrigeration system",
+    "code": "E9",
+    "title": "Multi-in/multi-out communication wiring error",
+    "meaning": "On multi-evaporator systems, the communication wiring between boards (MULTI OUT to MULTI IN) is broken, disconnected, or miswired. Which boards show E9 indicates where in the daisy chain the fault is.",
+    "diy_steps": [
+      "Power-cycle the system once",
+      "Check whether communication cabling was disturbed during recent work in the box",
+      "Note which evaporators display E9 — that pattern locates the bad segment for the technician"
+    ],
+    "when_to_call": "Call a technician to trace and repair the multi-in/multi-out communication wiring.",
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II Smart Controller (LCD display module)",
+    "code": "+COMM+",
+    "title": "Smart Controller communication wiring error",
+    "meaning": "The Beacon II Smart Controller LCD shows +COMM+ when its communication wiring to the evaporator boards is broken, disconnected, or wired OUT-to-OUT / IN-to-IN instead of OUT-to-IN. Which connected unit shows the error indicates which wires are faulty.",
+    "diy_steps": [
+      "Power-cycle the controller once",
+      "Check whether the display or its cable was recently bumped or unplugged",
+      "Note which system number the error appears against"
+    ],
+    "when_to_call": "Call a technician to verify the MULTI IN/OUT communication wiring between the controller and evaporator boards.",
+    "source_url": "https://www.partstown.com/modelManual/HTCR-BEACON-II_spm.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II Smart Controller (LCD display module)",
+    "code": "*BOXHI",
+    "title": "Box temperature too high (Smart Controller)",
+    "meaning": "The Smart Controller LCD flashes *BOXHI with \"CALL FOR SERVICE\" and the system number, and sounds its buzzer, when box temperature exceeds the alarm setpoint for the programmed alarm time. The code clears once the condition is corrected.",
+    "diy_steps": [
+      "Press CLEAR to silence the buzzer while you investigate",
+      "Check doors, gaskets, and recent product loading",
+      "Check the evaporator coil for ice and the condensing unit for power, running fans, and a clean coil"
+    ],
+    "when_to_call": "If temperature does not recover within an hour, call a refrigeration technician.",
+    "source_url": "https://www.partstown.com/modelManual/HTCR-BEACON-II_spm.pdf"
+  },
+  {
+    "brand": "Heatcraft (Bohn/Larkin)",
+    "model_family": "Beacon II Smart Controller (LCD display module)",
+    "code": "*INFLT",
+    "title": "Input fault (Smart Controller)",
+    "meaning": "The Smart Controller reports an input fault when the box temperature sensor, suction temperature sensor, or pressure transducer is open or not installed; the affected system pumps down and will not restart until the fault is cleared.",
+    "diy_steps": [
+      "Press CLEAR to silence the buzzer",
+      "Note the system number displayed with the fault",
+      "Monitor box temperature and protect product — that system is likely off"
+    ],
+    "when_to_call": "Call a technician the same day to test and replace the failed sensor or transducer.",
+    "source_url": "https://www.partstown.com/modelManual/HTCR-BEACON-II_spm.pdf"
+  }
+]

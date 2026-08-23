@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KE2 Therm Error Codes — Full Documented List</title>
+<meta name="description" content="Every documented KE2 Therm walk-in cooler error code and fault signal: what it means, what to check, when to call a tech.">
+<link rel="canonical" href="https://coolercodes.example.com/ke2-therm/">
+
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.78rem;color:var(--sub);margin-top:18px;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<div class="hero"><div class="wrap"><h1>KE2 Therm Fault &amp; Error Codes</h1>
+<p>12 documented codes and fault signals, verified against service manuals, with
+plain-English fixes.</p></div></div>
+<main><div class="wrap"><article class="card"><p>KE2 Therm's <b>Evaporator Efficiency</b> controller is fitted to thousands of walk-ins — sometimes from the factory, often as a retrofit that pays for itself in defrost energy savings. It skips cryptic codes entirely and scrolls named alarms across its display: HIGH AIR TEMP, DOOR SWITCH, EXCESS DEFROST, LOW SUPERHEAT. The LED color is your severity gauge — <b>yellow means the system is still running</b> and you have time to diagnose; a <b>red critical alarm like PRESSURE SENSOR means the controller shut refrigeration down</b> to protect the compressor, and box temperature is now rising on the clock.</p><p>Two KE2-specific things worth knowing. First, the VARIABLES menu turns sensor alarms into instant diagnosis: a reading of -87 means the sensor is open or unplugged, 180+ means it's shorted. Second, several KE2 alarms are really system diagnoses — LOW SUPERHEAT most commonly means the compressor never started (frequently a low-pressure control that was never field-set, which shows up as the weather cools each fall). Find your exact alarm below for what it means, what to check, and when to call.</p></article><h2>KE2 Therm KE2 Evaporator Efficiency</h2><div class='grid'><a href="/ke2-therm/ke2-evaporator-efficiency-high-air-temp/"><span class="c">HIGH AIR TEMP</span><div class="t">Room air temperature too warm</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-low-air-temp/"><span class="c">LOW AIR TEMP</span><div class="t">Room air temperature too cold</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-excess-defrost/"><span class="c">EXCESS DEFROST</span><div class="t">Too many defrost cycles</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-defr-term-on-time/"><span class="c">DEFR TERM ON TIME</span><div class="t">Defrost ended on time instead of temperature</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-door-switch/"><span class="c">DOOR SWITCH</span><div class="t">Door open alarm</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-t1-t2-t3-t4-sensor/"><span class="c">T1 / T2 / T3 / T4 SENSOR</span><div class="t">Temperature sensor failed (suction, air, coil, or aux)</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-high-superheat/"><span class="c">HIGH SUPERHEAT</span><div class="t">High superheat (EEV systems only)</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-low-superheat/"><span class="c">LOW SUPERHEAT</span><div class="t">Low superheat</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-pressure-sensor/"><span class="c">PRESSURE SENSOR</span><div class="t">Suction pressure transducer fault (critical)</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-communication-error/"><span class="c">COMMUNICATION ERROR</span><div class="t">Bonded controllers lost communication</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-ext-alarm/"><span class="c">EXT ALARM</span><div class="t">External device alarm passed through</div></a><a href="/ke2-therm/ke2-evaporator-efficiency-blank-display-no-lights/"><span class="c">Blank display (no lights)</span><div class="t">No display or lights on controller</div></a></div><div class="cta"><div><b>Equipment still down?</b> If you're in Middle Tennessee or Central Alabama, see who services walk-in coolers near you:</div><div style="margin-top:10px"><a href="/nashville-tn/">Nashville, TN &rarr;</a> &nbsp;&middot;&nbsp; <a href="/birmingham-al/">Birmingham, AL &rarr;</a></div></div></div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

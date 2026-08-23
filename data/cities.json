@@ -1,0 +1,171 @@
+[
+  {
+    "name": "Nashville",
+    "state": "TN",
+    "slug": "nashville-tn",
+    "intro_html": "<p>A walk-in cooler failing overnight is one of the most expensive small disasters in the restaurant business — and Nashville, with one of the fastest-growing restaurant and hotel markets in the Southeast, has thousands of walk-in boxes working around the clock, from Broadway kitchens to hotel banquet operations to the grocery and healthcare coolers that never get a night off. When one of them starts alarming, what's beeping is almost never the box itself: it's the refrigeration system and its controller — most commonly Heatcraft equipment (sold under the Bohn and Larkin names), a KE2 Therm controller, or a Dixell controller on boxes from manufacturers like Norlake and Kolpak.</p><p>That matters because the alarm code on that little controller tells you a lot before anyone rolls a truck. A door-switch alarm or a high-temperature alarm after a delivery is a two-minute fix; a low-superheat error repeating every hour is a compressor-killer in progress. The code pages on this site translate each one.</p><p>The Nashville walk-in service market is deep: family-owned refrigeration contractors who have serviced Dickerson Pike restaurant row for decades, CFESA-certified commercial kitchen outfits, a shop that focuses specifically on walk-in coolers and freezers, and multi-trade contractors that handle installation through commissioning. The list below is compiled from each company's own published information — repair, 24/7 emergency response, planned maintenance, gasket and door work, and installation serving Nashville, Franklin, Brentwood, Murfreesboro, Hendersonville, and Middle Tennessee.</p>",
+    "faq": [
+      {
+        "q": "Who repairs walk-in coolers and freezers in Nashville?",
+        "a": "Nashville has dedicated commercial refrigeration contractors ranging from family shops that focus specifically on walk-ins to large CFESA-certified kitchen equipment companies with 24/7 dispatch. Most service all the common systems — Heatcraft/Bohn/Larkin refrigeration, and boxes from Norlake, Kolpak, and others — regardless of who installed them."
+      },
+      {
+        "q": "My walk-in is warm — is it an emergency?",
+        "a": "Treat it as one until you know otherwise, because product is on the clock. First checks: is the door sealing (gasket, latch, nothing propping it open)? Is the evaporator coil inside iced over? Is the condensing unit running with a clean coil and clear airflow? Is the breaker on? If a controller code is displayed, look it up on this site — some alarms auto-clear as temperature recovers, others mean the system has shut itself down and every hour costs you inventory."
+      },
+      {
+        "q": "How much product time do I have if the cooler is down?",
+        "a": "A closed, full walk-in holds temperature far longer than an empty one — keep the door shut and don't keep checking it. Food safety rules put strict limits on time above 41°F for a cooler, so start monitoring temperature immediately, log it for your health inspector, and line up backup cold storage if the tech can't come fast. Never guess: a $30 thermometer log can save a full inventory writeoff argument with your insurer."
+      },
+      {
+        "q": "What maintenance actually prevents walk-in breakdowns?",
+        "a": "Three things cover most failures: keep the condenser coil clean (quarterly in a greasy kitchen), keep the door hardware honest (gaskets, sweeps, closers, and the door switch), and don't ignore icing on the evaporator — ice on the coil always has a cause, usually a defrost problem or a door leak, and it gets more expensive the longer it runs."
+      }
+    ],
+    "companies": [
+      {
+        "name": "Midtown Refrigeration LLC",
+        "phone": "(615) 268-0717",
+        "website": "https://midtownrefrigerationllc.com",
+        "city": "Nashville, TN",
+        "services": ["walk-in cooler repair", "walk-in freezer repair", "installation", "24-hour emergency service"],
+        "brands_serviced": [],
+        "notes": "Locally owned Nashville shop focused specifically on walk-in coolers and freezers, with 40+ years of commercial refrigeration experience."
+      },
+      {
+        "name": "Nashville Refrigeration Inc.",
+        "phone": "(615) 868-4844",
+        "website": "https://www.nashvillerefrigeration.com",
+        "city": "Nashville, TN",
+        "services": ["walk-in cooler/freezer repair", "installation", "preventative maintenance", "24/7/365 emergency service", "door seal and gasket replacement"],
+        "brands_serviced": [],
+        "notes": "Family-owned commercial refrigeration specialist operating since 1989, serving Nashville restaurants and food-service businesses."
+      },
+      {
+        "name": "ATECH Inc.",
+        "phone": "(615) 255-2002",
+        "website": "https://www.atechinfo.com",
+        "city": "Nashville, TN",
+        "services": ["walk-in cooler repair", "walk-in freezer repair", "planned maintenance", "same-day service"],
+        "brands_serviced": [],
+        "notes": "Commercial kitchen and refrigeration service company established 1990 with CFESA-certified technicians and branches across Tennessee."
+      },
+      {
+        "name": "Total Group LLC",
+        "phone": "(615) 577-1777",
+        "website": "https://www.turntototal.com",
+        "city": "Nashville, TN",
+        "services": ["walk-in refrigeration repair", "installation", "preventative maintenance plans", "24/7 emergency service"],
+        "brands_serviced": ["Scotsman", "Manitowoc", "Hoshizaki"],
+        "notes": "Restaurant equipment and refrigeration service company operating since 1996, covering both hot-side and cold-side commercial kitchen equipment."
+      },
+      {
+        "name": "A&M Mechanical Services, Inc.",
+        "phone": "(615) 866-0145",
+        "website": "https://ammechservices.com",
+        "city": "Hermitage, TN",
+        "services": ["walk-in cooler/freezer installation", "walk-in repair", "24/7 emergency repair"],
+        "brands_serviced": [],
+        "notes": "Local mechanical contractor serving restaurants, grocery stores, and gas stations across Middle Tennessee."
+      },
+      {
+        "name": "Evolution Maintenance",
+        "phone": "(615) 649-0622",
+        "website": "https://www.evolutionmaintenance.com",
+        "city": "Portland, TN",
+        "services": ["walk-in cooler/freezer repair", "installation", "planned maintenance", "24/7 emergency service"],
+        "brands_serviced": [],
+        "notes": "Commercial refrigeration and facilities maintenance contractor north of Nashville, servicing all makes and models for food-service clients."
+      },
+      {
+        "name": "Jarrett Companies",
+        "phone": "(615) 515-1270",
+        "website": "https://jarrettcompaniesinc.com",
+        "city": "Nashville, TN",
+        "services": ["walk-in cooler/freezer installation", "install through commissioning", "ongoing service"],
+        "brands_serviced": [],
+        "notes": "Locally owned multi-trade contractor (HVAC, plumbing, electrical) with a commercial refrigeration division serving Nashville restaurants."
+      }
+    ]
+  },
+  {
+    "name": "Birmingham",
+    "state": "AL",
+    "slug": "birmingham-al",
+    "intro_html": "<p>Birmingham's walk-in coolers work harder than most: restaurant kitchens from Avondale to Five Points, hotel food service, grocery and convenience chains, and a medical district that keeps cold storage running around the clock — all of it in a climate where the summer heat that stresses a condensing unit arrives in May and doesn't leave until October. When a box starts alarming here, the smart first question is always the same: what exactly is the controller saying?</p><p>Because the alarm isn't coming from the box — it's coming from the refrigeration system and its controller. Most commercial walk-ins run Heatcraft refrigeration (sold as Bohn and Larkin), a KE2 Therm efficiency controller, or a Dixell controller on boxes from manufacturers like Norlake and Kolpak. Each of those displays specific, documented codes — a door alarm, a sensor failure, a high-pressure trip — and each code points at a different fix, a different urgency, and a different cost. The code pages on this site translate them all, so you know whether you're looking at a door gasket or a compressor before the service call starts billing.</p><p>Birmingham's walk-in service market runs from sixty-year-old commercial HVAC and refrigeration institutions to install-focused specialists doing grocery and food-warehouse freezer systems. The list below is compiled from each company's own published information — repair, 24/7 emergency response, planned maintenance, and installation serving Birmingham, Hoover, Vestavia Hills, Homewood, Bessemer, Leeds, and Trussville.</p>",
+    "faq": [
+      {
+        "q": "Who repairs walk-in coolers and freezers in Birmingham?",
+        "a": "Birmingham has several long-established commercial refrigeration contractors — including companies that have serviced Jefferson County kitchens since the 1950s — plus statewide refrigeration/HVAC firms and install-focused specialists for grocery and warehouse freezer systems. Most work on all common walk-in systems regardless of the original installer."
+      },
+      {
+        "q": "My walk-in cooler can't hold temperature in the summer — why?",
+        "a": "Heat rejection. The condensing unit has to dump the box's heat somewhere, and an Alabama summer plus a dirty condenser coil plus blocked airflow is the classic combination behind high-temperature alarms and high-pressure trips. Clean the coil, clear the airflow, and check the door gaskets before assuming the system needs refrigerant — and if the alarm persists after that, it's a genuine service call."
+      },
+      {
+        "q": "The controller shows a code — should I just power-cycle it?",
+        "a": "Look the code up first. Some alarms (door alarms, high-temp after loading product) clear themselves once the condition is fixed. Others — repeated pressure-switch trips, low-superheat errors, sensor failures that shut the system down — are telling you something is genuinely wrong, and repeatedly forcing restarts can flood a compressor or mask a failure until it becomes a replacement. One reset for diagnosis is fine; reset-as-a-lifestyle destroys equipment."
+      },
+      {
+        "q": "What should a walk-in maintenance visit include?",
+        "a": "At minimum: condenser and evaporator coil cleaning, checking refrigerant charge and superheat, testing the defrost cycle and heaters, inspecting door gaskets, sweeps, hinges, and the door switch, clearing the condensate drain, and verifying the controller's setpoints and alarm settings. Twice a year is the working standard; hot, greasy, or high-traffic kitchens justify quarterly."
+      }
+    ],
+    "companies": [
+      {
+        "name": "Sullivan Service Co.",
+        "phone": "(205) 250-1170",
+        "website": "https://www.sullivanserviceco.com",
+        "city": "Birmingham, AL",
+        "services": ["walk-in cooler installation", "walk-in repair", "maintenance"],
+        "brands_serviced": [],
+        "notes": "Birmingham-owned commercial HVAC and refrigeration contractor operating since 1959."
+      },
+      {
+        "name": "Polar Bear Services",
+        "phone": "(205) 497-2327",
+        "website": "https://polarbearservicesco.com",
+        "city": "Leeds, AL",
+        "services": ["walk-in cooler/freezer installation", "repair", "maintenance", "24-hour emergency service"],
+        "brands_serviced": [],
+        "notes": "Licensed statewide commercial refrigeration and HVAC company with coverage across Birmingham, Huntsville, Anniston, and the Gulf Coast."
+      },
+      {
+        "name": "Stegall Heating, Cooling, Plumbing & Electrical",
+        "phone": "(205) 251-0330",
+        "website": "https://callstegall.com",
+        "city": "Birmingham, AL",
+        "services": ["walk-in cooler installation", "walk-in repair", "preventive maintenance", "24/7 emergency service"],
+        "brands_serviced": [],
+        "notes": "Sixty-plus-year Birmingham multi-trade contractor with a dedicated commercial refrigeration and walk-in cooler service line for Jefferson County businesses."
+      },
+      {
+        "name": "Sewell Service Company",
+        "phone": "(205) 680-5066",
+        "website": "https://sewellservicecompany.com",
+        "city": "Birmingham, AL",
+        "services": ["walk-in cooler/freezer repair", "installation", "preventive maintenance", "priority emergency calls"],
+        "brands_serviced": [],
+        "notes": "Birmingham-metro HVAC and refrigeration company serving restaurants, groceries, and food-service businesses across Jefferson County."
+      },
+      {
+        "name": "Pro Services LLC",
+        "phone": "(205) 966-9463",
+        "website": "https://proservicesplumbingandair.com",
+        "city": "McCalla, AL",
+        "services": ["walk-in cooler/freezer installation", "repair", "maintenance", "24/7 emergency service"],
+        "brands_serviced": [],
+        "notes": "Family-owned central Alabama mechanical contractor established 1987, doing commercial refrigeration alongside plumbing, HVAC, and electrical."
+      },
+      {
+        "name": "A, R & C Specialists",
+        "phone": "(256) 708-8617",
+        "website": "https://www.arandcspecialists.com",
+        "city": "Hanceville, AL",
+        "services": ["commercial refrigeration installation", "walk-in freezer installation", "grocery store refrigeration"],
+        "brands_serviced": [],
+        "notes": "Install-focused commercial refrigeration contractor north of Birmingham, specializing in grocery and food-warehouse freezer systems in the Birmingham service area."
+      }
+    ]
+  }
+]

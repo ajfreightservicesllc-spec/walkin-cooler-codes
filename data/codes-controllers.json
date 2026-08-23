@@ -1,0 +1,430 @@
+[
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "HIGH AIR TEMP",
+    "title": "Room air temperature too warm",
+    "meaning": "Air temperature has stayed above the setpoint plus the high-temp alarm offset (factory default 10°F over setpoint) for the alarm delay time (default 60 minutes). Yellow LED is lit and the system keeps running; this alarm is not triggered during defrost.",
+    "diy_steps": [
+      "Check whether the door was propped open for loading, unloading, or inventory, and make sure it is fully closed and sealing",
+      "Look at the evaporator coil inside the box for heavy frost or ice buildup",
+      "Verify all evaporator fans are spinning",
+      "Confirm the condensing unit outside is running and its coil and airflow are clear of debris"
+    ],
+    "when_to_call": "Call a refrigeration tech if the box will not pull down after the door is closed and the coil is clear, since low refrigerant charge or a failed compressor requires a licensed technician.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "LOW AIR TEMP",
+    "title": "Room air temperature too cold",
+    "meaning": "Air temperature has been below the setpoint by the low-temp alarm offset (factory default 4°F below setpoint) for the alarm delay time (default 10 minutes). Yellow LED is lit and the system continues to run.",
+    "diy_steps": [
+      "Check the actual room temperature with a separate thermometer to confirm the reading",
+      "Verify the setpoint and the low-temp alarm offset/delay were not accidentally changed",
+      "Note whether the alarm clears on its own once temperature returns to range"
+    ],
+    "when_to_call": "Call a tech if the room keeps overcooling, because a leaking liquid line solenoid or misadjusted low-pressure control needs professional service.",
+    "safety_flag": "Freezing risk to refrigerated (non-frozen) product.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "EXCESS DEFROST",
+    "title": "Too many defrost cycles",
+    "meaning": "The controller counted 32 defrosts within 48 hours. It automatically forces Defrost Mode to a fixed schedule (default 5 per day) and keeps running with the yellow LED lit. KE2 notes the most common cause is coil sensor placement too close to a defrost heater, ending defrosts too early.",
+    "diy_steps": [
+      "Note the alarm and current room temperature for the service tech",
+      "Check the evaporator coil for visible ice buildup",
+      "For coolers using air defrost, confirm the room setpoint is not set below 36°F"
+    ],
+    "when_to_call": "Call a refrigeration tech to verify coil sensor location, heaters, and solenoid valve, and to return Defrost Mode to Demand after fixing the root cause.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "DEFR TERM ON TIME",
+    "title": "Defrost ended on time instead of temperature",
+    "meaning": "The coil failed to reach the defrost termination temperature during two consecutive defrost cycles, so defrost ended on the time limit instead. Often points to failed defrost heaters, an iced coil, or a door left open. Yellow LED is lit; the system keeps running.",
+    "diy_steps": [
+      "Check the evaporator coil for heavy ice",
+      "Verify the door has not been left open for extended periods",
+      "For air-defrost coolers, confirm the room setpoint is not below 36°F"
+    ],
+    "when_to_call": "Call a tech if the coil is iced or the alarm repeats, since testing defrost heaters and solenoid valves involves live electrical work.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "DOOR SWITCH",
+    "title": "Door open alarm",
+    "meaning": "The door switch input shows the door open past the Door Alarm Delay time while room temperature is 5°F above setpoint. Indicates a door left open, a misaligned door switch, or a switch wiring/configuration problem.",
+    "diy_steps": [
+      "Verify the door is fully closed and latching, and check the gasket for damage or ice",
+      "Look at the two-piece magnetic door switch — make sure both halves line up and neither has been knocked loose",
+      "Close the door and see if the alarm clears after the delay time"
+    ],
+    "when_to_call": "Call a tech if the alarm stays on with the door closed and the switch aligned, since testing switch continuity and controller digital-input settings is a service task.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "T1 / T2 / T3 / T4 SENSOR",
+    "title": "Temperature sensor failed (suction, air, coil, or aux)",
+    "meaning": "The named temperature sensor is open, shorted, or not connected. In the VARIABLES menu a reading of -87 means open/disconnected and 180+ means shorted. Yellow LED is lit and the system keeps running.",
+    "diy_steps": [
+      "Note which sensor is named in the scrolling alarm text",
+      "Check the VARIABLES menu reading: -87 = open or unplugged, 180+ = shorted",
+      "Look for an obviously damaged, pinched, or iced-over sensor wire inside the box",
+      "Record the readings for the service tech"
+    ],
+    "when_to_call": "Call a tech to test sensor resistance against KE2's temperature/ohm table and replace the sensor or controller as needed.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "HIGH SUPERHEAT",
+    "title": "High superheat (EEV systems only)",
+    "meaning": "Only on systems with an electric expansion valve: superheat has run 2°F above setpoint for 90 minutes with the valve at least 95% open. Commonly indicates low refrigerant charge or a valve problem. Yellow LED lit; system keeps running.",
+    "diy_steps": [
+      "Note the alarm, room temperature, and how long it has been active",
+      "Check the condensing unit coil for dirt or blocked airflow and clear any debris",
+      "Do not attempt refrigerant-side checks"
+    ],
+    "when_to_call": "Call a refrigeration tech promptly — diagnosing suction pressure, refrigerant charge, and valve operation requires gauges and EPA certification.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "LOW SUPERHEAT",
+    "title": "Low superheat",
+    "meaning": "Superheat has been below 3°F for 5 minutes with the valve less than 10% open. KE2 says the most common cause is the compressor failing to start — often a low-pressure control switch that was never field-set, especially as outdoor temperatures drop in fall.",
+    "diy_steps": [
+      "Confirm the condensing unit compressor is actually running (listen/look at the outdoor unit)",
+      "Verify all evaporator fans are running and no service switch was left off",
+      "Check the coil for excessive frost on the air-entering and air-exiting sides"
+    ],
+    "when_to_call": "Call a tech if the compressor is not running or the alarm is intermittent — setting the low-pressure cut-in/cut-out control is the installing contractor's job, not a DIY item.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "PRESSURE SENSOR",
+    "title": "Suction pressure transducer fault (critical)",
+    "meaning": "Only active when an electric expansion valve is selected: the suction pressure sensor is shorted, open, out of range, or miswired. This is a red-LED critical alarm and the controller shuts the system down to protect the compressor.",
+    "diy_steps": [
+      "Treat this as urgent — the refrigeration system is off and box temperature will rise",
+      "Check that the transducer cable is plugged in and not visibly damaged",
+      "Move product to another cooler if the tech cannot come quickly"
+    ],
+    "when_to_call": "Call a refrigeration tech immediately; verifying transducer voltage and pressure readings requires meters and gauges.",
+    "safety_flag": "System shut down — product loss risk; treat as urgent.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "COMMUNICATION ERROR",
+    "title": "Bonded controllers lost communication",
+    "meaning": "On multi-evaporator systems with bonded controllers, this KE2 Evap failed to communicate with its bonded partners. Most commonly a local network issue (cables, switches, or a router-changed IP address). Yellow LED lit; system keeps running.",
+    "diy_steps": [
+      "Check that the Ethernet cables between controllers and any network switch are plugged in",
+      "Verify the network switch has power",
+      "Power-cycle the network switch if one is used"
+    ],
+    "when_to_call": "Call your refrigeration or controls contractor if reseating cables doesn't clear it — re-bonding controllers is a service procedure.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "EXT ALARM",
+    "title": "External device alarm passed through",
+    "meaning": "A third-party device wired to a digital input (for example a condensate pan overflow float switch) has tripped. The controller displays and forwards the alarm but refrigeration control continues normally.",
+    "diy_steps": [
+      "Identify which external device is wired to the controller (often a drain pan float switch)",
+      "Check the drain pan for standing water or a clogged drain line if a float switch is installed",
+      "Clear any visible blockage at the drain outlet"
+    ],
+    "when_to_call": "Call a tech if the external device keeps tripping or you can't identify what is connected to the alarm input.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "KE2 Therm",
+    "model_family": "KE2 Evaporator Efficiency",
+    "code": "Blank display (no lights)",
+    "title": "No display or lights on controller",
+    "meaning": "Not a coded alarm, but the controller is not operational if the display is blank. KE2 lists incoming power, voltage jumper settings, the board fuse, or power injected through the RJ45 port (PoE) as causes.",
+    "diy_steps": [
+      "Check the breaker feeding the evaporator/controller circuit",
+      "If the controller is networked, confirm it is not plugged into a Power-over-Ethernet switch port (PoE can blank the display)",
+      "Note whether the evaporator fans and refrigeration are still running"
+    ],
+    "when_to_call": "Call a tech if the breaker is on and the display is still dark — checking voltage jumpers and the board fuse is live electrical work.",
+    "source_url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "P1",
+    "title": "Room (thermostat) probe failure",
+    "meaning": "The room air temperature probe has failed open or shorted. The controller falls back to timed compressor cycling using the Cy/Cn (COn/COF) parameters, so the box keeps running on a timer instead of actual temperature. The alarm clears automatically a few seconds after the probe reads normally again.",
+    "diy_steps": [
+      "Record the alarm and check box temperature with a separate thermometer",
+      "Look inside the box for a damaged, wet, or iced-over probe and wire",
+      "Power-cycle the unit at the breaker once to rule out a transient fault"
+    ],
+    "when_to_call": "Call a tech to check probe connections and replace the probe — the manual specifically says check connections before replacing the probe.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/E-CLASS/XR06CX/XR06CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "P2",
+    "title": "Evaporator (defrost) probe failure",
+    "meaning": "The evaporator coil probe has failed, so defrost cycles now end on time instead of coil temperature. Cooling continues, but the coil can ice up if defrosts terminate improperly. Clears automatically when the probe reads normally.",
+    "diy_steps": [
+      "Check the evaporator coil for ice buildup",
+      "Look for a visibly damaged probe wire at the evaporator",
+      "Monitor box temperature until the probe is replaced"
+    ],
+    "when_to_call": "Call a tech to check connections and replace the evaporator probe, especially if you see ice forming on the coil.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/E-CLASS/XR06CX/XR06CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR60CX)",
+    "code": "P3",
+    "title": "Third probe failure",
+    "meaning": "The optional third probe (often used for condenser temperature monitoring on the XR60CX) has failed. Refrigeration outputs are unchanged; the alarm clears automatically when the probe reads normally again.",
+    "diy_steps": [
+      "Note the alarm; the box should still be cooling normally",
+      "Verify box temperature with a separate thermometer",
+      "Report the code to your service company"
+    ],
+    "when_to_call": "Call a tech at the next service visit to check the probe connection and replace it if needed.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XR-CX/XR60CX/XR60CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR60CX)",
+    "code": "P4",
+    "title": "Fourth probe failure",
+    "meaning": "The optional fourth probe (connected via the Hot Key plug on the XR60CX) has failed. Outputs are unchanged and the alarm auto-clears when the probe recovers.",
+    "diy_steps": [
+      "Note the alarm; cooling continues normally",
+      "Verify box temperature with a separate thermometer"
+    ],
+    "when_to_call": "Have a tech check the probe connection and replace the probe at the next service visit.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XR-CX/XR60CX/XR60CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "HA",
+    "title": "Maximum (high) temperature alarm",
+    "meaning": "Room temperature reached the maximum temperature alarm setpoint (AU/ALU parameter) and stayed there past the alarm delay. Outputs are unchanged — the unit keeps trying to cool — and the alarm stops automatically once temperature returns to normal.",
+    "diy_steps": [
+      "Make sure the door is fully closed and the gasket is sealing",
+      "Check the evaporator coil for visible ice and the fans for movement",
+      "Check the condensing unit: is it running, and is its coil clean with clear airflow?",
+      "Verify the breaker for the condensing unit hasn't tripped",
+      "Avoid loading warm product until temperature recovers"
+    ],
+    "when_to_call": "Call a refrigeration tech if temperature doesn't start dropping within an hour of closing the door and clearing airflow.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/E-CLASS/XR06CX/XR06CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "LA",
+    "title": "Minimum (low) temperature alarm",
+    "meaning": "Room temperature dropped to the minimum temperature alarm setpoint (AL/ALL parameter) past the alarm delay. Outputs are unchanged, and the alarm stops automatically when temperature returns to normal.",
+    "diy_steps": [
+      "Verify actual box temperature with a separate thermometer",
+      "Check whether the setpoint was recently changed",
+      "Move freeze-sensitive product away from the evaporator discharge if the box is overcooling"
+    ],
+    "when_to_call": "Call a tech if the box keeps running colder than setpoint, which can indicate a stuck contactor or control problem.",
+    "safety_flag": "Freezing risk to refrigerated product.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/E-CLASS/XR06CX/XR06CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR60CX)",
+    "code": "HA2",
+    "title": "Condenser high temperature alarm",
+    "meaning": "The condenser probe reads above the Au2 high-limit. Depending on the AC2 parameter the compressor may be switched off to protect it. High condenser temperature usually means a dirty condenser coil, blocked airflow, or a failed condenser fan.",
+    "diy_steps": [
+      "With the unit's disconnect off, look at the condenser coil for dust, lint, or grease buildup",
+      "Clear anything stored around the condensing unit blocking airflow",
+      "Gently brush or vacuum the coil surface (no pressure washing toward the fins)",
+      "Confirm the condenser fan spins when the unit runs"
+    ],
+    "when_to_call": "Call a tech if the alarm returns after cleaning the coil — refrigerant-side problems can also drive head pressure up.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XR-CX/XR60CX/XR60CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR60CX)",
+    "code": "LA2",
+    "title": "Condenser low temperature alarm",
+    "meaning": "The condenser probe reads below the AL2 low-limit. Depending on the bLL parameter the compressor may be switched off while the alarm is present. Often seen with very low ambient temperatures at the condensing unit.",
+    "diy_steps": [
+      "Note outdoor/ambient temperature at the condensing unit",
+      "Record the alarm and whether the unit is still cooling"
+    ],
+    "when_to_call": "Call a tech — low-ambient operation usually needs head-pressure controls checked by a professional.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XR-CX/XR60CX/XR60CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "dA",
+    "title": "Door open alarm",
+    "meaning": "The door switch input shows the door has been open longer than the digital-input delay (di/did parameter). Depending on configuration, the compressor and/or fans may have been stopped while the door is open; they restart per the rd/rrd setting. The alarm stops as soon as the door switch closes.",
+    "diy_steps": [
+      "Close the door fully and confirm it latches",
+      "Check the door gasket and hinges — a sagging door can hold the switch open",
+      "Check that the door switch (usually a plunger or magnetic switch) isn't stuck, iced, or knocked out of alignment"
+    ],
+    "when_to_call": "Call a tech if dA stays on with the door closed — the switch or its wiring likely needs replacement.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/E-CLASS/XR06CX/XR06CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "EA",
+    "title": "External alarm",
+    "meaning": "A device wired to the digital input (configured as external alarm, iF/i1F=EA/EAL) has tripped. Refrigeration outputs do not change, and the alarm stops when the external device resets.",
+    "diy_steps": [
+      "Identify what device is wired to the alarm input on your unit (varies by installer)",
+      "Check the obvious suspects: condensate overflow switch, high-pressure switch indicator",
+      "Note when the alarm started and whether cooling is still normal"
+    ],
+    "when_to_call": "Call your service company if you cannot identify or reset the external device causing the alarm.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/E-CLASS/XR06CX/XR06CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "CA",
+    "title": "Serious external alarm / pressure switch alarm — all outputs off",
+    "meaning": "A digital input configured as serious alarm (bA/bAL) or pressure switch alarm (PAL on XR60CX) has tripped, and the controller has switched ALL outputs off — refrigeration is stopped. A serious-alarm CA clears when the input resets; a pressure-switch CA (after the set number of trips) recovers only by switching the instrument off and on.",
+    "diy_steps": [
+      "Treat this as urgent: the system is off and box temperature will rise",
+      "Check the condensing unit for obvious issues — blocked condenser airflow, tripped breaker",
+      "Move product if a tech cannot arrive quickly",
+      "Do not repeatedly reset power to force it to run"
+    ],
+    "when_to_call": "Call a refrigeration tech immediately — repeated pressure-switch trips signal a real refrigeration-side fault that resetting will not fix.",
+    "safety_flag": "System shut down — product loss risk; do not force restarts.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XR-CX/XR60CX/XR60CX-GB.pdf"
+  },
+  {
+    "brand": "Dixell (Emerson)",
+    "model_family": "XR-series (XR06CX/XR60CX)",
+    "code": "OF / PoF",
+    "title": "Keyboard locked (not a fault)",
+    "meaning": "\"OF\" (XR06CX) or \"PoF\" (XR60CX) appears when a key is pressed while the keypad is locked. It is not an alarm — the lock prevents accidental setpoint changes. Unlock by holding the UP and DOWN arrow keys together for more than 3 seconds until \"on\"/\"Pon\" is displayed.",
+    "diy_steps": [
+      "Hold the UP and DOWN arrow keys together for over 3 seconds to unlock",
+      "The display shows \"on\" (XR06CX) or \"Pon\" (XR60CX) when unlocked"
+    ],
+    "when_to_call": "No service call needed unless the keypad won't unlock, which may indicate a failed keypad or controller.",
+    "source_url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XR-CX/XR60CX/XR60CX-GB.pdf"
+  },
+  {
+    "brand": "Norlake",
+    "model_family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+    "code": "DOOR AJAR ALARM",
+    "title": "Door open too long",
+    "meaning": "The door digital input has been active longer than the Door Al Delay setting, indicating the walk-in door has been left open or the door switch has failed.",
+    "diy_steps": [
+      "Close the door fully and press the ALARM button to silence the buzzer",
+      "Check the door gasket, closer, and latch for damage or ice",
+      "Verify the door switch is aligned and not stuck"
+    ],
+    "when_to_call": "Call a tech if the alarm persists with the door closed — the switch or its wiring needs testing.",
+    "source_url": "https://norlake.com/wp-content/uploads/2020/07/113470-programmable-controller-min.pdf"
+  },
+  {
+    "brand": "Norlake",
+    "model_family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+    "code": "ROOM TEMP HIGH ALARM",
+    "title": "Room air temperature above high limit",
+    "meaning": "Room air temperature exceeded the user-set high alarm limit for longer than the alarm delay. Norlake notes this is an early warning that often occurs when the door is left open too long; closing the door and pressing ALARM delays the air alarm while temperature recovers.",
+    "diy_steps": [
+      "Close the door and press the ALARM button to silence and delay the alarm",
+      "Check the evaporator coil for ice and confirm the fans are running",
+      "Confirm the condensing unit is running and its coil airflow is clear",
+      "Check the breaker for the refrigeration circuit"
+    ],
+    "when_to_call": "Call a refrigeration tech if temperature does not return to range after the door has been closed and airflow verified.",
+    "source_url": "https://norlake.com/wp-content/uploads/2020/07/113470-programmable-controller-min.pdf"
+  },
+  {
+    "brand": "Norlake",
+    "model_family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+    "code": "ROOM TEMP LOW ALARM",
+    "title": "Room air temperature below low limit",
+    "meaning": "Room air temperature dropped below the user-set low alarm limit for longer than the alarm delay, indicating the room is overcooling.",
+    "diy_steps": [
+      "Verify the actual room temperature with a separate thermometer",
+      "Check whether setpoints were recently changed on the SET screens",
+      "Move freeze-sensitive product away from the evaporator discharge"
+    ],
+    "when_to_call": "Call a tech if the room keeps running below setpoint — a stuck cooling relay or contactor needs professional diagnosis.",
+    "source_url": "https://norlake.com/wp-content/uploads/2020/07/113470-programmable-controller-min.pdf"
+  },
+  {
+    "brand": "Norlake",
+    "model_family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+    "code": "ROOM TEMPERATURE SENSOR FAILURE",
+    "title": "Air temperature sensor failed",
+    "meaning": "The room air sensor has failed. The status line will show \"USING PROD SENSOR\" if the controller falls back to the product sensor, or \"SENSOR FAIL MODE\" if all sensors have failed and the unit runs on timed Cool On/Heat On cycles.",
+    "diy_steps": [
+      "Check the MENU 1 status line to see which fallback mode the controller is in",
+      "Verify box temperature with a separate thermometer",
+      "Record the alarm and status for the service tech"
+    ],
+    "when_to_call": "Call a tech promptly — the room is running on backup control and needs the sensor tested and replaced.",
+    "source_url": "https://norlake.com/wp-content/uploads/2020/07/113470-programmable-controller-min.pdf"
+  },
+  {
+    "brand": "Norlake",
+    "model_family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+    "code": "AIR FLOW LOSS 1",
+    "title": "Evaporator air flow lost",
+    "meaning": "The air flow switch for circuit 1 has tripped, indicating the evaporator blower is not moving air. The alarm screen itself advises checking the blower and belts. (AIR FLOW LOSS 2 is the same alarm for the second circuit.)",
+    "diy_steps": [
+      "Look at the evaporator: are the fan blades turning?",
+      "Check the breaker for the evaporator fan circuit",
+      "Check for ice blocking the fan blades or coil"
+    ],
+    "when_to_call": "Call a tech if fans are not running with power on — motor, belt, or contactor replacement is a service job.",
+    "source_url": "https://norlake.com/wp-content/uploads/2020/07/113470-programmable-controller-min.pdf"
+  },
+  {
+    "brand": "Norlake",
+    "model_family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+    "code": "POWER RESTART",
+    "title": "Power was interrupted",
+    "meaning": "If the Power Reset Alarm is enabled, this alarm records that controller power was interrupted; it appears about 10 seconds after power-up. It does not affect control of the room — it only logs the outage.",
+    "diy_steps": [
+      "Press the ALARM button to view and acknowledge the alarm",
+      "Verify room and product temperatures recovered after the outage",
+      "Check whether other equipment on the same circuit also lost power"
+    ],
+    "when_to_call": "Call an electrician or tech if power interruptions recur without a known outage — that can indicate a failing breaker or wiring issue.",
+    "source_url": "https://norlake.com/wp-content/uploads/2020/07/113470-programmable-controller-min.pdf"
+  }
+]
