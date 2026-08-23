@@ -1,0 +1,446 @@
+[
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "E29",
+    "title": "Air temperature sensor error",
+    "meaning": "The Sair air temperature sensor has failed or its electrical connection is lost. The controller can no longer read the cabinet air temperature, so temperature control is unreliable until the sensor is fixed.",
+    "diy_steps": [
+      "Note the code and the current box temperature with a separate thermometer so product safety is known",
+      "Look inside the cooler for a visibly damaged, iced-over, or dangling sensor probe near the evaporator return air",
+      "Power-cycle the unit at the breaker for 2-3 minutes and see if the code returns",
+      "Move product to another cooler if temperature is drifting out of range"
+    ],
+    "when_to_call": "If the code returns after a power cycle, a refrigeration tech needs to test or replace the sensor and its wiring.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "E27",
+    "title": "Defrost (evaporator) sensor error",
+    "meaning": "The S5 evaporator sensor is defective or its electrical connection is lost. Defrost is normally controlled by this sensor, so defrost cycles may run on time only and the evaporator can ice up.",
+    "diy_steps": [
+      "Check the evaporator coil inside the box for heavy ice buildup",
+      "Power-cycle the unit at the breaker for 2-3 minutes and see if the code clears",
+      "Keep the door closed as much as possible and monitor box temperature with a separate thermometer"
+    ],
+    "when_to_call": "Call a tech if the code persists after a power cycle or if the evaporator is icing over.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "E30",
+    "title": "Condenser sensor error",
+    "meaning": "The Sc condenser sensor is defective or its electrical connection is lost. The controller loses its condenser-temperature protection, so a dirty or blocked condenser could go undetected.",
+    "diy_steps": [
+      "Visually check the condensing unit for dust, lint, or cardboard blocking the coil and clear anything obvious away from the airflow path",
+      "Power-cycle the unit at the breaker and see if the code returns",
+      "Monitor box temperature while waiting for service"
+    ],
+    "when_to_call": "If the code returns, have a tech test or replace the condenser sensor.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A01",
+    "title": "High temperature alarm",
+    "meaning": "Air temperature in the cabinet is too high — it has exceeded the programmed high-temperature alarm limit for longer than the alarm delay.",
+    "diy_steps": [
+      "Check that the door is fully closed and the gasket seals all the way around",
+      "Make sure the box wasn't just loaded with warm product or held open for restocking",
+      "Check the evaporator inside for heavy ice buildup and the condenser outside for blocked airflow",
+      "Verify the condensing unit is actually running (fan spinning, breaker on)",
+      "Move perishable product to a working cooler if temperature keeps climbing"
+    ],
+    "when_to_call": "If the temperature doesn't recover within an hour after fixing door and airflow issues, call a refrigeration tech — product is at risk.",
+    "safety_flag": "Food safety: log temperatures during the event for your health-inspection records.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A02",
+    "title": "Low temperature alarm",
+    "meaning": "Air temperature in the cabinet is too low — it has dropped below the programmed low-temperature alarm limit. On a cooler this can freeze product.",
+    "diy_steps": [
+      "Check the actual box temperature with a separate thermometer",
+      "Look for product stacked directly against the air sensor or discharge air stream",
+      "Note whether the compressor seems to run nonstop",
+      "Move freeze-sensitive product (produce, dairy, drinks) away from the coldest spots"
+    ],
+    "when_to_call": "If the unit won't cycle off and product is starting to freeze, call a tech — the controller, sensor, or setpoint needs professional attention.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A99",
+    "title": "High voltage alarm",
+    "meaning": "Supply voltage to the unit is too high. The controller raises this alarm as compressor protection and may stop the compressor to prevent damage.",
+    "diy_steps": [
+      "Note whether other equipment on the same circuit is acting up (lights flickering, other alarms)",
+      "Do not reset repeatedly — the alarm exists to protect the compressor",
+      "Monitor box temperature and move product if cooling stops"
+    ],
+    "when_to_call": "Call an electrician or refrigeration tech — supply-voltage problems are not a DIY fix.",
+    "safety_flag": "Building electrical problem — electrician territory.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "AA1",
+    "title": "Low voltage alarm",
+    "meaning": "Supply voltage to the unit is too low. The controller raises this alarm as compressor protection; low voltage can burn out a compressor motor.",
+    "diy_steps": [
+      "Check whether the unit shares a circuit with heavy equipment that just started",
+      "Check for an extension cord or undersized power feed to the unit",
+      "Monitor box temperature and move product if cooling stops"
+    ],
+    "when_to_call": "Call an electrician — sustained low voltage will damage the compressor.",
+    "safety_flag": "Building electrical problem — electrician territory.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A61",
+    "title": "Condenser alarm — high condenser temperature",
+    "meaning": "Condenser temperature is too high; the manual's own instruction is to check airflow. Usually a dirty condenser coil, blocked airflow, or a failed condenser fan.",
+    "diy_steps": [
+      "Look at the condensing unit: is the fan running and is air moving through the coil?",
+      "Clear boxes, bags, or debris blocking the coil or the space around the unit",
+      "Brush or vacuum visible dust and lint off the coil face (unit off at the breaker first)",
+      "Restore power and see if the alarm clears as the unit cools"
+    ],
+    "when_to_call": "If the coil is clean and airflow is clear but the alarm returns, call a tech — the fan motor or refrigerant side needs checking.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A80",
+    "title": "Condenser blocked alarm (manual reset)",
+    "meaning": "Condenser temperature went too high and the controller locked out; this alarm requires a manual reset. Per the manual, it is reset by switching the r12 main switch off and on again or by powering down the controller.",
+    "diy_steps": [
+      "Clean the condenser coil and clear all airflow blockages before resetting anything",
+      "Confirm the condenser fan spins freely and runs",
+      "Reset by powering the unit down at the breaker for a few minutes, then back on",
+      "Watch the unit for 30 minutes — if the alarm returns, stop resetting it"
+    ],
+    "when_to_call": "If A80 comes back after a cleaning and one reset, call a tech — repeated high condenser temps will kill the compressor.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A04",
+    "title": "Door alarm",
+    "meaning": "The door has been open for too long. Depending on configuration the controller may have stopped the compressor and fans while the door is open.",
+    "diy_steps": [
+      "Close the door fully and confirm the latch engages",
+      "Check the gasket for tears, ice, or product blocking the door from sealing",
+      "Check that the door switch plunger isn't stuck or iced",
+      "Confirm the alarm clears once the door has been shut for a few minutes"
+    ],
+    "when_to_call": "If the alarm stays on with the door verifiably shut, the door switch or its setting needs a tech.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400549/AN19438642089705-000401.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A15",
+    "title": "External alarm from DI input",
+    "meaning": "An external device wired to the controller's digital input is signaling an alarm. What it means depends on what is connected — commonly a pressure switch or other safety device.",
+    "diy_steps": [
+      "Check the box temperature and whether the unit is still cooling",
+      "Note any other equipment alarms in the room (the DI input relays an external signal)",
+      "Record the code and time for the service tech"
+    ],
+    "when_to_call": "Call your refrigeration tech to identify what device is tripping the input — it's often a protective switch doing its job.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "ERC 211/213/214",
+    "code": "A45",
+    "title": "Standby alarm — control stopped",
+    "meaning": "Refrigeration control has been stopped by the r12 main switch (a software on/off, sometimes also driven by an external switch input). The unit is not cooling on purpose, not because of a fault.",
+    "diy_steps": [
+      "Check whether someone deliberately switched the unit to standby (cleaning, service)",
+      "If an external main switch is fitted, check its position",
+      "Do not leave product in a box sitting in standby — verify temperature"
+    ],
+    "when_to_call": "If nobody turned it off and you can't find an external switch, have a tech check the r12 setting and DI configuration.",
+    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "A1",
+    "title": "High temperature alarm",
+    "meaning": "The air temperature has been above the upper alarm limit (parameter A13) for longer than the alarm delay. On the display it reads 'High t. alarm'.",
+    "diy_steps": [
+      "Check the door or lid is closed and sealing; look for torn gaskets",
+      "Check whether warm product was just loaded or a defrost just ended — recovery takes time",
+      "Look for ice on the evaporator and blockage or dirt at the condenser",
+      "Confirm the condensing unit is running and its breaker is on",
+      "Move perishables if temperature keeps rising"
+    ],
+    "when_to_call": "If temperature doesn't come back down within an hour after the obvious checks, call a refrigeration tech.",
+    "safety_flag": "Food safety: log temperatures during the event.",
+    "source_url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "A2",
+    "title": "Low temperature alarm",
+    "meaning": "The air temperature has dropped below the lower alarm limit (parameter A14). Displayed as 'Low t. alarm'. Product in a cooler can freeze if this persists.",
+    "diy_steps": [
+      "Verify actual temperature with a separate thermometer",
+      "Check nothing is stacked against the air sensor",
+      "Note if the compressor runs continuously and never cycles off",
+      "Move freeze-sensitive product away from the discharge air"
+    ],
+    "when_to_call": "If the unit won't cycle off, call a tech to check the sensor, relay, or setpoints.",
+    "source_url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "A4",
+    "title": "Door alarm",
+    "meaning": "The door contact reports the door has been open longer than the door-alarm delay (parameter A04). Depending on setup, refrigeration and fans may stop while the door is open.",
+    "diy_steps": [
+      "Close the door and confirm it latches",
+      "Inspect the gasket for damage, ice, or product blocking the seal",
+      "Check the door switch for sticking or ice",
+      "Confirm the alarm clears with the door shut"
+    ],
+    "when_to_call": "If the alarm won't clear with the door shut, the door switch or its wiring needs a tech.",
+    "source_url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "A45",
+    "title": "Standby mode — refrigeration stopped",
+    "meaning": "Refrigeration has been stopped via the r12 main switch or a DI input. The controller shows 'Standby mode'; on the AK-CC 210 the alarm relay is not activated for this state.",
+    "diy_steps": [
+      "Ask whether someone put the unit in standby for cleaning or stocking",
+      "Check any external switch wired to the unit",
+      "Verify box temperature and move product if it has been off a while"
+    ],
+    "when_to_call": "If no one turned it off, have a tech check the r12 parameter and DI wiring.",
+    "source_url": "https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "A59",
+    "title": "Case cleaning",
+    "meaning": "A cleaning signal from a DI input has put the case in cleaning mode. On networked systems this event is transmitted and can be logged as documentation of the cleaning sequence.",
+    "diy_steps": [
+      "Confirm whether staff activated cleaning mode",
+      "When cleaning is done, return the cleaning switch to normal",
+      "Verify the case pulls back down to temperature afterward"
+    ],
+    "when_to_call": "If the unit stays in cleaning mode after the switch is returned to normal, call a tech.",
+    "source_url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "E1",
+    "title": "Controller fault",
+    "meaning": "Internal fault in the controller itself ('EKC error'). This is a hardware/electronics problem, not a temperature condition.",
+    "diy_steps": [
+      "Power-cycle the unit at the breaker for 2-3 minutes",
+      "If the code returns, record it and monitor box temperature with a separate thermometer",
+      "Move product if the unit is not holding temperature"
+    ],
+    "when_to_call": "If E1 persists after a power cycle, the controller likely needs replacement by a tech.",
+    "source_url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "E27",
+    "title": "S5 sensor error",
+    "meaning": "Error on the S5 sensor — typically the defrost/evaporator sensor (or condenser sensor if configured that way). Defrost control may fall back to time-based operation, risking coil ice-up.",
+    "diy_steps": [
+      "Check the evaporator coil for heavy ice",
+      "Power-cycle at the breaker and see if the code returns",
+      "Monitor box temperature while waiting for service"
+    ],
+    "when_to_call": "If the code persists, a tech needs to test or replace the S5 sensor.",
+    "source_url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "EKC 202 / AK-CC 210",
+    "code": "E29",
+    "title": "Air sensor (Sair) error",
+    "meaning": "Error on the Sair air temperature sensor. The controller can't read box air temperature, so regulation and temperature alarms are unreliable.",
+    "diy_steps": [
+      "Check box temperature with a separate thermometer and note it",
+      "Look for a damaged or iced sensor probe in the return air stream",
+      "Power-cycle at the breaker; if the code returns, plan for service",
+      "Move product if temperature drifts out of safe range"
+    ],
+    "when_to_call": "Persistent E29 means the air sensor or wiring must be tested and replaced by a tech.",
+    "safety_flag": "The box is running blind on air temperature — monitor product closely.",
+    "source_url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "AK-CC 210/250",
+    "code": "E25",
+    "title": "S3 sensor error",
+    "meaning": "Error on the S3 sensor (one of the two air sensors, typically mounted before the evaporator). Temperature regulation that uses S3 becomes unreliable.",
+    "diy_steps": [
+      "Verify box temperature with a separate thermometer",
+      "Power-cycle the unit at the breaker and see if the code returns",
+      "Note the code and time for the service tech"
+    ],
+    "when_to_call": "If E25 persists, a tech needs to test or replace the S3 sensor.",
+    "source_url": "https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "AK-CC 210/250",
+    "code": "E26",
+    "title": "S4 sensor error",
+    "meaning": "Error on the S4 sensor (one of the two air sensors, typically mounted after the evaporator). Regulation and alarm functions that use S4 are affected.",
+    "diy_steps": [
+      "Verify box temperature with a separate thermometer",
+      "Power-cycle the unit at the breaker and see if the code returns",
+      "Note the code and time for the service tech"
+    ],
+    "when_to_call": "If E26 persists, a tech needs to test or replace the S4 sensor.",
+    "source_url": "https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "AK-CC 210/250",
+    "code": "A16",
+    "title": "Alarm signal from DI2 input",
+    "meaning": "An external device wired to the DI2 digital input is signaling an alarm after the configured delay. What tripped depends on what is connected to DI2.",
+    "diy_steps": [
+      "Check box temperature and whether the unit still cools",
+      "Note any other alarms on nearby equipment",
+      "Record the code and time for the tech"
+    ],
+    "when_to_call": "Call your tech to identify the device on DI2 — it is often a protective switch that tripped for a reason.",
+    "source_url": "https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "AK-CC 210/250",
+    "code": "A60",
+    "title": "HACCP high-temperature alarm",
+    "meaning": "High-temperature alarm for the HACCP monitoring function — the food-safety temperature limit tracked by the controller has been exceeded.",
+    "diy_steps": [
+      "Check and log the actual product/box temperature immediately",
+      "Check door seal, recent loading, evaporator ice, and condenser airflow",
+      "Follow your food-safety procedure for time/temperature abuse — move or discard product per policy"
+    ],
+    "when_to_call": "If temperature doesn't recover quickly, call a tech and document the event for HACCP records.",
+    "safety_flag": "Food safety event — document it for HACCP records.",
+    "source_url": "https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "Optyma Plus condensing unit controller",
+    "code": "A2",
+    "title": "LP alarm — low suction pressure",
+    "meaning": "Suction pressure is too low. The controller stops the compressor for protection. Common field causes include low refrigerant charge or an iced/starved evaporator, which are technician territory.",
+    "diy_steps": [
+      "Check the evaporator inside the box for heavy ice buildup",
+      "Confirm evaporator fans are running and airflow isn't blocked by product",
+      "Do not repeatedly reset the alarm — that short-cycles the compressor",
+      "Monitor box temperature and move product if cooling has stopped"
+    ],
+    "when_to_call": "Call a refrigeration tech — low-pressure trips usually mean a refrigerant or airflow problem only they can diagnose.",
+    "safety_flag": "Refrigerant-side issue — EPA-certified technician required beyond visual checks.",
+    "source_url": "https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "Optyma Plus condensing unit controller",
+    "code": "A17",
+    "title": "HP alarm — high/low pressure safety trip",
+    "meaning": "The high-pressure (or combined high/low pressure) safety input has tripped. The controller stops the compressor. High-pressure trips are very often a dirty or blocked condenser.",
+    "diy_steps": [
+      "Check the condenser coil for dirt, lint, or blockage and confirm the condenser fan runs",
+      "Clear anything stacked around the condensing unit that restricts airflow",
+      "With power off at the breaker, brush or vacuum the coil face clean",
+      "Restore power once and monitor — do not keep resetting a pressure trip"
+    ],
+    "when_to_call": "If the alarm returns after cleaning the condenser, call a tech immediately — repeated high-pressure trips damage the compressor.",
+    "safety_flag": "Do not force restarts against a pressure safety — compressor damage risk.",
+    "source_url": "https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "Optyma Plus condensing unit controller",
+    "code": "A45",
+    "title": "Standby mode",
+    "meaning": "The condensing unit is in standby — refrigeration was stopped via the r12 main switch or the DI1 input, not by a fault. The manual notes r12 and/or the DI1 input will restart regulation.",
+    "diy_steps": [
+      "Check whether someone deliberately shut the unit down",
+      "Check any external switch wired to DI1",
+      "Verify box temperature and move product if the unit has been off"
+    ],
+    "when_to_call": "If nobody stopped it, have a tech check the r12 setting and DI1 wiring.",
+    "source_url": "https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "Optyma Plus condensing unit controller",
+    "code": "A80",
+    "title": "Condenser blocked — airflow decreased",
+    "meaning": "The controller has detected reduced airflow through the condenser. The manual's stated action is to clean the condensing unit.",
+    "diy_steps": [
+      "Turn the unit off at the breaker",
+      "Remove leaves, lint, dust, and debris from the condenser coil and clear space around the unit",
+      "Check that the condenser fan spins freely",
+      "Restore power and confirm the alarm clears"
+    ],
+    "when_to_call": "If A80 returns after a thorough cleaning, call a tech to check the fan motor and pressures.",
+    "source_url": "https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "Optyma Plus condensing unit controller",
+    "code": "A96",
+    "title": "Maximum discharge temperature exceeded",
+    "meaning": "The compressor discharge gas temperature has exceeded its limit and the controller protects the compressor. Often related to condenser airflow or refrigerant-side problems.",
+    "diy_steps": [
+      "Check the condenser for blocked airflow and clean visible dirt (power off first)",
+      "Make sure the unit isn't enclosed in a hot, unventilated space",
+      "Monitor box temperature and avoid repeated resets"
+    ],
+    "when_to_call": "Call a tech if the alarm returns — overheating discharge gas will destroy the compressor if the root cause isn't fixed.",
+    "safety_flag": "Refrigerant-side issue — do not force restarts.",
+    "source_url": "https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf"
+  },
+  {
+    "brand": "Danfoss",
+    "model_family": "Optyma Plus condensing unit controller",
+    "code": "E1",
+    "title": "Controller fault",
+    "meaning": "Internal fault in the Optyma Plus controller itself ('Ctrl. Error'). This is an electronics problem, not an operating condition.",
+    "diy_steps": [
+      "Power-cycle the unit at the breaker for 2-3 minutes",
+      "If the code returns, record it and monitor box temperature",
+      "Move product if the unit stops holding temperature"
+    ],
+    "when_to_call": "Persistent E1 means the controller needs professional testing or replacement.",
+    "source_url": "https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf"
+  }
+]

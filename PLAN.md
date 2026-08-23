@@ -111,6 +111,10 @@ If none of that is true at 6 months, kill it and take the lesson.
 
 ## Hard rules carried over
 
+- Every NEW controller/brand added gets five of its codes spot-checked
+  directly against the cited primary sources before the pages count as done
+  (standing rule, 2026-08-23).
+
 - Every fault code verified against service documentation, source URL stored.
 - Company listings: real businesses only, phones verified on their own sites,
   no pay-to-play claims, brokers/lead-gen fakes excluded.

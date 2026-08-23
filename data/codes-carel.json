@@ -1,0 +1,501 @@
+[
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "rE",
+    "title": "Control (virtual) probe fault",
+    "meaning": "The virtual regulation probe the controller uses for temperature control has failed or is giving an invalid reading. The controller can no longer control on real temperature and the display alternates rE with the reading.",
+    "diy_steps": [
+      "Note whether the displayed temperature is frozen, blank, or wildly wrong",
+      "Look inside the box for the air sensor bulb and check it is not encased in ice or knocked out of position",
+      "Visually check the probe cable where it enters the controller for pinches or cuts (look only, do not open the panel)",
+      "Power-cycle the unit at the breaker once; if rE returns, stop"
+    ],
+    "when_to_call": "Call a refrigeration tech if rE persists after a power cycle — the probe or its wiring needs testing and replacement.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "E0",
+    "title": "Room probe S1 fault",
+    "meaning": "The room (air) temperature probe S1 is faulty, disconnected, or out of range. Depending on setup the controller may fall back to timed compressor cycling until the probe is fixed.",
+    "diy_steps": [
+      "Check whether the temperature display still makes sense or shows dashes",
+      "Look at the air probe inside the box — clear any ice buildup around it and make sure it hasn't been hit by product or a pallet",
+      "Visually inspect the visible probe wire for damage",
+      "Power-cycle at the breaker once and see if E0 clears"
+    ],
+    "when_to_call": "Call a tech if E0 stays on — a failed probe means the box is running blind and product is at risk.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "E1",
+    "title": "Defrost probe S2 fault",
+    "meaning": "The evaporator/defrost probe S2 is faulty or disconnected. Defrosts may end on time instead of temperature, which can lead to iced coils or over-long defrosts.",
+    "diy_steps": [
+      "Look at the evaporator coil for heavy ice — a bad defrost probe often shows up as an iced coil",
+      "Check the probe area on the coil for ice encasing the sensor",
+      "Watch for defrosts that seem to run much longer or shorter than usual",
+      "Power-cycle once at the breaker; if E1 returns, stop"
+    ],
+    "when_to_call": "Call a tech if E1 persists or the coil is icing up — probe replacement is a service job.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "E2",
+    "title": "Probe S3 fault (E3/E4 = probes S4/S5)",
+    "meaning": "One of the auxiliary probes (typically the condenser probe on S3; E3 and E4 are the same fault for probes S4 and S5) is faulty or disconnected. Condenser-temperature protection may not work while this alarm is active.",
+    "diy_steps": [
+      "Note which code shows (E2, E3, or E4) and when it started",
+      "Look over the condensing unit for obvious damage to the small sensor wire (look only)",
+      "Clear dust and debris from around the condenser while you're there",
+      "Power-cycle once; if the code returns, stop"
+    ],
+    "when_to_call": "Call a tech to test and replace the auxiliary probe if the code doesn't clear.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "HI",
+    "title": "High temperature alarm",
+    "meaning": "The controlled temperature has exceeded the high alarm threshold (parameter AH) for longer than the alarm delay (Ad). The display alternates HI with the temperature. It resets automatically once the box pulls back down.",
+    "diy_steps": [
+      "Check that the door is fully closed and nothing is holding it open; inspect the gasket for gaps",
+      "Ask whether warm product was just loaded or the door was open for stocking — allow recovery time",
+      "Check if a defrost just ran; temperatures are normally higher right after defrost",
+      "Check the condensing unit: fan running, coil not blocked by dust, boxes, or debris",
+      "Verify the breaker for the condensing unit hasn't tripped"
+    ],
+    "when_to_call": "Call a tech if the temperature keeps climbing or hasn't recovered within an hour or two with the door shut.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "LO",
+    "title": "Low temperature alarm",
+    "meaning": "The controlled temperature has dropped below the low alarm threshold (parameter AL) for longer than the alarm delay. The display alternates LO with the temperature and it resets automatically when temperature recovers.",
+    "diy_steps": [
+      "Confirm the actual temperature with an independent thermometer — a probe drifting cold can trigger false LO alarms",
+      "Check that product isn't stacked directly against the air sensor or discharge air stream",
+      "Note whether the compressor seems to run nonstop",
+      "Silence the buzzer and watch whether temperature climbs back into range"
+    ],
+    "when_to_call": "Call a tech if the box genuinely runs colder than setpoint or the compressor won't cycle off — that's a control or refrigeration fault.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "IA",
+    "title": "Immediate external alarm",
+    "meaning": "The multifunction digital input configured as an immediate external alarm has tripped — an external device (e.g. a pressure switch or monitoring contact) opened the contact. Resets automatically when the contact closes.",
+    "diy_steps": [
+      "Find out what device is wired to the alarm input on your installation",
+      "Check the condensing unit is running and its breaker is on",
+      "Check condenser airflow — a dirty or blocked coil can trip external pressure safeties",
+      "Note the time and how often IA appears, for the service call"
+    ],
+    "when_to_call": "Call a tech if IA repeats — whatever safety device tripped it needs to be diagnosed.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "dA",
+    "title": "Delayed external alarm",
+    "meaning": "The external alarm contact has been open for longer than the configured delay (parameter A7). Same as IA but with a time delay before it announces.",
+    "diy_steps": [
+      "Check the condensing unit is running and its breaker hasn't tripped",
+      "Clear dust, cardboard, and debris from the condenser coil area",
+      "Note when the alarm started and whether it coincides with hot weather or heavy door traffic"
+    ],
+    "when_to_call": "Call a tech to identify and test the external device wired to the alarm input if dA keeps returning.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "dor",
+    "title": "Door open too long",
+    "meaning": "The door switch input reports the walk-in door has been open longer than the allowed time. Control behavior may change while the door is open, and temperature will climb.",
+    "diy_steps": [
+      "Close the door fully; check nothing is blocking it — product, hose, pallet, strip curtain",
+      "Inspect the door gasket for tears or gaps and for ice holding the door off its seal",
+      "Check the door switch (plunger or magnet) is clean, aligned, and clicks when the door closes",
+      "See if the alarm clears within a few minutes of the door being properly shut"
+    ],
+    "when_to_call": "Call a tech if dor stays on with the door closed — the door switch or its wiring is faulty.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "Ed1",
+    "title": "Defrost ended by timeout (evaporator 1; Ed2 = evaporator 2)",
+    "meaning": "The defrost on evaporator 1 ended because it hit the maximum time limit (dP1) instead of reaching the end-defrost temperature. This often means heavier-than-normal ice on the coil.",
+    "diy_steps": [
+      "Look at the evaporator coil after the next defrost — is ice still visible?",
+      "Check the door gasket and door closure; humid air infiltration is the most common cause of coil icing",
+      "Check the drain pan and line for ice or standing water (visual only)",
+      "Note if Ed1/Ed2 shows up after every defrost or just occasionally"
+    ],
+    "when_to_call": "Call a tech if it repeats — the defrost heater, defrost probe, or defrost schedule needs service before the coil ices solid.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "cht",
+    "title": "High condenser temperature pre-alarm",
+    "meaning": "The condenser probe reads above the pre-alarm threshold — an early 'dirty condenser' warning. Control continues normally, but the system is running hotter than it should.",
+    "diy_steps": [
+      "Look at the condenser coil: dust, lint, cardboard, or grease blocking the fins is the usual cause",
+      "Clear anything stored against or on top of the condensing unit; it needs free airflow",
+      "Confirm the condenser fan spins when the compressor runs",
+      "Check ambient conditions — a condenser in a hot mechanical room or direct sun runs hot"
+    ],
+    "when_to_call": "Call a tech for a proper coil cleaning and pressure check if the pre-alarm keeps returning after clearing airflow.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "CHt",
+    "title": "High condenser temperature alarm",
+    "meaning": "Condenser temperature has exceeded the alarm threshold; per the Carel manual this alarm requires a manual reset. Prolonged operation in this state can trip safeties or damage the compressor.",
+    "diy_steps": [
+      "Check the condenser fan is actually running",
+      "Clear all airflow blockages around the condensing unit and look for a visibly dirty coil",
+      "Do not repeatedly reset the alarm to keep the box running — that masks a real problem",
+      "Note ambient temperature at the condenser location"
+    ],
+    "when_to_call": "Call a tech promptly — a hard high-condenser alarm risks compressor damage if the unit keeps running hot.",
+    "safety_flag": "Do not keep clearing this alarm to force operation; compressor damage risk.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "LP",
+    "title": "Low pressure alarm",
+    "meaning": "The low-pressure input (from an external pressure switch wired to the controller) has tripped. Commonly caused by low refrigerant charge, an iced coil, or fan/airflow problems.",
+    "diy_steps": [
+      "Look at the evaporator coil for heavy ice — an iced coil starves the system and drops pressure",
+      "Check evaporator fans are running",
+      "Check the door and gaskets; infiltration icing is a frequent root cause",
+      "Log how often LP trips for the technician"
+    ],
+    "when_to_call": "Call a tech — pressure and refrigerant-side diagnosis is not a DIY task, and repeated LP trips usually mean a leak or icing problem.",
+    "safety_flag": "Refrigerant-side issue; do not attempt beyond visual checks.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "Pd",
+    "title": "Pump-down timeout alarm",
+    "meaning": "On systems using pump-down shutoff, the low-pressure condition was not reached within the maximum allowed time. Often points to a valve, pressure switch, or refrigerant issue.",
+    "diy_steps": [
+      "Note when the alarm occurs (e.g. at every compressor stop or occasionally)",
+      "Check the condensing unit breaker and that the unit appears to run normally otherwise",
+      "Do not change controller parameters"
+    ],
+    "when_to_call": "Call a tech — pump-down faults involve the liquid-line solenoid and pressure controls, which need instruments to diagnose.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "Etc",
+    "title": "Real-time clock fault",
+    "meaning": "The controller's real-time clock has failed or lost its settings. Scheduled (time-of-day) defrosts and HACCP time-stamping won't run correctly until the clock is reset.",
+    "diy_steps": [
+      "Check whether the site recently had a power outage — clock loss after long outages is common",
+      "Note whether scheduled defrosts are still happening at their usual times",
+      "Have the person who programs the controller re-set the clock parameters if they're trained to"
+    ],
+    "when_to_call": "Call your service company if the clock won't hold its setting — the controller's clock hardware may need replacement.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "EE",
+    "title": "EEPROM error — unit parameters",
+    "meaning": "The controller detected a memory error in its unit (machine) parameters. Its stored configuration may be corrupted, so control behavior can't be trusted.",
+    "diy_steps": [
+      "Power-cycle the controller once at the breaker",
+      "Watch box temperature closely with an independent thermometer while the alarm is active",
+      "Do not attempt to reload defaults yourself — factory defaults rarely match a walk-in's required program"
+    ],
+    "when_to_call": "Call a tech if EE returns after a power cycle — the controller may need reprogramming or replacement.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "EF",
+    "title": "EEPROM error — operating parameters",
+    "meaning": "Memory error in the controller's operating parameters (setpoints and working values). Like EE, it means stored settings may be corrupted.",
+    "diy_steps": [
+      "Power-cycle once at the breaker and see if EF clears",
+      "Verify the setpoint still reads correctly (press SET briefly)",
+      "Monitor box temperature independently until it's resolved"
+    ],
+    "when_to_call": "Call a tech if the error persists or settings look wrong — the program needs to be reloaded from a known-good record.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "HA",
+    "title": "HACCP alarm type HA (HF = power-failure type)",
+    "meaning": "A HACCP temperature-excursion event was recorded: HA logs time above the high-temperature threshold during normal operation, HF logs a high-temperature condition following a power failure. These are food-safety log alarms, not equipment faults by themselves.",
+    "diy_steps": [
+      "Check current box temperature and whether product is still in safe range",
+      "Check for a recent power outage (HF) or a door/loading event (HA)",
+      "Record the event per your food-safety procedure before resetting",
+      "Address the underlying cause (door, breaker, condenser airflow) as with a HI alarm"
+    ],
+    "when_to_call": "Call a tech if excursions repeat without an obvious cause — and involve your food-safety manager for product disposition.",
+    "safety_flag": "Food safety event — document per HACCP procedure.",
+    "source_url": "https://everestref.com/file-downloads/service-manual/006_Carel.pdf"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "AFr",
+    "title": "Antifreeze alarm",
+    "meaning": "The antifreeze protection function has tripped (temperature at the antifreeze probe fell below its threshold). Per the Carel manual this alarm is manual-reset.",
+    "diy_steps": [
+      "Confirm actual temperature with an independent thermometer",
+      "Check whether product or airflow blockage is causing an abnormally cold spot at the sensor",
+      "Note when it trips relative to defrost or nighttime setback"
+    ],
+    "when_to_call": "Call a tech if the alarm repeats — the antifreeze setpoint, probe placement, or system control needs professional review.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "ir33 / ir33+",
+    "code": "dEF",
+    "title": "Defrost running (status, not a fault)",
+    "meaning": "The display shows dEF while a defrost cycle is running, if the controller is set to lock the display during defrost. This is normal operation, not an error.",
+    "diy_steps": [
+      "Wait — typical walk-in defrosts run roughly 30-60 minutes including recovery",
+      "Don't open the door more than needed during defrost",
+      "If dEF never clears after well over the normal defrost window, treat it as a fault"
+    ],
+    "when_to_call": "Call a tech only if the display stays in dEF far beyond the normal defrost duration or the box won't recover temperature afterward.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "E0",
+    "title": "Probe 1 (control) error",
+    "meaning": "The control/ambient probe has failed or is disconnected. The buzzer and alarm relay activate and the controller can no longer regulate on real air temperature.",
+    "diy_steps": [
+      "Check whether the display shows a plausible temperature or an error",
+      "Look at the air probe inside the unit for ice buildup or physical damage (visual only)",
+      "Power-cycle the unit once at the breaker or plug",
+      "Move product away from the sensor if it's buried"
+    ],
+    "when_to_call": "Call a tech if E0 remains — the probe needs testing and replacement.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "E1",
+    "title": "Probe 2 (defrost) error",
+    "meaning": "The defrost/evaporator probe has failed or is disconnected. Defrosts will end on time instead of coil temperature.",
+    "diy_steps": [
+      "Look at the evaporator coil for excess ice",
+      "Watch the next defrost — does the coil come fully clear?",
+      "Power-cycle once; if E1 returns, stop"
+    ],
+    "when_to_call": "Call a tech to replace the defrost probe if the code persists or the coil starts icing.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "E2",
+    "title": "Probe 3 (condenser) error",
+    "meaning": "On PJEZ models with a third probe, the condenser probe has failed or is disconnected, so high-condenser-temperature protection is compromised.",
+    "diy_steps": [
+      "Visually check the small sensor wire at the condensing unit for damage (look only)",
+      "Clean obvious dust and debris away from the condenser while you're there",
+      "Power-cycle once and see if E2 clears"
+    ],
+    "when_to_call": "Call a tech to test and replace the condenser probe if E2 stays on.",
+    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "IA",
+    "title": "External alarm",
+    "meaning": "The digital input configured as an external alarm (parameter A4, with delay A7) has tripped — an external safety or monitoring contact opened.",
+    "diy_steps": [
+      "Check the condensing unit is running and its breaker is on",
+      "Check condenser airflow and clear blockages",
+      "Find out from your installer what device is wired to the digital input",
+      "Log when IA occurs for the service visit"
+    ],
+    "when_to_call": "Call a tech if IA repeats — the external device that tripped needs professional diagnosis.",
+    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "dOR",
+    "title": "Open door alarm (shown as 'dr' on some PJEZ models)",
+    "meaning": "The door switch wired to the digital input reports the door has been open too long. Temperature will rise and the coil will ice faster while it's open.",
+    "diy_steps": [
+      "Close the door fully and remove anything blocking it",
+      "Inspect the gasket for tears, gaps, or ice preventing a seal",
+      "Check the door switch alignment and that it actuates when the door shuts",
+      "Confirm the alarm clears after the door has been closed a few minutes"
+    ],
+    "when_to_call": "Call a tech if the alarm stays on with the door verifiably closed — the switch or wiring is at fault.",
+    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "LO",
+    "title": "Low temperature alarm",
+    "meaning": "Temperature has fallen below the low alarm threshold (AL) for longer than the delay (Ad). Buzzer and alarm relay activate; it clears automatically when temperature recovers.",
+    "diy_steps": [
+      "Verify with an independent thermometer — rule out a drifting probe",
+      "Make sure product isn't stacked against the sensor",
+      "Watch whether the compressor ever cycles off"
+    ],
+    "when_to_call": "Call a tech if the unit truly runs below setpoint continuously — freeze damage to product is the risk.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "HI",
+    "title": "High temperature alarm",
+    "meaning": "Temperature has exceeded the high alarm threshold (AH) for longer than the delay (Ad). The most common walk-in alarm; often door- or defrost-related rather than a mechanical failure.",
+    "diy_steps": [
+      "Check the door is closed and the gasket seals; look for product blocking it",
+      "Consider recent loading of warm product or heavy door traffic — allow recovery time",
+      "Check whether a defrost just finished",
+      "Check the condensing unit: fan running, coil clear of dust and debris, breaker on"
+    ],
+    "when_to_call": "Call a tech if temperature keeps rising or doesn't recover within a couple of hours with the door shut.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "EE",
+    "title": "Unit parameter error",
+    "meaning": "The controller detected an error in its stored unit parameters (internal memory). Configuration data may be corrupted.",
+    "diy_steps": [
+      "Power-cycle the controller once",
+      "Check the setpoint still reads what it should (press SET for 1 second)",
+      "Monitor the box with an independent thermometer until resolved"
+    ],
+    "when_to_call": "Call a tech if EE persists — the controller may need its program reloaded or the unit replaced.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "EF",
+    "title": "Operating parameter error",
+    "meaning": "Error in the controller's stored operating parameters (working settings and setpoints). Settings may have reverted or corrupted.",
+    "diy_steps": [
+      "Power-cycle once and check whether EF clears",
+      "Verify the setpoint and compare against what's posted for the unit",
+      "Watch box temperature independently in the meantime"
+    ],
+    "when_to_call": "Call a tech if EF returns or settings look wrong — the parameter set needs to be reloaded from records.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "Ed",
+    "title": "Defrost ended by timeout",
+    "meaning": "The defrost ended because it hit the maximum duration (dP) rather than reaching the end-defrost temperature (dt). Usually means more ice on the coil than the defrost can clear.",
+    "diy_steps": [
+      "Look at the evaporator coil right after a defrost — remaining ice confirms the problem",
+      "Check the door gasket and closure for humid-air leaks",
+      "Check the drain pan for ice or overflow (visual only)",
+      "Note whether Ed shows after every defrost"
+    ],
+    "when_to_call": "Call a tech if Ed repeats — the defrost heater, probe, or schedule needs service before the coil blocks solid.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "dF",
+    "title": "Defrost running (status, not a fault)",
+    "meaning": "dF flashes on the display while a defrost is in progress (when parameter d6 = 0). This is normal operation, not an error code.",
+    "diy_steps": [
+      "Wait for the defrost to finish; fans may be off and the box may warm slightly — normal",
+      "Avoid opening the door during defrost",
+      "If dF never clears well beyond the normal defrost time, treat it as a fault"
+    ],
+    "when_to_call": "Call a tech only if the unit appears stuck in defrost or doesn't pull back down afterward.",
+    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "cht",
+    "title": "Dirty condenser pre-alarm",
+    "meaning": "Condenser temperature has passed the pre-alarm level — an early warning that the condenser coil is dirty or starved of airflow.",
+    "diy_steps": [
+      "Look at the condenser coil for dust, lint, or grease blocking the fins",
+      "Remove anything stored against or on top of the condensing unit",
+      "Confirm the condenser fan runs with the compressor"
+    ],
+    "when_to_call": "Call for a professional coil cleaning if the pre-alarm continues after clearing airflow.",
+    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "CHt",
+    "title": "Dirty condenser alarm",
+    "meaning": "Condenser temperature has exceeded the alarm threshold (parameter Ac) — the escalated version of cht, with buzzer and alarm relay active. Continued running risks safety trips and compressor stress.",
+    "diy_steps": [
+      "Check the condenser fan is turning",
+      "Clear all visible blockages and check for a heavily matted coil",
+      "Don't keep silencing the alarm to force operation"
+    ],
+    "when_to_call": "Call a tech promptly — running with a hard high-condenser alarm risks compressor damage.",
+    "safety_flag": "Do not repeatedly silence and keep running; compressor damage risk.",
+    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+  },
+  {
+    "brand": "Carel",
+    "model_family": "PJ Easy (PJEZ)",
+    "code": "EtC",
+    "title": "Clock alarm",
+    "meaning": "On PJEZ models with a real-time clock, the clock has failed or lost its setting, so time-of-day defrost bands won't run correctly.",
+    "diy_steps": [
+      "Check for a recent power outage",
+      "Verify scheduled defrosts are still occurring at normal times",
+      "Have your trained operator re-set the clock parameters if applicable"
+    ],
+    "when_to_call": "Call your service company if the clock won't hold time — the controller may need replacement.",
+    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+  }
+]

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carel Error Codes — Full Documented List</title>
+<meta name="description" content="Every documented Carel walk-in cooler error code and fault signal: what it means, what to check, when to call a tech.">
+<link rel="canonical" href="https://coolercodes.example.com/carel/">
+
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.78rem;color:var(--sub);margin-top:18px;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<div class="hero"><div class="wrap"><h1>Carel Fault &amp; Error Codes</h1>
+<p>34 documented codes and fault signals, verified against service manuals, with
+plain-English fixes.</p></div></div>
+<main><div class="wrap"><article class="card"><p>Carel controllers are fitted by walk-in and refrigeration OEMs worldwide — most commonly the <b>ir33 / ir33+</b> family and the smaller <b>PJ Easy (PJEZ)</b>, the compact digital thermostats you'll find running boxes from many different builders. Their code language is compact: <b>E-codes are probe faults</b> (E0 room probe, E1 defrost probe, E2 condenser probe), <b>HI and LO</b> are the temperature alarms, <b>dor/dOR</b> the door alarm, <b>Ed/Ed1</b> means a defrost timed out before clearing the coil, and the condenser pair — lowercase <b>cht</b> as the dirty-condenser early warning, uppercase <b>CHt</b> as the hard alarm — is the difference between a cleaning reminder and a compressor at risk. A code that fools everyone: <b>dEF or dF isn't a fault at all</b>, just the display's way of saying a defrost is running.</p><p>Carel controllers on HACCP-equipped installs also log HA/HF temperature-excursion events. Find your exact code below for the documented meaning, safe checks, and the technician threshold.</p></article><h2>Carel PJ Easy (PJEZ)</h2><div class='grid'><a href="/carel/pj-easy-pjez-e0/"><span class="c">E0</span><div class="t">Probe 1 (control) error</div></a><a href="/carel/pj-easy-pjez-e1/"><span class="c">E1</span><div class="t">Probe 2 (defrost) error</div></a><a href="/carel/pj-easy-pjez-e2/"><span class="c">E2</span><div class="t">Probe 3 (condenser) error</div></a><a href="/carel/pj-easy-pjez-ia/"><span class="c">IA</span><div class="t">External alarm</div></a><a href="/carel/pj-easy-pjez-dor/"><span class="c">dOR</span><div class="t">Open door alarm (shown as 'dr' on some PJEZ models)</div></a><a href="/carel/pj-easy-pjez-lo/"><span class="c">LO</span><div class="t">Low temperature alarm</div></a><a href="/carel/pj-easy-pjez-hi/"><span class="c">HI</span><div class="t">High temperature alarm</div></a><a href="/carel/pj-easy-pjez-ee/"><span class="c">EE</span><div class="t">Unit parameter error</div></a><a href="/carel/pj-easy-pjez-ef/"><span class="c">EF</span><div class="t">Operating parameter error</div></a><a href="/carel/pj-easy-pjez-ed/"><span class="c">Ed</span><div class="t">Defrost ended by timeout</div></a><a href="/carel/pj-easy-pjez-df/"><span class="c">dF</span><div class="t">Defrost running (status, not a fault)</div></a><a href="/carel/pj-easy-pjez-cht/"><span class="c">cht</span><div class="t">Dirty condenser pre-alarm</div></a><a href="/carel/pj-easy-pjez-cht-2/"><span class="c">CHt</span><div class="t">Dirty condenser alarm</div></a><a href="/carel/pj-easy-pjez-etc/"><span class="c">EtC</span><div class="t">Clock alarm</div></a></div><h2>Carel ir33 / ir33+</h2><div class='grid'><a href="/carel/ir33-ir33-re/"><span class="c">rE</span><div class="t">Control (virtual) probe fault</div></a><a href="/carel/ir33-ir33-e0/"><span class="c">E0</span><div class="t">Room probe S1 fault</div></a><a href="/carel/ir33-ir33-e1/"><span class="c">E1</span><div class="t">Defrost probe S2 fault</div></a><a href="/carel/ir33-ir33-e2/"><span class="c">E2</span><div class="t">Probe S3 fault (E3/E4 = probes S4/S5)</div></a><a href="/carel/ir33-ir33-hi/"><span class="c">HI</span><div class="t">High temperature alarm</div></a><a href="/carel/ir33-ir33-lo/"><span class="c">LO</span><div class="t">Low temperature alarm</div></a><a href="/carel/ir33-ir33-ia/"><span class="c">IA</span><div class="t">Immediate external alarm</div></a><a href="/carel/ir33-ir33-da/"><span class="c">dA</span><div class="t">Delayed external alarm</div></a><a href="/carel/ir33-ir33-dor/"><span class="c">dor</span><div class="t">Door open too long</div></a><a href="/carel/ir33-ir33-ed1/"><span class="c">Ed1</span><div class="t">Defrost ended by timeout (evaporator 1; Ed2 = evaporator 2)</div></a><a href="/carel/ir33-ir33-cht/"><span class="c">cht</span><div class="t">High condenser temperature pre-alarm</div></a><a href="/carel/ir33-ir33-cht-2/"><span class="c">CHt</span><div class="t">High condenser temperature alarm</div></a><a href="/carel/ir33-ir33-lp/"><span class="c">LP</span><div class="t">Low pressure alarm</div></a><a href="/carel/ir33-ir33-pd/"><span class="c">Pd</span><div class="t">Pump-down timeout alarm</div></a><a href="/carel/ir33-ir33-etc/"><span class="c">Etc</span><div class="t">Real-time clock fault</div></a><a href="/carel/ir33-ir33-ee/"><span class="c">EE</span><div class="t">EEPROM error — unit parameters</div></a><a href="/carel/ir33-ir33-ef/"><span class="c">EF</span><div class="t">EEPROM error — operating parameters</div></a><a href="/carel/ir33-ir33-ha/"><span class="c">HA</span><div class="t">HACCP alarm type HA (HF = power-failure type)</div></a><a href="/carel/ir33-ir33-afr/"><span class="c">AFr</span><div class="t">Antifreeze alarm</div></a><a href="/carel/ir33-ir33-def/"><span class="c">dEF</span><div class="t">Defrost running (status, not a fault)</div></a></div><div class="cta"><div><b>Equipment still down?</b> If you're in Middle Tennessee or Central Alabama, see who services walk-in coolers near you:</div><div style="margin-top:10px"><a href="/nashville-tn/">Nashville, TN &rarr;</a> &nbsp;&middot;&nbsp; <a href="/birmingham-al/">Birmingham, AL &rarr;</a></div></div></div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Danfoss Error Codes — Full Documented List</title>
+<meta name="description" content="Every documented Danfoss walk-in cooler error code and fault signal: what it means, what to check, when to call a tech.">
+<link rel="canonical" href="https://coolercodes.example.com/danfoss/">
+
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.78rem;color:var(--sub);margin-top:18px;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<div class="hero"><div class="wrap"><h1>Danfoss Fault &amp; Error Codes</h1>
+<p>30 documented codes and fault signals, verified against service manuals, with
+plain-English fixes.</p></div></div>
+<main><div class="wrap"><article class="card"><p>Danfoss electronic controllers run an enormous share of commercial refrigeration, and several of its families end up on walk-in coolers and their condensing units: the <b>ERC 211/213/214</b> controllers found on cabinets and walk-in control panels, the <b>EKC 202 and AK-CC 210/250</b> case and room controllers, and the <b>Optyma Plus</b> controller mounted on Danfoss condensing units that serve walk-ins. The code language is consistent across them: <b>E-codes are sensor and electronics errors</b> (E29 is the air sensor, E27 the defrost sensor), <b>A-codes are alarms</b> — temperature (A01/A02 or A1/A2), door (A04/A4), voltage protection (A99/AA1), and the condenser pair worth memorizing: A61 warns the condenser is running hot, A80 is the blocked-condenser lockout that requires a manual reset after you clean the coil.</p><p>Some AK-CC models add HACCP logging (A60) that timestamps food-safety excursions. Find your controller family and exact code below for the documented meaning, the safe checks, and when it's a service call.</p></article><h2>Danfoss AK-CC 210/250</h2><div class='grid'><a href="/danfoss/ak-cc-210-250-e25/"><span class="c">E25</span><div class="t">S3 sensor error</div></a><a href="/danfoss/ak-cc-210-250-e26/"><span class="c">E26</span><div class="t">S4 sensor error</div></a><a href="/danfoss/ak-cc-210-250-a16/"><span class="c">A16</span><div class="t">Alarm signal from DI2 input</div></a><a href="/danfoss/ak-cc-210-250-a60/"><span class="c">A60</span><div class="t">HACCP high-temperature alarm</div></a></div><h2>Danfoss EKC 202 / AK-CC 210</h2><div class='grid'><a href="/danfoss/ekc-202-ak-cc-210-a1/"><span class="c">A1</span><div class="t">High temperature alarm</div></a><a href="/danfoss/ekc-202-ak-cc-210-a2/"><span class="c">A2</span><div class="t">Low temperature alarm</div></a><a href="/danfoss/ekc-202-ak-cc-210-a4/"><span class="c">A4</span><div class="t">Door alarm</div></a><a href="/danfoss/ekc-202-ak-cc-210-a45/"><span class="c">A45</span><div class="t">Standby mode — refrigeration stopped</div></a><a href="/danfoss/ekc-202-ak-cc-210-a59/"><span class="c">A59</span><div class="t">Case cleaning</div></a><a href="/danfoss/ekc-202-ak-cc-210-e1/"><span class="c">E1</span><div class="t">Controller fault</div></a><a href="/danfoss/ekc-202-ak-cc-210-e27/"><span class="c">E27</span><div class="t">S5 sensor error</div></a><a href="/danfoss/ekc-202-ak-cc-210-e29/"><span class="c">E29</span><div class="t">Air sensor (Sair) error</div></a></div><h2>Danfoss ERC 211/213/214</h2><div class='grid'><a href="/danfoss/erc-211-213-214-e29/"><span class="c">E29</span><div class="t">Air temperature sensor error</div></a><a href="/danfoss/erc-211-213-214-e27/"><span class="c">E27</span><div class="t">Defrost (evaporator) sensor error</div></a><a href="/danfoss/erc-211-213-214-e30/"><span class="c">E30</span><div class="t">Condenser sensor error</div></a><a href="/danfoss/erc-211-213-214-a01/"><span class="c">A01</span><div class="t">High temperature alarm</div></a><a href="/danfoss/erc-211-213-214-a02/"><span class="c">A02</span><div class="t">Low temperature alarm</div></a><a href="/danfoss/erc-211-213-214-a99/"><span class="c">A99</span><div class="t">High voltage alarm</div></a><a href="/danfoss/erc-211-213-214-aa1/"><span class="c">AA1</span><div class="t">Low voltage alarm</div></a><a href="/danfoss/erc-211-213-214-a61/"><span class="c">A61</span><div class="t">Condenser alarm — high condenser temperature</div></a><a href="/danfoss/erc-211-213-214-a80/"><span class="c">A80</span><div class="t">Condenser blocked alarm (manual reset)</div></a><a href="/danfoss/erc-211-213-214-a04/"><span class="c">A04</span><div class="t">Door alarm</div></a><a href="/danfoss/erc-211-213-214-a15/"><span class="c">A15</span><div class="t">External alarm from DI input</div></a><a href="/danfoss/erc-211-213-214-a45/"><span class="c">A45</span><div class="t">Standby alarm — control stopped</div></a></div><h2>Danfoss Optyma Plus condensing unit controller</h2><div class='grid'><a href="/danfoss/optyma-plus-condensing-unit-controller-a2/"><span class="c">A2</span><div class="t">LP alarm — low suction pressure</div></a><a href="/danfoss/optyma-plus-condensing-unit-controller-a17/"><span class="c">A17</span><div class="t">HP alarm — high/low pressure safety trip</div></a><a href="/danfoss/optyma-plus-condensing-unit-controller-a45/"><span class="c">A45</span><div class="t">Standby mode</div></a><a href="/danfoss/optyma-plus-condensing-unit-controller-a80/"><span class="c">A80</span><div class="t">Condenser blocked — airflow decreased</div></a><a href="/danfoss/optyma-plus-condensing-unit-controller-a96/"><span class="c">A96</span><div class="t">Maximum discharge temperature exceeded</div></a><a href="/danfoss/optyma-plus-condensing-unit-controller-e1/"><span class="c">E1</span><div class="t">Controller fault</div></a></div><div class="cta"><div><b>Equipment still down?</b> If you're in Middle Tennessee or Central Alabama, see who services walk-in coolers near you:</div><div style="margin-top:10px"><a href="/nashville-tn/">Nashville, TN &rarr;</a> &nbsp;&middot;&nbsp; <a href="/birmingham-al/">Birmingham, AL &rarr;</a></div></div></div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

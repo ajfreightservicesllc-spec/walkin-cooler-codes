@@ -1,0 +1,1180 @@
+{
+  "intelliGen iF/iRC controller||AL01": {
+    "causes": [
+      "A door left open or a leaking gasket loading the box with warm, humid air",
+      "Warm product just loaded into the box, raising air temperature temporarily",
+      "Heavy ice on the evaporator coil choking airflow across it",
+      "Condensing unit not doing its job — tripped breaker, dead fans, or a dirty/blocked condenser coil",
+      "Unit left in Service or Product Load mode so it isn't cooling normally"
+    ],
+    "fixable": "Often, yes. Doors, gaskets, recent loading, blocked condenser airflow, and a forgotten Service mode are all things staff can find and fix in minutes without opening a panel.",
+    "why_tech": "If the box isn't pulling down within an hour of those checks, the problem is inside the sealed system or the controls — refrigerant diagnosis requires gauges and EPA Section 608 certification, and every hour above temperature puts product at risk."
+  },
+  "intelliGen iF/iRC controller||AL02": {
+    "causes": [
+      "The box temperature setpoint was changed, accidentally or otherwise",
+      "The system keeps running too cold because the temperature sensor or control is misreading",
+      "Product sitting directly in the evaporator discharge air, where it can freeze even when the box average is fine"
+    ],
+    "fixable": "Partially. Staff can verify the setpoint, compare the display against a separate thermometer, and move product out of the cold airstream — that resolves the setpoint and product-placement cases.",
+    "why_tech": "If the setpoint is right and the box still overcools, a sensor or control is lying to the system. Testing a sensor against a reference and replacing it is controller-level work, and in a cooler continued overcooling freezes and ruins product."
+  },
+  "intelliGen iF/iRC controller||AL03": {
+    "causes": [
+      "A compressor safety — high pressure, low pressure, or oil pressure — tripping every time the system tries to restart",
+      "Dirty or blocked condenser coil, or dead condenser fans, driving pressures out of range",
+      "Power problem at the condensing unit — breaker or disconnect off"
+    ],
+    "fixable": "Only the easy outer layer: staff can confirm the breaker is on, clear junk stacked around the condensing unit, and check that the fans spin and the coil is clean. If it still won't restart, it's a service call.",
+    "why_tech": "Identifying which safety is tripping — pressure, oil, or refrigerant-related — takes gauges, electrical testing, and training. Meanwhile the system is pumped down and not cooling, so this is a same-day, product-at-risk call."
+  },
+  "intelliGen iF/iRC controller||AL04": {
+    "causes": [
+      "Box temperature sensor failed or disconnected (companion code ER01)",
+      "Suction temperature sensor failed or disconnected (companion code ER03)",
+      "Suction pressure transducer failed or disconnected (companion code ER04)",
+      "A transient glitch that a single power cycle may clear"
+    ],
+    "fixable": "Barely. Staff can read off the companion ER code, power-cycle once at the breaker, and log the box temperature — that's the extent of it. The failed part still has to be tested and replaced.",
+    "why_tech": "The controller can't run the system properly without these inputs. A sensor gets tested against a reference and replaced; a pressure transducer is refrigerant-side work requiring gauges and EPA Section 608 certification. Same-day call — the system is running blind."
+  },
+  "intelliGen iF/iRC controller||AL06": {
+    "causes": [
+      "The door was genuinely left open past the alarm delay — pallets, cords, or product propping it",
+      "A damaged gasket or sweep keeping the door from sealing and latching",
+      "The door switch on the frame knocked loose or misaligned so it reports open even when the door is shut"
+    ],
+    "fixable": "Usually, yes. Closing the door, clearing whatever propped it, and re-seating a knocked-loose switch are all staff-level fixes. A torn gasket is a cheap, orderable part.",
+    "why_tech": "If the alarm stays on with the door verifiably closed, the switch itself or its normally-open/normally-closed configuration in the controller is wrong — checking and reconfiguring that is electrical and settings work a technician should do."
+  },
+  "intelliGen iF/iRC controller||AL12": {
+    "causes": [
+      "A probable leak of A2L (mildly flammable) refrigerant — the detection system has measured concentration at the regulatory mitigation level",
+      "The controller has taken over the unit to run mitigation, which is why normal operation stopped"
+    ],
+    "fixable": "No. The only correct staff actions are keeping people out of the box, ventilating the area, keeping ignition sources away, and NOT silencing or bypassing the alarm. Do not attempt anything else.",
+    "why_tech": "A2L refrigerants are mildly flammable — a leak is a safety event, not just a cooling problem. Finding and repairing the leak and recharging the system is legally restricted to EPA Section 608 certified technicians. Call immediately.",
+    "question": "What does the AL12 alarm on a Heatcraft intelliGen unit cooler mean?"
+  },
+  "intelliGen iF/iRC controller||ER01": {
+    "causes": [
+      "The box temperature sensor reading out of range, shorted, or disconnected",
+      "A transient fault that one power cycle may clear",
+      "Sensor wiring disturbed — which is why the manual says don't unplug or reroute it yourself"
+    ],
+    "fixable": "Not really. Staff can confirm the box is still holding temperature with a separate thermometer and try one power cycle. The sensor itself has to be tested against a reference and replaced if it disagrees.",
+    "why_tech": "The controller may be running on a fallback sensor, which is a degraded state, not a fix. Testing the sensor's reading against a reference thermometer and replacing it is exactly what the manual prescribes — controller-level work for a technician."
+  },
+  "intelliGen iF/iRC controller||ER02": {
+    "causes": [
+      "The evaporator coil (defrost termination) sensor failed or disconnected",
+      "Because defrost can no longer end on coil temperature, the coil may progressively ice up"
+    ],
+    "fixable": "No — staff can only watch: check the coil for ice, note how often defrosts run, and record the code. The sensor has to be checked and replaced.",
+    "why_tech": "The manual's fix is to test the sensor and its connections and replace as needed. Left alone, a coil that ices over stops cooling the box, so this needs a scheduled service visit before it becomes a high-temperature emergency."
+  },
+  "intelliGen iF/iRC controller||ER03": {
+    "causes": [
+      "The suction line temperature sensor at the evaporator failed or disconnected",
+      "With it gone, the controller can't calculate superheat to drive the electric expansion valve, so cooling control is degraded",
+      "A transient fault a single power cycle may clear"
+    ],
+    "fixable": "No. Confirm the box is holding temperature, try one power cycle, and log the code — that's the staff-side limit.",
+    "why_tech": "Superheat control protects the compressor; running degraded risks the most expensive component in the system. Testing and replacing the sensor and verifying superheat afterward is refrigeration-tech work."
+  },
+  "intelliGen iF/iRC controller||ER04": {
+    "causes": [
+      "The suction pressure transducer failed or disconnected",
+      "The controller has lost its superheat calculation for the expansion valve, same consequence as ER03",
+      "A transient fault a power cycle may clear"
+    ],
+    "fixable": "No. Staff can confirm the box is holding temperature, note any warming trend, and power-cycle once. Do not touch the refrigerant lines or the transducer itself.",
+    "why_tech": "A pressure transducer lives on the refrigerant side of the system. Replacing it means opening sealed refrigerant connections — legally EPA Section 608 certified work, done with gauges."
+  },
+  "intelliGen iF/iRC controller||ER11": {
+    "causes": [
+      "A condensing unit safety opened — the manual lists low pressure, high pressure, oil pressure, compressor module, or phase loss",
+      "Dirty condenser coil or blocked/dead condenser fans driving head pressure up",
+      "Heavy evaporator icing starving the system on the low side",
+      "Power problem at the condensing unit"
+    ],
+    "fixable": "Only the airflow layer: staff can verify power, clean-coil, and running-fans, and note whether the compressor is short-cycling. Which safety actually tripped can't be determined from the display.",
+    "why_tech": "Diagnosing whether it was pressure, oil, or phase loss requires gauges on the refrigerant circuit and live electrical testing at the condensing unit — both technician territory, and repeated safety trips will eventually take the compressor down."
+  },
+  "intelliGen iF/iRC controller||ER14": {
+    "causes": [
+      "Building supply voltage sagging — a brownout, often at heavy-load times of day",
+      "The control transformer on the wrong tap, delivering under ~22V to the board",
+      "A breaker not fully on"
+    ],
+    "fixable": "Staff can gather the evidence — is other equipment on the circuit acting up, is the breaker fully on, does it happen at certain times of day — but can't fix supply voltage.",
+    "why_tech": "Measuring primary power and changing the control transformer tap is live electrical work inside the panel. Chronic undervoltage also stresses the control board, so it's worth an electrician or tech visit before something more expensive fails."
+  },
+  "intelliGen iF/iRC controller||ER15": {
+    "causes": [
+      "Control transformer on the wrong tap, feeding the board above ~30V",
+      "High building supply voltage"
+    ],
+    "fixable": "No. Record when the error occurs and whether it's constant or intermittent — and don't open the control panel. That's it.",
+    "why_tech": "Overvoltage can cook the control board, so this isn't a wait-and-see item. Verifying supply voltage and moving the transformer tap is live electrical work for a technician or electrician."
+  },
+  "intelliGen iF/iRC controller||ER16": {
+    "causes": [
+      "An iced-up evaporator coil starving the system",
+      "Expansion valve problems keeping superheat below the safe minimum",
+      "A bad sensor reading feeding the superheat calculation",
+      "Evaporator fans not running"
+    ],
+    "fixable": "Partially. Staff can check the coil for ice, confirm the fans run, and note whether the unit keeps stopping and restarting — a lightly iced coil that defrosts out may end the problem. A repeating ER16 is a service call.",
+    "why_tech": "Persistent low superheat means liquid refrigerant can flood back to the compressor and destroy it — the most expensive failure a walk-in can have. Diagnosing valve and sensor causes takes gauges and EPA Section 608 certified refrigerant work."
+  },
+  "intelliGen iF/iRC controller||ER19": {
+    "causes": [
+      "The coin-cell clock battery on the control board is low or missing",
+      "After a power loss, time-based logs and defrost schedules can drift because the clock isn't held"
+    ],
+    "fixable": "Effectively yes, in the sense that nothing is urgent: cooling is not at risk. Note it and fold the battery swap into the next scheduled service visit rather than paying for an emergency call.",
+    "why_tech": "The battery lives on the control board inside the panel, so the manual routes replacement through a technician — but it's a next-visit item, not an emergency."
+  },
+  "intelliGen iF/iRC controller||ER22": {
+    "causes": [
+      "The controller board lost communication with its display/user interface module",
+      "Per the manual, usually a ribbon-cable connection issue between board and display"
+    ],
+    "fixable": "One shot: power-cycle at the breaker and check whether the unit is still cooling normally despite the dead display. If the error persists, it needs hands inside the panel.",
+    "why_tech": "Reseating or replacing the UI ribbon harness or the display module means opening the control enclosure — a technician job. The good news is the refrigeration usually keeps running while you wait."
+  },
+  "intelliGen iF/iRC controller||ER23": {
+    "causes": [
+      "Communication fault between the iRC control board and the user interface",
+      "Ribbon cable connection issue — the manual's named remedy is checking it and power-cycling"
+    ],
+    "fixable": "Try one power cycle at the breaker and confirm the unit still cools. If the error returns, staff have done all they safely can.",
+    "why_tech": "A returning ER23 means the ribbon connection or one of the boards needs inspection inside the control panel — panel-open work for a technician, though usually not a cooling emergency."
+  },
+  "intelliGen iF/iRC controller||ER25": {
+    "causes": [
+      "An evaporator controller on a multi-unit system lost its communication link",
+      "Communication wiring damaged, reversed polarity, or improperly shielded — per the manual",
+      "A comm cable pinched, unplugged, or disturbed during other work in the box"
+    ],
+    "fixable": "Partially. Power-cycle the affected unit, look for a cable someone obviously knocked loose during recent work, and note which evaporator's light bar is flashing. Anything beyond a visibly unplugged cable is wiring diagnosis.",
+    "why_tech": "Checking communication wiring polarity and shield grounding across a multi-evaporator system takes a meter and knowledge of the network layout — a controls-savvy technician's job."
+  },
+  "intelliGen iF/iRC controller||ER32": {
+    "causes": [
+      "The refrigerant detection system on an A2L unit cooler has sensed refrigerant at its early-warning level — a likely developing leak in the unit cooler piping",
+      "The -X suffix on the code identifies which leak sensor tripped"
+    ],
+    "fixable": "No. Ventilate the area, limit access to the box, keep ignition sources away, and do not reset or bypass the detection system. This is a leak until proven otherwise.",
+    "why_tech": "A2L refrigerants are mildly flammable, and leak repair plus recharge is EPA Section 608 certified work by law. Early warning is the cheap moment to fix it — before it escalates to full mitigation shutdown (AL12).",
+    "question": "What does ER32 mean on a Heatcraft intelliGen A2L unit cooler?"
+  },
+  "intelliGen iF/iRC controller||IN01": {
+    "causes": [
+      "The defrost schedule is running more often than the coil actually needs — 8 straight defrosts each finished in under 5 minutes",
+      "Purely informational; nothing has failed"
+    ],
+    "fixable": "Yes, in the sense that no action is needed today. Confirm the coil stays clear of ice between defrosts and jot down the current schedule for the next service visit.",
+    "why_tech": "Optimizing the defrost schedule is a controller-settings change best made by the servicing technician, because a schedule set too lean on the other side lets the coil ice up. It's a next-visit optimization, not an emergency."
+  },
+  "Beacon II refrigeration system||A1": {
+    "causes": [
+      "A door open or gaskets not sealing, loading the box with warm humid air",
+      "Warm product just loaded",
+      "Heavy ice on the evaporator coil blocking airflow",
+      "Condensing unit down or struggling — breaker, fans, or a dirty blocked condenser coil"
+    ],
+    "fixable": "Often. Doors, gaskets, recent loading, and blocked condenser airflow are staff-level checks and fixes, and the alarm clears itself once box temperature drops back below the setpoint.",
+    "why_tech": "If the box isn't pulling down within an hour of those checks, the fault is refrigerant-side or mechanical — gauge work that requires EPA Section 608 certification — and warming product turns this into a money-loss clock."
+  },
+  "Beacon II refrigeration system||A2": {
+    "causes": [
+      "The box setpoint was changed on the controller",
+      "The room sensor or control board misreading, so the system keeps overcooling",
+      "Product parked in the evaporator airstream freezing even when the box average is fine"
+    ],
+    "fixable": "Partially. Staff can verify the setpoint, compare the display against a separate thermometer, and move product out of the discharge air. The alarm clears itself when temperature comes back up.",
+    "why_tech": "If the setpoint is right and the box still overcools, the room sensor or board is at fault — testing and replacing it is technician work, and in a cooler, sustained overcooling freezes product."
+  },
+  "Beacon II refrigeration system||A3": {
+    "causes": [
+      "A pressure or oil safety tripping on every restart attempt — the compressor pumped down and failed to restart four times",
+      "Condensing unit power off at the breaker or disconnect",
+      "Dirty condenser coil or blocked airflow keeping pressures out of range"
+    ],
+    "fixable": "Only the outside layer: confirm power, clean coil, running fans, clear airflow, and listen for the compressor retrying. The manual notes Service mode or a power cycle clears the alarm — but only after the cause is fixed.",
+    "why_tech": "Working out which safety keeps tripping requires gauges on the system and electrical checks at the compressor. The system keeps retrying but isn't reliably cooling, so treat it as urgent."
+  },
+  "Beacon II refrigeration system||A4": {
+    "causes": [
+      "Room temperature sensor open or not installed (companion code E1)",
+      "Suction temperature sensor failed (companion code E3)",
+      "Suction pressure transducer failed (companion code E4)"
+    ],
+    "fixable": "No — and this one stops the system. The manual says the alarm clears only when the failed part is replaced and the system won't restart until then. Staff should monitor box temperature and move sensitive product to backup cold storage.",
+    "why_tech": "The system is down until a technician tests and replaces the failed sensor or transducer — transducer work is refrigerant-side and EPA Section 608 territory. With no cooling, product loss is a matter of hours: same-day call."
+  },
+  "Beacon II refrigeration system||E1": {
+    "causes": [
+      "The room (box) temperature sensor is shorted, open, or not installed",
+      "System pumped down and won't restart until the fault clears — so the box will warm",
+      "A transient fault a breaker reset may clear, per the manual"
+    ],
+    "fixable": "Barely. Reset the breaker once — the manual allows that — monitor box temperature with a separate thermometer, and move product if it's warming. The sensor itself must be replaced.",
+    "why_tech": "Cooling is stopped until the sensor and its board connection are tested and replaced, so this is a same-day service call with product on the clock."
+  },
+  "Beacon II refrigeration system||E2": {
+    "causes": [
+      "The defrost (coil) temperature sensor is shorted, open, or not installed",
+      "Defrosts no longer terminate on coil temperature, so the evaporator can progressively ice over"
+    ],
+    "fixable": "No. Staff can check the coil for ice, watch the box temperature trend over the next few hours, and record the code — the sensor has to be checked and replaced.",
+    "why_tech": "The manual's remedy is sensor and connection testing and replacement. Untreated, an icing coil eventually stops cooling the box, so schedule the visit before it becomes a high-temp alarm."
+  },
+  "Beacon II refrigeration system||E3": {
+    "causes": [
+      "The suction temperature sensor is shorted, open, or not installed",
+      "The system pumps down and stays off because superheat control of the expansion valve depends on this sensor"
+    ],
+    "fixable": "No — the system is likely off. Reset the breaker once in case it was transient, monitor box temperature, and move product to backup cold storage if needed.",
+    "why_tech": "No cooling until the sensor is replaced makes this a same-day call, and verifying superheat after replacement is gauge work for a refrigeration technician."
+  },
+  "Beacon II refrigeration system||E4": {
+    "causes": [
+      "The suction pressure transducer is shorted, open, or not installed",
+      "The system pumps down and stays off until the transducer is fixed — same stop-everything consequence as E3"
+    ],
+    "fixable": "No. Reset the breaker once, monitor box temperature, plan product protection, and do not touch the refrigerant lines or the transducer.",
+    "why_tech": "Transducer replacement opens the refrigerant side of the system — legally EPA Section 608 certified work. With the system pumped down and off, product loss urgency makes this a same-day call."
+  },
+  "Beacon II refrigeration system||E6": {
+    "causes": [
+      "An iced evaporator coil",
+      "Expansion valve trouble keeping superheat below the safe minimum",
+      "Defrost problems leaving the coil compromised",
+      "Bad sensor readings feeding the superheat calculation"
+    ],
+    "fixable": "Partially. Check the coil for ice, confirm the evaporator fans run in cooling, and note whether the unit keeps cycling off and restarting. If E6 repeats, stop there and call.",
+    "why_tech": "Chronic low superheat floods liquid refrigerant back to the compressor and destroys it — the most expensive single failure on the system. Valve and sensor diagnosis is gauge work requiring EPA Section 608 certification."
+  },
+  "Beacon II refrigeration system||E7": {
+    "causes": [
+      "The high pressure switch tripped — most often a dirty or airflow-blocked condenser coil or dead condenser fans",
+      "The low pressure switch tripped",
+      "The oil pressure switch tripped",
+      "Heavy evaporator icing upsetting system pressures"
+    ],
+    "fixable": "Sometimes. The classic staff-fixable case is a condenser coil buried in dust or boxes: clear the airflow, let it retry (it attempts up to four restarts). If it trips again after airflow is cleared, it's a service call.",
+    "why_tech": "Telling a pressure trip from an oil trip, and finding what's driving either, requires gauges on the refrigerant circuit — EPA Section 608 certified diagnosis, not something to guess at while the compressor takes repeated hits."
+  },
+  "Beacon II refrigeration system||E9": {
+    "causes": [
+      "Communication wiring between evaporator boards (MULTI OUT to MULTI IN) broken, disconnected, or miswired",
+      "Comm cabling disturbed during recent work inside the box",
+      "The pattern of which boards show E9 points to where in the daisy chain the fault sits"
+    ],
+    "fixable": "Partially. Power-cycle once, look for cabling obviously disturbed by recent work, and write down which evaporators show E9 — that pattern is genuinely useful to the technician. Rewiring is not a staff job.",
+    "why_tech": "Tracing a multi-board daisy chain and repairing the MULTI IN/OUT wiring takes a meter and the wiring diagram — controls work for a technician, though cooling usually continues meanwhile."
+  },
+  "Beacon II Smart Controller (LCD display module)||+COMM+": {
+    "causes": [
+      "Communication wiring between the Smart Controller display and the evaporator boards broken or disconnected",
+      "Wiring installed OUT-to-OUT or IN-to-IN instead of OUT-to-IN",
+      "The display or its cable bumped or unplugged — which connected unit shows the error points at the faulty wires"
+    ],
+    "fixable": "Partially. Power-cycle the controller, check whether the display or cable was recently bumped or unplugged, and note which system number carries the error. Actual wiring verification is a tech task.",
+    "why_tech": "Verifying MULTI IN/OUT polarity and continuity between the controller and evaporator boards is meter-and-diagram work. The refrigeration systems themselves usually keep running — you've lost monitoring, not cooling.",
+    "question": "Why does my Heatcraft Beacon II Smart Controller display +COMM+?"
+  },
+  "Beacon II Smart Controller (LCD display module)||*BOXHI": {
+    "causes": [
+      "Box temperature over the alarm setpoint past the alarm time — same root causes as any high-temp alarm",
+      "A door open or gasket not sealing, or warm product just loaded",
+      "Iced evaporator coil, or a condensing unit that is off, fan-dead, or airflow-blocked"
+    ],
+    "fixable": "Often. Press CLEAR to silence the buzzer, then work the list: doors, gaskets, recent loading, coil ice, condensing unit power and airflow. The code clears itself once the box recovers.",
+    "why_tech": "If temperature hasn't started recovering within an hour, the display's own \"CALL FOR SERVICE\" advice stands — the remaining causes are refrigerant-side, which means gauges and EPA Section 608 certification, with product warming the whole time.",
+    "question": "Why is my Beacon II Smart Controller flashing *BOXHI and CALL FOR SERVICE?"
+  },
+  "Beacon II Smart Controller (LCD display module)||*INFLT": {
+    "causes": [
+      "Box temperature sensor open or not installed on the flagged system",
+      "Suction temperature sensor failed on that system",
+      "Suction pressure transducer failed — any of the three pumps that system down and keeps it off until fixed"
+    ],
+    "fixable": "No. Press CLEAR to silence the buzzer, note the system number shown with the fault, and start protecting product — that system is likely off and staying off.",
+    "why_tech": "The affected system won't restart until the failed sensor or transducer is tested and replaced; transducer work is refrigerant-side, EPA Section 608 certified. A pumped-down system with product inside is a same-day call.",
+    "question": "What does the *INFLT input fault on a Beacon II Smart Controller mean?"
+  },
+  "KE2 Evaporator Efficiency||HIGH AIR TEMP": {
+    "causes": [
+      "Door propped open for loading, unloading, or inventory — humid air loads the box",
+      "Heavy frost or ice on the evaporator coil",
+      "Evaporator fans not all spinning",
+      "Condensing unit not running, or its coil and airflow choked with debris",
+      "Low refrigerant charge or a failed compressor — the not-DIY end of the list"
+    ],
+    "fixable": "Often. The system is still running (yellow LED, not a shutdown), and doors, coil ice, fan checks, and condenser airflow are all staff territory. If the box won't pull down after those, stop.",
+    "why_tech": "The remaining causes — low charge or a failed compressor — are sealed-system work: gauges, refrigerant handling, EPA Section 608 certification. And a box that can't reach temperature is quietly spoiling product the whole time.",
+    "question": "Why does my KE2 controller say HIGH AIR TEMP?"
+  },
+  "KE2 Evaporator Efficiency||LOW AIR TEMP": {
+    "causes": [
+      "The setpoint or the low-temp alarm offset/delay was changed",
+      "The room genuinely overcooling — KE2 points at a leaking liquid line solenoid or a misadjusted low-pressure control",
+      "A reading blip that clears itself once temperature returns to range"
+    ],
+    "fixable": "Partially. Confirm the real room temperature with a separate thermometer, check the settings weren't changed, and see if the alarm clears on its own. Genuine overcooling is not staff-fixable.",
+    "why_tech": "A leaking liquid line solenoid or a low-pressure control that needs adjustment are refrigerant-circuit components — gauge work under EPA Section 608. In a cooler, overcooling freezes product, so don't sit on a repeating alarm.",
+    "question": "Why does my KE2 controller say LOW AIR TEMP?"
+  },
+  "KE2 Evaporator Efficiency||EXCESS DEFROST": {
+    "causes": [
+      "Coil sensor mounted too close to a defrost heater, ending defrosts too early — KE2's most common cause",
+      "The controller counted 32 defrosts in 48 hours and forced itself onto a fixed schedule as a protective fallback",
+      "On air-defrost coolers, a room setpoint set below 36°F"
+    ],
+    "fixable": "Mostly no. Staff can note the alarm, check the coil for ice, and verify an air-defrost cooler isn't set below 36°F. The controller has already protected itself by switching to a fixed schedule.",
+    "why_tech": "Relocating the coil sensor, testing heaters and the solenoid valve, and returning Defrost Mode to Demand after the root cause is fixed are all inside-the-unit service tasks — heater testing is live electrical work.",
+    "question": "Why does my KE2 controller say EXCESS DEFROST?"
+  },
+  "KE2 Evaporator Efficiency||DEFR TERM ON TIME": {
+    "causes": [
+      "Failed defrost heaters, so the coil never reaches termination temperature",
+      "A coil so iced over that defrost can't finish the job in the time allowed",
+      "A door left open for long stretches, loading the coil with frost faster than defrost clears it",
+      "On air-defrost coolers, a room setpoint below 36°F"
+    ],
+    "fixable": "Partially. Check for heavy coil ice, make sure the door isn't living propped-open, and verify the setpoint on air-defrost coolers. A heavily iced coil or a repeating alarm ends the DIY portion.",
+    "why_tech": "Testing defrost heaters and solenoid valves is live electrical work on heating elements — exactly the kind of testing that belongs to a technician, before the iced coil takes the box over temperature.",
+    "question": "Why does my KE2 controller say DEFR TERM ON TIME?"
+  },
+  "KE2 Evaporator Efficiency||DOOR SWITCH": {
+    "causes": [
+      "The door genuinely left open past the delay while the room ran 5°F over setpoint",
+      "A door gasket damaged or iced so the door never fully seals",
+      "The two-piece magnetic switch knocked out of alignment",
+      "Switch wiring or digital-input configuration problem"
+    ],
+    "fixable": "Usually. Close and latch the door, check the gasket, and line the two magnetic switch halves back up — then wait out the delay and see if it clears. Most DOOR SWITCH alarms end there.",
+    "why_tech": "If the alarm stays on with the door closed and the switch aligned, someone needs to test switch continuity with a meter and check the controller's digital-input settings — service-level electrical and configuration work.",
+    "question": "Why does my KE2 controller say DOOR SWITCH?"
+  },
+  "KE2 Evaporator Efficiency||T1 / T2 / T3 / T4 SENSOR": {
+    "causes": [
+      "The named sensor open or unplugged — a VARIABLES reading of -87 is the giveaway",
+      "The named sensor shorted — a reading of 180+ points there",
+      "A sensor wire damaged, pinched, or iced over inside the box"
+    ],
+    "fixable": "Diagnosis yes, repair no. Staff can read which sensor is named in the scrolling text, pull its VARIABLES value (-87 open, 180+ shorted), and eyeball the wire for damage. The system keeps running meanwhile — yellow LED, not a shutdown.",
+    "why_tech": "Confirming the failure means testing sensor resistance against KE2's temperature/ohm table and then replacing the sensor — or the controller if the input itself is bad. That's meter work a technician should do.",
+    "question": "Why does my KE2 controller show a T1, T2, T3 or T4 SENSOR alarm?"
+  },
+  "KE2 Evaporator Efficiency||HIGH SUPERHEAT": {
+    "causes": [
+      "Low refrigerant charge — the common culprit when the valve has been ≥95% open for 90 minutes and superheat still runs high",
+      "An electric expansion valve problem",
+      "A dirty or airflow-blocked condensing unit coil making the system work short-handed"
+    ],
+    "fixable": "Barely. Clearing debris off the condensing unit coil is the one useful staff move. Everything else on this alarm is refrigerant-side — note the alarm, room temperature, and duration, and make the call.",
+    "why_tech": "Checking suction pressure, refrigerant charge, and valve operation takes gauges on the sealed system, which is EPA Section 608 certified work by law. Low charge also usually means a leak that must be found, not just topped off.",
+    "question": "Why does my KE2 controller say HIGH SUPERHEAT?"
+  },
+  "KE2 Evaporator Efficiency||LOW SUPERHEAT": {
+    "causes": [
+      "The compressor not starting — KE2's most common cause, often a low-pressure control switch that was never field-set",
+      "Falling outdoor temperatures in autumn exposing that never-set control",
+      "Evaporator fans off or a service switch left off",
+      "Excessive frost on the coil"
+    ],
+    "fixable": "Diagnosis only. Staff can confirm whether the outdoor compressor is actually running, check the evaporator fans and service switch, and look for heavy frost. Setting pressure controls is explicitly not a DIY item.",
+    "why_tech": "Setting the low-pressure cut-in/cut-out control is the installing contractor's job, done with gauges on the refrigerant circuit. Left wrong, the system will keep dropping out every time the weather turns.",
+    "question": "Why does my KE2 controller say LOW SUPERHEAT?"
+  },
+  "KE2 Evaporator Efficiency||PRESSURE SENSOR": {
+    "causes": [
+      "The suction pressure transducer shorted, open, out of range, or miswired",
+      "The controller has shut the whole system down to protect the compressor — this is the red-LED critical alarm",
+      "A cable unplugged or visibly damaged at the transducer"
+    ],
+    "fixable": "No, and it's urgent: refrigeration is OFF and the box is warming. Staff can check the transducer cable is plugged in and undamaged, then focus on moving product if the tech can't come fast.",
+    "why_tech": "Verifying transducer voltage and pressure readings requires meters and gauges on the refrigerant side — EPA Section 608 certified work. With the system down, product loss urgency makes this an immediate call, not a same-week one.",
+    "question": "Why does my KE2 controller show a PRESSURE SENSOR alarm and shut down?"
+  },
+  "KE2 Evaporator Efficiency||COMMUNICATION ERROR": {
+    "causes": [
+      "Ethernet cables between bonded controllers or the network switch unplugged or failed",
+      "The network switch without power",
+      "A router reassigning a controller's IP address — KE2's classic local-network cause"
+    ],
+    "fixable": "Often, yes — this is the rare alarm that's more IT than refrigeration. Reseat the Ethernet cables, confirm the switch has power, and power-cycle the switch. Cooling continues the whole time (yellow LED).",
+    "why_tech": "If reseating cables doesn't clear it, the controllers may need re-bonding — a KE2 service procedure your refrigeration or controls contractor performs, not a menu item for staff.",
+    "question": "Why does my KE2 controller say COMMUNICATION ERROR?"
+  },
+  "KE2 Evaporator Efficiency||EXT ALARM": {
+    "causes": [
+      "A third-party device wired to the digital input has tripped — most commonly a condensate pan overflow float switch",
+      "A clogged drain line backing water up into the pan until the float lifts",
+      "Refrigeration control itself is unaffected; the controller is only passing the message along"
+    ],
+    "fixable": "Frequently. If a drain-pan float is the connected device, checking the pan for standing water and clearing a visible blockage at the drain outlet is well within staff ability, and cooling never stopped.",
+    "why_tech": "If the device keeps tripping, or nobody on site knows what is actually wired to that input, a technician needs to trace the input and fix the underlying device — repeated pan overflows, for example, mean a drain problem that will eventually leak into the box.",
+    "question": "Why does my KE2 controller say EXT ALARM?"
+  },
+  "KE2 Evaporator Efficiency||Blank display (no lights)": {
+    "causes": [
+      "No incoming power — breaker off on the evaporator/controller circuit",
+      "The controller plugged into a Power-over-Ethernet switch port — PoE can blank the display",
+      "Voltage jumper settings or a blown board fuse, per KE2's list"
+    ],
+    "fixable": "Sometimes. Check the breaker, and if the controller is networked, make sure it isn't on a PoE switch port — that one is a genuine plug-it-elsewhere fix. Also note whether fans and refrigeration are still running.",
+    "why_tech": "If the breaker is on and the display is still dark, what's left is checking voltage jumpers and the board fuse — live electrical work inside the controller that belongs to a technician.",
+    "question": "Why is my KE2 controller display blank with no lights?"
+  },
+  "XR-series (XR06CX/XR60CX)||P1": {
+    "causes": [
+      "The room air probe failed open or shorted",
+      "A probe or wire damaged, wet, or iced over inside the box",
+      "A transient fault — the alarm clears itself seconds after the probe reads normally again"
+    ],
+    "fixable": "Partially. The controller has already protected the box by cycling the compressor on a timer, so cooling continues. Staff can verify box temperature with a separate thermometer, look for obvious probe damage, and power-cycle once.",
+    "why_tech": "The manual specifically says check the probe connections before replacing the probe — meter work at the controller terminals. Timed fallback cycling holds the box roughly, not precisely, so don't leave it that way for weeks."
+  },
+  "XR-series (XR06CX/XR60CX)||P2": {
+    "causes": [
+      "The evaporator coil probe failed, so defrosts now end on time instead of coil temperature",
+      "Improperly terminated defrosts letting the coil ice up",
+      "A visibly damaged probe wire at the evaporator"
+    ],
+    "fixable": "No real fix on-site. Staff can check the coil for ice, look for obvious wire damage, and watch box temperature until the probe is replaced — cooling does continue meanwhile.",
+    "why_tech": "Checking connections and replacing the evaporator probe is technician work, and it gets urgent the moment ice starts building on the coil, because an iced coil eventually stops cooling the box."
+  },
+  "XR-series (XR60CX)||P3": {
+    "causes": [
+      "The optional third probe — often used for condenser temperature monitoring — failed",
+      "Refrigeration outputs unchanged; the box should still be cooling normally",
+      "Auto-clears when the probe reads normally again"
+    ],
+    "fixable": "Nothing needs fixing today: cooling is unaffected. Verify box temperature with a separate thermometer and report the code to your service company.",
+    "why_tech": "The probe connection needs checking and the probe replacing at the next service visit — while it's out, the controller has lost its condenser high-temperature protection (HA2), which is worth restoring before summer."
+  },
+  "XR-series (XR60CX)||P4": {
+    "causes": [
+      "The optional fourth probe (connected via the Hot Key plug) failed",
+      "Outputs unchanged, cooling continues, and the alarm auto-clears if the probe recovers"
+    ],
+    "fixable": "Nothing urgent — cooling continues normally. Verify box temperature with a separate thermometer and log the code.",
+    "why_tech": "A technician checks the Hot Key probe connection and replaces the probe at the next scheduled visit; this is a monitoring loss, not a refrigeration fault."
+  },
+  "XR-series (XR06CX/XR60CX)||HA": {
+    "causes": [
+      "Door not fully closed or gasket not sealing",
+      "Ice on the evaporator coil or fans not moving air",
+      "Condensing unit off, tripped breaker, or a dirty condenser coil with blocked airflow",
+      "Warm product loaded before the box recovered"
+    ],
+    "fixable": "Often. The unit keeps trying to cool (outputs are unchanged) and the alarm silences itself once temperature recovers — so working the door/coil/condenser checklist is genuinely the fix in most cases.",
+    "why_tech": "If temperature isn't dropping within an hour of closing the door and clearing airflow, what remains is refrigerant-side — low charge, a failing compressor — which is gauge work requiring EPA Section 608 certification, with product warming as you wait."
+  },
+  "XR-series (XR06CX/XR60CX)||LA": {
+    "causes": [
+      "Setpoint recently changed lower than intended",
+      "A stuck contactor or control problem keeping the compressor running past setpoint",
+      "Freeze-sensitive product parked in the evaporator discharge air"
+    ],
+    "fixable": "Partially. Verify actual temperature with a separate thermometer, check the setpoint, and move freeze-sensitive product away from the discharge air. The alarm clears itself when temperature normalizes.",
+    "why_tech": "A box that keeps running colder than setpoint points at a stuck contactor or control fault — live electrical diagnosis. In a cooler, every extra hour of overcooling is frozen, ruined product."
+  },
+  "XR-series (XR60CX)||HA2": {
+    "causes": [
+      "Dirty condenser coil — dust, lint, or kitchen grease insulating it",
+      "Stored boxes or debris blocking airflow around the condensing unit",
+      "A failed condenser fan",
+      "Refrigerant-side problems driving head pressure up — the non-DIY tail of the list"
+    ],
+    "fixable": "Frequently, yes — this is the most staff-fixable alarm on the controller. With the disconnect off, brush or vacuum the coil (never pressure-wash into the fins), clear the stored junk, and confirm the fan spins. Note the compressor may have been switched off to protect itself.",
+    "why_tech": "If HA2 returns after a genuinely clean coil and free airflow, high head pressure is coming from the refrigerant side — overcharge, non-condensables — and that diagnosis takes gauges and EPA Section 608 certification."
+  },
+  "XR-series (XR60CX)||LA2": {
+    "causes": [
+      "Very low ambient temperature at the condensing unit — the usual winter cause",
+      "Head-pressure (low-ambient) controls not doing their job",
+      "Depending on the bLL parameter, the compressor may be off while the alarm is active"
+    ],
+    "fixable": "Not really. Note the outdoor temperature and whether the unit is still cooling — that's the useful staff contribution.",
+    "why_tech": "Low-ambient operation depends on head-pressure controls (fan cycling, flooding valves) that a technician checks with gauges. If the compressor is being held off in cold weather, the box can still drift warm — don't ignore it because it's winter."
+  },
+  "XR-series (XR06CX/XR60CX)||dA": {
+    "causes": [
+      "Door open longer than the digital-input delay",
+      "A sagging door or damaged gasket/hinges holding the switch open",
+      "The plunger or magnetic door switch stuck, iced, or knocked out of alignment"
+    ],
+    "fixable": "Usually. Close and latch the door, check gasket and hinges, and free or realign a stuck or iced switch — the alarm stops the moment the switch closes. Note the compressor and fans may have been paused while the door read open.",
+    "why_tech": "If dA stays on with the door verifiably closed, the switch or its wiring has failed and needs testing and replacement — a quick technician visit, but meter work all the same."
+  },
+  "XR-series (XR06CX/XR60CX)||EA": {
+    "causes": [
+      "Whatever device the installer wired to the digital input has tripped — commonly a condensate overflow switch or a high-pressure switch indicator",
+      "Refrigeration outputs are unchanged; the controller is only relaying the signal",
+      "Clears when the external device resets"
+    ],
+    "fixable": "Depends entirely on what's wired in, which varies by installer. Staff can check the obvious suspects — condensate overflow, pressure switch indicator — and confirm cooling is still normal.",
+    "why_tech": "If nobody on site can identify or reset the device behind the alarm, a technician has to trace the input wiring. An EA that keeps returning means the external device keeps finding a real problem."
+  },
+  "XR-series (XR06CX/XR60CX)||CA": {
+    "causes": [
+      "A digital input configured as serious alarm has tripped and the controller switched ALL outputs off",
+      "On the XR60CX, the pressure switch alarm reached its set number of trips — that variant only recovers via a power off/on",
+      "Blocked condenser airflow or a tripped breaker upstream of the pressure switch"
+    ],
+    "fixable": "No — and it's urgent, because refrigeration is stopped. Staff can check for obvious condenser blockage or a tripped breaker and move product if help is far off. Do not keep resetting power to force it to run.",
+    "why_tech": "Repeated pressure-switch trips are the system reporting a real refrigeration-side fault; forcing restarts just hammers the compressor. Diagnosis needs gauges and EPA Section 608 certification, and with all outputs off, product loss is on the clock."
+  },
+  "XR-series (XR06CX/XR60CX)||OF / PoF": {
+    "causes": [
+      "The keypad is locked and someone pressed a key — this is a status message, not a fault",
+      "The lock exists precisely to stop accidental setpoint changes"
+    ],
+    "fixable": "Completely. Hold the UP and DOWN arrows together for more than 3 seconds until the display shows \"on\" (XR06CX) or \"Pon\" (XR60CX) — unlocked. Nothing about refrigeration has changed.",
+    "why_tech": "The only scenario needing service is a keypad that refuses to unlock after the correct hold, which points to a failed keypad or controller.",
+    "question": "Why does my Dixell controller say OF or PoF when I press a button?"
+  },
+  "Programmable Controller (Carel PCO5+ based walk-in control panel)||DOOR AJAR ALARM": {
+    "causes": [
+      "The walk-in door left open longer than the Door Al Delay setting",
+      "A damaged gasket, closer, or latch — or ice on them — keeping the door from sealing",
+      "A door switch failed, stuck, or out of alignment"
+    ],
+    "fixable": "Usually. Close the door fully, press ALARM to silence the buzzer, and check gasket, closer, latch, and switch alignment — that covers the common cases.",
+    "why_tech": "If the alarm persists with the door genuinely closed, the switch or its wiring needs continuity testing — a short technician task, but meter work on the control circuit.",
+    "question": "Why is my Norlake walk-in showing DOOR AJAR ALARM?"
+  },
+  "Programmable Controller (Carel PCO5+ based walk-in control panel)||ROOM TEMP HIGH ALARM": {
+    "causes": [
+      "The door left open too long — Norlake flags this as the most common trigger for this early warning",
+      "Ice on the evaporator coil or fans not running",
+      "Condensing unit off or its coil airflow blocked",
+      "A tripped breaker on the refrigeration circuit"
+    ],
+    "fixable": "Often. Close the door and press ALARM — that silences and deliberately delays the alarm while temperature recovers — then verify coil, fans, condensing unit, and breaker. Most of these resolve without a truck roll.",
+    "why_tech": "If the room doesn't come back to range after the door is closed and airflow verified, the remaining causes are refrigerant-side — sealed-system diagnosis under EPA Section 608 — and warm product doesn't wait.",
+    "question": "Why is my Norlake walk-in showing ROOM TEMP HIGH ALARM?"
+  },
+  "Programmable Controller (Carel PCO5+ based walk-in control panel)||ROOM TEMP LOW ALARM": {
+    "causes": [
+      "Setpoints changed on the SET screens",
+      "A stuck cooling relay or contactor keeping refrigeration running past setpoint",
+      "Freeze-sensitive product sitting in the evaporator discharge air"
+    ],
+    "fixable": "Partially. Verify the real temperature with a separate thermometer, check the SET screens for changed setpoints, and move freeze-sensitive product out of the discharge air.",
+    "why_tech": "A room that keeps running below setpoint points at a stuck relay or contactor — live electrical diagnosis in the control panel — and in a cooler, sustained overcooling freezes product.",
+    "question": "Why is my Norlake walk-in showing ROOM TEMP LOW ALARM?"
+  },
+  "Programmable Controller (Carel PCO5+ based walk-in control panel)||ROOM TEMPERATURE SENSOR FAILURE": {
+    "causes": [
+      "The room air sensor has failed outright",
+      "The controller running on fallback — \"USING PROD SENSOR\" if the product sensor took over, or \"SENSOR FAIL MODE\" timed cycling if every sensor is gone"
+    ],
+    "fixable": "No — but staff should check the MENU 1 status line to see which fallback the controller is in, verify box temperature with a separate thermometer, and record both for the tech. Fallback keeps the room alive, not well-controlled.",
+    "why_tech": "The room is running on backup control, which holds temperature roughly at best — timed cycling can drift either direction. The sensor needs testing and replacement promptly, before backup control turns into a product problem.",
+    "question": "Why is my Norlake walk-in showing ROOM TEMPERATURE SENSOR FAILURE?"
+  },
+  "Programmable Controller (Carel PCO5+ based walk-in control panel)||AIR FLOW LOSS 1": {
+    "causes": [
+      "The evaporator blower for circuit 1 not moving air — the air flow switch tripped",
+      "A tripped breaker on the evaporator fan circuit",
+      "Ice physically blocking the fan blades or coil",
+      "A failed blower motor or belt — the alarm screen itself says check blower and belts"
+    ],
+    "fixable": "Partially. Look at the evaporator — are the blades turning? Check the fan-circuit breaker and look for ice jamming the blades. A tripped breaker or visible ice block is staff-resolvable; a dead motor is not.",
+    "why_tech": "If the fans won't run with power confirmed on, motor, belt, or contactor replacement is a service job. With no air moving across the coil, the room stops cooling regardless of how well the refrigeration side works.",
+    "question": "Why is my Norlake walk-in showing AIR FLOW LOSS 1?"
+  },
+  "Programmable Controller (Carel PCO5+ based walk-in control panel)||POWER RESTART": {
+    "causes": [
+      "Controller power was interrupted and the Power Reset Alarm feature logged it — it appears about 10 seconds after power-up",
+      "A building outage, or something more local like a failing breaker or wiring issue if it recurs without a known outage"
+    ],
+    "fixable": "Yes — this one is informational. Press ALARM to view and acknowledge it, confirm room and product temperatures recovered, and check whether other equipment on the circuit also blinked.",
+    "why_tech": "The alarm never affects control of the room. The only reason to bring in an electrician or tech is repeated power interruptions with no known outage — that pattern points at a failing breaker or wiring fault worth catching early.",
+    "question": "Why is my Norlake walk-in showing a POWER RESTART alarm?"
+  },
+  "ERC 211/213/214||E29": {
+    "causes": [
+      "The Sair air temperature sensor has failed outright",
+      "The sensor's electrical connection is lost — a damaged, iced-over, or dangling probe near the evaporator return air",
+      "A wiring break between the probe and the controller"
+    ],
+    "fixable": "Partly. Staff can power-cycle the unit at the breaker for a few minutes and check the probe for visible damage or ice — sometimes a glitch clears. If E29 comes back, it isn't a staff fix.",
+    "why_tech": "Testing the sensor circuit means live electrical measurement at the controller terminals, and while the alarm is active the box is running blind on air temperature — every hour of guessing puts product at risk."
+  },
+  "ERC 211/213/214||E27": {
+    "causes": [
+      "The S5 evaporator (defrost) sensor is defective",
+      "Its electrical connection to the controller is lost",
+      "With the sensor out, defrost runs on time only, so the evaporator can ice up — heavy ice on the coil is the visible symptom"
+    ],
+    "fixable": "Only the first steps. A power cycle at the breaker occasionally clears a glitch, and staff can keep the door shut and watch box temperature. A sensor that stays failed is a service part.",
+    "why_tech": "Replacing and verifying the S5 sensor is live electrical work at the controller, and an unmanaged icing coil will eventually choke airflow and stop the box from cooling at all."
+  },
+  "ERC 211/213/214||E30": {
+    "causes": [
+      "The Sc condenser sensor is defective",
+      "Its electrical connection is lost",
+      "While it's down, the controller has no condenser-temperature protection — a dust-matted or blocked condenser could go undetected"
+    ],
+    "fixable": "Staff can power-cycle once and clear any obvious dust or cardboard away from the condenser coil, which is worth doing anyway since the unit's own protection is offline. The sensor itself is not a staff repair.",
+    "why_tech": "The sensor and its wiring need live electrical testing, and until it's fixed nothing is watching the condenser — a dirty coil that can't reject heat will quietly cook the compressor."
+  },
+  "ERC 211/213/214||A01": {
+    "causes": [
+      "Door left open or a leaking gasket loading the box with warm, humid air",
+      "Warm product just loaded, or the door held open for restocking",
+      "Heavy ice on the evaporator choking airflow",
+      "A dust-matted or blocked condenser that can't reject heat",
+      "Condensing unit not running at all — tripped breaker or dead fan"
+    ],
+    "fixable": "Often, yes. Door, gasket, recent loading, blocked condenser airflow, and a tripped breaker are all things staff can find and fix in minutes.",
+    "why_tech": "If temperature doesn't recover within an hour of those checks, the fault is in the sealed system or controls — refrigerant diagnosis needs gauges and EPA Section 608 certification, and product is at risk the whole time it stays warm."
+  },
+  "ERC 211/213/214||A02": {
+    "causes": [
+      "Product stacked directly against the air sensor or in the discharge air stream, fooling the reading",
+      "The compressor running nonstop instead of cycling off",
+      "A sensor or setpoint problem making the controller drive the box too cold"
+    ],
+    "fixable": "Partly. Staff can verify the real temperature with a separate thermometer, move product away from the sensor and discharge air, and pull freeze-sensitive stock out of the cold spots. If the unit won't cycle off, that's it for DIY.",
+    "why_tech": "A unit that never cycles off has a controller, sensor, or setpoint fault that takes live electrical testing to pin down — and every hour it runs, produce, dairy, and drinks are freezing."
+  },
+  "ERC 211/213/214||A99": {
+    "causes": [
+      "Supply voltage to the unit is above the safe limit",
+      "A building electrical problem on the circuit — the same issue that makes lights flicker or trips other equipment"
+    ],
+    "fixable": "No. Staff can note whether other equipment on the circuit is acting up and watch box temperature, but supply voltage is not something to work around. Don't reset repeatedly — the alarm exists to protect the compressor.",
+    "why_tech": "This is building electrical work — live voltage measurement and correction at the panel is electrician territory, and forcing the compressor to run on bad voltage risks destroying it."
+  },
+  "ERC 211/213/214||AA1": {
+    "causes": [
+      "Supply voltage sagging below the safe limit",
+      "The unit sharing a circuit with heavy equipment that just started",
+      "An extension cord or undersized power feed starving the unit"
+    ],
+    "fixable": "Only the obvious part: if the unit is on an extension cord or a shared circuit with heavy equipment, that's visible and worth flagging. The electrical fix itself is not DIY.",
+    "why_tech": "Sustained low voltage burns out compressor motors — an electrician has to measure the supply under load and correct the feed before the compressor pays the price."
+  },
+  "ERC 211/213/214||A61": {
+    "causes": [
+      "A dust- or lint-matted condenser coil that can't reject heat",
+      "Boxes, bags, or debris blocking airflow through or around the coil",
+      "A condenser fan that has stopped running"
+    ],
+    "fixable": "Usually, yes — this is the classic staff-fixable alarm. Kill power at the breaker, brush or vacuum the coil face, clear everything blocking airflow, confirm the fan spins, and see if the alarm clears as the unit cools.",
+    "why_tech": "If the coil is clean and airflow is clear but A61 returns, the fan motor or the refrigerant side is at fault — that's live motor testing and gauge work, and running hot shortens compressor life by the day."
+  },
+  "ERC 211/213/214||A80": {
+    "causes": [
+      "Condenser temperature climbed high enough that the controller locked out — it requires a manual reset (r12 switch off/on or a power-down)",
+      "A dirty, dust-matted condenser coil",
+      "Blocked airflow around the condensing unit",
+      "A condenser fan that isn't spinning"
+    ],
+    "fixable": "Once. Clean the coil and clear the airflow first, then reset by powering down at the breaker for a few minutes. Watch it for 30 minutes. If A80 comes back, stop resetting.",
+    "why_tech": "Repeated high condenser temperature kills compressors — if one cleaning and one reset don't hold, a tech needs to check the fan motor and pressures before the lockouts turn into a compressor replacement."
+  },
+  "ERC 211/213/214||A04": {
+    "causes": [
+      "The door genuinely open too long — every minute open loads the box with warm, humid air",
+      "A torn or iced gasket, or product blocking the door from sealing",
+      "A door switch plunger that's stuck or iced up"
+    ],
+    "fixable": "Usually, yes. Shut the door, confirm the latch engages, check the gasket for tears and ice, and free a stuck switch plunger. The alarm should clear within a few minutes of a proper close.",
+    "why_tech": "If the alarm stays on with the door verifiably shut, the door switch or its setting is faulty — that's controller wiring and configuration work, and depending on setup the unit may be stopping the compressor and fans every time it thinks the door is open."
+  },
+  "ERC 211/213/214||A15": {
+    "causes": [
+      "An external device wired to the controller's digital input is signaling an alarm",
+      "Commonly a pressure switch or other protective device doing its job — what it means depends entirely on what's connected"
+    ],
+    "fixable": "No. Staff can check whether the box is still cooling, note other equipment alarms in the room, and record the code and time — that record genuinely shortens the service call.",
+    "why_tech": "Only someone who can trace the installation's wiring can identify which device tripped the input, and if it's a pressure safety, the underlying refrigerant-side problem needs EPA Section 608-certified diagnosis."
+  },
+  "ERC 211/213/214||A45": {
+    "causes": [
+      "Someone switched the unit off at the r12 main switch — a deliberate software on/off, not a fault",
+      "An external switch wired to the controller's input put it in standby (cleaning or service, usually)"
+    ],
+    "fixable": "Yes, if it was deliberate — find who turned it off and turn it back on, or flip the external main switch if one is fitted. Don't leave product sitting in a box that's in standby; verify the temperature.",
+    "why_tech": "If nobody turned it off and there's no external switch to find, the r12 setting or DI configuration has to be checked in the controller's parameters — a wrong guess there stops cooling entirely."
+  },
+  "EKC 202 / AK-CC 210||A1": {
+    "causes": [
+      "Door or lid open or not sealing — a torn gasket loads the box with warm, humid air",
+      "Warm product just loaded, or a defrost just ended — recovery takes time",
+      "Ice on the evaporator or a dirty, blocked condenser",
+      "Condensing unit not running — tripped breaker"
+    ],
+    "fixable": "Often, yes. Doors, gaskets, recent loading, post-defrost recovery, condenser blockage, and breakers are all staff checks. Give it up to an hour to pull back down after fixing the obvious.",
+    "why_tech": "If temperature doesn't recover within that hour, the problem is in the sealed system or controls — that's gauge work requiring EPA Section 608 certification, and warm product is a countdown clock. Log temperatures for your inspection records while you wait."
+  },
+  "EKC 202 / AK-CC 210||A2": {
+    "causes": [
+      "Product stacked against the air sensor, fooling the reading",
+      "The compressor running continuously and never cycling off",
+      "A sensor, relay, or setpoint fault driving the box below the A14 limit"
+    ],
+    "fixable": "Partly. Verify the real temperature with a separate thermometer, clear the sensor, and move freeze-sensitive product away from the discharge air. A unit that won't cycle off is beyond staff.",
+    "why_tech": "Diagnosing whether the sensor, relay, or setpoint is at fault means live electrical testing at the controller — and while it runs cold, product in a cooler is freezing."
+  },
+  "EKC 202 / AK-CC 210||A4": {
+    "causes": [
+      "Door open longer than the alarm delay — open-door time loads the box with warm, humid air",
+      "Gasket damage, ice, or product keeping the door off its seal",
+      "A sticking or iced door switch"
+    ],
+    "fixable": "Usually, yes. Close and latch the door, check the gasket, free the switch. Depending on setup, refrigeration and fans stop while the controller thinks the door is open — so a stuck switch means no cooling.",
+    "why_tech": "If the alarm won't clear with the door shut, the door switch or its wiring is faulty — live testing of the switch circuit and the A04 delay setting is controller work."
+  },
+  "EKC 202 / AK-CC 210||A45": {
+    "causes": [
+      "Refrigeration stopped deliberately via the r12 main switch",
+      "A DI input (an external switch) put the controller in standby — note the AK-CC 210 does not activate its alarm relay for this state, so nothing else may be flagging it"
+    ],
+    "fixable": "Yes, if someone put it in standby for cleaning or stocking — switch it back and verify box temperature. If nobody did, stop guessing at parameters.",
+    "why_tech": "Checking the r12 parameter and DI wiring means going into the controller's setup — a wrong change there keeps the box off. Meanwhile a unit in unnoticed standby is warming product with no alarm relay to warn anyone."
+  },
+  "EKC 202 / AK-CC 210||A59": {
+    "causes": [
+      "Staff activated cleaning mode via the DI input — a deliberate signal, not a fault",
+      "The cleaning switch left in the cleaning position after the job was done"
+    ],
+    "fixable": "Yes. Confirm someone actually started a cleaning, return the switch to normal when finished, and verify the case pulls back down to temperature. On networked systems the event is logged as documentation of the cleaning.",
+    "why_tech": "If the unit stays in cleaning mode after the switch is returned to normal, the DI input or its configuration is faulty — controller-level diagnosis, and the case isn't refrigerating properly until it's resolved."
+  },
+  "EKC 202 / AK-CC 210||E1": {
+    "causes": [
+      "An internal fault in the controller's own electronics — the 'EKC error'",
+      "Not a temperature condition: the hardware itself is the problem"
+    ],
+    "fixable": "One shot: power-cycle at the breaker for a few minutes. If E1 returns, there's nothing else staff can do except record it and watch box temperature with a separate thermometer.",
+    "why_tech": "A persistent internal fault means the controller likely needs replacement — swapping and reprogramming a refrigeration controller is live electrical work, and until then the box's control can't be trusted."
+  },
+  "EKC 202 / AK-CC 210||E27": {
+    "causes": [
+      "The S5 sensor (defrost/evaporator, or condenser if configured that way) has failed",
+      "With it down, defrost control falls back to time-based operation — coil ice-up is the risk, and heavy ice on the evaporator is the visible symptom"
+    ],
+    "fixable": "Only the checks: look for coil ice, power-cycle once, and monitor box temperature while waiting. The sensor itself is a service part.",
+    "why_tech": "Testing and replacing the S5 sensor is live electrical work at the controller, and an iced coil left unmanaged will eventually block airflow and stop the box from holding temperature."
+  },
+  "EKC 202 / AK-CC 210||E29": {
+    "causes": [
+      "The Sair air temperature sensor has failed",
+      "A damaged or iced probe in the return air stream",
+      "A broken connection between probe and controller"
+    ],
+    "fixable": "Barely. Power-cycle once and inspect the probe for visible damage. If E29 returns, regulation and temperature alarms are unreliable until a tech replaces the sensor — the box is running blind.",
+    "why_tech": "The sensor circuit needs live electrical testing, and with no trustworthy air reading, neither control nor the alarms protecting your product can be relied on — monitor with a separate thermometer and move product if it drifts."
+  },
+  "AK-CC 210/250||E25": {
+    "causes": [
+      "The S3 air sensor (typically mounted before the evaporator) has failed",
+      "A lost connection between the sensor and the controller",
+      "Any regulation that uses S3 is unreliable while the fault is active"
+    ],
+    "fixable": "Staff can verify box temperature with a separate thermometer, power-cycle once at the breaker, and record the code and time for the tech. That's the limit.",
+    "why_tech": "Confirming whether the sensor or its wiring failed takes live electrical measurement at the controller — and until it's fixed, temperature control on that sensor can't be trusted."
+  },
+  "AK-CC 210/250||E26": {
+    "causes": [
+      "The S4 air sensor (typically mounted after the evaporator) has failed",
+      "A lost connection between the sensor and the controller",
+      "Regulation and alarm functions using S4 are affected while it's down"
+    ],
+    "fixable": "Same as any failed sensor: verify the real temperature independently, power-cycle once, note the code for the service visit. Replacement is not a staff job.",
+    "why_tech": "Sensor and wiring testing is live electrical work, and with S4 out, some of the controller's alarm functions are blind — problems can develop without warning until it's repaired."
+  },
+  "AK-CC 210/250||A16": {
+    "causes": [
+      "An external device wired to the DI2 digital input tripped and held past the configured delay",
+      "Often a protective switch that opened for a reason — what it means depends on what the installer wired to DI2"
+    ],
+    "fixable": "No. Check the box is still cooling, note any other alarms on nearby equipment, and record the code and time — that's real help for the tech, not a fix.",
+    "why_tech": "Only someone who can trace the installation can identify the device on DI2, and if it's a pressure or safety switch, the root cause behind the trip needs professional diagnosis before the unit is trusted again."
+  },
+  "AK-CC 210/250||A60": {
+    "causes": [
+      "Temperature exceeded the food-safety limit the controller's HACCP function tracks",
+      "The same drivers as any high-temperature event: door and gasket leaks letting humid air in, recent loading, evaporator ice, or a dirty condenser that can't reject heat"
+    ],
+    "fixable": "The response is staff work even when the cause isn't: log the actual product and box temperature immediately, check door, loading, coil ice, and condenser airflow, and follow your food-safety procedure for time/temperature abuse — move or discard product per policy.",
+    "why_tech": "If temperature doesn't recover quickly, the mechanical cause needs a certified tech, and the event itself must be documented for HACCP records — this alarm is as much a compliance event as an equipment one."
+  },
+  "Optyma Plus condensing unit controller||A2": {
+    "causes": [
+      "Suction pressure below the safe limit — the controller stops the compressor to protect it",
+      "Low refrigerant charge",
+      "An iced or starved evaporator — heavy coil ice, dead evaporator fans, or product blocking airflow"
+    ],
+    "fixable": "Only the airflow part: check the evaporator for heavy ice and confirm the fans run and product isn't blocking them. Do not repeatedly reset the alarm — that short-cycles the compressor.",
+    "why_tech": "Low-pressure trips usually mean a refrigerant or airflow problem that takes gauges and EPA Section 608 certification to diagnose — and with the compressor stopped, product loss is on the clock."
+  },
+  "Optyma Plus condensing unit controller||A17": {
+    "causes": [
+      "The high-pressure (or combined high/low pressure) safety input tripped and the controller stopped the compressor",
+      "Very often a dirty or blocked condenser that can't reject heat",
+      "A condenser fan that isn't running",
+      "Material stacked around the condensing unit choking its airflow"
+    ],
+    "fixable": "The most common cause is: with power off at the breaker, brush or vacuum the coil face, clear everything around the unit, confirm the fan runs. Restore power once and monitor — do not keep resetting a pressure trip.",
+    "why_tech": "Repeated high-pressure trips damage the compressor, and forcing restarts against a pressure safety is how condensing units die. If it trips again after a cleaning, the refrigerant side needs certified diagnosis immediately — the box isn't cooling while the compressor is locked out."
+  },
+  "Optyma Plus condensing unit controller||A45": {
+    "causes": [
+      "Refrigeration stopped via the r12 main switch — deliberate standby, not a fault",
+      "The DI1 input (an external switch) stopped the unit; per the manual, r12 and/or DI1 restart regulation"
+    ],
+    "fixable": "Yes, if someone shut it down on purpose — check with staff, check any external switch wired to DI1, and verify box temperature since the unit hasn't been cooling.",
+    "why_tech": "If nobody stopped it, the r12 setting or DI1 wiring has to be checked inside the controller's configuration — guesswork there keeps the condensing unit off and the box warming."
+  },
+  "Optyma Plus condensing unit controller||A80": {
+    "causes": [
+      "Airflow through the condenser has dropped — the manual's stated action is to clean the condensing unit",
+      "Leaves, lint, dust, or debris matted on the coil",
+      "Space around the unit blocked so it can't breathe",
+      "A condenser fan not spinning freely"
+    ],
+    "fixable": "Yes — this is the alarm the manual tells you to fix with a cleaning. Power off at the breaker, remove debris from the coil, clear the space around the unit, check the fan spins freely, restore power, and confirm the alarm clears.",
+    "why_tech": "If A80 comes back after a thorough cleaning, the fan motor or system pressures are at fault — live motor testing and gauge work, and a condenser that can't reject heat is steadily overworking the compressor."
+  },
+  "Optyma Plus condensing unit controller||A96": {
+    "causes": [
+      "Compressor discharge gas temperature over its limit — the controller steps in to protect the compressor",
+      "Blocked or dirty condenser airflow",
+      "The unit enclosed in a hot, unventilated space",
+      "Refrigerant-side problems driving discharge temperature up"
+    ],
+    "fixable": "Only the airflow checks: clean visible dirt off the condenser (power off first) and make sure the unit isn't boxed into a hot corner. Avoid repeated resets.",
+    "why_tech": "Overheating discharge gas destroys compressors if the root cause isn't fixed — the refrigerant-side diagnosis behind it is gauge work for an EPA Section 608-certified tech, not something to reset past."
+  },
+  "Optyma Plus condensing unit controller||E1": {
+    "causes": [
+      "An internal fault in the Optyma Plus controller's own electronics ('Ctrl. Error')",
+      "Not an operating condition — the control hardware itself is the problem"
+    ],
+    "fixable": "One power cycle at the breaker for a few minutes. If E1 returns, record it and watch box temperature — there is no further staff step.",
+    "why_tech": "A persistent controller fault means professional testing or replacement of the control board — live electrical work on the condensing unit — and until then the unit's protections and regulation can't be trusted."
+  },
+  "ir33 / ir33+||rE": {
+    "causes": [
+      "The virtual regulation probe the controller regulates on has failed or is returning an invalid reading",
+      "An air sensor bulb encased in ice or knocked out of position",
+      "A pinched or cut probe cable where it enters the controller"
+    ],
+    "fixable": "Partly. Check whether the displayed temperature is frozen, blank, or wildly wrong, clear ice from the sensor bulb, look over the visible cable, and power-cycle once. If rE returns, stop.",
+    "why_tech": "Testing and replacing the probe means live electrical work inside the panel, and while rE is active the controller can't control on real temperature — product is exposed the whole time."
+  },
+  "ir33 / ir33+||E0": {
+    "causes": [
+      "The S1 room (air) probe is faulty, disconnected, or reading out of range",
+      "Ice built up around the probe, or the probe knocked loose by product or a pallet",
+      "Damaged probe wiring"
+    ],
+    "fixable": "The visual checks are: clear ice from around the probe, make sure it hasn't been hit, inspect the visible wire, power-cycle once. Depending on setup the controller may limp along on timed compressor cycling, but that's a stopgap, not a fix.",
+    "why_tech": "A failed room probe means the box is running blind and product is at risk — probe testing and replacement is live electrical work at the controller that shouldn't wait."
+  },
+  "ir33 / ir33+||E1": {
+    "causes": [
+      "The S2 evaporator/defrost probe is faulty or disconnected",
+      "Defrosts ending on time instead of coil temperature — leading to iced coils or over-long defrosts",
+      "Ice encasing the probe on the coil"
+    ],
+    "fixable": "Staff can spot the symptoms — an iced evaporator coil, defrosts running much longer or shorter than usual — and power-cycle once. Probe replacement is a service job.",
+    "why_tech": "The probe has to be tested and replaced at the controller under power, and a coil icing up behind a dead defrost probe will eventually block airflow and take the box down."
+  },
+  "ir33 / ir33+||E2": {
+    "causes": [
+      "An auxiliary probe is faulty or disconnected — S3 (typically the condenser probe) for E2; E3 and E4 are the same fault on probes S4 and S5",
+      "Damage to the small sensor wire at the condensing unit",
+      "While it's active, condenser-temperature protection may not be working"
+    ],
+    "fixable": "Note which code shows (E2, E3, or E4), look over the sensor wire without opening anything, clear dust from around the condenser since its protection is offline, and power-cycle once. That's the extent of it.",
+    "why_tech": "Auxiliary probe testing and replacement is live electrical work, and with the condenser probe out, a dust-matted coil that can't reject heat has nothing watching it."
+  },
+  "ir33 / ir33+||HI": {
+    "causes": [
+      "Door open or gasket not sealing — an open door loads the box with warm, humid air",
+      "Warm product just loaded or heavy door traffic during stocking",
+      "A defrost that just ended — temperatures run higher right after one",
+      "A dust-blocked condenser coil or a condenser fan that isn't running",
+      "A tripped breaker on the condensing unit"
+    ],
+    "fixable": "Often, yes — this alarm resets itself once the box pulls back down. Door, gasket, recent loading, post-defrost recovery, condenser airflow, and the breaker are all staff checks.",
+    "why_tech": "If temperature keeps climbing or hasn't recovered within an hour or two with the door shut, the fault is mechanical — refrigerant-side diagnosis needs EPA Section 608 certification, and warm product doesn't wait."
+  },
+  "ir33 / ir33+||LO": {
+    "causes": [
+      "A probe drifting cold and triggering a false alarm — verify with an independent thermometer",
+      "Product stacked against the air sensor or in the discharge air stream",
+      "A compressor that runs nonstop and never cycles off"
+    ],
+    "fixable": "Partly. Confirm the real temperature independently, move product off the sensor, silence the buzzer, and watch whether temperature climbs back — the alarm resets automatically when it recovers.",
+    "why_tech": "A box genuinely running colder than setpoint, or a compressor that won't cycle off, is a control or refrigeration fault needing live testing — and in the meantime it's freezing product."
+  },
+  "ir33 / ir33+||IA": {
+    "causes": [
+      "The digital input configured as an immediate external alarm tripped — an external device like a pressure switch or monitoring contact opened",
+      "A dirty or blocked condenser tripping an external pressure safety",
+      "A condensing unit that's stopped — tripped breaker"
+    ],
+    "fixable": "The side checks are: confirm the condensing unit runs, check its breaker, clear condenser airflow, and log when and how often IA appears. It resets itself when the contact closes — but repeats mean a real problem.",
+    "why_tech": "Identifying which safety device tripped requires tracing the installation's wiring, and a pressure safety that keeps opening points to a refrigerant-side fault needing certified diagnosis."
+  },
+  "ir33 / ir33+||dA": {
+    "causes": [
+      "The external alarm contact held open longer than the A7 delay — same trigger as IA, just time-delayed",
+      "A condensing unit that isn't running — tripped breaker",
+      "Condenser airflow choked by dust, cardboard, or debris, tripping an external safety"
+    ],
+    "fixable": "Same staff scope as IA: verify the condensing unit runs, clear the condenser area, and note whether the alarm lines up with hot weather or heavy door traffic. The device that tripped isn't staff-serviceable.",
+    "why_tech": "The external device on the alarm input has to be identified and tested by someone who knows the installation — repeated dA trips mean a protective device keeps finding a reason to open."
+  },
+  "ir33 / ir33+||dor": {
+    "causes": [
+      "The walk-in door genuinely open longer than allowed — every open minute loads the box with warm, humid air",
+      "Product, a hose, a pallet, or a strip curtain blocking the door",
+      "A torn gasket or ice holding the door off its seal",
+      "A dirty, misaligned, or faulty door switch (plunger or magnet)"
+    ],
+    "fixable": "Usually, yes. Close the door properly, clear whatever blocks it, check the gasket, and check the switch clicks when the door shuts — the alarm should clear within a few minutes.",
+    "why_tech": "If dor stays on with the door verifiably closed, the door switch or its wiring is faulty — that's live testing at the controller, and control behavior may be altered the whole time the unit thinks the door is open."
+  },
+  "ir33 / ir33+||Ed1": {
+    "causes": [
+      "The defrost on evaporator 1 hit its maximum time (dP1) before reaching end-defrost temperature — usually heavier-than-normal ice on the coil (Ed2 is the same on evaporator 2)",
+      "Humid air infiltration through a leaking door gasket — the most common cause of coil icing",
+      "A weak defrost heater, bad defrost probe, or an undersized defrost schedule",
+      "Ice or standing water in the drain pan and line"
+    ],
+    "fixable": "The detective work is: look at the coil right after the next defrost for leftover ice, check the door gasket and closure, eyeball the drain pan, and note whether Ed1 shows after every defrost or just occasionally.",
+    "why_tech": "If it repeats, the defrost heater, probe, or schedule needs service — heater testing is live electrical work — and left alone the coil ices solid and the box stops cooling."
+  },
+  "ir33 / ir33+||cht": {
+    "causes": [
+      "Condenser temperature past the pre-alarm level — an early 'dirty condenser' warning while control still runs normally",
+      "Dust, lint, cardboard, or grease matting the coil fins so it can't reject heat",
+      "Items stored against or on top of the condensing unit blocking its airflow",
+      "A hot location — a baking mechanical room or direct sun"
+    ],
+    "fixable": "Yes, mostly — that's the point of a pre-alarm. Clear everything off and around the unit, check the fan spins with the compressor, and deal with the dirt before this escalates to the hard CHt alarm.",
+    "why_tech": "If the pre-alarm keeps returning after airflow is cleared, the coil needs a proper professional cleaning and a pressure check — running hot is steadily stressing the compressor.",
+    "question": "What does the lowercase cht pre-alarm mean on a Carel ir33 controller?"
+  },
+  "ir33 / ir33+||CHt": {
+    "causes": [
+      "Condenser temperature over the alarm threshold — the escalated, manual-reset version of the cht warning",
+      "A condenser fan that has stopped",
+      "A heavily dirt-matted coil or blocked airflow that the earlier warning stage didn't get fixed"
+    ],
+    "fixable": "The airflow causes are staff-fixable — fan check, clear blockages, spot a filthy coil — but do not repeatedly reset this alarm to keep the box running. It's manual-reset for a reason.",
+    "why_tech": "Prolonged running against a hard high-condenser alarm trips safeties and damages the compressor — a tech needs to clean the coil properly and verify pressures before the unit racks up real damage.",
+    "question": "What does the CHt condenser alarm mean on a Carel ir33 controller?"
+  },
+  "ir33 / ir33+||LP": {
+    "causes": [
+      "The external low-pressure switch wired to the controller tripped",
+      "Low refrigerant charge",
+      "A heavily iced evaporator coil starving the system and dropping pressure",
+      "Evaporator fans not running, or door-gasket infiltration icing the coil"
+    ],
+    "fixable": "Only the visuals: check the evaporator for heavy ice, confirm the fans run, check the door and gaskets, and log how often LP trips. Nothing on the refrigerant side is DIY.",
+    "why_tech": "Pressure diagnosis takes gauges and EPA Section 608 certification, and repeated LP trips usually mean a leak or an icing problem — both get worse, not better, while unaddressed."
+  },
+  "ir33 / ir33+||Pd": {
+    "causes": [
+      "On pump-down systems, low pressure wasn't reached within the maximum allowed time at shutoff",
+      "A liquid-line solenoid valve, pressure switch, or refrigerant-side problem"
+    ],
+    "fixable": "No. Note when the alarm occurs — every compressor stop, or occasionally — check the breaker, and leave the parameters alone. That's the useful staff contribution.",
+    "why_tech": "Pump-down faults involve the liquid-line solenoid and pressure controls, which need instruments and refrigerant-side access to diagnose — EPA Section 608 territory, not a reset-and-hope situation."
+  },
+  "ir33 / ir33+||Etc": {
+    "causes": [
+      "The controller's real-time clock failed or lost its settings — commonly after a long power outage",
+      "Until it's reset, scheduled time-of-day defrosts and HACCP time-stamping won't run correctly"
+    ],
+    "fixable": "Sometimes. If the site just had an outage and someone on staff is trained to program the controller, re-setting the clock parameters may be all it takes. Check whether scheduled defrosts still happen on time.",
+    "why_tech": "A clock that won't hold its setting points to failed clock hardware in the controller — that's a service replacement, and until then defrost scheduling and food-safety time-stamps can't be trusted."
+  },
+  "ir33 / ir33+||EE": {
+    "causes": [
+      "A memory (EEPROM) error in the controller's unit/machine parameters",
+      "Stored configuration possibly corrupted — control behavior can't be trusted while this is active"
+    ],
+    "fixable": "One power cycle, then hands off. Don't attempt to reload defaults — factory defaults rarely match what a walk-in actually needs, and a wrong program is worse than the alarm. Watch box temperature with an independent thermometer.",
+    "why_tech": "If EE returns, the controller needs reprogramming from a known-good record or outright replacement — and until a tech does that, the box is running on settings that may be corrupt."
+  },
+  "ir33 / ir33+||EF": {
+    "causes": [
+      "A memory error in the controller's operating parameters — setpoints and working values",
+      "Stored settings possibly corrupted, same class of fault as EE"
+    ],
+    "fixable": "Power-cycle once, press SET briefly to check the setpoint still reads correctly, and monitor box temperature independently. If the error persists or settings look wrong, that's the end of the staff steps.",
+    "why_tech": "The program has to be reloaded from a known-good record by someone who has it — running a walk-in on corrupted setpoints risks both warm product and freeze damage, in either direction."
+  },
+  "ir33 / ir33+||HA": {
+    "causes": [
+      "A HACCP temperature excursion was recorded: HA logs time above the high-temperature threshold in normal operation, HF logs a high-temperature condition after a power failure",
+      "Behind it, the usual HI drivers: a door or loading event, a tripped breaker or outage, or blocked condenser airflow",
+      "These are food-safety log alarms — not equipment faults by themselves"
+    ],
+    "fixable": "The response is staff work: check current box temperature and whether product is still safe, identify the outage or door event, record everything per your food-safety procedure before resetting, then fix the underlying cause as you would a HI alarm.",
+    "why_tech": "Repeated excursions with no obvious cause mean the equipment needs professional diagnosis — and product disposition after an excursion is a call for your food-safety manager, documented for HACCP records."
+  },
+  "ir33 / ir33+||AFr": {
+    "causes": [
+      "Temperature at the antifreeze probe fell below its threshold and the manual-reset antifreeze protection tripped",
+      "Product or an airflow blockage creating an abnormally cold spot at the sensor",
+      "A pattern tied to defrost or nighttime setback timing"
+    ],
+    "fixable": "The checks are: confirm the real temperature with an independent thermometer, look for what's making that spot abnormally cold, and note when it trips relative to defrost or setback. The reset is manual, so don't just clear it blindly.",
+    "why_tech": "If it repeats, the antifreeze setpoint, probe placement, or system control needs professional review — a protection that keeps tripping is either misconfigured or catching a real freeze risk."
+  },
+  "ir33 / ir33+||dEF": {
+    "causes": [
+      "A defrost cycle is running and the controller is set to lock the display during defrost — this is normal operation, not an error",
+      "Only a concern if it never clears: a typical walk-in defrost runs roughly 30-60 minutes including recovery"
+    ],
+    "fixable": "Yes — by waiting. Keep the door closed as much as possible during defrost. If dEF is still showing well past the normal defrost window, treat it as a fault.",
+    "why_tech": "A display stuck in dEF far beyond normal, or a box that won't recover temperature after defrost, points to a defrost termination or control fault — heater and probe testing is live electrical work."
+  },
+  "PJ Easy (PJEZ)||E0": {
+    "causes": [
+      "The control/ambient probe has failed or is disconnected — buzzer and alarm relay activate",
+      "Ice buildup or physical damage at the air probe",
+      "Product buried against the sensor"
+    ],
+    "fixable": "The quick checks are: see whether the display shows a plausible temperature, clear product away from the sensor, look for ice or damage, and power-cycle once. A probe that stays failed is a part.",
+    "why_tech": "The controller can no longer regulate on real air temperature — probe testing and replacement is live electrical work, and the box is effectively blind until it's done."
+  },
+  "PJ Easy (PJEZ)||E1": {
+    "causes": [
+      "The defrost/evaporator probe has failed or is disconnected",
+      "Defrosts now end on time instead of coil temperature — excess coil ice is the symptom to watch"
+    ],
+    "fixable": "Watch the next defrost: does the coil come fully clear? Power-cycle once; if E1 returns, stop. The probe swap is a service call.",
+    "why_tech": "Replacing the defrost probe means working in the live control circuit, and a coil that never fully clears will ice over and choke the evaporator until the box can't hold temperature."
+  },
+  "PJ Easy (PJEZ)||E2": {
+    "causes": [
+      "On PJEZ models with a third probe, the condenser probe has failed or is disconnected",
+      "Damage to the small sensor wire at the condensing unit",
+      "High-condenser-temperature protection is compromised while it's down"
+    ],
+    "fixable": "Look over the sensor wire (look only), clean obvious dust away from the condenser since the unit's own protection is offline, and power-cycle once. That's it for staff.",
+    "why_tech": "The probe needs live testing and replacement, and until then nothing is watching for a dust-matted condenser that can't reject heat — the exact condition this probe exists to catch."
+  },
+  "PJ Easy (PJEZ)||IA": {
+    "causes": [
+      "The digital input configured as an external alarm (parameter A4, delay A7) tripped — an external safety or monitoring contact opened",
+      "A stopped condensing unit or tripped breaker",
+      "Condenser airflow blockage tripping an external safety"
+    ],
+    "fixable": "Confirm the condensing unit runs, check the breaker, clear condenser airflow, find out from your installer what's wired to the input, and log occurrences. Diagnosing the device itself isn't DIY.",
+    "why_tech": "A repeating external alarm means a protective device keeps finding a reason to open — identifying and testing it takes someone who knows the installation, and if it's a pressure safety, certified refrigerant-side diagnosis."
+  },
+  "PJ Easy (PJEZ)||dOR": {
+    "causes": [
+      "The door switch reports the door open too long ('dr' on some PJEZ models) — open-door time raises temperature and ices the coil faster with humid air",
+      "Something blocking the door, or a torn/iced gasket preventing a seal",
+      "A misaligned door switch that doesn't actuate when the door shuts"
+    ],
+    "fixable": "Usually, yes. Close the door fully, remove obstructions, inspect the gasket, check the switch alignment, and confirm the alarm clears a few minutes after a proper close.",
+    "why_tech": "If the alarm stays on with the door verifiably closed, the switch or its wiring is at fault — live circuit testing at the controller."
+  },
+  "PJ Easy (PJEZ)||LO": {
+    "causes": [
+      "Temperature below the AL threshold longer than the Ad delay — buzzer and relay active until it recovers",
+      "A drifting probe giving a false cold reading",
+      "Product stacked against the sensor",
+      "A compressor that never cycles off"
+    ],
+    "fixable": "Verify with an independent thermometer first — a drifting probe is a common false alarm. Clear the sensor and watch whether the compressor ever cycles off. The alarm clears itself when temperature recovers.",
+    "why_tech": "A unit genuinely running below setpoint continuously has a control or refrigeration fault that needs live diagnosis — and the cost of waiting is freeze-damaged product."
+  },
+  "PJ Easy (PJEZ)||HI": {
+    "causes": [
+      "Door open or gasket not sealing — the most common walk-in alarm is usually door- or defrost-related, not mechanical",
+      "Warm product loaded or heavy door traffic — recovery takes time",
+      "A defrost that just finished",
+      "A dust-blocked condenser coil, dead condenser fan, or tripped breaker"
+    ],
+    "fixable": "Often, yes. Door, gasket, loading, post-defrost recovery, condenser airflow, and the breaker are all staff checks — give the box a couple of hours to recover with the door shut.",
+    "why_tech": "If temperature keeps rising or won't recover in that window, the fault is in the sealed system — gauge diagnosis requiring EPA Section 608 certification, with product warming the whole time."
+  },
+  "PJ Easy (PJEZ)||EE": {
+    "causes": [
+      "The controller detected an error in its stored unit parameters — internal memory",
+      "Configuration data possibly corrupted"
+    ],
+    "fixable": "Power-cycle once, press SET for a second to confirm the setpoint still reads what it should, and monitor the box with an independent thermometer. No parameter tinkering.",
+    "why_tech": "A persistent memory error means the program has to be reloaded or the controller replaced by a tech — until then the box may be running on corrupted settings."
+  },
+  "PJ Easy (PJEZ)||EF": {
+    "causes": [
+      "An error in the stored operating parameters — working settings and setpoints",
+      "Settings may have reverted or corrupted"
+    ],
+    "fixable": "Power-cycle once, compare the setpoint against what's posted for the unit, and watch box temperature independently. If EF returns or settings look wrong, stop there.",
+    "why_tech": "The parameter set needs reloading from records by someone who has them — running on reverted setpoints can quietly hold the box at the wrong temperature in either direction."
+  },
+  "PJ Easy (PJEZ)||Ed": {
+    "causes": [
+      "The defrost hit its maximum duration (dP) before reaching the end-defrost temperature (dt) — more ice on the coil than the defrost can clear",
+      "Humid-air leaks at the door gasket icing the coil between defrosts",
+      "Ice or overflow in the drain pan",
+      "A weak defrost heater, bad probe, or undersized defrost schedule"
+    ],
+    "fixable": "The diagnosis help is: look at the coil right after a defrost — remaining ice confirms it — check the door gasket, eyeball the drain pan, and note whether Ed shows after every defrost.",
+    "why_tech": "A repeating Ed means the defrost heater, probe, or schedule needs service — heater testing is live electrical work — and an uncorrected coil eventually blocks solid and stops the box cooling."
+  },
+  "PJ Easy (PJEZ)||dF": {
+    "causes": [
+      "A defrost is in progress and the display flashes dF (when parameter d6 = 0) — normal operation, not an error",
+      "During defrost the fans may be off and the box may warm slightly — also normal"
+    ],
+    "fixable": "Yes — wait it out and avoid opening the door during defrost. Only if dF never clears well beyond the normal defrost time should it be treated as a fault.",
+    "why_tech": "A unit that appears stuck in defrost, or won't pull back down afterward, has a defrost termination or control fault — probe and heater diagnosis is a live-electrical service job."
+  },
+  "PJ Easy (PJEZ)||cht": {
+    "causes": [
+      "Condenser temperature past the pre-alarm level — an early warning the coil is dirty or starved of airflow",
+      "Dust, lint, or grease blocking the fins so the coil can't reject heat",
+      "Items stored against or on top of the condensing unit",
+      "A condenser fan not running with the compressor"
+    ],
+    "fixable": "Yes — this warning exists so staff can act before it escalates. Clear the airflow, check the fan, and get the dirt off the coil while it's still a pre-alarm.",
+    "why_tech": "If it keeps returning after the airflow is cleared, the coil needs a professional cleaning — a condenser running hot is quietly loading the compressor every hour it runs.",
+    "question": "What does the lowercase cht pre-alarm mean on a Carel PJ Easy controller?"
+  },
+  "PJ Easy (PJEZ)||CHt": {
+    "causes": [
+      "Condenser temperature over the Ac alarm threshold — the escalated version of cht, with buzzer and alarm relay active",
+      "A stopped condenser fan",
+      "A heavily matted coil or blocked airflow that the pre-alarm stage didn't get fixed"
+    ],
+    "fixable": "Check the fan and clear visible blockages, but don't keep silencing the alarm to force operation — that's how a dirty-coil warning turns into a dead compressor.",
+    "why_tech": "Continued running against a hard high-condenser alarm risks safety trips and compressor damage — a tech needs to clean the coil properly and verify the unit before it's trusted again.",
+    "question": "What does the CHt condenser alarm mean on a Carel PJ Easy controller?"
+  },
+  "PJ Easy (PJEZ)||EtC": {
+    "causes": [
+      "On PJEZ models with a real-time clock, the clock failed or lost its setting — often after a power outage",
+      "Time-of-day defrost bands won't run correctly until it's reset"
+    ],
+    "fixable": "Sometimes. After an outage, a trained operator re-setting the clock parameters may resolve it. Verify scheduled defrosts still occur at their normal times.",
+    "why_tech": "A clock that won't hold time points to failed hardware — the controller may need replacement, and until then the defrost schedule the box depends on isn't running when it should."
+  }
+}

@@ -14,6 +14,15 @@ directory repos. No cross-contamination: each site has its own data, its
 own content voice, and its own agents. If a task genuinely spans sites,
 stop and tell Rufus — don't reach across.
 
+## Standing rule: 5 spot-checks per new controller (set by Rufus, 2026-08-23)
+
+Whenever a NEW brand or controller's codes are added to this site, five of
+its codes MUST be spot-checked directly against the cited primary sources
+(the actual manual PDF or manufacturer page) before the pages count as
+done. Record what was checked and the result in the commit message. A
+research agent's citation is not verification — the spot-check is. If a
+spot-check fails, the entry is corrected or removed before anything ships.
+
 ## Core principles (do not violate)
 
 1. **Question-led, not directory-led.** Every content page's H1 and title
