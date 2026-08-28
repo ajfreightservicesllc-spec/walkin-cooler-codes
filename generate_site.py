@@ -27,7 +27,7 @@ from datetime import date
 from pathlib import Path
 
 # ---------------------------------------------------------------- CONFIG ---
-BASE_URL = "https://coolercodes.example.com"   # set real domain before deploy
+BASE_URL = "https://walkincoolercodes.com"
 SITE_NAME = "Walk-In Cooler Code Lookup"
 EQUIPMENT = "walk-in cooler"        # noun used in copy
 EQUIPMENT_SHORT = "walk-in cooler"
