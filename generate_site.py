@@ -52,6 +52,11 @@ CONTACT_EMAIL = "ajfreightservicesllc@gmail.com"
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "site"
+# Files copied verbatim into site/ on every build. main() wipes site/, so
+# anything that must survive a rebuild lives here, NOT in site/.
+# Holds the Google site-verification token — deleting it un-verifies the
+# Search Console property. Never remove it.
+STATIC = ROOT / "static"
 
 CSS = """
 :root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
@@ -548,8 +553,21 @@ def main():
     (OUT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
 
+    # Verbatim passthrough. site/ was wiped at the top of main(), so these are
+    # re-emitted every build — this is what keeps the verification token alive.
+    static_files = []
+    if STATIC.is_dir():
+        for src in sorted(STATIC.rglob("*")):
+            if src.is_file():
+                dest = OUT / src.relative_to(STATIC)
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src, dest)
+                static_files.append(dest.name)
+
     print(f"Generated: {len(entries)} code pages, {len(by_brand)} brand pages, "
           f"{len(cities)} city pages, {len(articles)} guides -> {OUT}")
+    if static_files:
+        print(f"Static passthrough: {', '.join(static_files)}")
 
 
 if __name__ == "__main__":
