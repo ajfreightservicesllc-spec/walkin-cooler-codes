@@ -2,7 +2,7 @@
 
 ## What this repo is
 
-Question-led SEO directory answering walk-in cooler/freezer alarm-code searches — Heatcraft (Bohn/Larkin intelliGen and Beacon II), KE2 Therm, Dixell (Emerson), Norlake controllers, 64 verified codes. Part of Rufus Jones's fault-code directory network (three separate
+Question-led SEO directory answering walk-in cooler/freezer alarm-code searches — Carel (ir33, PJ Easy, PCO5+), Heatcraft (Bohn/Larkin intelliGen and Beacon II), Danfoss (AK-CC, EKC, ERC, Optyma Plus), KE2 Therm, Dixell (Emerson) and Norlake controllers, 128 verified codes. Part of Rufus Jones's fault-code directory network (three separate
 repos: ice-machine-codes, air-compressor-codes, walkin-cooler-codes), but
 THIS REPO IS ISOLATED — see the isolation rule below.
 
