@@ -52,7 +52,15 @@ spot-check fails, the entry is corrected or removed before anything ships.
   (doubles as the exclusive-partner prospect list)
 - `data/brands.json` — brand hub page intros
 - `content/articles.json` — long-form guides
-- `site/` — generated output, committed
+- `site/` — generated output, committed. **Wiped by `shutil.rmtree` on
+  every build** — never store anything here that must persist.
+- `static/` — **NEVER DELETE OR RENAME.** Copied verbatim into `site/`
+  after every build, which is the only reason its contents survive the
+  wipe above. Holds `googleaf127d96642b3615.html`, an account-level
+  Google site-verification token shared across ALL of Rufus's sites —
+  deleting or renaming it un-verifies the Search Console property and
+  cuts off his reporting tools. `static/` is also the durable home for
+  any future verification file (Bing `BingSiteAuth.xml`, `ads.txt`).
 
 After ANY data or template change: regenerate, then verify — internal
 links resolve, page titles unique, no page under ~400 visible words.
