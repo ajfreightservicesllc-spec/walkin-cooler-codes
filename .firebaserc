@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "code-directories"
+  },
+  "targets": {
+    "code-directories": {
+      "hosting": {
+        "walkincoolercodes": [
+          "walkincoolercodes"
+        ]
+      }
+    }
+  }
+}
