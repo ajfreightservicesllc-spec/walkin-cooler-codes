@@ -6,8 +6,7 @@ One rich page per documented fault code / error signal for commercial
 equipment. SEO play: capture "brand + code" searches — informational queries
 with NO Google map pack — and funnel them to city money pages.
 
-This same engine runs three sites (ice machines, air compressors, walk-in
-coolers); only the CONFIG block below differs between site folders.
+Shared engine: only the CONFIG block below differs between site folders.
 
 Inputs (all relative to this file):
   data/codes-*.json     verified fault codes (one file per brand)
@@ -35,8 +34,14 @@ HOME_H1 = "Walk-in cooler showing an alarm code?"
 HOME_SUB = ("{n} documented fault codes across {brands}, verified against "
             "service manuals — what each one means, what to check yourself, "
             "and when it's a tech call.")
-CITY_HERO_SUB = ("Who actually fixes commercial ice machines in the {city} "
-                 "area — plus what to check before you pay for a service call.")
+# Homepage title and description are FIXED constants, never built from the
+# brand list — adding a brand must never be able to blow the title past ~60.
+HOME_TITLE = "Walk-In Cooler Fault Codes — Free Lookup by Brand & Code"
+HOME_DESC = ("Look up any walk-in cooler or freezer alarm code. Verified against "
+             "service manuals: what it means, what to check, when to call a tech.")
+CITY_HERO_SUB = ("Who actually fixes commercial walk-in coolers and freezers in "
+                 "the {city} area — plus what to check before you pay for a "
+                 "service call.")
 CTA_REGION_LINE = "If you're in Middle Tennessee or Central Alabama"
 DISCLAIMER_BRANDS = "Not affiliated with any equipment manufacturer."
 CTA_PHONE = ""        # e.g. "615-555-0100" (CallRail) — blank = hidden
@@ -213,7 +218,7 @@ def code_page(entry, related):
     # Question-led pages: the H1 and title ARE the question the searcher types.
     fam_short = fam.split("(")[0].strip() if fam else ""
     fam_is_selfdesc = any(w in fam_short.lower() for w in
-                          ("cuber", "dispenser", "control", "series", "model"))
+                          ("control", "series", "model"))
     if fam_short and fam_is_selfdesc:
         default_q = f"What does {code} mean on a {brand} {fam_short}?"
     elif fam_short:
@@ -441,10 +446,7 @@ def home_page(by_brand, cities, articles, total):
 {art_sec}
 {cta_block()}
 </div></main>"""
-    return page(f"{SITE_NAME} — {brands_line} Error Codes",
-                f"Look up any {brands_line} {EQUIPMENT} error code or fault "
-                f"signal. Plain-English meaning and first fixes.",
-                body, f"{BASE_URL}/")
+    return page(HOME_TITLE, HOME_DESC, body, f"{BASE_URL}/")
 
 
 def main():
