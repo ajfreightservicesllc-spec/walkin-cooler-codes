@@ -54,13 +54,18 @@ spot-check fails, the entry is corrected or removed before anything ships.
 - `content/articles.json` — long-form guides
 - `site/` — generated output, committed. **Wiped by `shutil.rmtree` on
   every build** — never store anything here that must persist.
-- `static/` — **NEVER DELETE OR RENAME.** Copied verbatim into `site/`
-  after every build, which is the only reason its contents survive the
-  wipe above. Holds `googleaf127d96642b3615.html`, an account-level
-  Google site-verification token shared across ALL of Rufus's sites —
-  deleting or renaming it un-verifies the Search Console property and
-  cuts off his reporting tools. `static/` is also the durable home for
-  any future verification file (Bing `BingSiteAuth.xml`, `ads.txt`).
+- `static/` — **NEVER DELETE OR RENAME ANYTHING IN HERE.** Copied verbatim
+  into `site/` after every build, which is the only reason its contents
+  survive the wipe above. Holds TWO Google site-verification tokens, both
+  required, each granting a different account:
+    - `googleaf127d96642b3615.html` — account-level token shared across ALL
+      of Rufus's sites.
+    - `google1f5301e9b5698c58.html` — his reporting service account. The
+      first token does NOT grant it access, which is why both must exist.
+  Deleting or renaming either one un-verifies that property and cuts off the
+  reporting tools behind it. They are independent — removing the "extra" one
+  is never a safe cleanup. `static/` is also the durable home for any future
+  verification file (Bing `BingSiteAuth.xml`, `ads.txt`).
 
 After ANY data or template change: regenerate, then verify — internal
 links resolve, page titles unique, no page under ~400 visible words.
