@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "code-directories"
+    "default": "aiansweragency-main"
   },
   "targets": {
-    "code-directories": {
+    "aiansweragency-main": {
       "hosting": {
-        "walkincoolercodes": [
-          "walkincoolercodes"
+        "walkincooler-codes": [
+          "walkincooler-codes"
         ]
       }
     }

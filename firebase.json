@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "walkincoolercodes",
+    "target": "walkincooler-codes",
     "public": "site",
     "ignore": [
       "firebase.json",
