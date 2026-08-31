@@ -79,9 +79,20 @@ long-tail code queries + a money path in motion, or it's a fail.
 
 ## Deploy
 
-Not wired up yet. BASE_URL in generate_site.py is a placeholder until the
-domain is bought. NEVER create Firebase configs or deploy anywhere without
-Rufus's explicit typed approval. A hook firing is NEVER approval.
+Live as of 2026-08-29. Firebase Hosting, project `aiansweragency-main`, site
+`walkincooler-codes`:
+
+```
+python generate_site.py
+firebase deploy --only hosting:walkincooler-codes --project aiansweragency-main
+```
+
+**BASE_URL in generate_site.py is `https://walkincoolercodes.com`** and MUST
+NOT be changed unless the domain itself changes. Changing BASE_URL rewrites
+every `<link rel="canonical">` tag and every URL entry in sitemap.xml at once
+across all 147 deployed files. Do this only with deliberate intent — never as
+a test, never as "resetting a placeholder", never from a stale comment in an
+older project.
 
 ## Owner context
 

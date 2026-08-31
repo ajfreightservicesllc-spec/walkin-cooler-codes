@@ -1,0 +1,6 @@
+# Google site-verification tokens — byte-exact files
+# Must never have line endings converted or bytes altered
+static/googleaf127d96642b3615.html -text
+static/google1f5301e9b5698c58.html -text
+site/googleaf127d96642b3615.html -text
+site/google1f5301e9b5698c58.html -text

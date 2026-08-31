@@ -132,3 +132,18 @@ If none of that is true at 6 months, kill it and take the lesson.
 - Deploys go to Firebase project `aiansweragency-main`, hosting site
   `walkincooler-codes`. Never deploy anywhere else without Rufus's explicit
   typed approval.
+
+## Technical notes
+
+**Google site-verification redirects (investigated 2026-08-31):**
+Firebase's `cleanUrls: true` setting strips `.html` from served paths. Both
+Google site-verification tokens redirect rather than serve at the literal URL:
+- `https://walkincoolercodes.com/googleaf127d96642b3615.html` → 301 →
+  `/googleaf127d96642b3615/` → 200 OK, returns exact verification line
+- `https://walkincoolercodes.com/google1f5301e9b5698c58.html` → 301 →
+  `/google1f5301e9b5698c58/` → 200 OK, returns exact verification line
+
+Google Search Console verifier follows 301 redirects, so both tokens serve
+correctly at their final URLs. The active verification method for this property
+is being confirmed directly via DNS TXT record — a hosting-config fix is not
+needed.
