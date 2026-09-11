@@ -12,7 +12,7 @@
       "Move product to another cooler if temperature is drifting out of range"
     ],
     "when_to_call": "If the code returns after a power cycle, a refrigeration tech needs to test or replace the sensor and its wiring.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -26,7 +26,7 @@
       "Keep the door closed as much as possible and monitor box temperature with a separate thermometer"
     ],
     "when_to_call": "Call a tech if the code persists after a power cycle or if the evaporator is icing over.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -40,7 +40,7 @@
       "Monitor box temperature while waiting for service"
     ],
     "when_to_call": "If the code returns, have a tech test or replace the condenser sensor.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -57,7 +57,7 @@
     ],
     "when_to_call": "If the temperature doesn't recover within an hour after fixing door and airflow issues, call a refrigeration tech — product is at risk.",
     "safety_flag": "Food safety: log temperatures during the event for your health-inspection records.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -72,7 +72,7 @@
       "Move freeze-sensitive product (produce, dairy, drinks) away from the coldest spots"
     ],
     "when_to_call": "If the unit won't cycle off and product is starting to freeze, call a tech — the controller, sensor, or setpoint needs professional attention.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -87,7 +87,7 @@
     ],
     "when_to_call": "Call an electrician or refrigeration tech — supply-voltage problems are not a DIY fix.",
     "safety_flag": "Building electrical problem — electrician territory.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -102,7 +102,7 @@
     ],
     "when_to_call": "Call an electrician — sustained low voltage will damage the compressor.",
     "safety_flag": "Building electrical problem — electrician territory.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -117,7 +117,7 @@
       "Restore power and see if the alarm clears as the unit cools"
     ],
     "when_to_call": "If the coil is clean and airflow is clear but the alarm returns, call a tech — the fan motor or refrigerant side needs checking.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -132,7 +132,7 @@
       "Watch the unit for 30 minutes — if the alarm returns, stop resetting it"
     ],
     "when_to_call": "If A80 comes back after a cleaning and one reset, call a tech — repeated high condenser temps will kill the compressor.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -147,7 +147,7 @@
       "Confirm the alarm clears once the door has been shut for a few minutes"
     ],
     "when_to_call": "If the alarm stays on with the door verifiably shut, the door switch or its setting needs a tech.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400549/AN19438642089705-000401.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -161,7 +161,7 @@
       "Record the code and time for the service tech"
     ],
     "when_to_call": "Call your refrigeration tech to identify what device is tripping the input — it's often a protective switch doing its job.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -175,7 +175,7 @@
       "Do not leave product in a box sitting in standby — verify temperature"
     ],
     "when_to_call": "If nobody turned it off and you can't find an external switch, have a tech check the r12 setting and DI configuration.",
-    "source_url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+    "source_url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
   },
   {
     "brand": "Danfoss",
@@ -298,7 +298,7 @@
   },
   {
     "brand": "Danfoss",
-    "model_family": "AK-CC 210/250",
+    "model_family": "AK-CC 210",
     "code": "E25",
     "title": "S3 sensor error",
     "meaning": "Error on the S3 sensor (one of the two air sensors, typically mounted before the evaporator). Temperature regulation that uses S3 becomes unreliable.",
@@ -312,7 +312,7 @@
   },
   {
     "brand": "Danfoss",
-    "model_family": "AK-CC 210/250",
+    "model_family": "AK-CC 210",
     "code": "E26",
     "title": "S4 sensor error",
     "meaning": "Error on the S4 sensor (one of the two air sensors, typically mounted after the evaporator). Regulation and alarm functions that use S4 are affected.",
@@ -326,7 +326,7 @@
   },
   {
     "brand": "Danfoss",
-    "model_family": "AK-CC 210/250",
+    "model_family": "AK-CC 210",
     "code": "A16",
     "title": "Alarm signal from DI2 input",
     "meaning": "An external device wired to the DI2 digital input is signaling an alarm after the configured delay. What tripped depends on what is connected to DI2.",
@@ -340,7 +340,7 @@
   },
   {
     "brand": "Danfoss",
-    "model_family": "AK-CC 210/250",
+    "model_family": "AK-CC 210",
     "code": "A60",
     "title": "HACCP high-temperature alarm",
     "meaning": "High-temperature alarm for the HACCP monitoring function — the food-safety temperature limit tracked by the controller has been exceeded.",

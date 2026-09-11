@@ -1,39 +1,51 @@
 #!/usr/bin/env python3
 """
-Equipment Fault-Code Directory — Static Site Generator (shared engine)
-======================================================================
-One rich page per documented fault code / error signal for commercial
-equipment. SEO play: capture "brand + code" searches — informational queries
-with NO Google map pack — and funnel them to city money pages.
-
-Shared engine: only the CONFIG block below differs between site folders.
+Walk-In Cooler Code Lookup — Static Site Generator
+===================================================
+One rich page per CONTROLLER FAMILY: the manufacturer's full code table, a
+full section for every verified code, a diagnostic sequence, the parts usually
+involved, and primary-source citations. Consolidated 2026-09-10 from one page
+per code (thin pages don't index); the 128 retired URLs live in
+data/redirects.json and are 301'd to page#code-anchor through firebase.json.
 
 Inputs (all relative to this file):
-  data/codes-*.json     verified fault codes (one file per brand)
-  data/cities.json      city pages: intro copy + REAL local companies only
-  content/articles.json long-form guides (HTML bodies)
+  data/codes-*.json            verified fault codes -> full per-code sections
+  data/supplements.json        causes / fixability / why-technician, per code
+  data/families.json           which-machines context, per data family
+  data/controller_pages.json   families -> page, full code-table rows,
+                               diagnostic sequence, parts, hub copy
+  data/sources.json            primary-source registry (every citation)
+  data/redirects.json          retired per-code URLs (never delete entries)
+  data/brands.json             brand hub intros
+  data/cities.json             city pages: intro, FAQs, verified companies
+  content/articles.json        long-form guides
 
 Run (Windows or Linux, Python 3 stdlib only):
     python generate_site.py
-Output -> ./site/
+Output -> ./site/  (and the "redirects" block of firebase.json is re-synced).
+The build exits 1 if any check fails: broken internal link or #anchor,
+duplicate <title>, a page under MIN_WORDS visible words, a page without a
+primary-source citation, a page more than MAX_HUB_CLICKS clicks from a brand
+hub, a code sourced to an unregistered URL, or a redirect that won't resolve.
 """
 
 import json
 import re
 import shutil
-from collections import defaultdict
+import sys
+from collections import defaultdict, deque
 from datetime import date
+from html.parser import HTMLParser
 from pathlib import Path
 
 # ---------------------------------------------------------------- CONFIG ---
 BASE_URL = "https://walkincoolercodes.com"
 SITE_NAME = "Walk-In Cooler Code Lookup"
 EQUIPMENT = "walk-in cooler"        # noun used in copy
-EQUIPMENT_SHORT = "walk-in cooler"
 HOME_H1 = "Walk-in cooler showing an alarm code?"
-HOME_SUB = ("{n} documented fault codes across {brands}, verified against "
-            "service manuals — what each one means, what to check yourself, "
-            "and when it's a tech call.")
+HOME_SUB = ("{n} documented fault codes across {brands} controllers, taken from "
+            "the manufacturers' own manuals — what each one means, what to "
+            "check yourself, and when it's a tech call.")
 # Homepage title and description are FIXED constants, never built from the
 # brand list — adding a brand must never be able to blow the title past ~60.
 HOME_TITLE = "Walk-In Cooler Fault Codes — Free Lookup by Brand & Code"
@@ -48,15 +60,37 @@ CTA_PHONE = ""        # e.g. "615-555-0100" (CallRail) — blank = hidden
 CTA_PHONE_LABEL = "Talk to a technician now"
 PARTS_LINK = ""       # parts affiliate URL — blank = hidden
 CONTACT_EMAIL = "ajfreightservicesllc@gmail.com"
+CONTENT_UPDATED = "2026-09-10"   # sitemap <lastmod> — bump when page content changes
+# The one canonical home of the refrigeration-cycle explanations (superheat,
+# subcooling, defrost, condenser, refrigerants). Controller pages link into
+# its #anchors instead of re-explaining them.
+FUNDAMENTALS_GUIDE = "walk-in-cooler-alarm-codes-guide"
+FRAGMENT_REDIRECTS = True   # 301 -> page#code-anchor (Firebase keeps the #)
+MIN_WORDS = 400
+MAX_HUB_CLICKS = 2
 # ------------------------------------------------------------ END CONFIG ---
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "site"
+DATA = ROOT / "data"
+FIREBASE_JSON = ROOT / "firebase.json"
 # Files copied verbatim into site/ on every build. main() wipes site/, so
 # anything that must survive a rebuild lives here, NOT in site/.
-# Holds the Google site-verification token — deleting it un-verifies the
-# Search Console property. Never remove it.
+# Holds both Google site-verification tokens and the IndexNow key — deleting
+# any of them breaks the service behind it. Never remove them.
 STATIC = ROOT / "static"
+
+FUNDAMENTALS = {
+    "refrigeration-cycle": "how the refrigeration cycle works",
+    "temperature-control": "how a controller holds temperature — and how its sensors are tested",
+    "superheat": "what superheat is and why controllers alarm on it",
+    "subcooling": "what subcooling is",
+    "defrost": "how defrost works and what goes wrong",
+    "condenser": "why the condenser matters",
+    "refrigerants": "refrigerants and the A2L change",
+}
+KIND_LABEL = {"signal": "status message", "status": "status",
+              "message": "message", "info": "information"}
 
 CSS = """
 :root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
@@ -83,7 +117,7 @@ border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-botto
 .meaning{font-size:1.05rem}
 h2{font-size:1.18rem;margin:22px 0 8px}
 h3{font-size:1.02rem;margin:16px 0 6px}
-article p{margin:10px 0}
+article p,.card p{margin:10px 0}
 article ul,article ol{padding-left:24px;margin:10px 0}
 article li{margin:6px 0}
 ol.steps{padding-left:22px}
@@ -111,7 +145,24 @@ box-shadow:0 4px 14px rgba(13,60,97,.08)}
 .biz b{font-size:1.05rem}
 .biz .svc{font-size:.85rem;color:var(--sub)}
 .biz a.tel{font-weight:700;text-decoration:none}
-.src{font-size:.78rem;color:var(--sub);margin-top:18px;word-break:break-all}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
 footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
@@ -120,9 +171,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 # Populated in main() before any page renders.
 NAV_HTML = ""
 FOOTER_LINKS_HTML = ""
-CITY_LINKS = []   # [(name, state, slug)]
-FAMILIES = {}     # model_family -> intro html (data/families.json)
-SUPPLEMENTS = {}  # "family||code" -> {causes, fixable, why_tech} (data/supplements.json)
+CITY_LINKS = []    # [(name, state, slug)]
+FAMILIES = {}      # model_family -> intro html (data/families.json)
+SUPPLEMENTS = {}   # "family||code" -> {causes, fixable, why_tech} (data/supplements.json)
+SOURCES = {}       # id -> {publisher, title, doc, url} (data/sources.json)
+SOURCE_BY_URL = {}
 
 
 def esc(s):
@@ -133,6 +186,13 @@ def esc(s):
 def slugify(text):
     s = re.sub(r"[^a-z0-9]+", "-", str(text).lower()).strip("-")
     return s or "x"
+
+
+def load_json(rel, default=None):
+    f = ROOT / rel
+    if not f.exists():
+        return default
+    return json.loads(f.read_text(encoding="utf-8"))
 
 
 def page(title, desc, body, canonical, schema=None):
@@ -169,6 +229,38 @@ before hiring.</div>
 </body></html>"""
 
 
+def breadcrumb(items):
+    """items: [(label, path or None for the current page)] -> (html, schema)."""
+    html = " &rsaquo; ".join(
+        f'<a href="{path}">{esc(label)}</a>' if path else esc(label)
+        for label, path in items)
+    elements = []
+    for i, (label, path) in enumerate(items):
+        el = {"@type": "ListItem", "position": i + 1, "name": label}
+        if path:
+            el["item"] = BASE_URL + path
+        elements.append(el)
+    schema = {"@context": "https://schema.org", "@type": "BreadcrumbList",
+              "itemListElement": elements}
+    return f'<div class="crumbs">{html}</div>', schema
+
+
+def cite(sid):
+    s = SOURCES[sid]
+    return (f'<a href="{esc(s["url"])}">{esc(s["publisher"])} — {esc(s["title"])}</a> '
+            f'<span class="doc">({esc(s["doc"])})</span>')
+
+
+def sources_block(ids, notes=None, lead=""):
+    notes = notes or {}
+    items = "".join(
+        f"<li>{cite(sid)}" + (f" — {esc(notes[sid])}" if notes.get(sid) else "") + "</li>"
+        for sid in ids)
+    lead_html = f"<p>{esc(lead)}</p>" if lead else ""
+    return (f'<div class="card sources"><h2>Sources</h2>{lead_html}'
+            f'<ul class="src-list">{items}</ul></div>')
+
+
 def cta_block(city_links=True):
     if CTA_PHONE:
         tel = re.sub(r"[^0-9+]", "", CTA_PHONE)
@@ -192,156 +284,240 @@ def parts_block():
             f'Order OEM replacement parts &rarr;</a></p>')
 
 
-def code_page(entry, related):
-    brand, fam, code = entry["brand"], entry.get("model_family", ""), entry["code"]
-    title = entry.get("title", "")
-    meaning = entry.get("meaning", "")
-    when_to_call = entry.get("when_to_call", "")
-    diy = entry.get("diy_steps", [])
-    h1 = f"{brand} {fam} — {code}: {title}" if fam else f"{brand} {code}: {title}"
-    steps = "".join(f"<li>{esc(s)}</li>" for s in diy)
-    safety = entry.get("safety_flag", "")
-    safety_html = (f'<div class="callout"><b>Safety:</b> {esc(safety)}</div>'
-                   if safety and len(str(safety)) > 20 else "")
-    rel_html = "".join(
-        f'<a href="{r["url"]}"><span class="c">{esc(r["code"])}</span>'
-        f'<div class="t">{esc(r.get("title",""))}</div></a>' for r in related[:6])
-    related_sec = (f'<h2>Other {esc(brand)} {esc(fam)} codes</h2>'
-                   f'<div class="grid">{rel_html}</div>') if rel_html else ""
-    src = entry.get("source_url", "")
-    src_html = (f'<p class="src">Verified against service documentation: '
-                f'<a href="{esc(src)}" rel="nofollow">{esc(src)}</a></p>') if src else ""
+def city_prose():
+    if not CITY_LINKS:
+        return ""
+    links = " or ".join(f'<a href="/{slug}/">{esc(n)}, {esc(st)}</a>'
+                        for n, st, slug in CITY_LINKS)
+    return (f"<p>If it does come to a service call and you're in {links}, we "
+            f"maintain independently compiled lists of local companies that "
+            f"service {esc(EQUIPMENT)}s — real businesses with verified contact "
+            f"information, none of whom paid to be listed.</p>")
 
-    # Depth data: family context + per-code supplements (causes / fixability /
-    # why-a-technician). Sections render only where the data exists.
-    supp = SUPPLEMENTS.get(f"{fam}||{code}", {})
-    fam_html = FAMILIES.get(fam, "")
-    causes = supp.get("causes", [])
-    fixable = supp.get("fixable", "")
-    why_tech = supp.get("why_tech", "")
 
-    # Question-led pages: the H1 and title ARE the question the searcher types.
-    fam_short = fam.split("(")[0].strip() if fam else ""
-    fam_is_selfdesc = any(w in fam_short.lower() for w in
-                          ("control", "series", "model"))
-    if fam_short and fam_is_selfdesc:
-        default_q = f"What does {code} mean on a {brand} {fam_short}?"
-    elif fam_short:
-        default_q = f"What does {code} mean on a {brand} {fam_short} {EQUIPMENT_SHORT}?"
-    else:
-        default_q = f"What does {code} mean on a {brand} {EQUIPMENT_SHORT}?"
-    question = supp.get("question") or default_q
+def fam_blurb(fam):
+    return (FAMILIES.get(fam, "")
+            .replace("<p><b>Which machines show this code:</b>", "<p>")
+            .replace("<p><b>Which machines show this signal:</b>", "<p>"))
 
-    if fam_html:
-        blurb = fam_html.replace(
-            "<p><b>Which machines show this code:</b>", "<p>").replace(
-            "<p><b>Which machines show this signal:</b>", "<p>")
-        fam_sec = f"<h2>Which machines show this?</h2>{blurb}"
-    else:
-        fam_sec = ""
-    causes_sec = (f"<h2>What causes it?</h2><ul>" +
-                  "".join(f"<li>{esc(c)}</li>" for c in causes) +
-                  "</ul>") if causes else ""
-    fix_intro = f"<p>{esc(fixable)}</p>" if fixable else ""
-    city_prose = ""
-    if CITY_LINKS:
-        links = " or ".join(f'<a href="/{slug}/">{esc(n)}, {esc(st)}</a>'
-                            for n, st, slug in CITY_LINKS)
-        city_prose = (f"<p>If it does come to a service call and you're in "
-                      f"{links}, we maintain independently compiled lists of "
-                      f"local companies that service {esc(EQUIPMENT)}s — real "
-                      f"businesses with verified contact information, none of "
-                      f"whom paid to be listed.</p>")
 
-    # Per-page FAQ — every answer is built from THIS code's verified data, so
-    # each page carries unique content and matching FAQPage structured data.
-    first_step = diy[0].rstrip(".") if diy else ""
-    q1 = f"What does {code} mean on a {brand} {fam}?".replace("  ", " ")
-    a1 = f"{title}. {meaning}"
-    q2 = f"Can I fix {code} on a {brand} {fam} myself?".replace("  ", " ")
-    if fixable:
-        a2 = fixable
-    elif first_step:
-        a2 = (f"Some causes behind this fault are within reach of on-site staff. "
-              f"Start with the documented first steps — {first_step.lower()} — and "
-              f"work through the checklist above before paying for a service call. "
-              f"Anything involving refrigerant, pressurized components, or the "
-              f"electrical cabinet belongs to a qualified technician.")
-    else:
-        a2 = ("This one is not a do-it-yourself fault — see the guidance above and "
-              "have a qualified technician handle it.")
-    q3 = f"When does {code} on a {brand} {fam} need a technician?".replace("  ", " ")
-    a3 = f"{why_tech} {when_to_call}".strip() if why_tech else when_to_call
-    faqs = [(q1, a1), (q2, a2), (q3, a3)]
-    # Don't visibly repeat the H1 question inside the FAQ block; it stays in
-    # the structured data, where the page itself is its answer.
-    faq_html = "".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>"
-                       for q, a in faqs if a and q != question)
-    schema = [{
-        "@context": "https://schema.org", "@type": "FAQPage",
-        "mainEntity": [{"@type": "Question", "name": q,
-                        "acceptedAnswer": {"@type": "Answer", "text": a}}
-                       for q, a in faqs if a]
-    }]
-    intro = (f"<b>Short answer: {esc(title)}.</b> If your {esc(brand)} "
-             f"{esc(fam)} is showing <b>{esc(code)}</b>, the controller has "
-             f"logged a specific, documented condition. This page covers what it "
-             f"means, what causes it, what you can safely fix yourself, and when "
-             f"— and why — it takes a technician.")
+# ------------------------------------------------------ controller pages ---
+def build_rows(pg, fam_entries):
+    """Full code table for one page: verified entries (with full sections)
+    first, in data order, then manual-table rows placed after their 'after'
+    code. Assigns a unique #anchor to every row."""
+    applies = pg.get("applies", {})
+    override = pg.get("applies_override", {})
+    rows = []
+    for fam in pg["families"]:
+        for e in fam_entries[fam]:
+            rows.append({"code": e["code"], "title": e["title"], "entry": e,
+                         "applies": override.get(e["code"], applies.get(fam, "")),
+                         "kind": "alarm"})
+    for t in pg.get("table_rows", []):
+        row = {"code": t["code"], "title": t["meaning"], "entry": None,
+               "applies": t.get("applies", ""), "kind": t.get("kind", "alarm")}
+        idx = len(rows)
+        if t.get("after"):
+            hits = [i for i, r in enumerate(rows) if r["code"] == t["after"]]
+            if not hits:
+                raise SystemExit(f"{pg['id']}: row {t['code']} is 'after' "
+                                 f"{t['after']}, which is not on the page")
+            idx = hits[-1] + 1
+        rows.insert(idx, row)
+    taken = set()
+    for r in rows:
+        base = "code-" + slugify(r["code"])
+        anchor = base
+        if anchor in taken:   # e.g. Carel cht vs CHt
+            anchor = f"{base}-{slugify(r['title'])[:40]}".rstrip("-")
+        n = 2
+        while anchor in taken:
+            anchor = f"{base}-{n}"
+            n += 1
+        taken.add(anchor)
+        r["anchor"] = anchor
+    return rows
+
+
+def code_section(r):
+    e = r["entry"]
+    supp = SUPPLEMENTS.get(f"{e['model_family']}||{e['code']}", {})
+    src = SOURCE_BY_URL[e["source_url"]]
+    out = [f'<section class="code-sec" id="{r["anchor"]}">',
+           f"<h3>{esc(e['code'])} — {esc(e['title'])}</h3>"]
+    if r["applies"]:
+        out.append(f'<p class="applies">Applies to: {esc(r["applies"])}</p>')
+    out.append(f"<p>{esc(e['meaning'])}</p>")
+    if supp.get("causes"):
+        out.append("<p><b>What causes it:</b></p><ul>"
+                   + "".join(f"<li>{esc(c)}</li>" for c in supp["causes"]) + "</ul>")
+    if supp.get("fixable"):
+        out.append(f"<p><b>Can staff fix it?</b> {esc(supp['fixable'])}</p>")
+    if e.get("diy_steps"):
+        out.append('<p><b>What to check, in order:</b></p><ol class="steps">'
+                   + "".join(f"<li>{esc(s)}</li>" for s in e["diy_steps"]) + "</ol>")
+    safety = str(e.get("safety_flag") or "")
+    if len(safety) > 20:
+        out.append(f'<div class="callout"><b>Safety:</b> {esc(safety)}</div>')
+    if supp.get("why_tech"):
+        out.append(f"<p><b>Why it takes a technician:</b> {esc(supp['why_tech'])}</p>")
+    if e.get("when_to_call"):
+        out.append(f'<div class="callout"><b>When to call:</b> {esc(e["when_to_call"])}</div>')
+    out.append(f'<p class="src">Source: <a href="{esc(e["source_url"])}">'
+               f'{esc(src["publisher"])} — {esc(src["title"])}</a> ({esc(src["doc"])})</p>')
+    out.append("</section>")
+    return "\n".join(out)
+
+
+def controller_page(pg, rows, brand_pages, hub_path):
+    brand, name = pg["brand"], pg["name"]
+    path = "/" + pg["path"]
+    is_hub = path == hub_path
+    anchor_by_code = {r["code"]: r["anchor"] for r in rows}
+    extra_cols = pg.get("extra_cols", [])
+    show_applies = any(r["applies"] for r in rows)
+
+    head = ("<tr><th>Code</th><th>What it means</th>"
+            + ("<th>Applies to</th>" if show_applies else "")
+            + "".join(f"<th>{esc(c['label'])}</th>" for c in extra_cols) + "</tr>")
+    trs = []
+    for r in rows:
+        badge = (f' <span class="kind">{KIND_LABEL[r["kind"]]}</span>'
+                 if r["kind"] in KIND_LABEL else "")
+        if r["entry"]:
+            cells = [f'<a href="#{r["anchor"]}"><b>{esc(r["code"])}</b></a>']
+            tr = "<tr>"
+        else:
+            cells = [f"<b>{esc(r['code'])}</b>"]
+            tr = f'<tr id="{r["anchor"]}">'
+        cells.append(esc(r["title"]) + badge)
+        if show_applies:
+            cells.append(esc(r["applies"]) or "&mdash;")
+        cells += [esc(c["values"].get(r["code"], "")) or "&mdash;" for c in extra_cols]
+        trs.append(tr + "".join(f"<td>{c}</td>" for c in cells) + "</tr>")
+    table = (f'<div class="tbl"><table class="codes"><thead>{head}</thead>'
+             f'<tbody>{"".join(trs)}</tbody></table></div>')
+    n_detail = sum(1 for r in rows if r["entry"])
+    n_listed = len(rows) - n_detail
+    note = f"{n_detail} codes link to a full section below."
+    if n_listed:
+        note += (f" The other {n_listed} are listed as the manufacturer's "
+                 f"manual gives them.")
+    note += " Every row comes from the manual cited at the end of this page."
+
+    sections = "\n".join(code_section(r) for r in rows if r["entry"])
+    diagnosis = ('<ol class="steps">'
+                 + "".join(f"<li>{s}</li>" for s in pg["diagnosis"]) + "</ol>")
+
+    prow = []
+    for p in pg["parts"]:
+        links = []
+        for c in p["codes"]:
+            if c not in anchor_by_code:
+                raise SystemExit(f"{pg['id']}: part '{p['part']}' lists code "
+                                 f"{c!r}, which is not on the page")
+            links.append(f'<a href="#{anchor_by_code[c]}">{esc(c)}</a>')
+        prow.append(f"<tr><td>{esc(p['part'])}</td><td>{', '.join(links) or '&mdash;'}"
+                    f"</td><td>{esc(p.get('note', ''))}</td></tr>")
+    parts_tbl = ('<div class="tbl"><table class="parts"><thead><tr><th>Part</th>'
+                 '<th>Codes that point to it</th><th>Note</th></tr></thead><tbody>'
+                 + "".join(prow) + "</tbody></table></div>")
+
+    fund = pg.get("fundamentals", [])
+    fund_html = ""
+    if fund:
+        links = "; ".join(
+            f'<a href="/guides/{FUNDAMENTALS_GUIDE}/#{f}">{esc(FUNDAMENTALS[f])}</a>'
+            for f in fund)
+        fund_html = ("<h2>What refrigeration is behind these codes?</h2>"
+                     "<p>Every code here is the controller reporting a reading from "
+                     "the refrigeration system. The background is explained once, "
+                     f"for every controller on this site: {links}.</p>")
+
+    others = [s for s in brand_pages if s["id"] != pg["id"]]
+    sib_html = ""
+    if others:
+        cards = "".join(
+            f'<a href="/{s["path"]}"><span class="c">{esc(s["name"])}</span>'
+            f'<div class="t">{esc(s["recognize"])}</div></a>' for s in others)
+        sib_html = (f"<h2>Other {esc(brand)} controllers</h2>"
+                    f"<div class='grid'>{cards}</div>")
+
+    crumbs = [("Home", "/"), (brand, None)] if is_hub else \
+             [("Home", "/"), (brand, hub_path), (name, None)]
+    crumbs_html, bc = breadcrumb(crumbs)
+    faq = {"@context": "https://schema.org", "@type": "FAQPage",
+           "mainEntity": [{"@type": "Question",
+                           "name": f"What does {r['code']} mean on a {pg['faq_name']}?",
+                           "acceptedAnswer": {"@type": "Answer",
+                                              "text": f"{r['title']}. {r['entry']['meaning']}"}}
+                          for r in rows if r["entry"]]}
+    blurbs = "".join(fam_blurb(f) for f in pg["families"])
     body = f"""<main><div class="wrap">
-<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/{slugify(brand)}/">{esc(brand)}</a> &rsaquo; {esc(code)}</div>
-<div class="card">
-<span class="family-tag">{esc(brand)} {esc(fam)} &middot; {esc(code)}</span>
-<h1 class="page-h1">{esc(question)}</h1>
-<p class="meaning">{intro}</p>
-<h2>What exactly is the machine telling you?</h2>
-<p>{esc(meaning)}</p>
-{fam_sec}
-{causes_sec}
-<h2>Can you fix it yourself?</h2>
-{fix_intro}
-<p><b>Step by step — what to try, in order:</b></p>
-<ol class="steps">{steps}</ol>
+{crumbs_html}
+<article class="card">
+<span class="family-tag">{esc(brand)} &middot; {len(rows)} codes and messages</span>
+<h1 class="page-h1">{esc(pg['h1'])}</h1>
+{pg['short_answer']}
+<h2>Which machines use it?</h2>
+{blurbs}
+<h2>How do you read and clear the display?</h2>
+{pg['display_html']}
+<h2 id="code-table">Every {esc(name)} code at a glance</h2>
+{table}
+<p class="note">{esc(note)}</p>
+<h2>What does each code mean — and what should you do?</h2>
+{sections}
+<h2>How do you diagnose a {esc(name)} alarm, step by step?</h2>
+{diagnosis}
 <div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
 If the same fault returns after a single reset, the underlying condition is real —
 stop resetting and deal with the cause.</div>
-{safety_html}
-<h2>When do you need a technician — and why?</h2>
-{f'<p>{esc(why_tech)}</p>' if why_tech else ''}
-<div class="callout"><b>When to call:</b> {esc(when_to_call)}</div>
-{city_prose}
+<h2>Which parts are usually involved?</h2>
+{parts_tbl}
+{fund_html}
+{pg.get('extra_html', '')}
+{city_prose()}
 {parts_block()}
-<h2>Related questions</h2>
-{faq_html}
-{src_html}
-</div>
-{related_sec}
+</article>
+{sources_block(pg['sources'])}
+{sib_html}
 </div></main>"""
-    meta = (f"{question} {title}. What causes it, what you can fix yourself, "
-            f"and when it takes a technician.")
-    return page(question, meta[:158], body, entry["canonical"], schema)
+    return page(pg["title"], pg["meta"][:158], body, BASE_URL + path, [faq, bc])
 
 
-def brand_page(brand, families, brand_intros=None):
-    intro = (brand_intros or {}).get(brand, "")
-    intro_html = f'<article class="card">{intro}</article>' if intro else ""
-    secs = ""
-    for fam, entries in sorted(families.items()):
-        cards = "".join(
-            f'<a href="{e["url"]}"><span class="c">{esc(e["code"])}</span>'
-            f'<div class="t">{esc(e.get("title",""))}</div></a>' for e in entries)
-        secs += f"<h2>{esc(brand)} {esc(fam)}</h2><div class='grid'>{cards}</div>"
-    n = sum(len(v) for v in families.values())
-    body = f"""<div class="hero"><div class="wrap"><h1>{esc(brand)} Fault &amp; Error Codes</h1>
-<p>{n} documented codes and fault signals, verified against service manuals, with
-plain-English fixes.</p></div></div>
-<main><div class="wrap">{intro_html}{secs}{cta_block()}</div></main>"""
-    return page(f"{brand} Error Codes — Full Documented List",
-                f"Every documented {brand} {EQUIPMENT} error code and fault "
-                f"signal: what it means, what to check, when to call a tech.",
-                body, f"{BASE_URL}/{slugify(brand)}/")
+def hub_page(brand, brand_pages, rows_by_page, cfg, intro):
+    hub_path = f"/{slugify(brand)}/"
+    crumbs_html, bc = breadcrumb([("Home", "/"), (brand, None)])
+    secs, index, srcs = [], [], []
+    for pg in brand_pages:
+        rows = rows_by_page[pg["id"]]
+        blurbs = "".join(fam_blurb(f) for f in pg["families"])
+        secs.append(f'<h3><a href="/{pg["path"]}">{esc(pg["name"])}</a></h3>{blurbs}'
+                    f'<p><a href="/{pg["path"]}">All {len(rows)} {esc(pg["name"])} '
+                    f'codes — meanings, checks, diagnosis and parts &rarr;</a></p>')
+        chips = "".join(f'<a href="/{pg["path"]}#{r["anchor"]}">{esc(r["code"])}</a>'
+                        for r in rows if r["kind"] == "alarm")
+        index.append(f'<p><b>{esc(pg["name"])}:</b></p><div class="chips">{chips}</div>')
+        srcs += [s for s in pg["sources"] if s not in srcs]
+    body = f"""<main><div class="wrap">
+{crumbs_html}
+<article class="card">
+<h1 class="page-h1">{esc(cfg['h1'])}</h1>
+{intro}
+<h2>Which {esc(brand)} controller do you have?</h2>
+{''.join(secs)}
+<h2>Every {esc(brand)} code, by controller</h2>
+{''.join(index)}
+</article>
+{cta_block()}
+{sources_block(srcs)}
+</div></main>"""
+    return page(cfg["title"], cfg["meta"][:158], body, BASE_URL + hub_path, [bc])
 
 
+# --------------------------------------------------------- other pages ---
 def city_page(city):
     name, state, slug = city["name"], city["state"], city["slug"]
     biz_html = ""
@@ -362,12 +538,14 @@ def city_page(city):
 <span class="svc">{esc(c.get('notes',''))}</span></div>"""
     faq = city.get("faq", [])
     faq_html = "".join(f"<h3>{esc(q['q'])}</h3><p>{esc(q['a'])}</p>" for q in faq)
-    faq_schema = [{
+    schema = [{
         "@context": "https://schema.org", "@type": "FAQPage",
         "mainEntity": [{"@type": "Question", "name": q["q"],
                         "acceptedAnswer": {"@type": "Answer", "text": q["a"]}}
                        for q in faq]
     }] if faq else []
+    src_html = (sources_block(city["sources"], city.get("source_notes"))
+                if city.get("sources") else "")
     body = f"""<div class="hero"><div class="wrap">
 <h1>{esc(EQUIPMENT.title())} Repair &amp; Service in {esc(name)}, {esc(state)}</h1>
 <p>{esc(CITY_HERO_SUB.format(city=name))}</p>
@@ -384,27 +562,34 @@ meaningful share of "breakdowns" are airflow, power, or maintenance problems a
 own published information. No company paid to appear here. Verify details when you call.</p>
 {biz_html}</div>
 <div class="card"><h2>Frequently asked questions</h2>{faq_html}</div>
+{src_html}
 </div></main>"""
     title = f"{EQUIPMENT.title()} Repair {name} {state} — Commercial Service"
     desc = (f"{EQUIPMENT.title()} repair and service in {name}, {state}: verified "
             f"local companies, plus what to check before you pay for a service call.")
-    return page(title, desc[:158], body, f"{BASE_URL}/{slug}/", faq_schema)
+    return page(title, desc[:158], body, f"{BASE_URL}/{slug}/", schema)
 
 
 def article_page(a, all_articles):
     others = [x for x in all_articles if x is not a][:4]
     more = "".join(f'<a href="/guides/{x["slug"]}/"><span class="c">{esc(x["h1"])}</span>'
                    f'<div class="t">{esc(x.get("teaser",""))}</div></a>' for x in others)
+    crumbs_html, bc = breadcrumb([("Home", "/"), ("Guides", "/guides/"), (a["h1"], None)])
     schema = [{
         "@context": "https://schema.org", "@type": "Article",
         "headline": a["h1"],
         "datePublished": a.get("date", str(date.today())),
+        "dateModified": CONTENT_UPDATED,
         "author": {"@type": "Organization", "name": SITE_NAME},
-    }]
+        "citation": [SOURCES[s]["url"] for s in a.get("sources", [])],
+    }, bc]
+    src_html = (sources_block(a["sources"], a.get("source_notes"))
+                if a.get("sources") else "")
     body = f"""<main><div class="wrap">
-<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; {esc(a['h1'])}</div>
+{crumbs_html}
 <article class="card"><h1 class="page-h1">{a['h1']}</h1>
 {a['body_html']}</article>
+{src_html}
 {cta_block()}
 <h2>More guides</h2><div class="grid">{more}</div>
 </div></main>"""
@@ -416,20 +601,32 @@ def guides_index(articles):
     cards = "".join(
         f'<a href="/guides/{a["slug"]}/"><span class="c">{esc(a["h1"])}</span>'
         f'<div class="t">{esc(a.get("teaser",""))}</div></a>' for a in articles)
+    srcs = []
+    for a in articles:
+        srcs += [s for s in a.get("sources", []) if s not in srcs]
+    crumbs_html, bc = breadcrumb([("Home", "/"), ("Guides", None)])
     body = f"""<div class="hero"><div class="wrap"><h1>Guides</h1>
 <p>Troubleshooting, maintenance, and buying guidance for the people who keep
 {esc(EQUIPMENT)}s running.</p></div></div>
-<main><div class="wrap"><div class="grid">{cards}</div>{cta_block()}</div></main>"""
+<main><div class="wrap">{crumbs_html}<div class="grid">{cards}</div>{cta_block()}
+{sources_block(srcs, lead="The guides draw on these manufacturer manuals and the FDA Food Code:")}
+</div></main>"""
     return page(f"{EQUIPMENT.title()} Guides & Troubleshooting",
                 f"Practical guides for facility and kitchen staff: troubleshooting, "
                 f"maintenance, and repair-or-replace decisions for {EQUIPMENT}s.",
-                body, f"{BASE_URL}/guides/")
+                body, f"{BASE_URL}/guides/", [bc])
 
 
-def home_page(by_brand, cities, articles, total):
+def home_page(brands, pages_by_brand, rows_by_page, cities, articles):
+    def n_codes(pgs):
+        return sum(1 for pg in pgs for r in rows_by_page[pg["id"]] if r["kind"] == "alarm")
     rows = "".join(
-        f'<a href="/{slugify(b)}/"><b>{esc(b)}</b>{len(v)} codes documented</a>'
-        for b, v in sorted(by_brand.items()))
+        f'<a href="/{slugify(b)}/"><b>{esc(b)}</b>{n_codes(pages_by_brand[b])} codes documented</a>'
+        for b in brands)
+    ctrl = "".join(
+        f'<a href="/{pg["path"]}"><span class="c">{esc(pg["name"])}</span>'
+        f'<div class="t">{esc(pg["recognize"])}</div></a>'
+        for b in brands for pg in pages_by_brand[b])
     city_rows = "".join(
         f'<a href="/{c["slug"]}/"><b>{esc(c["name"])}, {esc(c["state"])}</b>'
         f'Local repair &amp; service</a>' for c in cities)
@@ -439,47 +636,209 @@ def home_page(by_brand, cities, articles, total):
         f'<a href="/guides/{a["slug"]}/"><span class="c">{esc(a["h1"])}</span>'
         f'<div class="t">{esc(a.get("teaser",""))}</div></a>' for a in articles[:6])
     art_sec = f'<h2>Guides</h2><div class="grid">{art_rows}</div>' if articles else ""
-    brands_line = " and ".join(sorted(by_brand))
-    sub = HOME_SUB.format(n=total, brands=brands_line)
+    total = n_codes([pg for b in brands for pg in pages_by_brand[b]])
+    sub = HOME_SUB.format(n=total, brands=" and ".join(brands))
+    manuals = [k for k in SOURCES if not k.startswith("fda")]
     body = f"""<div class="hero"><div class="wrap">
 <h1>{esc(HOME_H1)}</h1>
 <p>{esc(sub)}</p>
 </div></div>
 <main><div class="wrap">
 <div class="brand-row">{rows}</div>
+<h2>Find your controller</h2>
+<p>The brand on the box door usually isn't the brand talking — the alarm comes from
+the refrigeration controller. Match what's on your display:</p>
+<div class="grid">{ctrl}</div>
 {city_sec}
 {art_sec}
 {cta_block()}
+{sources_block(manuals, lead="Every code on this site is taken from the manufacturer's own manual:")}
 </div></main>"""
     return page(HOME_TITLE, HOME_DESC, body, f"{BASE_URL}/")
 
 
+# ------------------------------------------------------------ checks ---
+class _Scan(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.links, self.ids, self.title, self.text = [], set(), "", []
+        self._in_title = False
+        self._skip = 0
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag in ("script", "style"):
+            self._skip += 1
+        elif tag == "title":
+            self._in_title = True
+        if a.get("id"):
+            self.ids.add(a["id"])
+        if tag == "a" and a.get("href"):
+            self.links.append(a["href"])
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style"):
+            self._skip -= 1
+        elif tag == "title":
+            self._in_title = False
+
+    def handle_data(self, data):
+        if self._in_title:
+            self.title += data
+        elif not self._skip:
+            self.text.append(data)
+
+
+def validate(hub_paths):
+    pages, errors = {}, []
+    for f in sorted(OUT.rglob("index.html")):
+        rel = f.parent.relative_to(OUT).as_posix()
+        s = _Scan()
+        s.feed(f.read_text(encoding="utf-8"))
+        pages["/" if rel == "." else f"/{rel}/"] = s
+    source_urls = {v["url"] for v in SOURCES.values()}
+    titles, graph, words = defaultdict(list), {}, {}
+    for path, s in pages.items():
+        titles[s.title.strip()].append(path)
+        words[path] = len(" ".join(s.text).split())
+        if words[path] < MIN_WORDS:
+            errors.append(f"{path}: only {words[path]} visible words (min {MIN_WORDS})")
+        cited, edges = False, set()
+        for href in s.links:
+            if href in source_urls:
+                cited = True
+            if href.startswith(("http://", "https://", "mailto:", "tel:")):
+                continue
+            target, _, frag = href.partition("#")
+            target = target or path
+            if not target.startswith("/"):
+                errors.append(f"{path}: relative link {href}")
+            elif target in pages:
+                edges.add(target)
+                if frag and frag not in pages[target].ids:
+                    errors.append(f"{path}: link {href} — no id '{frag}' on {target}")
+            elif not (OUT / target.lstrip("/")).is_file():
+                errors.append(f"{path}: broken link {href}")
+        if not cited:
+            errors.append(f"{path}: no primary-source citation")
+        graph[path] = edges
+    for title, paths in titles.items():
+        if len(paths) > 1:
+            errors.append(f"duplicate title {title!r}: {paths}")
+    for h in hub_paths:
+        if h not in pages:
+            errors.append(f"brand hub {h} was not generated")
+        elif h not in graph.get("/", set()):
+            errors.append(f"homepage does not link brand hub {h}")
+    dist = {h: 0 for h in hub_paths if h in pages}
+    queue = deque(dist)
+    while queue:
+        cur = queue.popleft()
+        for nxt in graph.get(cur, ()):
+            if nxt not in dist:
+                dist[nxt] = dist[cur] + 1
+                queue.append(nxt)
+    for path in pages:
+        d = dist.get(path)
+        if d is None or d > MAX_HUB_CLICKS:
+            errors.append(f"{path}: {'unreachable' if d is None else d} clicks from "
+                          f"the nearest brand hub (max {MAX_HUB_CLICKS})")
+    return pages, words, dist, errors
+
+
+def sync_redirects(anchor_of, page_of_family, generated):
+    """Resolve data/redirects.json to firebase.json 301 rules (regex form —
+    matches with or without the trailing slash; glob sources did not)."""
+    spec = load_json("data/redirects.json", {"redirects": []})["redirects"]
+    rules, errors = [], []
+    for r in spec:
+        src, fam, code = r["from"], r["family"], r["code"]
+        stem = src.rstrip("/")
+        if not re.fullmatch(r"/[a-z0-9/-]+", stem):
+            errors.append(f"redirect {src}: unexpected characters")
+            continue
+        if src in generated:
+            errors.append(f"redirect {src}: collides with a generated page")
+            continue
+        pg, anchor = page_of_family.get(fam), anchor_of.get((fam, code))
+        if not pg or not anchor:
+            errors.append(f"redirect {src}: nothing to point at for {fam} || {code}")
+            continue
+        dest = "/" + pg["path"] + (f"#{anchor}" if FRAGMENT_REDIRECTS else "")
+        rules.append({"regex": f"^{stem}/?$", "destination": dest, "type": 301})
+    fb = json.loads(FIREBASE_JSON.read_text(encoding="utf-8"))
+    changed = fb["hosting"].get("redirects") != rules
+    if changed:
+        fb["hosting"]["redirects"] = rules
+        FIREBASE_JSON.write_text(json.dumps(fb, indent=2) + "\n", encoding="utf-8")
+    return rules, errors, changed
+
+
+# -------------------------------------------------------------- main ---
 def main():
     global NAV_HTML, FOOTER_LINKS_HTML, CITY_LINKS, FAMILIES, SUPPLEMENTS
+    global SOURCES, SOURCE_BY_URL
 
-    for name, target in (("families.json", "FAMILIES"),
-                         ("supplements.json", "SUPPLEMENTS")):
-        f = ROOT / "data" / name
-        if f.exists():
-            globals()[target] = json.loads(f.read_text(encoding="utf-8"))
+    FAMILIES = load_json("data/families.json", {})
+    SUPPLEMENTS = load_json("data/supplements.json", {})
+    SOURCES = {k: v for k, v in load_json("data/sources.json", {}).items()
+               if not k.startswith("_")}
+    SOURCE_BY_URL = {v["url"]: v for v in SOURCES.values()}
+    cfg = load_json("data/controller_pages.json")
+    pages_cfg, hubs_cfg = cfg["pages"], cfg.get("hubs", {})
+    brand_intros = load_json("data/brands.json", {})
+    cities = load_json("data/cities.json", [])
+    articles = load_json("content/articles.json", [])
 
     entries = []
-    for f in sorted((ROOT / "data").glob("codes-*.json")):
+    for f in sorted(DATA.glob("codes-*.json")):
         entries += json.loads(f.read_text(encoding="utf-8"))
+    fam_entries = defaultdict(list)
+    for e in entries:
+        fam_entries[e["model_family"]].append(e)
+        if e.get("source_url") not in SOURCE_BY_URL:
+            raise SystemExit(f"{e['brand']} {e['code']}: source_url is not a "
+                             f"registered primary source in data/sources.json")
 
-    brands_file = ROOT / "data" / "brands.json"
-    brand_intros = (json.loads(brands_file.read_text(encoding="utf-8"))
-                    if brands_file.exists() else {})
+    page_of_family = {}
+    for pg in pages_cfg:
+        for fam in pg["families"]:
+            if fam in page_of_family:
+                raise SystemExit(f"family {fam!r} is on two pages")
+            if fam not in fam_entries:
+                raise SystemExit(f"{pg['id']}: no codes for family {fam!r}")
+            page_of_family[fam] = pg
+        for sid in pg["sources"]:
+            if sid not in SOURCES:
+                raise SystemExit(f"{pg['id']}: unknown source {sid!r}")
+        for t in pg.get("table_rows", []):
+            if t.get("source") not in pg["sources"]:
+                raise SystemExit(f"{pg['id']}: row {t['code']} must cite one of the "
+                                 f"page's own sources")
+    unplaced = set(fam_entries) - set(page_of_family)
+    if unplaced:
+        raise SystemExit(f"families with no page: {sorted(unplaced)}")
+    for a in articles + cities:
+        for sid in a.get("sources", []):
+            if sid not in SOURCES:
+                raise SystemExit(f"{a.get('slug')}: unknown source {sid!r}")
 
-    cities_file = ROOT / "data" / "cities.json"
-    cities = (json.loads(cities_file.read_text(encoding="utf-8"))
-              if cities_file.exists() else [])
-
-    articles_file = ROOT / "content" / "articles.json"
-    articles = (json.loads(articles_file.read_text(encoding="utf-8"))
-                if articles_file.exists() else [])
+    rows_by_page = {pg["id"]: build_rows(pg, fam_entries) for pg in pages_cfg}
+    anchor_of = {(r["entry"]["model_family"], r["code"]): r["anchor"]
+                 for rows in rows_by_page.values() for r in rows if r["entry"]}
 
     brands = sorted({e["brand"] for e in entries})
+    pages_by_brand = defaultdict(list)
+    for pg in pages_cfg:
+        pages_by_brand[pg["brand"]].append(pg)
+    hub_paths = {b: f"/{slugify(b)}/" for b in brands}
+    for b in brands:
+        at_hub = [pg for pg in pages_by_brand[b] if "/" + pg["path"] == hub_paths[b]]
+        if len(pages_by_brand[b]) == 1 and not at_hub:
+            raise SystemExit(f"{b}: a brand's only controller page must live at {hub_paths[b]}")
+        if len(pages_by_brand[b]) > 1 and (at_hub or b not in hubs_cfg):
+            raise SystemExit(f"{b}: multi-controller brand needs hub copy and no page at the hub URL")
+
     NAV_HTML = "".join(f'<a href="/{slugify(b)}/">{esc(b)}</a>' for b in brands)
     if articles:
         NAV_HTML += '<a href="/guides/">Guides</a>'
@@ -491,61 +850,31 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
+    urls = []
 
-    seen = set()
-    for e in entries:
-        slug = f"{slugify(e.get('model_family',''))}-{slugify(e['code'])}".strip("-")
-        while slug in seen:
-            slug += "-2"
-        seen.add(slug)
-        e["path"] = f"{slugify(e['brand'])}/{slug}/"
-        e["url"] = f"/{e['path']}"
-        e["canonical"] = f"{BASE_URL}/{e['path']}"
-
-    by_brand = defaultdict(list)
-    by_family = defaultdict(lambda: defaultdict(list))
-    for e in entries:
-        by_brand[e["brand"]].append(e)
-        by_family[e["brand"]][e.get("model_family", "Other")].append(e)
-
-    urls = [f"{BASE_URL}/"]
-
-    for e in entries:
-        related = [r for r in by_family[e["brand"]][e.get("model_family", "Other")]
-                   if r is not e]
-        d = OUT / e["path"]
+    def write(path, html):
+        d = OUT / path.strip("/")
         d.mkdir(parents=True, exist_ok=True)
-        (d / "index.html").write_text(code_page(e, related), encoding="utf-8")
-        urls.append(e["canonical"])
+        (d / "index.html").write_text(html, encoding="utf-8")
+        urls.append(path)
 
-    for brand, fams in by_family.items():
-        d = OUT / slugify(brand)
-        d.mkdir(parents=True, exist_ok=True)
-        (d / "index.html").write_text(brand_page(brand, fams, brand_intros),
-                                      encoding="utf-8")
-        urls.append(f"{BASE_URL}/{slugify(brand)}/")
-
+    write("/", home_page(brands, pages_by_brand, rows_by_page, cities, articles))
+    for b in brands:
+        if len(pages_by_brand[b]) > 1:
+            write(hub_paths[b], hub_page(b, pages_by_brand[b], rows_by_page,
+                                         hubs_cfg[b], brand_intros.get(b, "")))
+        for pg in pages_by_brand[b]:
+            write("/" + pg["path"], controller_page(pg, rows_by_page[pg["id"]],
+                                                    pages_by_brand[b], hub_paths[b]))
     for c in cities:
-        d = OUT / c["slug"]
-        d.mkdir(parents=True, exist_ok=True)
-        (d / "index.html").write_text(city_page(c), encoding="utf-8")
-        urls.append(f"{BASE_URL}/{c['slug']}/")
-
+        write(f"/{c['slug']}/", city_page(c))
     if articles:
-        gd = OUT / "guides"
-        gd.mkdir(parents=True, exist_ok=True)
-        (gd / "index.html").write_text(guides_index(articles), encoding="utf-8")
-        urls.append(f"{BASE_URL}/guides/")
+        write("/guides/", guides_index(articles))
         for a in articles:
-            d = gd / a["slug"]
-            d.mkdir(parents=True, exist_ok=True)
-            (d / "index.html").write_text(article_page(a, articles), encoding="utf-8")
-            urls.append(f"{BASE_URL}/guides/{a['slug']}/")
+            write(f"/guides/{a['slug']}/", article_page(a, articles))
 
-    (OUT / "index.html").write_text(
-        home_page(by_brand, cities, articles, len(entries)), encoding="utf-8")
-
-    sm = "\n".join(f"<url><loc>{u}</loc></url>" for u in urls)
+    sm = "\n".join(f"<url><loc>{BASE_URL}{u}</loc><lastmod>{CONTENT_UPDATED}</lastmod></url>"
+                   for u in urls)
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -553,8 +882,8 @@ def main():
     (OUT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
 
-    # Verbatim passthrough. site/ was wiped at the top of main(), so these are
-    # re-emitted every build — this is what keeps the verification token alive.
+    # Verbatim passthrough. site/ was wiped above, so these are re-emitted every
+    # build — this is what keeps the verification tokens and IndexNow key alive.
     static_files = []
     if STATIC.is_dir():
         for src in sorted(STATIC.rglob("*")):
@@ -564,10 +893,29 @@ def main():
                 shutil.copy2(src, dest)
                 static_files.append(dest.name)
 
-    print(f"Generated: {len(entries)} code pages, {len(by_brand)} brand pages, "
-          f"{len(cities)} city pages, {len(articles)} guides -> {OUT}")
+    rules, errors, fb_changed = sync_redirects(anchor_of, page_of_family, set(urls))
+    pages, words, dist, check_errors = validate(set(hub_paths.values()))
+    errors += check_errors
+
+    n_rows = sum(len(r) for r in rows_by_page.values())
+    n_detail = sum(1 for rows in rows_by_page.values() for r in rows if r["entry"])
+    print(f"Generated {len(urls)} pages -> {OUT} (sitemap: {len(urls)} URLs)")
+    print(f"  {len(pages_cfg)} controller pages, {n_rows} table rows "
+          f"({n_detail} with full sections); {len(cities)} city pages; "
+          f"{len(articles)} guides")
+    print(f"  {len(rules)} redirects (firebase.json "
+          f"{'updated' if fb_changed else 'unchanged'})")
+    print(f"  fewest words: {min(words.values())} ({min(words, key=words.get)}); "
+          f"farthest from a hub: {max(dist.values())} clicks")
     if static_files:
-        print(f"Static passthrough: {', '.join(static_files)}")
+        print(f"  static passthrough: {', '.join(static_files)}")
+    if errors:
+        print(f"\nBUILD CHECKS FAILED ({len(errors)}):")
+        for e in errors:
+            print("  -", e)
+        sys.exit(1)
+    print("  all checks passed: links, anchors, titles, word counts, "
+          "citations, hub distance, redirects")
 
 
 if __name__ == "__main__":

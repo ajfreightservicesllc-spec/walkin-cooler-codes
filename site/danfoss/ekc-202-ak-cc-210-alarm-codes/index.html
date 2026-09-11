@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Do Danfoss EKC 202 &amp; AK-CC 210 Alarm Codes Mean? Full List</title>
+<meta name="description" content="Every Danfoss EKC 202 and AK-CC 210 code: E1, E6, E25-E29 faults, A1-A61 alarms and the S status codes that explain why the box isn't cooling right now.">
+<link rel="canonical" href="https://walkincoolercodes.com/danfoss/ekc-202-ak-cc-210-alarm-codes/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does A1 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "High temperature alarm. The air temperature has been above the upper alarm limit (parameter A13) for longer than the alarm delay. On the display it reads 'High t. alarm'."}}, {"@type": "Question", "name": "What does A2 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "Low temperature alarm. The air temperature has dropped below the lower alarm limit (parameter A14). Displayed as 'Low t. alarm'. Product in a cooler can freeze if this persists."}}, {"@type": "Question", "name": "What does A4 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "Door alarm. The door contact reports the door has been open longer than the door-alarm delay (parameter A04). Depending on setup, refrigeration and fans may stop while the door is open."}}, {"@type": "Question", "name": "What does A45 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "Standby mode \u2014 refrigeration stopped. Refrigeration has been stopped via the r12 main switch or a DI input. The controller shows 'Standby mode'; on the AK-CC 210 the alarm relay is not activated for this state."}}, {"@type": "Question", "name": "What does A59 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "Case cleaning. A cleaning signal from a DI input has put the case in cleaning mode. On networked systems this event is transmitted and can be logged as documentation of the cleaning sequence."}}, {"@type": "Question", "name": "What does E1 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "Controller fault. Internal fault in the controller itself ('EKC error'). This is a hardware/electronics problem, not a temperature condition."}}, {"@type": "Question", "name": "What does E27 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "S5 sensor error. Error on the S5 sensor \u2014 typically the defrost/evaporator sensor (or condenser sensor if configured that way). Defrost control may fall back to time-based operation, risking coil ice-up."}}, {"@type": "Question", "name": "What does E29 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "Air sensor (Sair) error. Error on the Sair air temperature sensor. The controller can't read box air temperature, so regulation and temperature alarms are unreliable."}}, {"@type": "Question", "name": "What does E25 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "S3 sensor error. Error on the S3 sensor (one of the two air sensors, typically mounted before the evaporator). Temperature regulation that uses S3 becomes unreliable."}}, {"@type": "Question", "name": "What does E26 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "S4 sensor error. Error on the S4 sensor (one of the two air sensors, typically mounted after the evaporator). Regulation and alarm functions that use S4 are affected."}}, {"@type": "Question", "name": "What does A16 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "Alarm signal from DI2 input. An external device wired to the DI2 digital input is signaling an alarm after the configured delay. What tripped depends on what is connected to DI2."}}, {"@type": "Question", "name": "What does A60 mean on a Danfoss EKC 202 / AK-CC 210?", "acceptedAnswer": {"@type": "Answer", "text": "HACCP high-temperature alarm. High-temperature alarm for the HACCP monitoring function \u2014 the food-safety temperature limit tracked by the controller has been exceeded."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://walkincoolercodes.com/"}, {"@type": "ListItem", "position": 2, "name": "Danfoss", "item": "https://walkincoolercodes.com/danfoss/"}, {"@type": "ListItem", "position": 3, "name": "Danfoss EKC 202 / AK-CC 210"}]}</script>
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p,.card p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/danfoss/">Danfoss</a> &rsaquo; Danfoss EKC 202 / AK-CC 210</div>
+<article class="card">
+<span class="family-tag">Danfoss &middot; 30 codes and messages</span>
+<h1 class="page-h1">What do Danfoss EKC 202 and AK-CC 210 alarm codes mean?</h1>
+<p><b>Short answer:</b> these controllers show three kinds of code. <b>E-codes</b> are faults — a sensor error or a defect in the controller. <b>A-codes</b> are alarms from daily operation — temperature, door, inputs, standby. <b>S-codes</b> are status messages that explain why nothing seems to be happening: refrigeration stopped by the main switch or the thermostat, a defrost in progress, a door open. The EKC 202 and the AK-CC 210 share most codes; the table marks which controller each one applies to.</p>
+<h2>Which machines use it?</h2>
+<p> The Danfoss <b>EKC 202</b> and its successor the <b>AK-CC 210</b> are panel-mount case controllers used across commercial refrigeration — display cases, cold rooms, and walk-in evaporator control, often tied into a store's front-end monitoring network. Faults show as short codes plus a plain-text line on the display: <b>E-codes</b> are defects (E1 controller fault, E27 and E29 sensor errors) and <b>A-codes</b> are alarms (A1 high temperature, A2 low, A4 door, A45 standby). Practical tip: A45 standby doesn't trip the alarm relay on the AK-CC 210 — a box someone left in standby can sit warming quietly, so treat an unexplained 'Standby mode' display as urgent, not informational.</p><p> The Danfoss <b>AK-CC 210</b> is a case controller for commercial refrigeration — cold rooms, display cases, and walk-in evaporator sections, frequently networked into a central monitoring system that logs its alarms. It reports with the same short-code convention as the rest of Danfoss's EKC/AK line: <b>E-codes</b> for sensor and hardware defects (E25 and E26 are the S3 and S4 air sensors) and <b>A-codes</b> for alarm conditions, including <b>A60</b>, a dedicated HACCP high-temperature alarm for food-safety monitoring. Practical tip: when A60 shows, log the actual product temperature immediately — that alarm is a compliance record as much as an equipment warning, and your notes matter at inspection time.</p>
+<h2>How do you read and clear the display?</h2>
+<p>When there's an error the LEDs on the front flash and the alarm relay switches on. <b>Push the top button</b> to see the alarm report, and keep pushing to see any others. E-alarms appear the moment the error occurs; A-alarms only after their time delay has run out, and an A-alarm stays hidden while an E-alarm is active. <b>Push the upper button briefly (1 second)</b> to show the current status code.</p>
+<h2 id="code-table">Every Danfoss EKC 202 / AK-CC 210 code at a glance</h2>
+<div class="tbl"><table class="codes"><thead><tr><th>Code</th><th>What it means</th><th>Applies to</th></tr></thead><tbody><tr><td><a href="#code-a1"><b>A1</b></a></td><td>High temperature alarm</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr><td><a href="#code-a2"><b>A2</b></a></td><td>Low temperature alarm</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr><td><a href="#code-a4"><b>A4</b></a></td><td>Door alarm</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr id="code-a5"><td><b>A5</b></td><td>Maximum hold time (AK-CC 210: information that the time set in parameter o16 has expired)</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr id="code-a15"><td><b>A15</b></td><td>Alarm signal from the DI1 input</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr><td><a href="#code-a45"><b>A45</b></a></td><td>Standby mode — refrigeration stopped</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr><td><a href="#code-a59"><b>A59</b></a></td><td>Case cleaning</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr><td><a href="#code-e1"><b>E1</b></a></td><td>Controller fault</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr id="code-e6"><td><b>E6</b></td><td>Real-time clock fault — check the battery and reset the clock</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr><td><a href="#code-e27"><b>E27</b></a></td><td>S5 sensor error</td><td>EKC 202 &amp; AK-CC 210</td></tr><tr><td><a href="#code-e29"><b>E29</b></a></td><td>Air sensor (Sair) error</td><td>EKC 202</td></tr><tr><td><a href="#code-e25"><b>E25</b></a></td><td>S3 sensor error</td><td>AK-CC 210</td></tr><tr><td><a href="#code-e26"><b>E26</b></a></td><td>S4 sensor error</td><td>AK-CC 210</td></tr><tr><td><a href="#code-a16"><b>A16</b></a></td><td>Alarm signal from DI2 input</td><td>AK-CC 210</td></tr><tr><td><a href="#code-a60"><b>A60</b></a></td><td>HACCP high-temperature alarm</td><td>AK-CC 210</td></tr><tr id="code-a61"><td><b>A61</b></td><td>Condenser alarm</td><td>EKC 202</td></tr><tr id="code-s0"><td><b>S0</b></td><td>Regulating <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s1"><td><b>S1</b></td><td>Waiting for the end of a coordinated defrost <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s2"><td><b>S2</b></td><td>Compressor ON-time <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s3"><td><b>S3</b></td><td>Compressor OFF-time <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s4"><td><b>S4</b></td><td>Drip-off time <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s10"><td><b>S10</b></td><td>Refrigeration stopped by the main switch <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s11"><td><b>S11</b></td><td>Refrigeration stopped by the thermostat <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s14"><td><b>S14</b></td><td>Defrost sequence — defrosting <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s15"><td><b>S15</b></td><td>Defrost sequence — fan delay <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s16"><td><b>S16</b></td><td>Refrigeration stopped because of an open DI input <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s17"><td><b>S17</b></td><td>Door open (open DI input) <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s20"><td><b>S20</b></td><td>Emergency cooling <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s25"><td><b>S25</b></td><td>Manual control of outputs <span class="kind">status</span></td><td>EKC 202</td></tr><tr id="code-s29"><td><b>S29</b></td><td>Case cleaning <span class="kind">status</span></td><td>EKC 202</td></tr></tbody></table></div>
+<p class="note">12 codes link to a full section below. The other 18 are listed as the manufacturer's manual gives them. Every row comes from the manual cited at the end of this page.</p>
+<h2>What does each code mean — and what should you do?</h2>
+<section class="code-sec" id="code-a1">
+<h3>A1 — High temperature alarm</h3>
+<p class="applies">Applies to: EKC 202 &amp; AK-CC 210</p>
+<p>The air temperature has been above the upper alarm limit (parameter A13) for longer than the alarm delay. On the display it reads 'High t. alarm'.</p>
+<p><b>What causes it:</b></p><ul><li>Door or lid open or not sealing — a torn gasket loads the box with warm, humid air</li><li>Warm product just loaded, or a defrost just ended — recovery takes time</li><li>Ice on the evaporator or a dirty, blocked condenser</li><li>Condensing unit not running — tripped breaker</li></ul>
+<p><b>Can staff fix it?</b> Often, yes. Doors, gaskets, recent loading, post-defrost recovery, condenser blockage, and breakers are all staff checks. Give it up to an hour to pull back down after fixing the obvious.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the door or lid is closed and sealing; look for torn gaskets</li><li>Check whether warm product was just loaded or a defrost just ended — recovery takes time</li><li>Look for ice on the evaporator and blockage or dirt at the condenser</li><li>Confirm the condensing unit is running and its breaker is on</li><li>Move perishables if temperature keeps rising</li></ol>
+<div class="callout"><b>Safety:</b> Food safety: log temperatures during the event.</div>
+<p><b>Why it takes a technician:</b> If temperature doesn't recover within that hour, the problem is in the sealed system or controls — that's gauge work requiring EPA Section 608 certification, and warm product is a countdown clock. Log temperatures for your inspection records while you wait.</p>
+<div class="callout"><b>When to call:</b> If temperature doesn't come back down within an hour after the obvious checks, call a refrigeration tech.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> (RS8DZ902 (BC162786425567en-000901))</p>
+</section>
+<section class="code-sec" id="code-a2">
+<h3>A2 — Low temperature alarm</h3>
+<p class="applies">Applies to: EKC 202 &amp; AK-CC 210</p>
+<p>The air temperature has dropped below the lower alarm limit (parameter A14). Displayed as 'Low t. alarm'. Product in a cooler can freeze if this persists.</p>
+<p><b>What causes it:</b></p><ul><li>Product stacked against the air sensor, fooling the reading</li><li>The compressor running continuously and never cycling off</li><li>A sensor, relay, or setpoint fault driving the box below the A14 limit</li></ul>
+<p><b>Can staff fix it?</b> Partly. Verify the real temperature with a separate thermometer, clear the sensor, and move freeze-sensitive product away from the discharge air. A unit that won't cycle off is beyond staff.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Verify actual temperature with a separate thermometer</li><li>Check nothing is stacked against the air sensor</li><li>Note if the compressor runs continuously and never cycles off</li><li>Move freeze-sensitive product away from the discharge air</li></ol>
+<p><b>Why it takes a technician:</b> Diagnosing whether the sensor, relay, or setpoint is at fault means live electrical testing at the controller — and while it runs cold, product in a cooler is freezing.</p>
+<div class="callout"><b>When to call:</b> If the unit won't cycle off, call a tech to check the sensor, relay, or setpoints.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> (RS8DZ902 (BC162786425567en-000901))</p>
+</section>
+<section class="code-sec" id="code-a4">
+<h3>A4 — Door alarm</h3>
+<p class="applies">Applies to: EKC 202 &amp; AK-CC 210</p>
+<p>The door contact reports the door has been open longer than the door-alarm delay (parameter A04). Depending on setup, refrigeration and fans may stop while the door is open.</p>
+<p><b>What causes it:</b></p><ul><li>Door open longer than the alarm delay — open-door time loads the box with warm, humid air</li><li>Gasket damage, ice, or product keeping the door off its seal</li><li>A sticking or iced door switch</li></ul>
+<p><b>Can staff fix it?</b> Usually, yes. Close and latch the door, check the gasket, free the switch. Depending on setup, refrigeration and fans stop while the controller thinks the door is open — so a stuck switch means no cooling.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Close the door and confirm it latches</li><li>Inspect the gasket for damage, ice, or product blocking the seal</li><li>Check the door switch for sticking or ice</li><li>Confirm the alarm clears with the door shut</li></ol>
+<p><b>Why it takes a technician:</b> If the alarm won't clear with the door shut, the door switch or its wiring is faulty — live testing of the switch circuit and the A04 delay setting is controller work.</p>
+<div class="callout"><b>When to call:</b> If the alarm won't clear with the door shut, the door switch or its wiring needs a tech.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> (RS8DZ902 (BC162786425567en-000901))</p>
+</section>
+<section class="code-sec" id="code-a45">
+<h3>A45 — Standby mode — refrigeration stopped</h3>
+<p class="applies">Applies to: EKC 202 &amp; AK-CC 210</p>
+<p>Refrigeration has been stopped via the r12 main switch or a DI input. The controller shows 'Standby mode'; on the AK-CC 210 the alarm relay is not activated for this state.</p>
+<p><b>What causes it:</b></p><ul><li>Refrigeration stopped deliberately via the r12 main switch</li><li>A DI input (an external switch) put the controller in standby — note the AK-CC 210 does not activate its alarm relay for this state, so nothing else may be flagging it</li></ul>
+<p><b>Can staff fix it?</b> Yes, if someone put it in standby for cleaning or stocking — switch it back and verify box temperature. If nobody did, stop guessing at parameters.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Ask whether someone put the unit in standby for cleaning or stocking</li><li>Check any external switch wired to the unit</li><li>Verify box temperature and move product if it has been off a while</li></ol>
+<p><b>Why it takes a technician:</b> Checking the r12 parameter and DI wiring means going into the controller's setup — a wrong change there keeps the box off. Meanwhile a unit in unnoticed standby is warming product with no alarm relay to warn anyone.</p>
+<div class="callout"><b>When to call:</b> If no one turned it off, have a tech check the r12 parameter and DI wiring.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf">Danfoss — Controller for temperature control AK-CC 210 — user guide</a> (RS8EP602, 2018-11 (BC029186426773en-000601))</p>
+</section>
+<section class="code-sec" id="code-a59">
+<h3>A59 — Case cleaning</h3>
+<p class="applies">Applies to: EKC 202 &amp; AK-CC 210</p>
+<p>A cleaning signal from a DI input has put the case in cleaning mode. On networked systems this event is transmitted and can be logged as documentation of the cleaning sequence.</p>
+<p><b>What causes it:</b></p><ul><li>Staff activated cleaning mode via the DI input — a deliberate signal, not a fault</li><li>The cleaning switch left in the cleaning position after the job was done</li></ul>
+<p><b>Can staff fix it?</b> Yes. Confirm someone actually started a cleaning, return the switch to normal when finished, and verify the case pulls back down to temperature. On networked systems the event is logged as documentation of the cleaning.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Confirm whether staff activated cleaning mode</li><li>When cleaning is done, return the cleaning switch to normal</li><li>Verify the case pulls back down to temperature afterward</li></ol>
+<p><b>Why it takes a technician:</b> If the unit stays in cleaning mode after the switch is returned to normal, the DI input or its configuration is faulty — controller-level diagnosis, and the case isn't refrigerating properly until it's resolved.</p>
+<div class="callout"><b>When to call:</b> If the unit stays in cleaning mode after the switch is returned to normal, call a tech.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> (RS8DZ902 (BC162786425567en-000901))</p>
+</section>
+<section class="code-sec" id="code-e1">
+<h3>E1 — Controller fault</h3>
+<p class="applies">Applies to: EKC 202 &amp; AK-CC 210</p>
+<p>Internal fault in the controller itself ('EKC error'). This is a hardware/electronics problem, not a temperature condition.</p>
+<p><b>What causes it:</b></p><ul><li>An internal fault in the controller's own electronics — the 'EKC error'</li><li>Not a temperature condition: the hardware itself is the problem</li></ul>
+<p><b>Can staff fix it?</b> One shot: power-cycle at the breaker for a few minutes. If E1 returns, there's nothing else staff can do except record it and watch box temperature with a separate thermometer.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the unit at the breaker for 2-3 minutes</li><li>If the code returns, record it and monitor box temperature with a separate thermometer</li><li>Move product if the unit is not holding temperature</li></ol>
+<p><b>Why it takes a technician:</b> A persistent internal fault means the controller likely needs replacement — swapping and reprogramming a refrigeration controller is live electrical work, and until then the box's control can't be trusted.</p>
+<div class="callout"><b>When to call:</b> If E1 persists after a power cycle, the controller likely needs replacement by a tech.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> (RS8DZ902 (BC162786425567en-000901))</p>
+</section>
+<section class="code-sec" id="code-e27">
+<h3>E27 — S5 sensor error</h3>
+<p class="applies">Applies to: EKC 202 &amp; AK-CC 210</p>
+<p>Error on the S5 sensor — typically the defrost/evaporator sensor (or condenser sensor if configured that way). Defrost control may fall back to time-based operation, risking coil ice-up.</p>
+<p><b>What causes it:</b></p><ul><li>The S5 sensor (defrost/evaporator, or condenser if configured that way) has failed</li><li>With it down, defrost control falls back to time-based operation — coil ice-up is the risk, and heavy ice on the evaporator is the visible symptom</li></ul>
+<p><b>Can staff fix it?</b> Only the checks: look for coil ice, power-cycle once, and monitor box temperature while waiting. The sensor itself is a service part.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the evaporator coil for heavy ice</li><li>Power-cycle at the breaker and see if the code returns</li><li>Monitor box temperature while waiting for service</li></ol>
+<p><b>Why it takes a technician:</b> Testing and replacing the S5 sensor is live electrical work at the controller, and an iced coil left unmanaged will eventually block airflow and stop the box from holding temperature.</p>
+<div class="callout"><b>When to call:</b> If the code persists, a tech needs to test or replace the S5 sensor.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> (RS8DZ902 (BC162786425567en-000901))</p>
+</section>
+<section class="code-sec" id="code-e29">
+<h3>E29 — Air sensor (Sair) error</h3>
+<p class="applies">Applies to: EKC 202</p>
+<p>Error on the Sair air temperature sensor. The controller can't read box air temperature, so regulation and temperature alarms are unreliable.</p>
+<p><b>What causes it:</b></p><ul><li>The Sair air temperature sensor has failed</li><li>A damaged or iced probe in the return air stream</li><li>A broken connection between probe and controller</li></ul>
+<p><b>Can staff fix it?</b> Barely. Power-cycle once and inspect the probe for visible damage. If E29 returns, regulation and temperature alarms are unreliable until a tech replaces the sensor — the box is running blind.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check box temperature with a separate thermometer and note it</li><li>Look for a damaged or iced sensor probe in the return air stream</li><li>Power-cycle at the breaker; if the code returns, plan for service</li><li>Move product if temperature drifts out of safe range</li></ol>
+<div class="callout"><b>Safety:</b> The box is running blind on air temperature — monitor product closely.</div>
+<p><b>Why it takes a technician:</b> The sensor circuit needs live electrical testing, and with no trustworthy air reading, neither control nor the alarms protecting your product can be relied on — monitor with a separate thermometer and move product if it drifts.</p>
+<div class="callout"><b>When to call:</b> Persistent E29 means the air sensor or wiring must be tested and replaced by a tech.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> (RS8DZ902 (BC162786425567en-000901))</p>
+</section>
+<section class="code-sec" id="code-e25">
+<h3>E25 — S3 sensor error</h3>
+<p class="applies">Applies to: AK-CC 210</p>
+<p>Error on the S3 sensor (one of the two air sensors, typically mounted before the evaporator). Temperature regulation that uses S3 becomes unreliable.</p>
+<p><b>What causes it:</b></p><ul><li>The S3 air sensor (typically mounted before the evaporator) has failed</li><li>A lost connection between the sensor and the controller</li><li>Any regulation that uses S3 is unreliable while the fault is active</li></ul>
+<p><b>Can staff fix it?</b> Staff can verify box temperature with a separate thermometer, power-cycle once at the breaker, and record the code and time for the tech. That's the limit.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Verify box temperature with a separate thermometer</li><li>Power-cycle the unit at the breaker and see if the code returns</li><li>Note the code and time for the service tech</li></ol>
+<p><b>Why it takes a technician:</b> Confirming whether the sensor or its wiring failed takes live electrical measurement at the controller — and until it's fixed, temperature control on that sensor can't be trusted.</p>
+<div class="callout"><b>When to call:</b> If E25 persists, a tech needs to test or replace the S3 sensor.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf">Danfoss — Controller for temperature control AK-CC 210 — user guide</a> (RS8EP602, 2018-11 (BC029186426773en-000601))</p>
+</section>
+<section class="code-sec" id="code-e26">
+<h3>E26 — S4 sensor error</h3>
+<p class="applies">Applies to: AK-CC 210</p>
+<p>Error on the S4 sensor (one of the two air sensors, typically mounted after the evaporator). Regulation and alarm functions that use S4 are affected.</p>
+<p><b>What causes it:</b></p><ul><li>The S4 air sensor (typically mounted after the evaporator) has failed</li><li>A lost connection between the sensor and the controller</li><li>Regulation and alarm functions using S4 are affected while it's down</li></ul>
+<p><b>Can staff fix it?</b> Same as any failed sensor: verify the real temperature independently, power-cycle once, note the code for the service visit. Replacement is not a staff job.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Verify box temperature with a separate thermometer</li><li>Power-cycle the unit at the breaker and see if the code returns</li><li>Note the code and time for the service tech</li></ol>
+<p><b>Why it takes a technician:</b> Sensor and wiring testing is live electrical work, and with S4 out, some of the controller's alarm functions are blind — problems can develop without warning until it's repaired.</p>
+<div class="callout"><b>When to call:</b> If E26 persists, a tech needs to test or replace the S4 sensor.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf">Danfoss — Controller for temperature control AK-CC 210 — user guide</a> (RS8EP602, 2018-11 (BC029186426773en-000601))</p>
+</section>
+<section class="code-sec" id="code-a16">
+<h3>A16 — Alarm signal from DI2 input</h3>
+<p class="applies">Applies to: AK-CC 210</p>
+<p>An external device wired to the DI2 digital input is signaling an alarm after the configured delay. What tripped depends on what is connected to DI2.</p>
+<p><b>What causes it:</b></p><ul><li>An external device wired to the DI2 digital input tripped and held past the configured delay</li><li>Often a protective switch that opened for a reason — what it means depends on what the installer wired to DI2</li></ul>
+<p><b>Can staff fix it?</b> No. Check the box is still cooling, note any other alarms on nearby equipment, and record the code and time — that's real help for the tech, not a fix.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check box temperature and whether the unit still cools</li><li>Note any other alarms on nearby equipment</li><li>Record the code and time for the tech</li></ol>
+<p><b>Why it takes a technician:</b> Only someone who can trace the installation can identify the device on DI2, and if it's a pressure or safety switch, the root cause behind the trip needs professional diagnosis before the unit is trusted again.</p>
+<div class="callout"><b>When to call:</b> Call your tech to identify the device on DI2 — it is often a protective switch that tripped for a reason.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf">Danfoss — Controller for temperature control AK-CC 210 — user guide</a> (RS8EP602, 2018-11 (BC029186426773en-000601))</p>
+</section>
+<section class="code-sec" id="code-a60">
+<h3>A60 — HACCP high-temperature alarm</h3>
+<p class="applies">Applies to: AK-CC 210</p>
+<p>High-temperature alarm for the HACCP monitoring function — the food-safety temperature limit tracked by the controller has been exceeded.</p>
+<p><b>What causes it:</b></p><ul><li>Temperature exceeded the food-safety limit the controller's HACCP function tracks</li><li>The same drivers as any high-temperature event: door and gasket leaks letting humid air in, recent loading, evaporator ice, or a dirty condenser that can't reject heat</li></ul>
+<p><b>Can staff fix it?</b> The response is staff work even when the cause isn't: log the actual product and box temperature immediately, check door, loading, coil ice, and condenser airflow, and follow your food-safety procedure for time/temperature abuse — move or discard product per policy.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check and log the actual product/box temperature immediately</li><li>Check door seal, recent loading, evaporator ice, and condenser airflow</li><li>Follow your food-safety procedure for time/temperature abuse — move or discard product per policy</li></ol>
+<div class="callout"><b>Safety:</b> Food safety event — document it for HACCP records.</div>
+<p><b>Why it takes a technician:</b> If temperature doesn't recover quickly, the mechanical cause needs a certified tech, and the event itself must be documented for HACCP records — this alarm is as much a compliance event as an equipment one.</p>
+<div class="callout"><b>When to call:</b> If temperature doesn't recover quickly, call a tech and document the event for HACCP records.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf">Danfoss — Controller for temperature control AK-CC 210 — user guide</a> (RS8EP602, 2018-11 (BC029186426773en-000601))</p>
+</section>
+<h2>How do you diagnose a Danfoss EKC 202 / AK-CC 210 alarm, step by step?</h2>
+<ol class="steps"><li><b>Read every report.</b> Push the top button to step through the alarm report. Fix E-codes first — an active E-alarm hides any A-alarm behind it.</li><li><b>If it's warm but not alarming, read the status code.</b> A brief press of the upper button shows it: S10 means refrigeration was stopped by the main switch, S11 by the thermostat, S16 by an open DI input, S17 a door open; S14 and S15 are a defrost in progress.</li><li><b>A45 standby is urgent on an AK-CC 210.</b> Refrigeration has been stopped via the r12 main switch or a DI input — and on the AK-CC 210 the alarm relay is not activated, so a remote alarm system won't call anyone.</li><li><b>Know which sensor is which.</b> The EKC 202 uses an air sensor (Sair) and an evaporator/defrost sensor (S5). The AK-CC 210 uses S3 in the air flow before the evaporator, S4 after the evaporator, and S5 on the evaporator for defrost. Live readings are in the service menu (EKC 202: u09 = S5, u69 = Sair).</li><li><b>Replacement sensors must match.</b> Pt1000 sensors are normal; PTC 1000 Ω or NTC 5,000 Ω (at 25 °C) sensors can be used instead, selected in parameter o06 — and all sensors on one controller must be the same type.</li><li><b>A60 is a food-safety record.</b> It's the AK-CC 210's HACCP high-temperature alarm — log the actual product temperature when you see it.</li><li><b>E6 is the clock.</b> Check the battery and reset the clock.</li></ol>
+<div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
+If the same fault returns after a single reset, the underlying condition is real —
+stop resetting and deal with the cause.</div>
+<h2>Which parts are usually involved?</h2>
+<div class="tbl"><table class="parts"><thead><tr><th>Part</th><th>Codes that point to it</th><th>Note</th></tr></thead><tbody><tr><td>Air sensor Sair (EKC 202)</td><td><a href="#code-e29">E29</a>, <a href="#code-a1">A1</a>, <a href="#code-a2">A2</a></td><td></td></tr><tr><td>Air sensors S3 and S4 (AK-CC 210)</td><td><a href="#code-e25">E25</a>, <a href="#code-e26">E26</a>, <a href="#code-a1">A1</a>, <a href="#code-a2">A2</a>, <a href="#code-a60">A60</a></td><td></td></tr><tr><td>Evaporator / defrost sensor S5</td><td><a href="#code-e27">E27</a></td><td></td></tr><tr><td>Door switch on a DI input</td><td><a href="#code-a4">A4</a></td><td></td></tr><tr><td>Devices wired to DI1 / DI2</td><td><a href="#code-a15">A15</a>, <a href="#code-a16">A16</a>, <a href="#code-a59">A59</a></td><td></td></tr><tr><td>Main switch setting r12, or a DI standby input</td><td><a href="#code-a45">A45</a></td><td></td></tr><tr><td>The controller and its clock battery</td><td><a href="#code-e1">E1</a>, <a href="#code-e6">E6</a></td><td></td></tr><tr><td>Condenser (EKC 202)</td><td><a href="#code-a61">A61</a></td><td></td></tr></tbody></table></div>
+<h2>What refrigeration is behind these codes?</h2><p>Every code here is the controller reporting a reading from the refrigeration system. The background is explained once, for every controller on this site: <a href="/guides/walk-in-cooler-alarm-codes-guide/#temperature-control">how a controller holds temperature — and how its sensors are tested</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#defrost">how defrost works and what goes wrong</a>.</p>
+
+<p>If it does come to a service call and you're in <a href="/nashville-tn/">Nashville, TN</a> or <a href="/birmingham-al/">Birmingham, AL</a>, we maintain independently compiled lists of local companies that service walk-in coolers — real businesses with verified contact information, none of whom paid to be listed.</p>
+
+</article>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf">Danfoss — Controller for temperature control EKC 202A, B, C — user guide</a> <span class="doc">(RS8DZ902 (BC162786425567en-000901))</span></li><li><a href="https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf">Danfoss — Controller for temperature control AK-CC 210 — user guide</a> <span class="doc">(RS8EP602, 2018-11 (BC029186426773en-000601))</span></li></ul></div>
+<h2>Other Danfoss controllers</h2><div class='grid'><a href="/danfoss/erc-211-213-214-alarm-codes/"><span class="c">Danfoss ERC 211 / 213 / 214</span><div class="t">Danfoss ERC 21X display; E27/E29/E30 sensor errors and A01–A99 alarms.</div></a><a href="/danfoss/optyma-plus-alarm-codes/"><span class="c">Danfoss Optyma Plus</span><div class="t">Controller built into a Danfoss condensing unit; A2, A17, A80, A96.</div></a></div>
+</div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Do Carel PJ Easy (PJEZ) Codes Mean? E0, dOr, CHt &amp; More</title>
+<meta name="description" content="Every Carel PJ Easy (PJEZ) alarm code: E0/E1/E2 probe errors, HI/LO, dOr, IA, cht/CHt, Ed, EE/EF, EtC. What it means, what to check, when to call a tech.">
+<link rel="canonical" href="https://walkincoolercodes.com/carel/pj-easy-alarm-codes/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does E0 mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Probe 1 (control) error. The control/ambient probe has failed or is disconnected. The buzzer and alarm relay activate and the controller can no longer regulate on real air temperature."}}, {"@type": "Question", "name": "What does E1 mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Probe 2 (defrost) error. The defrost/evaporator probe has failed or is disconnected. Defrosts will end on time instead of coil temperature."}}, {"@type": "Question", "name": "What does E2 mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Probe 3 (condenser) error. On PJEZ models with a third probe, the condenser probe has failed or is disconnected, so high-condenser-temperature protection is compromised."}}, {"@type": "Question", "name": "What does IA mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "External alarm. The digital input configured as an external alarm (parameter A4, with delay A7) has tripped \u2014 an external safety or monitoring contact opened."}}, {"@type": "Question", "name": "What does dOr mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Open door alarm. The door switch wired to the digital input reports the door has been open too long. Temperature will rise and the coil will ice faster while it's open."}}, {"@type": "Question", "name": "What does LO mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Low temperature alarm. Temperature has fallen below the low alarm threshold (AL) for longer than the delay (Ad). Buzzer and alarm relay activate; it clears automatically when temperature recovers."}}, {"@type": "Question", "name": "What does HI mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "High temperature alarm. Temperature has exceeded the high alarm threshold (AH) for longer than the delay (Ad). The most common walk-in alarm; often door- or defrost-related rather than a mechanical failure."}}, {"@type": "Question", "name": "What does EE mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Unit parameter error. The controller detected an error in its stored unit parameters (internal memory). Configuration data may be corrupted."}}, {"@type": "Question", "name": "What does EF mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Operating parameter error. Error in the controller's stored operating parameters (working settings and setpoints). Settings may have reverted or corrupted."}}, {"@type": "Question", "name": "What does Ed mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Defrost ended by timeout. The defrost ended because it hit the maximum duration (dP) rather than reaching the end-defrost temperature (dt). Usually means more ice on the coil than the defrost can clear."}}, {"@type": "Question", "name": "What does dF mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Defrost running (status, not a fault). dF flashes on the display while a defrost is in progress (when parameter d6 = 0). This is normal operation, not an error code."}}, {"@type": "Question", "name": "What does cht mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Dirty condenser pre-alarm. Condenser temperature has passed the pre-alarm level \u2014 an early warning that the condenser coil is dirty or starved of airflow."}}, {"@type": "Question", "name": "What does CHt mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Dirty condenser alarm. Condenser temperature has exceeded the alarm threshold (parameter Ac) \u2014 the escalated version of cht, with buzzer and alarm relay active. Continued running risks safety trips and compressor stress."}}, {"@type": "Question", "name": "What does EtC mean on a Carel PJ Easy (PJEZ)?", "acceptedAnswer": {"@type": "Answer", "text": "Clock alarm. On PJEZ models with a real-time clock, the clock has failed or lost its setting, so time-of-day defrost bands won't run correctly."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://walkincoolercodes.com/"}, {"@type": "ListItem", "position": 2, "name": "Carel", "item": "https://walkincoolercodes.com/carel/"}, {"@type": "ListItem", "position": 3, "name": "Carel PJ Easy (PJEZ)"}]}</script>
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p,.card p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/carel/">Carel</a> &rsaquo; Carel PJ Easy (PJEZ)</div>
+<article class="card">
+<span class="family-tag">Carel &middot; 15 codes and messages</span>
+<h1 class="page-h1">What do Carel PJ Easy (PJEZ) alarm codes mean?</h1>
+<p><b>Short answer:</b> when a PJ Easy alarms, the code flashes alternating with the temperature and — where fitted and enabled — the buzzer and alarm relay switch on. <b>E0, E1 and E2</b> are probe errors (control, defrost, condenser/product), <b>HI/LO</b> temperature alarms, <b>dOr</b> the door, <b>IA</b> an external alarm, <b>cht/CHt</b> a dirty condenser, <b>Ed</b> a defrost that ended on time, <b>EE/EF</b> parameter errors and <b>EtC</b> the clock. Every alarm clears itself once its cause is gone except <b>CHt</b>, which needs a manual reset.</p>
+<h2>Which machines use it?</h2>
+<p> The Carel <b>PJ Easy (PJEZ)</b> is a small, low-cost panel-mount controller that box and case OEMs fit widely to coolers, freezers, and walk-in panels, and that contractors commonly install as a replacement thermostat. It uses short two- or three-character codes that alternate with the temperature reading: <b>E0/E1/E2</b> for failed probes, <b>HI/LO</b> for temperature alarms, <b>dOr</b> for the door, <b>cht/CHt</b> for a dirty condenser, <b>EE/EF</b> for parameter memory errors. Practical tip: <b>dF</b> flashing on the display just means a defrost is running — it's normal status, not a fault, so wait out the cycle before assuming something is wrong.</p>
+<h2>How do you read and clear the display?</h2>
+<p>Press <b>SET</b> to mute the buzzer; the code and the alarm relay only go off when the cause has been resolved. To reset <b>CHt</b>, switch the controller off and on with the UP button (hold it 3 seconds) or disconnect the power — after cleaning the condenser. <b>dF</b> on the display just means a defrost is running.</p>
+<h2 id="code-table">Every Carel PJ Easy (PJEZ) code at a glance</h2>
+<div class="tbl"><table class="codes"><thead><tr><th>Code</th><th>What it means</th></tr></thead><tbody><tr><td><a href="#code-e0"><b>E0</b></a></td><td>Probe 1 (control) error</td></tr><tr><td><a href="#code-e1"><b>E1</b></a></td><td>Probe 2 (defrost) error</td></tr><tr><td><a href="#code-e2"><b>E2</b></a></td><td>Probe 3 (condenser) error</td></tr><tr><td><a href="#code-ia"><b>IA</b></a></td><td>External alarm</td></tr><tr><td><a href="#code-dor"><b>dOr</b></a></td><td>Open door alarm</td></tr><tr><td><a href="#code-lo"><b>LO</b></a></td><td>Low temperature alarm</td></tr><tr><td><a href="#code-hi"><b>HI</b></a></td><td>High temperature alarm</td></tr><tr><td><a href="#code-ee"><b>EE</b></a></td><td>Unit parameter error</td></tr><tr><td><a href="#code-ef"><b>EF</b></a></td><td>Operating parameter error</td></tr><tr><td><a href="#code-ed"><b>Ed</b></a></td><td>Defrost ended by timeout</td></tr><tr><td><a href="#code-df"><b>dF</b></a></td><td>Defrost running (status, not a fault)</td></tr><tr><td><a href="#code-cht"><b>cht</b></a></td><td>Dirty condenser pre-alarm</td></tr><tr><td><a href="#code-cht-dirty-condenser-alarm"><b>CHt</b></a></td><td>Dirty condenser alarm</td></tr><tr><td><a href="#code-etc"><b>EtC</b></a></td><td>Clock alarm</td></tr><tr id="code-src"><td><b>SrC</b></td><td>Maintenance request (easy split only): the maintenance interval set in parameter HMP has passed; cleared by setting HMr = 1 <span class="kind">information</span></td></tr></tbody></table></div>
+<p class="note">14 codes link to a full section below. The other 1 are listed as the manufacturer's manual gives them. Every row comes from the manual cited at the end of this page.</p>
+<h2>What does each code mean — and what should you do?</h2>
+<section class="code-sec" id="code-e0">
+<h3>E0 — Probe 1 (control) error</h3>
+<p>The control/ambient probe has failed or is disconnected. The buzzer and alarm relay activate and the controller can no longer regulate on real air temperature.</p>
+<p><b>What causes it:</b></p><ul><li>The control/ambient probe has failed or is disconnected — buzzer and alarm relay activate</li><li>Ice buildup or physical damage at the air probe</li><li>Product buried against the sensor</li></ul>
+<p><b>Can staff fix it?</b> The quick checks are: see whether the display shows a plausible temperature, clear product away from the sensor, look for ice or damage, and power-cycle once. A probe that stays failed is a part.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check whether the display shows a plausible temperature or an error</li><li>Look at the air probe inside the unit for ice buildup or physical damage (visual only)</li><li>Power-cycle the unit once at the breaker or plug</li><li>Move product away from the sensor if it's buried</li></ol>
+<p><b>Why it takes a technician:</b> The controller can no longer regulate on real air temperature — probe testing and replacement is live electrical work, and the box is effectively blind until it's done.</p>
+<div class="callout"><b>When to call:</b> Call a tech if E0 remains — the probe needs testing and replacement.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-e1">
+<h3>E1 — Probe 2 (defrost) error</h3>
+<p>The defrost/evaporator probe has failed or is disconnected. Defrosts will end on time instead of coil temperature.</p>
+<p><b>What causes it:</b></p><ul><li>The defrost/evaporator probe has failed or is disconnected</li><li>Defrosts now end on time instead of coil temperature — excess coil ice is the symptom to watch</li></ul>
+<p><b>Can staff fix it?</b> Watch the next defrost: does the coil come fully clear? Power-cycle once; if E1 returns, stop. The probe swap is a service call.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the evaporator coil for excess ice</li><li>Watch the next defrost — does the coil come fully clear?</li><li>Power-cycle once; if E1 returns, stop</li></ol>
+<p><b>Why it takes a technician:</b> Replacing the defrost probe means working in the live control circuit, and a coil that never fully clears will ice over and choke the evaporator until the box can't hold temperature.</p>
+<div class="callout"><b>When to call:</b> Call a tech to replace the defrost probe if the code persists or the coil starts icing.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-e2">
+<h3>E2 — Probe 3 (condenser) error</h3>
+<p>On PJEZ models with a third probe, the condenser probe has failed or is disconnected, so high-condenser-temperature protection is compromised.</p>
+<p><b>What causes it:</b></p><ul><li>On PJEZ models with a third probe, the condenser probe has failed or is disconnected</li><li>Damage to the small sensor wire at the condensing unit</li><li>High-condenser-temperature protection is compromised while it's down</li></ul>
+<p><b>Can staff fix it?</b> Look over the sensor wire (look only), clean obvious dust away from the condenser since the unit's own protection is offline, and power-cycle once. That's it for staff.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Visually check the small sensor wire at the condensing unit for damage (look only)</li><li>Clean obvious dust and debris away from the condenser while you're there</li><li>Power-cycle once and see if E2 clears</li></ol>
+<p><b>Why it takes a technician:</b> The probe needs live testing and replacement, and until then nothing is watching for a dust-matted condenser that can't reject heat — the exact condition this probe exists to catch.</p>
+<div class="callout"><b>When to call:</b> Call a tech to test and replace the condenser probe if E2 stays on.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-ia">
+<h3>IA — External alarm</h3>
+<p>The digital input configured as an external alarm (parameter A4, with delay A7) has tripped — an external safety or monitoring contact opened.</p>
+<p><b>What causes it:</b></p><ul><li>The digital input configured as an external alarm (parameter A4, delay A7) tripped — an external safety or monitoring contact opened</li><li>A stopped condensing unit or tripped breaker</li><li>Condenser airflow blockage tripping an external safety</li></ul>
+<p><b>Can staff fix it?</b> Confirm the condensing unit runs, check the breaker, clear condenser airflow, find out from your installer what's wired to the input, and log occurrences. Diagnosing the device itself isn't DIY.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condensing unit is running and its breaker is on</li><li>Check condenser airflow and clear blockages</li><li>Find out from your installer what device is wired to the digital input</li><li>Log when IA occurs for the service visit</li></ol>
+<p><b>Why it takes a technician:</b> A repeating external alarm means a protective device keeps finding a reason to open — identifying and testing it takes someone who knows the installation, and if it's a pressure safety, certified refrigerant-side diagnosis.</p>
+<div class="callout"><b>When to call:</b> Call a tech if IA repeats — the external device that tripped needs professional diagnosis.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-dor">
+<h3>dOr — Open door alarm</h3>
+<p>The door switch wired to the digital input reports the door has been open too long. Temperature will rise and the coil will ice faster while it's open.</p>
+<p><b>What causes it:</b></p><ul><li>The door switch reports the door open too long — open-door time raises temperature and ices the coil faster with humid air</li><li>Something blocking the door, or a torn/iced gasket preventing a seal</li><li>A misaligned door switch that doesn't actuate when the door shuts</li></ul>
+<p><b>Can staff fix it?</b> Usually, yes. Close the door fully, remove obstructions, inspect the gasket, check the switch alignment, and confirm the alarm clears a few minutes after a proper close.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Close the door fully and remove anything blocking it</li><li>Inspect the gasket for tears, gaps, or ice preventing a seal</li><li>Check the door switch alignment and that it actuates when the door shuts</li><li>Confirm the alarm clears after the door has been closed a few minutes</li></ol>
+<p><b>Why it takes a technician:</b> If the alarm stays on with the door verifiably closed, the switch or its wiring is at fault — live circuit testing at the controller.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the alarm stays on with the door verifiably closed — the switch or wiring is at fault.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-lo">
+<h3>LO — Low temperature alarm</h3>
+<p>Temperature has fallen below the low alarm threshold (AL) for longer than the delay (Ad). Buzzer and alarm relay activate; it clears automatically when temperature recovers.</p>
+<p><b>What causes it:</b></p><ul><li>Temperature below the AL threshold longer than the Ad delay — buzzer and relay active until it recovers</li><li>A drifting probe giving a false cold reading</li><li>Product stacked against the sensor</li><li>A compressor that never cycles off</li></ul>
+<p><b>Can staff fix it?</b> Verify with an independent thermometer first — a drifting probe is a common false alarm. Clear the sensor and watch whether the compressor ever cycles off. The alarm clears itself when temperature recovers.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Verify with an independent thermometer — rule out a drifting probe</li><li>Make sure product isn't stacked against the sensor</li><li>Watch whether the compressor ever cycles off</li></ol>
+<p><b>Why it takes a technician:</b> A unit genuinely running below setpoint continuously has a control or refrigeration fault that needs live diagnosis — and the cost of waiting is freeze-damaged product.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the unit truly runs below setpoint continuously — freeze damage to product is the risk.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-hi">
+<h3>HI — High temperature alarm</h3>
+<p>Temperature has exceeded the high alarm threshold (AH) for longer than the delay (Ad). The most common walk-in alarm; often door- or defrost-related rather than a mechanical failure.</p>
+<p><b>What causes it:</b></p><ul><li>Door open or gasket not sealing — the most common walk-in alarm is usually door- or defrost-related, not mechanical</li><li>Warm product loaded or heavy door traffic — recovery takes time</li><li>A defrost that just finished</li><li>A dust-blocked condenser coil, dead condenser fan, or tripped breaker</li></ul>
+<p><b>Can staff fix it?</b> Often, yes. Door, gasket, loading, post-defrost recovery, condenser airflow, and the breaker are all staff checks — give the box a couple of hours to recover with the door shut.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the door is closed and the gasket seals; look for product blocking it</li><li>Consider recent loading of warm product or heavy door traffic — allow recovery time</li><li>Check whether a defrost just finished</li><li>Check the condensing unit: fan running, coil clear of dust and debris, breaker on</li></ol>
+<p><b>Why it takes a technician:</b> If temperature keeps rising or won't recover in that window, the fault is in the sealed system — gauge diagnosis requiring EPA Section 608 certification, with product warming the whole time.</p>
+<div class="callout"><b>When to call:</b> Call a tech if temperature keeps rising or doesn't recover within a couple of hours with the door shut.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-ee">
+<h3>EE — Unit parameter error</h3>
+<p>The controller detected an error in its stored unit parameters (internal memory). Configuration data may be corrupted.</p>
+<p><b>What causes it:</b></p><ul><li>The controller detected an error in its stored unit parameters — internal memory</li><li>Configuration data possibly corrupted</li></ul>
+<p><b>Can staff fix it?</b> Power-cycle once, press SET for a second to confirm the setpoint still reads what it should, and monitor the box with an independent thermometer. No parameter tinkering.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the controller once</li><li>Check the setpoint still reads what it should (press SET for 1 second)</li><li>Monitor the box with an independent thermometer until resolved</li></ol>
+<p><b>Why it takes a technician:</b> A persistent memory error means the program has to be reloaded or the controller replaced by a tech — until then the box may be running on corrupted settings.</p>
+<div class="callout"><b>When to call:</b> Call a tech if EE persists — the controller may need its program reloaded or the unit replaced.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-ef">
+<h3>EF — Operating parameter error</h3>
+<p>Error in the controller's stored operating parameters (working settings and setpoints). Settings may have reverted or corrupted.</p>
+<p><b>What causes it:</b></p><ul><li>An error in the stored operating parameters — working settings and setpoints</li><li>Settings may have reverted or corrupted</li></ul>
+<p><b>Can staff fix it?</b> Power-cycle once, compare the setpoint against what's posted for the unit, and watch box temperature independently. If EF returns or settings look wrong, stop there.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle once and check whether EF clears</li><li>Verify the setpoint and compare against what's posted for the unit</li><li>Watch box temperature independently in the meantime</li></ol>
+<p><b>Why it takes a technician:</b> The parameter set needs reloading from records by someone who has them — running on reverted setpoints can quietly hold the box at the wrong temperature in either direction.</p>
+<div class="callout"><b>When to call:</b> Call a tech if EF returns or settings look wrong — the parameter set needs to be reloaded from records.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-ed">
+<h3>Ed — Defrost ended by timeout</h3>
+<p>The defrost ended because it hit the maximum duration (dP) rather than reaching the end-defrost temperature (dt). Usually means more ice on the coil than the defrost can clear.</p>
+<p><b>What causes it:</b></p><ul><li>The defrost hit its maximum duration (dP) before reaching the end-defrost temperature (dt) — more ice on the coil than the defrost can clear</li><li>Humid-air leaks at the door gasket icing the coil between defrosts</li><li>Ice or overflow in the drain pan</li><li>A weak defrost heater, bad probe, or undersized defrost schedule</li></ul>
+<p><b>Can staff fix it?</b> The diagnosis help is: look at the coil right after a defrost — remaining ice confirms it — check the door gasket, eyeball the drain pan, and note whether Ed shows after every defrost.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the evaporator coil right after a defrost — remaining ice confirms the problem</li><li>Check the door gasket and closure for humid-air leaks</li><li>Check the drain pan for ice or overflow (visual only)</li><li>Note whether Ed shows after every defrost</li></ol>
+<p><b>Why it takes a technician:</b> A repeating Ed means the defrost heater, probe, or schedule needs service — heater testing is live electrical work — and an uncorrected coil eventually blocks solid and stops the box cooling.</p>
+<div class="callout"><b>When to call:</b> Call a tech if Ed repeats — the defrost heater, probe, or schedule needs service before the coil blocks solid.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-df">
+<h3>dF — Defrost running (status, not a fault)</h3>
+<p>dF flashes on the display while a defrost is in progress (when parameter d6 = 0). This is normal operation, not an error code.</p>
+<p><b>What causes it:</b></p><ul><li>A defrost is in progress and the display flashes dF (when parameter d6 = 0) — normal operation, not an error</li><li>During defrost the fans may be off and the box may warm slightly — also normal</li></ul>
+<p><b>Can staff fix it?</b> Yes — wait it out and avoid opening the door during defrost. Only if dF never clears well beyond the normal defrost time should it be treated as a fault.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Wait for the defrost to finish; fans may be off and the box may warm slightly — normal</li><li>Avoid opening the door during defrost</li><li>If dF never clears well beyond the normal defrost time, treat it as a fault</li></ol>
+<p><b>Why it takes a technician:</b> A unit that appears stuck in defrost, or won't pull back down afterward, has a defrost termination or control fault — probe and heater diagnosis is a live-electrical service job.</p>
+<div class="callout"><b>When to call:</b> Call a tech only if the unit appears stuck in defrost or doesn't pull back down afterward.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-cht">
+<h3>cht — Dirty condenser pre-alarm</h3>
+<p>Condenser temperature has passed the pre-alarm level — an early warning that the condenser coil is dirty or starved of airflow.</p>
+<p><b>What causes it:</b></p><ul><li>Condenser temperature past the pre-alarm level — an early warning the coil is dirty or starved of airflow</li><li>Dust, lint, or grease blocking the fins so the coil can't reject heat</li><li>Items stored against or on top of the condensing unit</li><li>A condenser fan not running with the compressor</li></ul>
+<p><b>Can staff fix it?</b> Yes — this warning exists so staff can act before it escalates. Clear the airflow, check the fan, and get the dirt off the coil while it's still a pre-alarm.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the condenser coil for dust, lint, or grease blocking the fins</li><li>Remove anything stored against or on top of the condensing unit</li><li>Confirm the condenser fan runs with the compressor</li></ol>
+<p><b>Why it takes a technician:</b> If it keeps returning after the airflow is cleared, the coil needs a professional cleaning — a condenser running hot is quietly loading the compressor every hour it runs.</p>
+<div class="callout"><b>When to call:</b> Call for a professional coil cleaning if the pre-alarm continues after clearing airflow.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-cht-dirty-condenser-alarm">
+<h3>CHt — Dirty condenser alarm</h3>
+<p>Condenser temperature has exceeded the alarm threshold (parameter Ac) — the escalated version of cht, with buzzer and alarm relay active. Continued running risks safety trips and compressor stress.</p>
+<p><b>What causes it:</b></p><ul><li>Condenser temperature over the Ac alarm threshold — the escalated version of cht, with buzzer and alarm relay active</li><li>A stopped condenser fan</li><li>A heavily matted coil or blocked airflow that the pre-alarm stage didn't get fixed</li></ul>
+<p><b>Can staff fix it?</b> Check the fan and clear visible blockages, but don't keep silencing the alarm to force operation — that's how a dirty-coil warning turns into a dead compressor.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condenser fan is turning</li><li>Clear all visible blockages and check for a heavily matted coil</li><li>Don't keep silencing the alarm to force operation</li></ol>
+<div class="callout"><b>Safety:</b> Do not repeatedly silence and keep running; compressor damage risk.</div>
+<p><b>Why it takes a technician:</b> Continued running against a hard high-condenser alarm risks safety trips and compressor damage — a tech needs to clean the coil properly and verify the unit before it's trusted again.</p>
+<div class="callout"><b>When to call:</b> Call a tech promptly — running with a hard high-condenser alarm risks compressor damage.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<section class="code-sec" id="code-etc">
+<h3>EtC — Clock alarm</h3>
+<p>On PJEZ models with a real-time clock, the clock has failed or lost its setting, so time-of-day defrost bands won't run correctly.</p>
+<p><b>What causes it:</b></p><ul><li>On PJEZ models with a real-time clock, the clock failed or lost its setting — often after a power outage</li><li>Time-of-day defrost bands won't run correctly until it's reset</li></ul>
+<p><b>Can staff fix it?</b> Sometimes. After an outage, a trained operator re-setting the clock parameters may resolve it. Verify scheduled defrosts still occur at their normal times.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check for a recent power outage</li><li>Verify scheduled defrosts are still occurring at normal times</li><li>Have your trained operator re-set the clock parameters if applicable</li></ol>
+<p><b>Why it takes a technician:</b> A clock that won't hold time points to failed hardware — the controller may need replacement, and until then the defrost schedule the box depends on isn't running when it should.</p>
+<div class="callout"><b>When to call:</b> Call your service company if the clock won't hold time — the controller may need replacement.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> (+030220791 rel. 3.4, 28.04.2021)</p>
+</section>
+<h2>How do you diagnose a Carel PJ Easy (PJEZ) alarm, step by step?</h2>
+<ol class="steps"><li><b>Note the code and the real temperature.</b> Read the box on a separate thermometer before you change anything.</li><li><b>Mute, don't clear.</b> SET silences the buzzer; the code and relay stay on until the cause is fixed.</li><li><b>E0, E1, E2 are probe 1 (control), probe 2 (defrost) and probe 3 (condenser/product).</b> PJ Easy and easy compact models take Carel NTC probes (10 kΩ at 25 °C) or PTC probes (985 Ω at 25 °C), depending on the model's order code; easy split models use NTC or high-temperature NTC probes (50 kΩ). A replacement probe must match what the controller is set up for. Thermistor probes have no polarity.</li><li><b>dOr is the door switch.</b> If the pre-alarm times A7 and d8 are both zero the alarm is immediate. It resets when the door is closed, or when the controller is switched off with UP for 3 seconds.</li><li><b>Ed means a defrost ended on time, not temperature.</b> It clears after the next defrost that ends correctly — look at the coil for ice before then.</li><li><b>cht, then CHt.</b> cht is the dirty-condenser pre-alarm; CHt is the full alarm and the only one that needs a manual reset. Clean the condenser coil with the power off, then reset.</li><li><b>EtC</b> clears by setting the time. <b>EE/EF</b> are parameter-memory errors — a technician job if a power cycle doesn't clear them.</li></ol>
+<div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
+If the same fault returns after a single reset, the underlying condition is real —
+stop resetting and deal with the cause.</div>
+<h2>Which parts are usually involved?</h2>
+<div class="tbl"><table class="parts"><thead><tr><th>Part</th><th>Codes that point to it</th><th>Note</th></tr></thead><tbody><tr><td>Probe 1 — control / room probe (NTC or PTC)</td><td><a href="#code-e0">E0</a>, <a href="#code-hi">HI</a>, <a href="#code-lo">LO</a></td><td></td></tr><tr><td>Probe 2 — defrost probe on the evaporator</td><td><a href="#code-e1">E1</a>, <a href="#code-ed">Ed</a></td><td></td></tr><tr><td>Probe 3 — condenser or product probe</td><td><a href="#code-e2">E2</a>, <a href="#code-cht">cht</a>, <a href="#code-cht-dirty-condenser-alarm">CHt</a></td><td></td></tr><tr><td>Condenser coil and fan</td><td><a href="#code-cht">cht</a>, <a href="#code-cht-dirty-condenser-alarm">CHt</a></td><td></td></tr><tr><td>Door switch</td><td><a href="#code-dor">dOr</a></td><td></td></tr><tr><td>Device on the multifunction input</td><td><a href="#code-ia">IA</a></td><td></td></tr><tr><td>Defrost heater and defrost termination</td><td><a href="#code-ed">Ed</a>, <a href="#code-df">dF</a></td><td></td></tr><tr><td>The controller (parameter memory, clock)</td><td><a href="#code-ee">EE</a>, <a href="#code-ef">EF</a>, <a href="#code-etc">EtC</a></td><td></td></tr></tbody></table></div>
+<h2>What refrigeration is behind these codes?</h2><p>Every code here is the controller reporting a reading from the refrigeration system. The background is explained once, for every controller on this site: <a href="/guides/walk-in-cooler-alarm-codes-guide/#temperature-control">how a controller holds temperature — and how its sensors are tested</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#defrost">how defrost works and what goes wrong</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#condenser">why the condenser matters</a>.</p>
+
+<p>If it does come to a service call and you're in <a href="/nashville-tn/">Nashville, TN</a> or <a href="/birmingham-al/">Birmingham, AL</a>, we maintain independently compiled lists of local companies that service walk-in coolers — real businesses with verified contact information, none of whom paid to be listed.</p>
+
+</article>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1">Carel — easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual</a> <span class="doc">(+030220791 rel. 3.4, 28.04.2021)</span></li></ul></div>
+<h2>Other Carel controllers</h2><div class='grid'><a href="/carel/ir33-alarm-codes/"><span class="c">Carel ir33 / ir33+</span><div class="t">Compact panel display; the code shows in place of the temperature with a bell icon.</div></a></div>
+</div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

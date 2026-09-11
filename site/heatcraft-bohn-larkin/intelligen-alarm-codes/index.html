@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Do Heatcraft intelliGen Codes Mean? AL01, ER01, IN01 &amp; More</title>
+<meta name="description" content="Every Heatcraft intelliGen code on Bohn and Larkin unit coolers: AL alarms, ER errors, IN information and A2L leak codes. What each means and what to check.">
+<link rel="canonical" href="https://walkincoolercodes.com/heatcraft-bohn-larkin/intelligen-alarm-codes/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does AL01 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "High box temperature alarm. The walk-in box temperature has stayed above the programmed High Box Temperature alarm setpoint (default 50F cooler / 40F freezer) longer than the alarm delay time (default 60 minutes). The light bar turns red and AL01 shows on the OLED display."}}, {"@type": "Question", "name": "What does AL02 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Low box temperature alarm. Box temperature has dropped below the Low Box Temperature alarm setpoint (default 30F cooler / 20F freezer) for longer than the alarm delay time. In a cooler this risks freezing product."}}, {"@type": "Question", "name": "What does AL03 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "System startup failure. Shown only when the condensing unit control circuit is wired to the controller. The system pumped down and could not restart \u2014 typically a compressor safety (high/low pressure, oil pressure) keeps tripping."}}, {"@type": "Question", "name": "What does AL04 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Input fault (sensor failure alarm). One of the key control inputs \u2014 box temperature sensor (ER01), suction temperature sensor (ER03), or suction pressure transducer (ER04) \u2014 has failed or is disconnected, so the controller cannot run the system normally."}}, {"@type": "Question", "name": "What does AL06 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Door open alarm. The walk-in door switch has reported the door open longer than the programmed Door Open Alarm Time (default 60 minutes). A related high box temperature alarm may follow."}}, {"@type": "Question", "name": "What does AL12 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "A2L refrigerant leak mitigation active. On A2L-refrigerant unit coolers, the Refrigerant Detection System (RDS) has measured a refrigerant concentration at the regulatory mitigation level and has taken over the unit to run mitigation actions. The light bar turns red."}}, {"@type": "Question", "name": "What does ER01 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Box temperature sensor error. The room/box temperature sensor is reading out of range, shorted, or disconnected. The light bar shows yellow and the controller may fall back to another sensor to keep running."}}, {"@type": "Question", "name": "What does ER02 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Coil temperature sensor error. The evaporator coil (defrost termination) sensor has failed or is disconnected. Defrost cycles may not terminate correctly, which can lead to an iced-up coil."}}, {"@type": "Question", "name": "What does ER03 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Evaporator suction temperature sensor error. The suction line temperature sensor at the evaporator has failed or is disconnected. The controller uses this sensor to calculate superheat and drive the electric expansion valve, so cooling control is degraded."}}, {"@type": "Question", "name": "What does ER04 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Evaporator suction pressure transducer error. The suction pressure transducer has failed or is disconnected. Like ER03, this breaks the controller's superheat calculation for the expansion valve."}}, {"@type": "Question", "name": "What does ER11 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Control circuit error (condensing unit safety tripped). Shown only when the condensing unit is wired to the controller. A safety in the condensing unit control circuit has opened \u2014 the manual lists low pressure, high pressure, oil pressure, compressor module, or phase loss as causes."}}, {"@type": "Question", "name": "What does ER14 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Power supply voltage low. The 24V control power feeding the iRC board has dropped below the minimum (about 22V per the manual). Usually a building supply-voltage or transformer issue."}}, {"@type": "Question", "name": "What does ER15 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Power supply voltage high. The 24V control power feeding the iRC board is above the maximum (about 30V per the manual), usually a wrong transformer tap or high building voltage."}}, {"@type": "Question", "name": "What does ER16 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Low superheat error. The controller measured suction superheat below its minimum safe value for 2 minutes; it shuts the unit down briefly, displays the error, then restarts. Causes in the manual include an iced coil, expansion valve problems, or a bad sensor reading."}}, {"@type": "Question", "name": "What does ER19 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Replace controller clock battery. The coin-cell battery that keeps the controller's clock is low or missing. The system still cools, but time-based logs and defrost schedules can be affected after a power loss."}}, {"@type": "Question", "name": "What does ER22 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "User interface (iRC UI) failure. The controller board has lost proper communication with its display/user interface module, usually a ribbon-cable connection issue per the manual."}}, {"@type": "Question", "name": "What does ER23 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Board communication error. Communication between the iRC control board and the user interface has faulted. The manual's remedy is checking the ribbon cable and power-cycling."}}, {"@type": "Question", "name": "What does ER25 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "System connection lost (multi-evaporator communication). An evaporator controller on a multi-unit system lost its communication link with the rest of the system \u2014 typically damaged, reversed-polarity, or improperly shielded communication wiring per the manual."}}, {"@type": "Question", "name": "What does ER32 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "A2L refrigerant early warning. The Refrigerant Detection System on an A2L unit cooler has detected refrigerant at an early-warning level; the display shows a yellow light bar. The manual directs checking unit cooler piping for leaks (the code's -X suffix identifies which leak sensor)."}}, {"@type": "Question", "name": "What does IN01 mean on a Heatcraft intelliGen controller?", "acceptedAnswer": {"@type": "Answer", "text": "Too many defrosts (information code). Informational notice: the unit has run 8 consecutive defrost cycles that each lasted under 5 minutes, suggesting the defrost schedule is more frequent than the coil needs."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://walkincoolercodes.com/"}, {"@type": "ListItem", "position": 2, "name": "Heatcraft (Bohn/Larkin)", "item": "https://walkincoolercodes.com/heatcraft-bohn-larkin/"}, {"@type": "ListItem", "position": 3, "name": "Heatcraft intelliGen"}]}</script>
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p,.card p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a> &rsaquo; Heatcraft intelliGen</div>
+<article class="card">
+<span class="family-tag">Heatcraft (Bohn/Larkin) &middot; 37 codes and messages</span>
+<h1 class="page-h1">What do Heatcraft intelliGen (Bohn / Larkin) AL, ER and IN codes mean?</h1>
+<p><b>Short answer:</b> intelliGen shows the code on the unit's OLED display and backs it with a light bar. <b>Green</b> is normal. An <b>error</b> (ER code) on any evaporator turns every light bar on the system <b>yellow</b>, with the unit that has the problem flashing yellow; an <b>alarm</b> (AL code) turns them all <b>red</b>, with the unit causing it flashing red. <b>IN</b> codes are information about conditions worth correcting, such as too many or too few defrosts.</p>
+<h2>Which machines use it?</h2>
+<p> The <b>intelliGen</b> refrigeration controller is Heatcraft's current-generation control system, factory-fitted to unit coolers sold under Heatcraft's brands — <b>Bohn</b> and <b>Larkin</b> most commonly, along with Climate Control and Chandler. If your walk-in's evaporator carries one of those nameplates and shows a small OLED text display with a colored light bar, this is your controller. It reports with AL (alarm), ER (error), and IN (information) codes on the display, backed by the light bar: green is normal, yellow is a non-critical fault, red means act now. On newer A2L-refrigerant unit coolers it also runs the built-in refrigerant leak detection system. Practical tip: photograph the display before power-cycling — the code and light bar color together tell the technician most of the story.</p>
+<h2>How do you read and clear the display?</h2>
+<p>Before chasing a code, check the unit isn't in <b>Service</b> or <b>Product Load</b> mode — both pump the system down and switch off the expansion valve, fans and heaters, which looks exactly like a failure. The <b>Monitor</b> menu shows live sensor readings, and every board logs box temperature, coil temperature, suction pressure and temperature, superheat, valve steps, door switch and volts every minute for 60 days — the log copies to a USB drive for the technician.</p>
+<h2 id="code-table">Every Heatcraft intelliGen code at a glance</h2>
+<div class="tbl"><table class="codes"><thead><tr><th>Code</th><th>What it means</th></tr></thead><tbody><tr><td><a href="#code-al01"><b>AL01</b></a></td><td>High box temperature alarm</td></tr><tr><td><a href="#code-al02"><b>AL02</b></a></td><td>Low box temperature alarm</td></tr><tr><td><a href="#code-al03"><b>AL03</b></a></td><td>System startup failure</td></tr><tr><td><a href="#code-al04"><b>AL04</b></a></td><td>Input fault (sensor failure alarm)</td></tr><tr><td><a href="#code-al06"><b>AL06</b></a></td><td>Door open alarm</td></tr><tr id="code-al10"><td><b>AL10</b></td><td>LL high box temperature</td></tr><tr id="code-al11"><td><b>AL11</b></td><td>LL low box temperature</td></tr><tr><td><a href="#code-al12"><b>AL12</b></a></td><td>A2L refrigerant leak mitigation active</td></tr><tr><td><a href="#code-er01"><b>ER01</b></a></td><td>Box temperature sensor error</td></tr><tr><td><a href="#code-er02"><b>ER02</b></a></td><td>Coil temperature sensor error</td></tr><tr><td><a href="#code-er03"><b>ER03</b></a></td><td>Evaporator suction temperature sensor error</td></tr><tr><td><a href="#code-er04"><b>ER04</b></a></td><td>Evaporator suction pressure transducer error</td></tr><tr><td><a href="#code-er11"><b>ER11</b></a></td><td>Control circuit error (condensing unit safety tripped)</td></tr><tr id="code-er13"><td><b>ER13</b></td><td>Spare I/O error</td></tr><tr><td><a href="#code-er14"><b>ER14</b></a></td><td>Power supply voltage low</td></tr><tr><td><a href="#code-er15"><b>ER15</b></a></td><td>Power supply voltage high</td></tr><tr><td><a href="#code-er16"><b>ER16</b></a></td><td>Low superheat error</td></tr><tr id="code-er18"><td><b>ER18</b></td><td>Auxiliary temperature probe error</td></tr><tr><td><a href="#code-er19"><b>ER19</b></a></td><td>Replace controller clock battery</td></tr><tr id="code-er20"><td><b>ER20</b></td><td>Log disrupted — pull the data log to confirm missing data, then power cycle</td></tr><tr><td><a href="#code-er22"><b>ER22</b></a></td><td>User interface (iRC UI) failure</td></tr><tr><td><a href="#code-er23"><b>ER23</b></a></td><td>Board communication error</td></tr><tr id="code-er24"><td><b>ER24</b></td><td>Aux temp override — the aux temperature sensor was assigned to two functions; no action required</td></tr><tr><td><a href="#code-er25"><b>ER25</b></a></td><td>System connection lost (multi-evaporator communication)</td></tr><tr id="code-er26"><td><b>ER26</b></td><td>EV (evaporator) connection lost</td></tr><tr id="code-er27"><td><b>ER27</b></td><td>High humidity</td></tr><tr id="code-er28"><td><b>ER28</b></td><td>Low humidity</td></tr><tr id="code-er29"><td><b>ER29</b></td><td>Humidity sensor error</td></tr><tr id="code-er31"><td><b>ER31</b></td><td>LL connection lost — the three digits shown are the last 3 digits of the disconnected system's IP address</td></tr><tr><td><a href="#code-er32"><b>ER32</b></a></td><td>A2L refrigerant early warning</td></tr><tr id="code-er33"><td><b>ER33</b></td><td>A2L sensor fault</td></tr><tr id="code-er34"><td><b>ER34</b></td><td>A2L service (X = leak-detection sensor number)</td></tr><tr id="code-er35"><td><b>ER35</b></td><td>A2L mitigation (X = leak-detection sensor number)</td></tr><tr id="code-er36"><td><b>ER36</b></td><td>A2L refrigerant mismatch</td></tr><tr id="code-er37"><td><b>ER37</b></td><td>A2L mitigation controller communication loss — check the RS-485 wiring and its polarity</td></tr><tr><td><a href="#code-in01"><b>IN01</b></a></td><td>Too many defrosts (information code)</td></tr><tr id="code-in05"><td><b>IN05</b></td><td>Too few defrosts — 8 consecutive defrosts ended on time <span class="kind">information</span></td></tr></tbody></table></div>
+<p class="note">20 codes link to a full section below. The other 17 are listed as the manufacturer's manual gives them. Every row comes from the manual cited at the end of this page.</p>
+<h2>What does each code mean — and what should you do?</h2>
+<section class="code-sec" id="code-al01">
+<h3>AL01 — High box temperature alarm</h3>
+<p>The walk-in box temperature has stayed above the programmed High Box Temperature alarm setpoint (default 50F cooler / 40F freezer) longer than the alarm delay time (default 60 minutes). The light bar turns red and AL01 shows on the OLED display.</p>
+<p><b>What causes it:</b></p><ul><li>A door left open or a leaking gasket loading the box with warm, humid air</li><li>Warm product just loaded into the box, raising air temperature temporarily</li><li>Heavy ice on the evaporator coil choking airflow across it</li><li>Condensing unit not doing its job — tripped breaker, dead fans, or a dirty/blocked condenser coil</li><li>Unit left in Service or Product Load mode so it isn't cooling normally</li></ul>
+<p><b>Can staff fix it?</b> Often, yes. Doors, gaskets, recent loading, blocked condenser airflow, and a forgotten Service mode are all things staff can find and fix in minutes without opening a panel.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check that all doors are fully closed and door gaskets seal tight</li><li>Ask staff whether product was just loaded — warm product can trip this alarm temporarily</li><li>Look at the evaporator coil inside the box for heavy ice buildup</li><li>Check the outdoor/condensing unit: breaker on, fans spinning, coil free of dirt, leaves and boxes blocking airflow</li><li>Verify no one left the unit in Service or Product Load mode</li></ol>
+<p><b>Why it takes a technician:</b> If the box isn't pulling down within an hour of those checks, the problem is inside the sealed system or the controls — refrigerant diagnosis requires gauges and EPA Section 608 certification, and every hour above temperature puts product at risk.</p>
+<div class="callout"><b>When to call:</b> If temperature does not start falling within an hour after these checks, call a refrigeration technician — product is at risk.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-al02">
+<h3>AL02 — Low box temperature alarm</h3>
+<p>Box temperature has dropped below the Low Box Temperature alarm setpoint (default 30F cooler / 20F freezer) for longer than the alarm delay time. In a cooler this risks freezing product.</p>
+<p><b>What causes it:</b></p><ul><li>The box temperature setpoint was changed, accidentally or otherwise</li><li>The system keeps running too cold because the temperature sensor or control is misreading</li><li>Product sitting directly in the evaporator discharge air, where it can freeze even when the box average is fine</li></ul>
+<p><b>Can staff fix it?</b> Partially. Staff can verify the setpoint, compare the display against a separate thermometer, and move product out of the cold airstream — that resolves the setpoint and product-placement cases.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Verify the box temperature setpoint was not accidentally changed on the controller</li><li>Move product away from the evaporator discharge air if it is freezing</li><li>Note the displayed box temp and compare it against a separate thermometer in the box</li></ol>
+<p><b>Why it takes a technician:</b> If the setpoint is right and the box still overcools, a sensor or control is lying to the system. Testing a sensor against a reference and replacing it is controller-level work, and in a cooler continued overcooling freezes and ruins product.</p>
+<div class="callout"><b>When to call:</b> Call a technician if the setpoint is correct but the system keeps running too cold — the temperature sensor or control may be faulty.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-al03">
+<h3>AL03 — System startup failure</h3>
+<p>Shown only when the condensing unit control circuit is wired to the controller. The system pumped down and could not restart — typically a compressor safety (high/low pressure, oil pressure) keeps tripping.</p>
+<p><b>What causes it:</b></p><ul><li>A compressor safety — high pressure, low pressure, or oil pressure — tripping every time the system tries to restart</li><li>Dirty or blocked condenser coil, or dead condenser fans, driving pressures out of range</li><li>Power problem at the condensing unit — breaker or disconnect off</li></ul>
+<p><b>Can staff fix it?</b> Only the easy outer layer: staff can confirm the breaker is on, clear junk stacked around the condensing unit, and check that the fans spin and the coil is clean. If it still won't restart, it's a service call.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condensing unit breaker and disconnect are on</li><li>Check the condenser coil for dirt and blocked airflow, and confirm condenser fans run</li><li>Make sure nothing is stacked around the condensing unit restricting air</li></ol>
+<p><b>Why it takes a technician:</b> Identifying which safety is tripping — pressure, oil, or refrigerant-related — takes gauges, electrical testing, and training. Meanwhile the system is pumped down and not cooling, so this is a same-day, product-at-risk call.</p>
+<div class="callout"><b>When to call:</b> Call a technician promptly — repeated safety trips point to pressure, refrigerant, or compressor problems that require gauges and training.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-al04">
+<h3>AL04 — Input fault (sensor failure alarm)</h3>
+<p>One of the key control inputs — box temperature sensor (ER01), suction temperature sensor (ER03), or suction pressure transducer (ER04) — has failed or is disconnected, so the controller cannot run the system normally.</p>
+<p><b>What causes it:</b></p><ul><li>Box temperature sensor failed or disconnected (companion code ER01)</li><li>Suction temperature sensor failed or disconnected (companion code ER03)</li><li>Suction pressure transducer failed or disconnected (companion code ER04)</li><li>A transient glitch that a single power cycle may clear</li></ul>
+<p><b>Can staff fix it?</b> Barely. Staff can read off the companion ER code, power-cycle once at the breaker, and log the box temperature — that's the extent of it. The failed part still has to be tested and replaced.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the controller display for the companion error code (ER01, ER03 or ER04) to identify which sensor faulted</li><li>Power-cycle the unit at the breaker once to see if the fault clears</li><li>Record the code and the box temperature for the service call</li></ol>
+<p><b>Why it takes a technician:</b> The controller can't run the system properly without these inputs. A sensor gets tested against a reference and replaced; a pressure transducer is refrigerant-side work requiring gauges and EPA Section 608 certification. Same-day call — the system is running blind.</p>
+<div class="callout"><b>When to call:</b> Call a technician the same day — a failed sensor or transducer must be tested and replaced.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-al06">
+<h3>AL06 — Door open alarm</h3>
+<p>The walk-in door switch has reported the door open longer than the programmed Door Open Alarm Time (default 60 minutes). A related high box temperature alarm may follow.</p>
+<p><b>What causes it:</b></p><ul><li>The door was genuinely left open past the alarm delay — pallets, cords, or product propping it</li><li>A damaged gasket or sweep keeping the door from sealing and latching</li><li>The door switch on the frame knocked loose or misaligned so it reports open even when the door is shut</li></ul>
+<p><b>Can staff fix it?</b> Usually, yes. Closing the door, clearing whatever propped it, and re-seating a knocked-loose switch are all staff-level fixes. A torn gasket is a cheap, orderable part.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Close the walk-in door fully and confirm it latches</li><li>Check the door gasket and sweep for damage that keeps the door from sealing</li><li>Check that nothing (pallets, cords, product) is propping the door open</li><li>Verify the door switch on the frame is not knocked loose or misaligned</li></ol>
+<p><b>Why it takes a technician:</b> If the alarm stays on with the door verifiably closed, the switch itself or its normally-open/normally-closed configuration in the controller is wrong — checking and reconfiguring that is electrical and settings work a technician should do.</p>
+<div class="callout"><b>When to call:</b> If the alarm stays on with the door verifiably closed, have a technician check the door switch and its setting (normally open vs. normally closed).</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-al12">
+<h3>AL12 — A2L refrigerant leak mitigation active</h3>
+<p>On A2L-refrigerant unit coolers, the Refrigerant Detection System (RDS) has measured a refrigerant concentration at the regulatory mitigation level and has taken over the unit to run mitigation actions. The light bar turns red.</p>
+<p><b>What causes it:</b></p><ul><li>A probable leak of A2L (mildly flammable) refrigerant — the detection system has measured concentration at the regulatory mitigation level</li><li>The controller has taken over the unit to run mitigation, which is why normal operation stopped</li></ul>
+<p><b>Can staff fix it?</b> No. The only correct staff actions are keeping people out of the box, ventilating the area, keeping ignition sources away, and NOT silencing or bypassing the alarm. Do not attempt anything else.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Keep people out of the walk-in box and ventilate the area</li><li>Do not create ignition sources near the unit (open flames, sparking tools)</li><li>Do not silence or bypass the alarm</li></ol>
+<div class="callout"><b>Safety:</b> A2L refrigerant leak — flammability hazard; evacuate the box, ventilate, no ignition sources, call for service immediately.</div>
+<p><b>Why it takes a technician:</b> A2L refrigerants are mildly flammable — a leak is a safety event, not just a cooling problem. Finding and repairing the leak and recharging the system is legally restricted to EPA Section 608 certified technicians. Call immediately.</p>
+<div class="callout"><b>When to call:</b> Call a refrigeration technician immediately — this indicates a probable refrigerant leak of a mildly flammable (A2L) refrigerant.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er01">
+<h3>ER01 — Box temperature sensor error</h3>
+<p>The room/box temperature sensor is reading out of range, shorted, or disconnected. The light bar shows yellow and the controller may fall back to another sensor to keep running.</p>
+<p><b>What causes it:</b></p><ul><li>The box temperature sensor reading out of range, shorted, or disconnected</li><li>A transient fault that one power cycle may clear</li><li>Sensor wiring disturbed — which is why the manual says don't unplug or reroute it yourself</li></ul>
+<p><b>Can staff fix it?</b> Not really. Staff can confirm the box is still holding temperature with a separate thermometer and try one power cycle. The sensor itself has to be tested against a reference and replaced if it disagrees.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note whether the box is still holding temperature with a separate thermometer</li><li>Power-cycle at the breaker once to see if the error clears</li><li>Do not unplug or reroute sensor wiring yourself</li></ol>
+<p><b>Why it takes a technician:</b> The controller may be running on a fallback sensor, which is a degraded state, not a fix. Testing the sensor's reading against a reference thermometer and replacing it is exactly what the manual prescribes — controller-level work for a technician.</p>
+<div class="callout"><b>When to call:</b> Call a technician to test the sensor and its connections; per the manual it is replaced if its reading does not match a reference thermometer.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er02">
+<h3>ER02 — Coil temperature sensor error</h3>
+<p>The evaporator coil (defrost termination) sensor has failed or is disconnected. Defrost cycles may not terminate correctly, which can lead to an iced-up coil.</p>
+<p><b>What causes it:</b></p><ul><li>The evaporator coil (defrost termination) sensor failed or disconnected</li><li>Because defrost can no longer end on coil temperature, the coil may progressively ice up</li></ul>
+<p><b>Can staff fix it?</b> No — staff can only watch: check the coil for ice, note how often defrosts run, and record the code. The sensor has to be checked and replaced.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Visually check the evaporator coil for ice buildup</li><li>Note how often the unit has been going into defrost</li><li>Record the error and box temperature for the service visit</li></ol>
+<p><b>Why it takes a technician:</b> The manual's fix is to test the sensor and its connections and replace as needed. Left alone, a coil that ices over stops cooling the box, so this needs a scheduled service visit before it becomes a high-temperature emergency.</p>
+<div class="callout"><b>When to call:</b> Call a technician — the manual's fix is to check the sensor and connections and replace as needed.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er03">
+<h3>ER03 — Evaporator suction temperature sensor error</h3>
+<p>The suction line temperature sensor at the evaporator has failed or is disconnected. The controller uses this sensor to calculate superheat and drive the electric expansion valve, so cooling control is degraded.</p>
+<p><b>What causes it:</b></p><ul><li>The suction line temperature sensor at the evaporator failed or disconnected</li><li>With it gone, the controller can't calculate superheat to drive the electric expansion valve, so cooling control is degraded</li><li>A transient fault a single power cycle may clear</li></ul>
+<p><b>Can staff fix it?</b> No. Confirm the box is holding temperature, try one power cycle, and log the code — that's the staff-side limit.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Confirm the box is still holding temperature</li><li>Power-cycle once at the breaker to see if the error clears</li><li>Log the code for the technician</li></ol>
+<p><b>Why it takes a technician:</b> Superheat control protects the compressor; running degraded risks the most expensive component in the system. Testing and replacing the sensor and verifying superheat afterward is refrigeration-tech work.</p>
+<div class="callout"><b>When to call:</b> Call a technician to test and replace the sensor — superheat control depends on it.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er04">
+<h3>ER04 — Evaporator suction pressure transducer error</h3>
+<p>The suction pressure transducer has failed or is disconnected. Like ER03, this breaks the controller's superheat calculation for the expansion valve.</p>
+<p><b>What causes it:</b></p><ul><li>The suction pressure transducer failed or disconnected</li><li>The controller has lost its superheat calculation for the expansion valve, same consequence as ER03</li><li>A transient fault a power cycle may clear</li></ul>
+<p><b>Can staff fix it?</b> No. Staff can confirm the box is holding temperature, note any warming trend, and power-cycle once. Do not touch the refrigerant lines or the transducer itself.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Confirm the box is holding temperature and note any warming trend</li><li>Power-cycle once at the breaker</li><li>Do not touch refrigerant lines or the transducer</li></ol>
+<p><b>Why it takes a technician:</b> A pressure transducer lives on the refrigerant side of the system. Replacing it means opening sealed refrigerant connections — legally EPA Section 608 certified work, done with gauges.</p>
+<div class="callout"><b>When to call:</b> Call a technician — replacing a pressure transducer is refrigerant-side work.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er11">
+<h3>ER11 — Control circuit error (condensing unit safety tripped)</h3>
+<p>Shown only when the condensing unit is wired to the controller. A safety in the condensing unit control circuit has opened — the manual lists low pressure, high pressure, oil pressure, compressor module, or phase loss as causes.</p>
+<p><b>What causes it:</b></p><ul><li>A condensing unit safety opened — the manual lists low pressure, high pressure, oil pressure, compressor module, or phase loss</li><li>Dirty condenser coil or blocked/dead condenser fans driving head pressure up</li><li>Heavy evaporator icing starving the system on the low side</li><li>Power problem at the condensing unit</li></ul>
+<p><b>Can staff fix it?</b> Only the airflow layer: staff can verify power, clean-coil, and running-fans, and note whether the compressor is short-cycling. Which safety actually tripped can't be determined from the display.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condensing unit breaker and power</li><li>Check the condenser coil is clean and its fans are running with unobstructed airflow</li><li>Look at the evaporator coil for heavy icing</li><li>Note whether the compressor is short-cycling (starting and stopping repeatedly)</li></ol>
+<p><b>Why it takes a technician:</b> Diagnosing whether it was pressure, oil, or phase loss requires gauges on the refrigerant circuit and live electrical testing at the condensing unit — both technician territory, and repeated safety trips will eventually take the compressor down.</p>
+<div class="callout"><b>When to call:</b> Call a technician — diagnosing which safety tripped (pressure, oil, phase) requires gauges and electrical testing.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er14">
+<h3>ER14 — Power supply voltage low</h3>
+<p>The 24V control power feeding the iRC board has dropped below the minimum (about 22V per the manual). Usually a building supply-voltage or transformer issue.</p>
+<p><b>What causes it:</b></p><ul><li>Building supply voltage sagging — a brownout, often at heavy-load times of day</li><li>The control transformer on the wrong tap, delivering under ~22V to the board</li><li>A breaker not fully on</li></ul>
+<p><b>Can staff fix it?</b> Staff can gather the evidence — is other equipment on the circuit acting up, is the breaker fully on, does it happen at certain times of day — but can't fix supply voltage.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check whether other equipment on the same circuit is also acting up (brownout clue)</li><li>Check the breaker feeding the unit is fully on</li><li>Note whether the error appears at certain times of day (heavy building load)</li></ol>
+<p><b>Why it takes a technician:</b> Measuring primary power and changing the control transformer tap is live electrical work inside the panel. Chronic undervoltage also stresses the control board, so it's worth an electrician or tech visit before something more expensive fails.</p>
+<div class="callout"><b>When to call:</b> Call a technician or electrician to measure primary power and the control transformer tap.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er15">
+<h3>ER15 — Power supply voltage high</h3>
+<p>The 24V control power feeding the iRC board is above the maximum (about 30V per the manual), usually a wrong transformer tap or high building voltage.</p>
+<p><b>What causes it:</b></p><ul><li>Control transformer on the wrong tap, feeding the board above ~30V</li><li>High building supply voltage</li></ul>
+<p><b>Can staff fix it?</b> No. Record when the error occurs and whether it's constant or intermittent — and don't open the control panel. That's it.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Record when the error occurs and whether it is constant or intermittent</li><li>Do not open the control panel</li></ol>
+<p><b>Why it takes a technician:</b> Overvoltage can cook the control board, so this isn't a wait-and-see item. Verifying supply voltage and moving the transformer tap is live electrical work for a technician or electrician.</p>
+<div class="callout"><b>When to call:</b> Call a technician or electrician — overvoltage can damage the control board and the transformer tap may need changing.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er16">
+<h3>ER16 — Low superheat error</h3>
+<p>The controller measured suction superheat below its minimum safe value for 2 minutes; it shuts the unit down briefly, displays the error, then restarts. Causes in the manual include an iced coil, expansion valve problems, or a bad sensor reading.</p>
+<p><b>What causes it:</b></p><ul><li>An iced-up evaporator coil starving the system</li><li>Expansion valve problems keeping superheat below the safe minimum</li><li>A bad sensor reading feeding the superheat calculation</li><li>Evaporator fans not running</li></ul>
+<p><b>Can staff fix it?</b> Partially. Staff can check the coil for ice, confirm the fans run, and note whether the unit keeps stopping and restarting — a lightly iced coil that defrosts out may end the problem. A repeating ER16 is a service call.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Visually check the evaporator coil for ice buildup</li><li>Note whether the unit keeps stopping and restarting</li><li>Confirm evaporator fans are running</li></ol>
+<p><b>Why it takes a technician:</b> Persistent low superheat means liquid refrigerant can flood back to the compressor and destroy it — the most expensive failure a walk-in can have. Diagnosing valve and sensor causes takes gauges and EPA Section 608 certified refrigerant work.</p>
+<div class="callout"><b>When to call:</b> If the error repeats, call a technician — persistent low superheat risks flooding liquid refrigerant back to the compressor.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er19">
+<h3>ER19 — Replace controller clock battery</h3>
+<p>The coin-cell battery that keeps the controller's clock is low or missing. The system still cools, but time-based logs and defrost schedules can be affected after a power loss.</p>
+<p><b>What causes it:</b></p><ul><li>The coin-cell clock battery on the control board is low or missing</li><li>After a power loss, time-based logs and defrost schedules can drift because the clock isn't held</li></ul>
+<p><b>Can staff fix it?</b> Effectively yes, in the sense that nothing is urgent: cooling is not at risk. Note it and fold the battery swap into the next scheduled service visit rather than paying for an emergency call.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note the error — cooling is not immediately at risk</li><li>Schedule the battery replacement rather than treating it as an emergency</li></ol>
+<p><b>Why it takes a technician:</b> The battery lives on the control board inside the panel, so the manual routes replacement through a technician — but it's a next-visit item, not an emergency.</p>
+<div class="callout"><b>When to call:</b> Have a technician replace the coin-cell battery on the control board at the next service visit.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er22">
+<h3>ER22 — User interface (iRC UI) failure</h3>
+<p>The controller board has lost proper communication with its display/user interface module, usually a ribbon-cable connection issue per the manual.</p>
+<p><b>What causes it:</b></p><ul><li>The controller board lost communication with its display/user interface module</li><li>Per the manual, usually a ribbon-cable connection issue between board and display</li></ul>
+<p><b>Can staff fix it?</b> One shot: power-cycle at the breaker and check whether the unit is still cooling normally despite the dead display. If the error persists, it needs hands inside the panel.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the unit once at the breaker</li><li>Check whether the unit is still cooling normally despite the display fault</li></ol>
+<p><b>Why it takes a technician:</b> Reseating or replacing the UI ribbon harness or the display module means opening the control enclosure — a technician job. The good news is the refrigeration usually keeps running while you wait.</p>
+<div class="callout"><b>When to call:</b> Call a technician to reseat or replace the UI ribbon harness or the UI module.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er23">
+<h3>ER23 — Board communication error</h3>
+<p>Communication between the iRC control board and the user interface has faulted. The manual's remedy is checking the ribbon cable and power-cycling.</p>
+<p><b>What causes it:</b></p><ul><li>Communication fault between the iRC control board and the user interface</li><li>Ribbon cable connection issue — the manual's named remedy is checking it and power-cycling</li></ul>
+<p><b>Can staff fix it?</b> Try one power cycle at the breaker and confirm the unit still cools. If the error returns, staff have done all they safely can.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the unit once at the breaker</li><li>Confirm the unit still cools and note if the error returns</li></ol>
+<p><b>Why it takes a technician:</b> A returning ER23 means the ribbon connection or one of the boards needs inspection inside the control panel — panel-open work for a technician, though usually not a cooling emergency.</p>
+<div class="callout"><b>When to call:</b> If the error returns after a power cycle, have a technician check the ribbon connection and boards.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er25">
+<h3>ER25 — System connection lost (multi-evaporator communication)</h3>
+<p>An evaporator controller on a multi-unit system lost its communication link with the rest of the system — typically damaged, reversed-polarity, or improperly shielded communication wiring per the manual.</p>
+<p><b>What causes it:</b></p><ul><li>An evaporator controller on a multi-unit system lost its communication link</li><li>Communication wiring damaged, reversed polarity, or improperly shielded — per the manual</li><li>A comm cable pinched, unplugged, or disturbed during other work in the box</li></ul>
+<p><b>Can staff fix it?</b> Partially. Power-cycle the affected unit, look for a cable someone obviously knocked loose during recent work, and note which evaporator's light bar is flashing. Anything beyond a visibly unplugged cable is wiring diagnosis.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the affected unit once</li><li>Check that no communication cable was recently disturbed, pinched, or unplugged during other work</li><li>Note which evaporator's light bar is flashing</li></ol>
+<p><b>Why it takes a technician:</b> Checking communication wiring polarity and shield grounding across a multi-evaporator system takes a meter and knowledge of the network layout — a controls-savvy technician's job.</p>
+<div class="callout"><b>When to call:</b> Call a technician to check the communication wiring polarity and shield grounding.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-er32">
+<h3>ER32 — A2L refrigerant early warning</h3>
+<p>The Refrigerant Detection System on an A2L unit cooler has detected refrigerant at an early-warning level; the display shows a yellow light bar. The manual directs checking unit cooler piping for leaks (the code's -X suffix identifies which leak sensor).</p>
+<p><b>What causes it:</b></p><ul><li>The refrigerant detection system on an A2L unit cooler has sensed refrigerant at its early-warning level — a likely developing leak in the unit cooler piping</li><li>The -X suffix on the code identifies which leak sensor tripped</li></ul>
+<p><b>Can staff fix it?</b> No. Ventilate the area, limit access to the box, keep ignition sources away, and do not reset or bypass the detection system. This is a leak until proven otherwise.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Ventilate the area and limit access to the walk-in box</li><li>Avoid ignition sources near the equipment</li><li>Do not reset or bypass the detection system yourself</li></ol>
+<div class="callout"><b>Safety:</b> Possible A2L (mildly flammable) refrigerant leak — ventilate, no ignition sources, service call required.</div>
+<p><b>Why it takes a technician:</b> A2L refrigerants are mildly flammable, and leak repair plus recharge is EPA Section 608 certified work by law. Early warning is the cheap moment to fix it — before it escalates to full mitigation shutdown (AL12).</p>
+<div class="callout"><b>When to call:</b> Call a refrigeration technician promptly — a refrigerant leak must be found and repaired.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<section class="code-sec" id="code-in01">
+<h3>IN01 — Too many defrosts (information code)</h3>
+<p>Informational notice: the unit has run 8 consecutive defrost cycles that each lasted under 5 minutes, suggesting the defrost schedule is more frequent than the coil needs.</p>
+<p><b>What causes it:</b></p><ul><li>The defrost schedule is running more often than the coil actually needs — 8 straight defrosts each finished in under 5 minutes</li><li>Purely informational; nothing has failed</li></ul>
+<p><b>Can staff fix it?</b> Yes, in the sense that no action is needed today. Confirm the coil stays clear of ice between defrosts and jot down the current schedule for the next service visit.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Visually confirm the coil is staying clear of ice between defrosts</li><li>Note the current defrost schedule shown on the controller for the technician</li></ol>
+<p><b>Why it takes a technician:</b> Optimizing the defrost schedule is a controller-settings change best made by the servicing technician, because a schedule set too lean on the other side lets the coil ice up. It's a next-visit optimization, not an emergency.</p>
+<div class="callout"><b>When to call:</b> Mention it at the next service visit so the defrost schedule can be optimized; it is not an emergency.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> (H-IM-iRC, February 2025)</p>
+</section>
+<h2>How do you diagnose a Heatcraft intelliGen alarm, step by step?</h2>
+<ol class="steps"><li><b>Find the flashing unit.</b> On a multi-evaporator system every light bar changes colour, but only the unit with the problem flashes — go to that one and read its display.</li><li><b>Rule out Service and Product Load mode</b> (see above).</li><li><b>Sensor codes (ER01–ER04, AL04): compare before replacing.</b> Read the suspect sensor in the Monitor menu and compare it with a thermometer at the same spot. Or test it in stirred ice water: at 32 °F it should read 32,650 Ω — more than about 1,000 Ω off, replace it. Sensors don't need to be removed from the evaporator for checking.</li><li><b>ER16 low superheat.</b> intelliGen raises it when a board runs below the minimum superheat setting for 2 minutes. Check for an iced coil and the refrigerant type setting, then whether the expansion valve closes: pump the system down with the liquid-line valve closed, put the system in Service mode, reopen the liquid valve — if suction pressure rises, the valve is leaking.</li><li><b>Box won't reach temperature (AL01 with the system running):</b> Heatcraft's own sequence is — system running? refrigerant charge, operating superheat, high superheat with the valve wide open, low-pressure switch, equipment capacity against the load, box setpoint, compressor, condenser coil dirt, non-condensables, condenser fan, refrigerant type setting, iced coil, defrost settings, superheat setpoint, and °F/°C display.</li><li><b>A2L units: AL12 and ER32–ER37 are leak-detection events.</b> Units with A2L refrigerant carry a refrigerant detection system; when a leak reaches the mitigation level it takes over and the display shows AL12. Follow the unit's A2L safety instructions and call a technician.</li><li><b>ER19: replace the clock battery</b> — a coin cell on the iRC board.</li><li><b>Pull the log.</b> Errors and alarms are logged as they start and end (up to 500 entries) — copy them to USB so the technician sees the history, not just the current code.</li></ol>
+<div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
+If the same fault returns after a single reset, the underlying condition is real —
+stop resetting and deal with the cause.</div>
+<h2>Which parts are usually involved?</h2>
+<div class="tbl"><table class="parts"><thead><tr><th>Part</th><th>Codes that point to it</th><th>Note</th></tr></thead><tbody><tr><td>Box (room) temperature sensor</td><td><a href="#code-er01">ER01</a>, <a href="#code-al01">AL01</a>, <a href="#code-al02">AL02</a>, <a href="#code-al04">AL04</a></td><td></td></tr><tr><td>Coil temperature sensor</td><td><a href="#code-er02">ER02</a>, <a href="#code-in01">IN01</a>, <a href="#code-in05">IN05</a></td><td></td></tr><tr><td>Evaporator suction temperature sensor</td><td><a href="#code-er03">ER03</a>, <a href="#code-er16">ER16</a>, <a href="#code-al04">AL04</a></td><td></td></tr><tr><td>Suction pressure transducer</td><td><a href="#code-er04">ER04</a>, <a href="#code-al04">AL04</a></td><td>Factory intelliGen systems use the 300 psia transducer; the 139.7 psia setting is for Beacon II and QRC retrofits.</td></tr><tr><td>Electronic expansion valve (EXV)</td><td><a href="#code-er16">ER16</a>, <a href="#code-al01">AL01</a></td><td></td></tr><tr><td>Condensing-unit safety circuit and compressor</td><td><a href="#code-er11">ER11</a>, <a href="#code-al03">AL03</a></td><td></td></tr><tr><td>24 V transformer and supply</td><td><a href="#code-er14">ER14</a>, <a href="#code-er15">ER15</a></td><td>On a 208 V supply the transformer must be on the 208 V tap.</td></tr><tr><td>iRC board, iRC user interface and ribbon cable</td><td><a href="#code-er22">ER22</a>, <a href="#code-er23">ER23</a></td><td></td></tr><tr><td>Clock coin-cell battery</td><td><a href="#code-er19">ER19</a></td><td></td></tr><tr><td>Door switch</td><td><a href="#code-al06">AL06</a></td><td></td></tr><tr><td>Communication wiring between units</td><td><a href="#code-er25">ER25</a>, <a href="#code-er26">ER26</a>, <a href="#code-er31">ER31</a></td><td></td></tr><tr><td>A2L refrigerant detection system (A2L units)</td><td><a href="#code-al12">AL12</a>, <a href="#code-er32">ER32</a>, <a href="#code-er33">ER33</a>, <a href="#code-er34">ER34</a>, <a href="#code-er35">ER35</a>, <a href="#code-er36">ER36</a>, <a href="#code-er37">ER37</a></td><td></td></tr></tbody></table></div>
+<h2>What refrigeration is behind these codes?</h2><p>Every code here is the controller reporting a reading from the refrigeration system. The background is explained once, for every controller on this site: <a href="/guides/walk-in-cooler-alarm-codes-guide/#superheat">what superheat is and why controllers alarm on it</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#defrost">how defrost works and what goes wrong</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#refrigerants">refrigerants and the A2L change</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#temperature-control">how a controller holds temperature — and how its sensors are tested</a>.</p>
+
+<p>If it does come to a service call and you're in <a href="/nashville-tn/">Nashville, TN</a> or <a href="/birmingham-al/">Birmingham, AL</a>, we maintain independently compiled lists of local companies that service walk-in coolers — real businesses with verified contact information, none of whom paid to be listed.</p>
+
+</article>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf">Heatcraft Refrigeration Products — intelliGen Refrigeration Controller — installation and operation manual</a> <span class="doc">(H-IM-iRC, February 2025)</span></li></ul></div>
+<h2>Other Heatcraft (Bohn/Larkin) controllers</h2><div class='grid'><a href="/heatcraft-bohn-larkin/beacon-ii-alarm-codes/"><span class="c">Heatcraft Beacon II</span><div class="t">Two-digit LED on the evaporator board (A1–A4, E1–E9); optional LCD Smart Controller.</div></a></div>
+</div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

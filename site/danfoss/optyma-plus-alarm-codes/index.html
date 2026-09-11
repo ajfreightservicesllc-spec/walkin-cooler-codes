@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Do Danfoss Optyma Plus Alarm Codes Mean? A2, A17, A80, A96</title>
+<meta name="description" content="Every Danfoss Optyma Plus controller code: A2 LP, A17 HP, A45, A80 condenser blocked, A96 discharge temperature, A97, A98 and the E sensor errors, explained.">
+<link rel="canonical" href="https://walkincoolercodes.com/danfoss/optyma-plus-alarm-codes/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does A2 mean on a Danfoss Optyma Plus?", "acceptedAnswer": {"@type": "Answer", "text": "LP alarm \u2014 low suction pressure. Suction pressure is too low. The controller stops the compressor for protection. Common field causes include low refrigerant charge or an iced/starved evaporator, which are technician territory."}}, {"@type": "Question", "name": "What does A17 mean on a Danfoss Optyma Plus?", "acceptedAnswer": {"@type": "Answer", "text": "HP alarm \u2014 high/low pressure safety trip. The high-pressure (or combined high/low pressure) safety input has tripped. The controller stops the compressor. High-pressure trips are very often a dirty or blocked condenser."}}, {"@type": "Question", "name": "What does A45 mean on a Danfoss Optyma Plus?", "acceptedAnswer": {"@type": "Answer", "text": "Standby mode. The condensing unit is in standby \u2014 refrigeration was stopped via the r12 main switch or the DI1 input, not by a fault. The manual notes r12 and/or the DI1 input will restart regulation."}}, {"@type": "Question", "name": "What does A80 mean on a Danfoss Optyma Plus?", "acceptedAnswer": {"@type": "Answer", "text": "Condenser blocked \u2014 airflow decreased. The controller has detected reduced airflow through the condenser. The manual's stated action is to clean the condensing unit."}}, {"@type": "Question", "name": "What does A96 mean on a Danfoss Optyma Plus?", "acceptedAnswer": {"@type": "Answer", "text": "Maximum discharge temperature exceeded. The compressor discharge gas temperature has exceeded its limit and the controller protects the compressor. Often related to condenser airflow or refrigerant-side problems."}}, {"@type": "Question", "name": "What does E1 mean on a Danfoss Optyma Plus?", "acceptedAnswer": {"@type": "Answer", "text": "Controller fault. Internal fault in the Optyma Plus controller itself ('Ctrl. Error'). This is an electronics problem, not an operating condition."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://walkincoolercodes.com/"}, {"@type": "ListItem", "position": 2, "name": "Danfoss", "item": "https://walkincoolercodes.com/danfoss/"}, {"@type": "ListItem", "position": 3, "name": "Danfoss Optyma Plus"}]}</script>
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p,.card p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/danfoss/">Danfoss</a> &rsaquo; Danfoss Optyma Plus</div>
+<article class="card">
+<span class="family-tag">Danfoss &middot; 16 codes and messages</span>
+<h1 class="page-h1">What do Danfoss Optyma Plus condensing unit alarm codes mean?</h1>
+<p><b>Short answer:</b> the Optyma Plus controller is mounted on the condensing unit — the outdoor or machine-room half of the system — so its alarms are about protecting the compressor and condenser: low suction pressure (A2), a high/low pressure safety trip (A17), a blocked condenser (A80), too-high discharge temperature (A96), a safety input (A97) or the speed drive (A98). E-codes are controller, sensor and pressure-transmitter faults. Danfoss's full list is below.</p>
+<h2>Which machines use it?</h2>
+<p> Danfoss <b>Optyma Plus</b> condensing units — the outdoor or machine-room half of many walk-in cooler and freezer installations — carry their own built-in electronic controller with a small display on the unit. It reports faults as short codes: <b>A-codes</b> for alarms (A2 low suction pressure, A17 pressure safety trip, A80 condenser airflow, A96 discharge temperature) and <b>E-codes</b> for controller defects. Because this controller lives on the condensing unit, its alarms lean toward compressor protection — pressure trips and overheating — rather than box temperature. Practical tip: when one of these codes stops the compressor, resist the urge to keep resetting; the protections exist because forcing restarts is how compressors get destroyed.</p>
+<h2>How do you read and clear the display?</h2>
+<p>When there's an error the LEDs on the front flash and the alarm relay switches on; <b>push the top button</b> to see the alarm report. E-alarms show the moment the error occurs; A-alarms only once their time delay has passed, and an A-alarm stays hidden while an E-alarm is active.</p>
+<h2 id="code-table">Every Danfoss Optyma Plus code at a glance</h2>
+<div class="tbl"><table class="codes"><thead><tr><th>Code</th><th>What it means</th></tr></thead><tbody><tr><td><a href="#code-a2"><b>A2</b></a></td><td>LP alarm — low suction pressure</td></tr><tr id="code-a11"><td><b>A11</b></td><td>No refrigerant selected — set parameter o30</td></tr><tr id="code-a16"><td><b>A16</b></td><td>DI2 alarm — check the function that sends a signal to the DI2 input</td></tr><tr><td><a href="#code-a17"><b>A17</b></a></td><td>HP alarm — high/low pressure safety trip</td></tr><tr><td><a href="#code-a45"><b>A45</b></a></td><td>Standby mode</td></tr><tr><td><a href="#code-a80"><b>A80</b></a></td><td>Condenser blocked — airflow decreased</td></tr><tr><td><a href="#code-a96"><b>A96</b></a></td><td>Maximum discharge temperature exceeded</td></tr><tr id="code-a97"><td><b>A97</b></td><td>Safety alarm — a safety function on DI2 or DI3 is activated; check that input and the compressor's direction of rotation</td></tr><tr id="code-a98"><td><b>A98</b></td><td>Drive alarm — alarm from the speed regulation; check the speed regulation</td></tr><tr><td><a href="#code-e1"><b>E1</b></a></td><td>Controller fault</td></tr><tr id="code-e20"><td><b>E20</b></td><td>Error on pressure transmitter Pc (condensing pressure)</td></tr><tr id="code-e30"><td><b>E30</b></td><td>Error on the aux sensor (S5)</td></tr><tr id="code-e31"><td><b>E31</b></td><td>Error on the air (ambient) sensor S2</td></tr><tr id="code-e32"><td><b>E32</b></td><td>Error on the discharge sensor S3</td></tr><tr id="code-e33"><td><b>E33</b></td><td>Error on the suction gas sensor S4</td></tr><tr id="code-e39"><td><b>E39</b></td><td>Error on pressure transmitter Ps (suction pressure)</td></tr></tbody></table></div>
+<p class="note">6 codes link to a full section below. The other 10 are listed as the manufacturer's manual gives them. Every row comes from the manual cited at the end of this page.</p>
+<h2>What does each code mean — and what should you do?</h2>
+<section class="code-sec" id="code-a2">
+<h3>A2 — LP alarm — low suction pressure</h3>
+<p>Suction pressure is too low. The controller stops the compressor for protection. Common field causes include low refrigerant charge or an iced/starved evaporator, which are technician territory.</p>
+<p><b>What causes it:</b></p><ul><li>Suction pressure below the safe limit — the controller stops the compressor to protect it</li><li>Low refrigerant charge</li><li>An iced or starved evaporator — heavy coil ice, dead evaporator fans, or product blocking airflow</li></ul>
+<p><b>Can staff fix it?</b> Only the airflow part: check the evaporator for heavy ice and confirm the fans run and product isn't blocking them. Do not repeatedly reset the alarm — that short-cycles the compressor.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the evaporator inside the box for heavy ice buildup</li><li>Confirm evaporator fans are running and airflow isn't blocked by product</li><li>Do not repeatedly reset the alarm — that short-cycles the compressor</li><li>Monitor box temperature and move product if cooling has stopped</li></ol>
+<div class="callout"><b>Safety:</b> Refrigerant-side issue — EPA-certified technician required beyond visual checks.</div>
+<p><b>Why it takes a technician:</b> Low-pressure trips usually mean a refrigerant or airflow problem that takes gauges and EPA Section 608 certification to diagnose — and with the compressor stopped, product loss is on the clock.</p>
+<div class="callout"><b>When to call:</b> Call a refrigeration tech — low-pressure trips usually mean a refrigerant or airflow problem only they can diagnose.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf">Danfoss — Controller for condensing unit Optyma Plus, SW 3.7x — user guide</a> (BC172686425380en-001202)</p>
+</section>
+<section class="code-sec" id="code-a17">
+<h3>A17 — HP alarm — high/low pressure safety trip</h3>
+<p>The high-pressure (or combined high/low pressure) safety input has tripped. The controller stops the compressor. High-pressure trips are very often a dirty or blocked condenser.</p>
+<p><b>What causes it:</b></p><ul><li>The high-pressure (or combined high/low pressure) safety input tripped and the controller stopped the compressor</li><li>Very often a dirty or blocked condenser that can't reject heat</li><li>A condenser fan that isn't running</li><li>Material stacked around the condensing unit choking its airflow</li></ul>
+<p><b>Can staff fix it?</b> The most common cause is: with power off at the breaker, brush or vacuum the coil face, clear everything around the unit, confirm the fan runs. Restore power once and monitor — do not keep resetting a pressure trip.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condenser coil for dirt, lint, or blockage and confirm the condenser fan runs</li><li>Clear anything stacked around the condensing unit that restricts airflow</li><li>With power off at the breaker, brush or vacuum the coil face clean</li><li>Restore power once and monitor — do not keep resetting a pressure trip</li></ol>
+<div class="callout"><b>Safety:</b> Do not force restarts against a pressure safety — compressor damage risk.</div>
+<p><b>Why it takes a technician:</b> Repeated high-pressure trips damage the compressor, and forcing restarts against a pressure safety is how condensing units die. If it trips again after a cleaning, the refrigerant side needs certified diagnosis immediately — the box isn't cooling while the compressor is locked out.</p>
+<div class="callout"><b>When to call:</b> If the alarm returns after cleaning the condenser, call a tech immediately — repeated high-pressure trips damage the compressor.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf">Danfoss — Controller for condensing unit Optyma Plus, SW 3.7x — user guide</a> (BC172686425380en-001202)</p>
+</section>
+<section class="code-sec" id="code-a45">
+<h3>A45 — Standby mode</h3>
+<p>The condensing unit is in standby — refrigeration was stopped via the r12 main switch or the DI1 input, not by a fault. The manual notes r12 and/or the DI1 input will restart regulation.</p>
+<p><b>What causes it:</b></p><ul><li>Refrigeration stopped via the r12 main switch — deliberate standby, not a fault</li><li>The DI1 input (an external switch) stopped the unit; per the manual, r12 and/or DI1 restart regulation</li></ul>
+<p><b>Can staff fix it?</b> Yes, if someone shut it down on purpose — check with staff, check any external switch wired to DI1, and verify box temperature since the unit hasn't been cooling.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check whether someone deliberately shut the unit down</li><li>Check any external switch wired to DI1</li><li>Verify box temperature and move product if the unit has been off</li></ol>
+<p><b>Why it takes a technician:</b> If nobody stopped it, the r12 setting or DI1 wiring has to be checked inside the controller's configuration — guesswork there keeps the condensing unit off and the box warming.</p>
+<div class="callout"><b>When to call:</b> If nobody stopped it, have a tech check the r12 setting and DI1 wiring.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf">Danfoss — Controller for condensing unit Optyma Plus, SW 3.7x — user guide</a> (BC172686425380en-001202)</p>
+</section>
+<section class="code-sec" id="code-a80">
+<h3>A80 — Condenser blocked — airflow decreased</h3>
+<p>The controller has detected reduced airflow through the condenser. The manual's stated action is to clean the condensing unit.</p>
+<p><b>What causes it:</b></p><ul><li>Airflow through the condenser has dropped — the manual's stated action is to clean the condensing unit</li><li>Leaves, lint, dust, or debris matted on the coil</li><li>Space around the unit blocked so it can't breathe</li><li>A condenser fan not spinning freely</li></ul>
+<p><b>Can staff fix it?</b> Yes — this is the alarm the manual tells you to fix with a cleaning. Power off at the breaker, remove debris from the coil, clear the space around the unit, check the fan spins freely, restore power, and confirm the alarm clears.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Turn the unit off at the breaker</li><li>Remove leaves, lint, dust, and debris from the condenser coil and clear space around the unit</li><li>Check that the condenser fan spins freely</li><li>Restore power and confirm the alarm clears</li></ol>
+<p><b>Why it takes a technician:</b> If A80 comes back after a thorough cleaning, the fan motor or system pressures are at fault — live motor testing and gauge work, and a condenser that can't reject heat is steadily overworking the compressor.</p>
+<div class="callout"><b>When to call:</b> If A80 returns after a thorough cleaning, call a tech to check the fan motor and pressures.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf">Danfoss — Controller for condensing unit Optyma Plus, SW 3.7x — user guide</a> (BC172686425380en-001202)</p>
+</section>
+<section class="code-sec" id="code-a96">
+<h3>A96 — Maximum discharge temperature exceeded</h3>
+<p>The compressor discharge gas temperature has exceeded its limit and the controller protects the compressor. Often related to condenser airflow or refrigerant-side problems.</p>
+<p><b>What causes it:</b></p><ul><li>Compressor discharge gas temperature over its limit — the controller steps in to protect the compressor</li><li>Blocked or dirty condenser airflow</li><li>The unit enclosed in a hot, unventilated space</li><li>Refrigerant-side problems driving discharge temperature up</li></ul>
+<p><b>Can staff fix it?</b> Only the airflow checks: clean visible dirt off the condenser (power off first) and make sure the unit isn't boxed into a hot corner. Avoid repeated resets.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condenser for blocked airflow and clean visible dirt (power off first)</li><li>Make sure the unit isn't enclosed in a hot, unventilated space</li><li>Monitor box temperature and avoid repeated resets</li></ol>
+<div class="callout"><b>Safety:</b> Refrigerant-side issue — do not force restarts.</div>
+<p><b>Why it takes a technician:</b> Overheating discharge gas destroys compressors if the root cause isn't fixed — the refrigerant-side diagnosis behind it is gauge work for an EPA Section 608-certified tech, not something to reset past.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the alarm returns — overheating discharge gas will destroy the compressor if the root cause isn't fixed.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf">Danfoss — Controller for condensing unit Optyma Plus, SW 3.7x — user guide</a> (BC172686425380en-001202)</p>
+</section>
+<section class="code-sec" id="code-e1">
+<h3>E1 — Controller fault</h3>
+<p>Internal fault in the Optyma Plus controller itself ('Ctrl. Error'). This is an electronics problem, not an operating condition.</p>
+<p><b>What causes it:</b></p><ul><li>An internal fault in the Optyma Plus controller's own electronics ('Ctrl. Error')</li><li>Not an operating condition — the control hardware itself is the problem</li></ul>
+<p><b>Can staff fix it?</b> One power cycle at the breaker for a few minutes. If E1 returns, record it and watch box temperature — there is no further staff step.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the unit at the breaker for 2-3 minutes</li><li>If the code returns, record it and monitor box temperature</li><li>Move product if the unit stops holding temperature</li></ol>
+<p><b>Why it takes a technician:</b> A persistent controller fault means professional testing or replacement of the control board — live electrical work on the condensing unit — and until then the unit's protections and regulation can't be trusted.</p>
+<div class="callout"><b>When to call:</b> Persistent E1 means the controller needs professional testing or replacement.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf">Danfoss — Controller for condensing unit Optyma Plus, SW 3.7x — user guide</a> (BC172686425380en-001202)</p>
+</section>
+<h2>How do you diagnose a Danfoss Optyma Plus alarm, step by step?</h2>
+<ol class="steps"><li><b>Push the top button and read the report.</b> Note every code before resetting anything.</li><li><b>A45 isn't a failure.</b> Standby means refrigeration was stopped via parameter r12 or the DI1 input; r12 and/or DI1 start it again.</li><li><b>A80 is the one you can act on.</b> Airflow across the condenser has decreased, and Danfoss's action is simply: clean the condensing unit. The alarm is raised when condensing temperature stays too high — limit set by A70 — for the delay set by A71.</li><li><b>A2, A17 and A96 are protections — don't keep resetting them.</b> Danfoss's instruction for all three is to follow the condensing unit's own instructions. The controller counts high- and low-pressure trips (read-outs P51 and P52): a climbing count points at a system problem, not a one-off.</li><li><b>Discharge temperature is handled in stages.</b> If the discharge temperature (sensor Td) gets too high, the controller first reduces compressor capacity and runs the condenser fan at 100 %; if that doesn't bring it down it stops the compressor and raises A96, reconnecting the compressor once the temperature is 10 K below the limit.</li><li><b>Sensor and transmitter errors</b> (E20, E30–E33, E39): check the sensor and its connection.</li><li><b>A11</b> means no refrigerant type has been selected — parameter o30 has to be set.</li></ol>
+<div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
+If the same fault returns after a single reset, the underlying condition is real —
+stop resetting and deal with the cause.</div>
+<h2>Which parts are usually involved?</h2>
+<div class="tbl"><table class="parts"><thead><tr><th>Part</th><th>Codes that point to it</th><th>Note</th></tr></thead><tbody><tr><td>Suction pressure transmitter Ps</td><td><a href="#code-e39">E39</a>, <a href="#code-a2">A2</a></td><td></td></tr><tr><td>Condensing pressure transmitter Pc</td><td><a href="#code-e20">E20</a></td><td></td></tr><tr><td>High / low pressure safety switch (DI3)</td><td><a href="#code-a17">A17</a></td><td></td></tr><tr><td>Discharge temperature sensor Td (S3)</td><td><a href="#code-e32">E32</a>, <a href="#code-a96">A96</a></td><td></td></tr><tr><td>Suction gas sensor S4</td><td><a href="#code-e33">E33</a></td><td></td></tr><tr><td>Ambient air sensor S2</td><td><a href="#code-e31">E31</a></td><td></td></tr><tr><td>Condenser coil and fan</td><td><a href="#code-a80">A80</a></td><td></td></tr><tr><td>Compressor speed drive</td><td><a href="#code-a98">A98</a></td><td></td></tr><tr><td>Safety devices on DI2 / DI3</td><td><a href="#code-a97">A97</a>, <a href="#code-a16">A16</a></td><td></td></tr></tbody></table></div>
+<h2>What refrigeration is behind these codes?</h2><p>Every code here is the controller reporting a reading from the refrigeration system. The background is explained once, for every controller on this site: <a href="/guides/walk-in-cooler-alarm-codes-guide/#condenser">why the condenser matters</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#superheat">what superheat is and why controllers alarm on it</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#refrigerants">refrigerants and the A2L change</a>.</p>
+<p>The compressor itself — how it works and why these protections exist — is general compressor theory, which our sister site <a href='https://aircompressorcodes.com/'>aircompressorcodes.com</a> covers. This page stays with what the Optyma Plus controller reports.</p>
+<p>If it does come to a service call and you're in <a href="/nashville-tn/">Nashville, TN</a> or <a href="/birmingham-al/">Birmingham, AL</a>, we maintain independently compiled lists of local companies that service walk-in coolers — real businesses with verified contact information, none of whom paid to be listed.</p>
+
+</article>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf">Danfoss — Controller for condensing unit Optyma Plus, SW 3.7x — user guide</a> <span class="doc">(BC172686425380en-001202)</span></li></ul></div>
+<h2>Other Danfoss controllers</h2><div class='grid'><a href="/danfoss/erc-211-213-214-alarm-codes/"><span class="c">Danfoss ERC 211 / 213 / 214</span><div class="t">Danfoss ERC 21X display; E27/E29/E30 sensor errors and A01–A99 alarms.</div></a><a href="/danfoss/ekc-202-ak-cc-210-alarm-codes/"><span class="c">Danfoss EKC 202 / AK-CC 210</span><div class="t">Danfoss case and cold-room controller; E, A and S (status) codes.</div></a></div>
+</div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

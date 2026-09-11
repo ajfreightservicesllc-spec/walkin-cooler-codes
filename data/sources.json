@@ -1,0 +1,111 @@
+{
+  "_note": "Primary sources cited on the site. Every URL was downloaded and checked 2026-09-10 (HTTP 200, real PDF). Pages and codes reference these by id.",
+  "carel-ir33plus": {
+    "publisher": "Carel",
+    "title": "ir33+ platform electronic controller — user manual",
+    "doc": "+0300028EN rel. 1.1, 05.05.2017",
+    "url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
+  },
+  "carel-easy": {
+    "publisher": "Carel",
+    "title": "easy / easy compact / easy split (PJEZ) electronic digital thermostats — user manual",
+    "doc": "+030220791 rel. 3.4, 28.04.2021",
+    "url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
+  },
+  "danfoss-erc21x": {
+    "publisher": "Danfoss",
+    "title": "Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide",
+    "doc": "BC194286421698en-001002",
+    "url": "https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf"
+  },
+  "danfoss-erc211": {
+    "publisher": "Danfoss",
+    "title": "Electronic refrigeration control ERC 211 — installation guide",
+    "doc": "AN19438642229205-000701",
+    "url": "https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf"
+  },
+  "danfoss-erc214": {
+    "publisher": "Danfoss",
+    "title": "Electronic refrigeration control ERC 214 — installation guide",
+    "doc": "AN19438642089705-000401",
+    "url": "https://assets.danfoss.com/documents/latest/400549/AN19438642089705-000401.pdf"
+  },
+  "danfoss-ekc202": {
+    "publisher": "Danfoss",
+    "title": "Controller for temperature control EKC 202A, B, C — user guide",
+    "doc": "RS8DZ902 (BC162786425567en-000901)",
+    "url": "https://assets.danfoss.com/documents/latest/54543/BC162786425567en-000901.pdf"
+  },
+  "danfoss-akcc210": {
+    "publisher": "Danfoss",
+    "title": "Controller for temperature control AK-CC 210 — user guide",
+    "doc": "RS8EP602, 2018-11 (BC029186426773en-000601)",
+    "url": "https://assets.danfoss.com/documents/latest/52464/BC029186426773en-000601.pdf"
+  },
+  "danfoss-optyma": {
+    "publisher": "Danfoss",
+    "title": "Controller for condensing unit Optyma Plus, SW 3.7x — user guide",
+    "doc": "BC172686425380en-001202",
+    "url": "https://assets.danfoss.com/documents/latest/561026/BC172686425380en-001202.pdf"
+  },
+  "heatcraft-intelligen": {
+    "publisher": "Heatcraft Refrigeration Products",
+    "title": "intelliGen Refrigeration Controller — installation and operation manual",
+    "doc": "H-IM-iRC, February 2025",
+    "url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/IG-IWRC.pdf"
+  },
+  "heatcraft-beacon2": {
+    "publisher": "Heatcraft Refrigeration Products",
+    "title": "Beacon II Refrigeration Systems — installation and operation manual",
+    "doc": "H-IM-79G, June 2020",
+    "url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf"
+  },
+  "heatcraft-smart": {
+    "publisher": "Heatcraft Refrigeration Products",
+    "title": "Beacon II Smart Controller — installation and operation manual",
+    "doc": "H-IM-80F, July 2017",
+    "url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf"
+  },
+  "heatcraft-uc": {
+    "publisher": "Heatcraft Refrigeration Products",
+    "title": "Unit Coolers — installation and operation manual",
+    "doc": "H-IM-UC-0626",
+    "url": "https://www.heatcraftrpd.com/dA/372b2b9e1e/H-IM-UC-HFC.pdf"
+  },
+  "heatcraft-cu": {
+    "publisher": "Heatcraft Refrigeration Products",
+    "title": "Condensing Units — installation and operation manual",
+    "doc": "H-IM-CU-0725",
+    "url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/condensing-units-and-packaged-systems/current/H-IM-CU.pdf"
+  },
+  "dixell-xr06cx": {
+    "publisher": "Dixell (Copeland)",
+    "title": "XR06CX digital controller with defrost and fans management — manual",
+    "doc": "1592020160 XR06CX GB r1.2, 27.07.2015",
+    "url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/E-CLASS/XR06CX/XR06CX-GB.pdf"
+  },
+  "dixell-xr60cx": {
+    "publisher": "Dixell (Copeland)",
+    "title": "XR60CX digital controller with defrost and fans management — manual",
+    "doc": "1592020060 XR60CX GB r1.1, 27.04.2015",
+    "url": "https://webapps.copeland.com/Dixell/Content/Pages/Manuals/XR-CX/XR60CX/XR60CX-GB.pdf"
+  },
+  "ke2-q117": {
+    "publisher": "KE2 Therm Solutions",
+    "title": "KE2 Evaporator Efficiency — alarm troubleshooting guide",
+    "doc": "Q.1.17, August 2017 (KE2's document, hosted by OEM partner Krack)",
+    "url": "https://www.krack.com/ns/Technical-Documents/Q-1-17-KE2-Evap-Alarm-Troubleshooting.pdf"
+  },
+  "norlake-113470": {
+    "publisher": "Norlake",
+    "title": "Programmable Controller — operation manual",
+    "doc": "113470 Rev. J, 6/20",
+    "url": "https://norlake.com/wp-content/uploads/2020/07/113470-programmable-controller-min.pdf"
+  },
+  "fda-food-code-2022": {
+    "publisher": "U.S. Food and Drug Administration",
+    "title": "Food Code 2022 — §3-501.16(A)(2) cold holding at 41°F; §3-501.19 time as a public health control",
+    "doc": "Food Code 2022",
+    "url": "https://www.fda.gov/media/164194/download"
+  }
+}

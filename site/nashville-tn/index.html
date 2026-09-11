@@ -32,7 +32,7 @@ border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-botto
 .meaning{font-size:1.05rem}
 h2{font-size:1.18rem;margin:22px 0 8px}
 h3{font-size:1.02rem;margin:16px 0 6px}
-article p{margin:10px 0}
+article p,.card p{margin:10px 0}
 article ul,article ol{padding-left:24px;margin:10px 0}
 article li{margin:6px 0}
 ol.steps{padding-left:22px}
@@ -60,7 +60,24 @@ box-shadow:0 4px 14px rgba(13,60,97,.08)}
 .biz b{font-size:1.05rem}
 .biz .svc{font-size:.85rem;color:var(--sub)}
 .biz a.tel{font-weight:700;text-decoration:none}
-.src{font-size:.78rem;color:var(--sub);margin-top:18px;word-break:break-all}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
 footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
@@ -108,6 +125,7 @@ own published information. No company paid to appear here. Verify details when y
 <span class="svc">walk-in cooler/freezer installation, install through commissioning, ongoing service</span><br>
 <span class="svc">Locally owned multi-trade contractor (HVAC, plumbing, electrical) with a commercial refrigeration division serving Nashville restaurants.</span></div></div>
 <div class="card"><h2>Frequently asked questions</h2><h3>Who repairs walk-in coolers and freezers in Nashville?</h3><p>Nashville has dedicated commercial refrigeration contractors ranging from family shops that focus specifically on walk-ins to large CFESA-certified kitchen equipment companies with 24/7 dispatch. Most service all the common systems — Heatcraft/Bohn/Larkin refrigeration, and boxes from Norlake, Kolpak, and others — regardless of who installed them.</p><h3>My walk-in is warm — is it an emergency?</h3><p>Treat it as one until you know otherwise, because product is on the clock. First checks: is the door sealing (gasket, latch, nothing propping it open)? Is the evaporator coil inside iced over? Is the condensing unit running with a clean coil and clear airflow? Is the breaker on? If a controller code is displayed, look it up on this site — some alarms auto-clear as temperature recovers, others mean the system has shut itself down and every hour costs you inventory.</p><h3>How much product time do I have if the cooler is down?</h3><p>A closed, full walk-in holds temperature far longer than an empty one — keep the door shut and don't keep checking it. Food safety rules put strict limits on time above 41°F for a cooler, so start monitoring temperature immediately, log it for your health inspector, and line up backup cold storage if the tech can't come fast. Never guess: a $30 thermometer log can save a full inventory writeoff argument with your insurer.</p><h3>What maintenance actually prevents walk-in breakdowns?</h3><p>Three things cover most failures: keep the condenser coil clean (quarterly in a greasy kitchen), keep the door hardware honest (gaskets, sweeps, closers, and the door switch), and don't ignore icing on the evaporator — ice on the coil always has a cause, usually a defrost problem or a door leak, and it gets more expensive the longer it runs.</p></div>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://www.fda.gov/media/164194/download">U.S. Food and Drug Administration — Food Code 2022 — §3-501.16(A)(2) cold holding at 41°F; §3-501.19 time as a public health control</a> <span class="doc">(Food Code 2022)</span> — §3-501.16(A)(2): cold food held at 41°F (5°C) or below</li><li><a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> <span class="doc">(H-IM-79G, June 2020)</span> — preventive maintenance: coil cleaning, defrost controls, drain pan and drain-line heater</li></ul></div>
 </div></main>
 <footer><div class="wrap">
 <div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>

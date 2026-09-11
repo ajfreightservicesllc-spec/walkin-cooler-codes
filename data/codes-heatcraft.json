@@ -448,7 +448,7 @@
       "Note which system number the error appears against"
     ],
     "when_to_call": "Call a technician to verify the MULTI IN/OUT communication wiring between the controller and evaporator boards.",
-    "source_url": "https://www.partstown.com/modelManual/HTCR-BEACON-II_spm.pdf"
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf"
   },
   {
     "brand": "Heatcraft (Bohn/Larkin)",
@@ -462,7 +462,7 @@
       "Check the evaporator coil for ice and the condensing unit for power, running fans, and a clean coil"
     ],
     "when_to_call": "If temperature does not recover within an hour, call a refrigeration technician.",
-    "source_url": "https://www.partstown.com/modelManual/HTCR-BEACON-II_spm.pdf"
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf"
   },
   {
     "brand": "Heatcraft (Bohn/Larkin)",
@@ -476,6 +476,6 @@
       "Monitor box temperature and protect product — that system is likely off"
     ],
     "when_to_call": "Call a technician the same day to test and replace the failed sensor or transducer.",
-    "source_url": "https://www.partstown.com/modelManual/HTCR-BEACON-II_spm.pdf"
+    "source_url": "https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf"
   }
 ]

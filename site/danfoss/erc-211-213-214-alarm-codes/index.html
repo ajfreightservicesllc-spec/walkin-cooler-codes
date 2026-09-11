@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Do Danfoss ERC 211/213/214 Codes Mean? E29, A01, A80 &amp; More</title>
+<meta name="description" content="All 12 Danfoss ERC 211/213/214 codes: sensor errors E27, E29, E30 and alarms A01, A02, A04, A15, A45, A61, A80, A99, AA1. Meaning, checks and reset.">
+<link rel="canonical" href="https://walkincoolercodes.com/danfoss/erc-211-213-214-alarm-codes/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does E29 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Air temperature sensor error. The Sair air temperature sensor has failed or its electrical connection is lost. The controller can no longer read the cabinet air temperature, so temperature control is unreliable until the sensor is fixed."}}, {"@type": "Question", "name": "What does E27 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Defrost (evaporator) sensor error. The S5 evaporator sensor is defective or its electrical connection is lost. Defrost is normally controlled by this sensor, so defrost cycles may run on time only and the evaporator can ice up."}}, {"@type": "Question", "name": "What does E30 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Condenser sensor error. The Sc condenser sensor is defective or its electrical connection is lost. The controller loses its condenser-temperature protection, so a dirty or blocked condenser could go undetected."}}, {"@type": "Question", "name": "What does A01 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "High temperature alarm. Air temperature in the cabinet is too high \u2014 it has exceeded the programmed high-temperature alarm limit for longer than the alarm delay."}}, {"@type": "Question", "name": "What does A02 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Low temperature alarm. Air temperature in the cabinet is too low \u2014 it has dropped below the programmed low-temperature alarm limit. On a cooler this can freeze product."}}, {"@type": "Question", "name": "What does A99 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "High voltage alarm. Supply voltage to the unit is too high. The controller raises this alarm as compressor protection and may stop the compressor to prevent damage."}}, {"@type": "Question", "name": "What does AA1 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Low voltage alarm. Supply voltage to the unit is too low. The controller raises this alarm as compressor protection; low voltage can burn out a compressor motor."}}, {"@type": "Question", "name": "What does A61 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Condenser alarm \u2014 high condenser temperature. Condenser temperature is too high; the manual's own instruction is to check airflow. Usually a dirty condenser coil, blocked airflow, or a failed condenser fan."}}, {"@type": "Question", "name": "What does A80 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Condenser blocked alarm (manual reset). Condenser temperature went too high and the controller locked out; this alarm requires a manual reset. Per the manual, it is reset by switching the r12 main switch off and on again or by powering down the controller."}}, {"@type": "Question", "name": "What does A04 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Door alarm. The door has been open for too long. Depending on configuration the controller may have stopped the compressor and fans while the door is open."}}, {"@type": "Question", "name": "What does A15 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "External alarm from DI input. An external device wired to the controller's digital input is signaling an alarm. What it means depends on what is connected \u2014 commonly a pressure switch or other safety device."}}, {"@type": "Question", "name": "What does A45 mean on a Danfoss ERC 211/213/214?", "acceptedAnswer": {"@type": "Answer", "text": "Standby alarm \u2014 control stopped. Refrigeration control has been stopped by the r12 main switch (a software on/off, sometimes also driven by an external switch input). The unit is not cooling on purpose, not because of a fault."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://walkincoolercodes.com/"}, {"@type": "ListItem", "position": 2, "name": "Danfoss", "item": "https://walkincoolercodes.com/danfoss/"}, {"@type": "ListItem", "position": 3, "name": "Danfoss ERC 211 / 213 / 214"}]}</script>
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p,.card p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/danfoss/">Danfoss</a> &rsaquo; Danfoss ERC 211 / 213 / 214</div>
+<article class="card">
+<span class="family-tag">Danfoss &middot; 12 codes and messages</span>
+<h1 class="page-h1">What do Danfoss ERC 211, 213 and 214 alarm codes mean?</h1>
+<p><b>Short answer:</b> the ERC 21X series uses two kinds of code. <b>E-codes</b> mean a sensor is defective or its connection is lost — E29 the air sensor (Sair), E27 the evaporator/defrost sensor (S5), E30 the condenser sensor (Sc). <b>A-codes</b> are alarm conditions: temperature (A01/A02), supply voltage (A99/AA1), condenser (A61/A80), door (A04), an external input (A15) and standby (A45). Danfoss's table has twelve codes, and all twelve have a full section below.</p>
+<h2>Which machines use it?</h2>
+<p> The Danfoss <b>ERC 211, 213, and 214</b> are compact electronic refrigeration controllers fitted by many commercial cabinet and refrigeration equipment makers, and they turn up on walk-in panels as well as reach-ins and display cases. The display normally shows temperature; faults appear as <b>E-codes</b> for failed sensors (E27 defrost, E29 air, E30 condenser) and <b>A-codes</b> for alarm conditions — temperature, voltage, condenser, and door alarms. One code worth knowing before you panic: <b>A45</b> means the unit was switched to standby on purpose via its main-switch parameter, not that anything broke. Practical tip: A80 (condenser blocked) is manual-reset — clean the coil first, then power-cycle, or it just comes straight back.</p>
+<h2>How do you read and clear the display?</h2>
+<p>One key does double duty: a short press scrolls, but <b>pressing and holding it for about 3 seconds switches the main switch on or off</b> — an easy way to put a box into A45 standby without meaning to. Holding it while powering up triggers a factory reset, so don't do that while troubleshooting.</p>
+<h2 id="code-table">Every Danfoss ERC 211 / 213 / 214 code at a glance</h2>
+<div class="tbl"><table class="codes"><thead><tr><th>Code</th><th>What it means</th></tr></thead><tbody><tr><td><a href="#code-e29"><b>E29</b></a></td><td>Air temperature sensor error</td></tr><tr><td><a href="#code-e27"><b>E27</b></a></td><td>Defrost (evaporator) sensor error</td></tr><tr><td><a href="#code-e30"><b>E30</b></a></td><td>Condenser sensor error</td></tr><tr><td><a href="#code-a01"><b>A01</b></a></td><td>High temperature alarm</td></tr><tr><td><a href="#code-a02"><b>A02</b></a></td><td>Low temperature alarm</td></tr><tr><td><a href="#code-a99"><b>A99</b></a></td><td>High voltage alarm</td></tr><tr><td><a href="#code-aa1"><b>AA1</b></a></td><td>Low voltage alarm</td></tr><tr><td><a href="#code-a61"><b>A61</b></a></td><td>Condenser alarm — high condenser temperature</td></tr><tr><td><a href="#code-a80"><b>A80</b></a></td><td>Condenser blocked alarm (manual reset)</td></tr><tr><td><a href="#code-a04"><b>A04</b></a></td><td>Door alarm</td></tr><tr><td><a href="#code-a15"><b>A15</b></a></td><td>External alarm from DI input</td></tr><tr><td><a href="#code-a45"><b>A45</b></a></td><td>Standby alarm — control stopped</td></tr></tbody></table></div>
+<p class="note">12 codes link to a full section below. Every row comes from the manual cited at the end of this page.</p>
+<h2>What does each code mean — and what should you do?</h2>
+<section class="code-sec" id="code-e29">
+<h3>E29 — Air temperature sensor error</h3>
+<p>The Sair air temperature sensor has failed or its electrical connection is lost. The controller can no longer read the cabinet air temperature, so temperature control is unreliable until the sensor is fixed.</p>
+<p><b>What causes it:</b></p><ul><li>The Sair air temperature sensor has failed outright</li><li>The sensor's electrical connection is lost — a damaged, iced-over, or dangling probe near the evaporator return air</li><li>A wiring break between the probe and the controller</li></ul>
+<p><b>Can staff fix it?</b> Partly. Staff can power-cycle the unit at the breaker for a few minutes and check the probe for visible damage or ice — sometimes a glitch clears. If E29 comes back, it isn't a staff fix.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note the code and the current box temperature with a separate thermometer so product safety is known</li><li>Look inside the cooler for a visibly damaged, iced-over, or dangling sensor probe near the evaporator return air</li><li>Power-cycle the unit at the breaker for 2-3 minutes and see if the code returns</li><li>Move product to another cooler if temperature is drifting out of range</li></ol>
+<p><b>Why it takes a technician:</b> Testing the sensor circuit means live electrical measurement at the controller terminals, and while the alarm is active the box is running blind on air temperature — every hour of guessing puts product at risk.</p>
+<div class="callout"><b>When to call:</b> If the code returns after a power cycle, a refrigeration tech needs to test or replace the sensor and its wiring.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-e27">
+<h3>E27 — Defrost (evaporator) sensor error</h3>
+<p>The S5 evaporator sensor is defective or its electrical connection is lost. Defrost is normally controlled by this sensor, so defrost cycles may run on time only and the evaporator can ice up.</p>
+<p><b>What causes it:</b></p><ul><li>The S5 evaporator (defrost) sensor is defective</li><li>Its electrical connection to the controller is lost</li><li>With the sensor out, defrost runs on time only, so the evaporator can ice up — heavy ice on the coil is the visible symptom</li></ul>
+<p><b>Can staff fix it?</b> Only the first steps. A power cycle at the breaker occasionally clears a glitch, and staff can keep the door shut and watch box temperature. A sensor that stays failed is a service part.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the evaporator coil inside the box for heavy ice buildup</li><li>Power-cycle the unit at the breaker for 2-3 minutes and see if the code clears</li><li>Keep the door closed as much as possible and monitor box temperature with a separate thermometer</li></ol>
+<p><b>Why it takes a technician:</b> Replacing and verifying the S5 sensor is live electrical work at the controller, and an unmanaged icing coil will eventually choke airflow and stop the box from cooling at all.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the code persists after a power cycle or if the evaporator is icing over.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-e30">
+<h3>E30 — Condenser sensor error</h3>
+<p>The Sc condenser sensor is defective or its electrical connection is lost. The controller loses its condenser-temperature protection, so a dirty or blocked condenser could go undetected.</p>
+<p><b>What causes it:</b></p><ul><li>The Sc condenser sensor is defective</li><li>Its electrical connection is lost</li><li>While it's down, the controller has no condenser-temperature protection — a dust-matted or blocked condenser could go undetected</li></ul>
+<p><b>Can staff fix it?</b> Staff can power-cycle once and clear any obvious dust or cardboard away from the condenser coil, which is worth doing anyway since the unit's own protection is offline. The sensor itself is not a staff repair.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Visually check the condensing unit for dust, lint, or cardboard blocking the coil and clear anything obvious away from the airflow path</li><li>Power-cycle the unit at the breaker and see if the code returns</li><li>Monitor box temperature while waiting for service</li></ol>
+<p><b>Why it takes a technician:</b> The sensor and its wiring need live electrical testing, and until it's fixed nothing is watching the condenser — a dirty coil that can't reject heat will quietly cook the compressor.</p>
+<div class="callout"><b>When to call:</b> If the code returns, have a tech test or replace the condenser sensor.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a01">
+<h3>A01 — High temperature alarm</h3>
+<p>Air temperature in the cabinet is too high — it has exceeded the programmed high-temperature alarm limit for longer than the alarm delay.</p>
+<p><b>What causes it:</b></p><ul><li>Door left open or a leaking gasket loading the box with warm, humid air</li><li>Warm product just loaded, or the door held open for restocking</li><li>Heavy ice on the evaporator choking airflow</li><li>A dust-matted or blocked condenser that can't reject heat</li><li>Condensing unit not running at all — tripped breaker or dead fan</li></ul>
+<p><b>Can staff fix it?</b> Often, yes. Door, gasket, recent loading, blocked condenser airflow, and a tripped breaker are all things staff can find and fix in minutes.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check that the door is fully closed and the gasket seals all the way around</li><li>Make sure the box wasn't just loaded with warm product or held open for restocking</li><li>Check the evaporator inside for heavy ice buildup and the condenser outside for blocked airflow</li><li>Verify the condensing unit is actually running (fan spinning, breaker on)</li><li>Move perishable product to a working cooler if temperature keeps climbing</li></ol>
+<div class="callout"><b>Safety:</b> Food safety: log temperatures during the event for your health-inspection records.</div>
+<p><b>Why it takes a technician:</b> If temperature doesn't recover within an hour of those checks, the fault is in the sealed system or controls — refrigerant diagnosis needs gauges and EPA Section 608 certification, and product is at risk the whole time it stays warm.</p>
+<div class="callout"><b>When to call:</b> If the temperature doesn't recover within an hour after fixing door and airflow issues, call a refrigeration tech — product is at risk.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a02">
+<h3>A02 — Low temperature alarm</h3>
+<p>Air temperature in the cabinet is too low — it has dropped below the programmed low-temperature alarm limit. On a cooler this can freeze product.</p>
+<p><b>What causes it:</b></p><ul><li>Product stacked directly against the air sensor or in the discharge air stream, fooling the reading</li><li>The compressor running nonstop instead of cycling off</li><li>A sensor or setpoint problem making the controller drive the box too cold</li></ul>
+<p><b>Can staff fix it?</b> Partly. Staff can verify the real temperature with a separate thermometer, move product away from the sensor and discharge air, and pull freeze-sensitive stock out of the cold spots. If the unit won't cycle off, that's it for DIY.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the actual box temperature with a separate thermometer</li><li>Look for product stacked directly against the air sensor or discharge air stream</li><li>Note whether the compressor seems to run nonstop</li><li>Move freeze-sensitive product (produce, dairy, drinks) away from the coldest spots</li></ol>
+<p><b>Why it takes a technician:</b> A unit that never cycles off has a controller, sensor, or setpoint fault that takes live electrical testing to pin down — and every hour it runs, produce, dairy, and drinks are freezing.</p>
+<div class="callout"><b>When to call:</b> If the unit won't cycle off and product is starting to freeze, call a tech — the controller, sensor, or setpoint needs professional attention.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a99">
+<h3>A99 — High voltage alarm</h3>
+<p>Supply voltage to the unit is too high. The controller raises this alarm as compressor protection and may stop the compressor to prevent damage.</p>
+<p><b>What causes it:</b></p><ul><li>Supply voltage to the unit is above the safe limit</li><li>A building electrical problem on the circuit — the same issue that makes lights flicker or trips other equipment</li></ul>
+<p><b>Can staff fix it?</b> No. Staff can note whether other equipment on the circuit is acting up and watch box temperature, but supply voltage is not something to work around. Don't reset repeatedly — the alarm exists to protect the compressor.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note whether other equipment on the same circuit is acting up (lights flickering, other alarms)</li><li>Do not reset repeatedly — the alarm exists to protect the compressor</li><li>Monitor box temperature and move product if cooling stops</li></ol>
+<div class="callout"><b>Safety:</b> Building electrical problem — electrician territory.</div>
+<p><b>Why it takes a technician:</b> This is building electrical work — live voltage measurement and correction at the panel is electrician territory, and forcing the compressor to run on bad voltage risks destroying it.</p>
+<div class="callout"><b>When to call:</b> Call an electrician or refrigeration tech — supply-voltage problems are not a DIY fix.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-aa1">
+<h3>AA1 — Low voltage alarm</h3>
+<p>Supply voltage to the unit is too low. The controller raises this alarm as compressor protection; low voltage can burn out a compressor motor.</p>
+<p><b>What causes it:</b></p><ul><li>Supply voltage sagging below the safe limit</li><li>The unit sharing a circuit with heavy equipment that just started</li><li>An extension cord or undersized power feed starving the unit</li></ul>
+<p><b>Can staff fix it?</b> Only the obvious part: if the unit is on an extension cord or a shared circuit with heavy equipment, that's visible and worth flagging. The electrical fix itself is not DIY.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check whether the unit shares a circuit with heavy equipment that just started</li><li>Check for an extension cord or undersized power feed to the unit</li><li>Monitor box temperature and move product if cooling stops</li></ol>
+<div class="callout"><b>Safety:</b> Building electrical problem — electrician territory.</div>
+<p><b>Why it takes a technician:</b> Sustained low voltage burns out compressor motors — an electrician has to measure the supply under load and correct the feed before the compressor pays the price.</p>
+<div class="callout"><b>When to call:</b> Call an electrician — sustained low voltage will damage the compressor.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a61">
+<h3>A61 — Condenser alarm — high condenser temperature</h3>
+<p>Condenser temperature is too high; the manual's own instruction is to check airflow. Usually a dirty condenser coil, blocked airflow, or a failed condenser fan.</p>
+<p><b>What causes it:</b></p><ul><li>A dust- or lint-matted condenser coil that can't reject heat</li><li>Boxes, bags, or debris blocking airflow through or around the coil</li><li>A condenser fan that has stopped running</li></ul>
+<p><b>Can staff fix it?</b> Usually, yes — this is the classic staff-fixable alarm. Kill power at the breaker, brush or vacuum the coil face, clear everything blocking airflow, confirm the fan spins, and see if the alarm clears as the unit cools.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the condensing unit: is the fan running and is air moving through the coil?</li><li>Clear boxes, bags, or debris blocking the coil or the space around the unit</li><li>Brush or vacuum visible dust and lint off the coil face (unit off at the breaker first)</li><li>Restore power and see if the alarm clears as the unit cools</li></ol>
+<p><b>Why it takes a technician:</b> If the coil is clean and airflow is clear but A61 returns, the fan motor or the refrigerant side is at fault — that's live motor testing and gauge work, and running hot shortens compressor life by the day.</p>
+<div class="callout"><b>When to call:</b> If the coil is clean and airflow is clear but the alarm returns, call a tech — the fan motor or refrigerant side needs checking.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a80">
+<h3>A80 — Condenser blocked alarm (manual reset)</h3>
+<p>Condenser temperature went too high and the controller locked out; this alarm requires a manual reset. Per the manual, it is reset by switching the r12 main switch off and on again or by powering down the controller.</p>
+<p><b>What causes it:</b></p><ul><li>Condenser temperature climbed high enough that the controller locked out — it requires a manual reset (r12 switch off/on or a power-down)</li><li>A dirty, dust-matted condenser coil</li><li>Blocked airflow around the condensing unit</li><li>A condenser fan that isn't spinning</li></ul>
+<p><b>Can staff fix it?</b> Once. Clean the coil and clear the airflow first, then reset by powering down at the breaker for a few minutes. Watch it for 30 minutes. If A80 comes back, stop resetting.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Clean the condenser coil and clear all airflow blockages before resetting anything</li><li>Confirm the condenser fan spins freely and runs</li><li>Reset by powering the unit down at the breaker for a few minutes, then back on</li><li>Watch the unit for 30 minutes — if the alarm returns, stop resetting it</li></ol>
+<p><b>Why it takes a technician:</b> Repeated high condenser temperature kills compressors — if one cleaning and one reset don't hold, a tech needs to check the fan motor and pressures before the lockouts turn into a compressor replacement.</p>
+<div class="callout"><b>When to call:</b> If A80 comes back after a cleaning and one reset, call a tech — repeated high condenser temps will kill the compressor.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a04">
+<h3>A04 — Door alarm</h3>
+<p>The door has been open for too long. Depending on configuration the controller may have stopped the compressor and fans while the door is open.</p>
+<p><b>What causes it:</b></p><ul><li>The door genuinely open too long — every minute open loads the box with warm, humid air</li><li>A torn or iced gasket, or product blocking the door from sealing</li><li>A door switch plunger that's stuck or iced up</li></ul>
+<p><b>Can staff fix it?</b> Usually, yes. Shut the door, confirm the latch engages, check the gasket for tears and ice, and free a stuck switch plunger. The alarm should clear within a few minutes of a proper close.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Close the door fully and confirm the latch engages</li><li>Check the gasket for tears, ice, or product blocking the door from sealing</li><li>Check that the door switch plunger isn't stuck or iced</li><li>Confirm the alarm clears once the door has been shut for a few minutes</li></ol>
+<p><b>Why it takes a technician:</b> If the alarm stays on with the door verifiably shut, the door switch or its setting is faulty — that's controller wiring and configuration work, and depending on setup the unit may be stopping the compressor and fans every time it thinks the door is open.</p>
+<div class="callout"><b>When to call:</b> If the alarm stays on with the door verifiably shut, the door switch or its setting needs a tech.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a15">
+<h3>A15 — External alarm from DI input</h3>
+<p>An external device wired to the controller's digital input is signaling an alarm. What it means depends on what is connected — commonly a pressure switch or other safety device.</p>
+<p><b>What causes it:</b></p><ul><li>An external device wired to the controller's digital input is signaling an alarm</li><li>Commonly a pressure switch or other protective device doing its job — what it means depends entirely on what's connected</li></ul>
+<p><b>Can staff fix it?</b> No. Staff can check whether the box is still cooling, note other equipment alarms in the room, and record the code and time — that record genuinely shortens the service call.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the box temperature and whether the unit is still cooling</li><li>Note any other equipment alarms in the room (the DI input relays an external signal)</li><li>Record the code and time for the service tech</li></ol>
+<p><b>Why it takes a technician:</b> Only someone who can trace the installation's wiring can identify which device tripped the input, and if it's a pressure safety, the underlying refrigerant-side problem needs EPA Section 608-certified diagnosis.</p>
+<div class="callout"><b>When to call:</b> Call your refrigeration tech to identify what device is tripping the input — it's often a protective switch doing its job.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<section class="code-sec" id="code-a45">
+<h3>A45 — Standby alarm — control stopped</h3>
+<p>Refrigeration control has been stopped by the r12 main switch (a software on/off, sometimes also driven by an external switch input). The unit is not cooling on purpose, not because of a fault.</p>
+<p><b>What causes it:</b></p><ul><li>Someone switched the unit off at the r12 main switch — a deliberate software on/off, not a fault</li><li>An external switch wired to the controller's input put it in standby (cleaning or service, usually)</li></ul>
+<p><b>Can staff fix it?</b> Yes, if it was deliberate — find who turned it off and turn it back on, or flip the external main switch if one is fitted. Don't leave product sitting in a box that's in standby; verify the temperature.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check whether someone deliberately switched the unit to standby (cleaning, service)</li><li>If an external main switch is fitted, check its position</li><li>Do not leave product in a box sitting in standby — verify temperature</li></ol>
+<p><b>Why it takes a technician:</b> If nobody turned it off and there's no external switch to find, the r12 setting or DI configuration has to be checked in the controller's parameters — a wrong guess there stops cooling entirely.</p>
+<div class="callout"><b>When to call:</b> If nobody turned it off and you can't find an external switch, have a tech check the r12 setting and DI configuration.</div>
+<p class="src">Source: <a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> (BC194286421698en-001002)</p>
+</section>
+<h2>How do you diagnose a Danfoss ERC 211 / 213 / 214 alarm, step by step?</h2>
+<ol class="steps"><li><b>Rule out A45 first.</b> A45 means control was stopped by the r12 main switch — someone switched it off, not something broken. Switch it back on and watch the box pull down.</li><li><b>E-codes are a sensor or its wiring.</b> E29 (air, Sair), E27 (evaporator, S5) and E30 (condenser, Sc) mean the sensor is defective or its electrical connection is lost. Check the plug and cable before replacing the sensor.</li><li><b>Match the sensor type.</b> The ERC accepts NTC 5 kΩ (EKS 211), NTC 10 kΩ (EKS 221), PTC 990 Ω (EKS 111) or Pt1000 (AKS 11, 12, 21) sensors, selected in parameter o06. A replacement that doesn't match the setting reads wrong from day one.</li><li><b>Condenser: A61 warns, A80 locks out.</b> A61 means condenser temperature is too high — check the airflow. A80 is the condenser-blocked alarm and needs a manual reset: set the r12 main switch off and on again, or power the controller down — after cleaning the coil, or it comes straight back.</li><li><b>A99 and AA1 are about the building's supply voltage</b> — too high or too low — and exist to protect the compressor. If they repeat, the fix is electrical, not refrigeration.</li><li><b>A04 and A15 come from the digital input.</b> A04 is the door open too long; A15 is an external alarm on DI1, and what DI1 does is set by parameter o02 — so check what's wired there.</li></ol>
+<div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
+If the same fault returns after a single reset, the underlying condition is real —
+stop resetting and deal with the cause.</div>
+<h2>Which parts are usually involved?</h2>
+<div class="tbl"><table class="parts"><thead><tr><th>Part</th><th>Codes that point to it</th><th>Note</th></tr></thead><tbody><tr><td>Air sensor Sair</td><td><a href="#code-e29">E29</a>, <a href="#code-a01">A01</a>, <a href="#code-a02">A02</a></td><td></td></tr><tr><td>Evaporator / defrost sensor S5</td><td><a href="#code-e27">E27</a></td><td></td></tr><tr><td>Condenser sensor Sc</td><td><a href="#code-e30">E30</a>, <a href="#code-a61">A61</a>, <a href="#code-a80">A80</a></td><td></td></tr><tr><td>Condenser coil and fan</td><td><a href="#code-a61">A61</a>, <a href="#code-a80">A80</a></td><td></td></tr><tr><td>Door switch on DI1</td><td><a href="#code-a04">A04</a></td><td></td></tr><tr><td>Device wired to DI1</td><td><a href="#code-a15">A15</a></td><td></td></tr><tr><td>Building power supply</td><td><a href="#code-a99">A99</a>, <a href="#code-aa1">AA1</a></td><td></td></tr><tr><td>Main switch setting (r12)</td><td><a href="#code-a45">A45</a></td><td></td></tr></tbody></table></div>
+<h2>What refrigeration is behind these codes?</h2><p>Every code here is the controller reporting a reading from the refrigeration system. The background is explained once, for every controller on this site: <a href="/guides/walk-in-cooler-alarm-codes-guide/#temperature-control">how a controller holds temperature — and how its sensors are tested</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#condenser">why the condenser matters</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#defrost">how defrost works and what goes wrong</a>.</p>
+
+<p>If it does come to a service call and you're in <a href="/nashville-tn/">Nashville, TN</a> or <a href="/birmingham-al/">Birmingham, AL</a>, we maintain independently compiled lists of local companies that service walk-in coolers — real businesses with verified contact information, none of whom paid to be listed.</p>
+
+</article>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://assets.danfoss.com/documents/latest/362099/BC194286421698en-001002.pdf">Danfoss — Electronic refrigeration control ERC 21X series (ERC 211, 213, 214) — user guide</a> <span class="doc">(BC194286421698en-001002)</span></li><li><a href="https://assets.danfoss.com/documents/latest/400547/AN19438642229205-000701.pdf">Danfoss — Electronic refrigeration control ERC 211 — installation guide</a> <span class="doc">(AN19438642229205-000701)</span></li><li><a href="https://assets.danfoss.com/documents/latest/400549/AN19438642089705-000401.pdf">Danfoss — Electronic refrigeration control ERC 214 — installation guide</a> <span class="doc">(AN19438642089705-000401)</span></li></ul></div>
+<h2>Other Danfoss controllers</h2><div class='grid'><a href="/danfoss/ekc-202-ak-cc-210-alarm-codes/"><span class="c">Danfoss EKC 202 / AK-CC 210</span><div class="t">Danfoss case and cold-room controller; E, A and S (status) codes.</div></a><a href="/danfoss/optyma-plus-alarm-codes/"><span class="c">Danfoss Optyma Plus</span><div class="t">Controller built into a Danfoss condensing unit; A2, A17, A80, A96.</div></a></div>
+</div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

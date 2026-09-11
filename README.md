@@ -1,7 +1,10 @@
 # Walk-In Cooler Code Lookup
 
-SEO content site: one page per documented walk-in cooler / freezer controller
-fault code or alarm signal. The play is to rank for **code searches**
+SEO content site: one page per walk-in cooler / freezer **controller family**
+— the manufacturer's full code table, what each fault means, a diagnostic
+sequence and the parts involved, all cited to the manufacturer's own manual.
+(Until 2026-09-10 it was one page per code; see
+`INDEXATION_AUDIT_2026-09-10.md` for why that changed.) The play is to rank for **code searches**
 ("heatcraft al01", "dixell HA code walk in cooler", "ke2 evaporator efficiency
 alarm") — informational queries Google serves with plain web results, **no map
 pack** — instead of fighting local repair companies on "walk in cooler repair
@@ -19,23 +22,24 @@ standing in front of a cooler throwing an alarm. Highest-intent moment there is.
 1. **CTA_PHONE** in `generate_site.py` — set a CallRail number routed to ONE
    exclusive walk-in refrigeration company per metro (same model as the
    dumpster deal). Blank = block hidden. No fake numbers, ever.
-2. **PARTS_LINK** — parts affiliate link (Parts Town etc.) on every code page.
+2. **PARTS_LINK** — parts affiliate link (Parts Town etc.) on every controller page.
 3. Later: featured placement on city pages once traffic is provable.
 
 ## What's in it
 
-| Brand | Codes |
-|---|---|
-| Carel (ir33, PJ Easy, PCO5+) | 34 |
-| Heatcraft — Bohn / Larkin (intelliGen, Beacon II) | 34 |
-| Danfoss (AK-CC, EKC, ERC, Optyma Plus) | 30 |
-| KE2 Therm (Evaporator Efficiency) | 12 |
-| Dixell / Emerson (XR series) | 12 |
-| Norlake | 6 |
-| **Total** | **128** |
+| Brand | Controller pages | Full sections | Table rows |
+|---|---|---|---|
+| Carel | ir33 / ir33+, PJ Easy (PJEZ) | 34 | 49 |
+| Heatcraft — Bohn / Larkin | intelliGen, Beacon II | 34 | 57 |
+| Danfoss | ERC 211/213/214, EKC 202 / AK-CC 210, Optyma Plus | 30 | 58 |
+| KE2 Therm | Evaporator Efficiency | 12 | 17 |
+| Dixell / Emerson | XR06CX / XR60CX | 12 | 15 |
+| Norlake | Programmable controller | 6 | 22 |
+| **Total** | **10** | **128** | **218** |
 
-Plus 7 long-form guides and 2 city pages (Nashville TN, Birmingham AL) listing
-13 verified local companies.
+Plus 6 brand hubs (Dixell, KE2 and Norlake: the hub is the controller page),
+7 long-form guides and 2 city pages (Nashville TN, Birmingham AL) listing 13
+verified local companies. 24 URLs in the sitemap.
 
 ## Files
 
@@ -46,6 +50,11 @@ Plus 7 long-form guides and 2 city pages (Nashville TN, Birmingham AL) listing
 - `data/supplements.json` — per-code causes / fixability / why-technician /
   natural-language question, keyed `"model_family||code"`.
 - `data/families.json` — which-machines and generation context per family.
+- `data/controller_pages.json` — the 10 controller pages: families carried,
+  full code-table rows, diagnostic sequence, parts, sources, hub copy.
+- `data/sources.json` — every primary source cited on the site.
+- `data/redirects.json` — the 128 retired per-code URLs (301s are generated
+  into `firebase.json`; never delete an entry).
 - `data/cities.json` — city pages: intro, FAQs, verified companies. Doubles as
   the exclusive-partner prospect list.
 - `data/brands.json` — brand hub page intros.

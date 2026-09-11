@@ -8,6 +8,648 @@
       "**/node_modules/**"
     ],
     "cleanUrls": true,
-    "trailingSlash": true
+    "trailingSlash": true,
+    "redirects": [
+      {
+        "regex": "^/carel/ir33-ir33-re/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-re",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-e0/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-e0",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-e1/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-e1",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-e2/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-e2",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-hi/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-hi",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-lo/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-lo",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-ia/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-ia",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-da/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-da",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-dor/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-dor",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-ed1/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-ed1",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-cht/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-cht",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-cht-2/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-cht-high-condenser-temperature-alarm",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-lp/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-lp",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-pd/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-pd",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-etc/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-etc",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-ee/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-ee",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-ef/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-ef",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-ha/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-ha",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-afr/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-afr",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/ir33-ir33-def/?$",
+        "destination": "/carel/ir33-alarm-codes/#code-def",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-e0/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-e0",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-e1/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-e1",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-e2/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-e2",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-ia/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-ia",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-dor/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-dor",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-lo/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-lo",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-hi/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-hi",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-ee/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-ee",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-ef/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-ef",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-ed/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-ed",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-df/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-df",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-cht/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-cht",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-cht-2/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-cht-dirty-condenser-alarm",
+        "type": 301
+      },
+      {
+        "regex": "^/carel/pj-easy-pjez-etc/?$",
+        "destination": "/carel/pj-easy-alarm-codes/#code-etc",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-high-air-temp/?$",
+        "destination": "/ke2-therm/#code-high-air-temp",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-low-air-temp/?$",
+        "destination": "/ke2-therm/#code-low-air-temp",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-excess-defrost/?$",
+        "destination": "/ke2-therm/#code-excess-defrost",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-defr-term-on-time/?$",
+        "destination": "/ke2-therm/#code-defr-term-on-time",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-door-switch/?$",
+        "destination": "/ke2-therm/#code-door-switch",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-t1-t2-t3-t4-sensor/?$",
+        "destination": "/ke2-therm/#code-t1-t2-t3-t4-sensor",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-high-superheat/?$",
+        "destination": "/ke2-therm/#code-high-superheat",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-low-superheat/?$",
+        "destination": "/ke2-therm/#code-low-superheat",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-pressure-sensor/?$",
+        "destination": "/ke2-therm/#code-pressure-sensor",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-communication-error/?$",
+        "destination": "/ke2-therm/#code-communication-error",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-ext-alarm/?$",
+        "destination": "/ke2-therm/#code-ext-alarm",
+        "type": 301
+      },
+      {
+        "regex": "^/ke2-therm/ke2-evaporator-efficiency-blank-display-no-lights/?$",
+        "destination": "/ke2-therm/#code-blank-display-no-lights",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-p1/?$",
+        "destination": "/dixell-emerson/#code-p1",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-p2/?$",
+        "destination": "/dixell-emerson/#code-p2",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr60cx-p3/?$",
+        "destination": "/dixell-emerson/#code-p3",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr60cx-p4/?$",
+        "destination": "/dixell-emerson/#code-p4",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-ha/?$",
+        "destination": "/dixell-emerson/#code-ha",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-la/?$",
+        "destination": "/dixell-emerson/#code-la",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr60cx-ha2/?$",
+        "destination": "/dixell-emerson/#code-ha2",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr60cx-la2/?$",
+        "destination": "/dixell-emerson/#code-la2",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-da/?$",
+        "destination": "/dixell-emerson/#code-da",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-ea/?$",
+        "destination": "/dixell-emerson/#code-ea",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-ca/?$",
+        "destination": "/dixell-emerson/#code-ca",
+        "type": 301
+      },
+      {
+        "regex": "^/dixell-emerson/xr-series-xr06cx-xr60cx-of-pof/?$",
+        "destination": "/dixell-emerson/#code-of-pof",
+        "type": 301
+      },
+      {
+        "regex": "^/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-door-ajar-alarm/?$",
+        "destination": "/norlake/#code-door-ajar-alarm",
+        "type": 301
+      },
+      {
+        "regex": "^/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-room-temp-high-alarm/?$",
+        "destination": "/norlake/#code-room-temp-high-alarm",
+        "type": 301
+      },
+      {
+        "regex": "^/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-room-temp-low-alarm/?$",
+        "destination": "/norlake/#code-room-temp-low-alarm",
+        "type": 301
+      },
+      {
+        "regex": "^/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-room-temperature-sensor-failure/?$",
+        "destination": "/norlake/#code-room-temperature-sensor-failure",
+        "type": 301
+      },
+      {
+        "regex": "^/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-air-flow-loss-1/?$",
+        "destination": "/norlake/#code-air-flow-loss-1",
+        "type": 301
+      },
+      {
+        "regex": "^/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-power-restart/?$",
+        "destination": "/norlake/#code-power-restart",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-e29/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-e29",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-e27/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-e27",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-e30/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-e30",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a01/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a01",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a02/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a02",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a99/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a99",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-aa1/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-aa1",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a61/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a61",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a80/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a80",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a04/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a04",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a15/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a15",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/erc-211-213-214-a45/?$",
+        "destination": "/danfoss/erc-211-213-214-alarm-codes/#code-a45",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-a1/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-a1",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-a2/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-a2",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-a4/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-a4",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-a45/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-a45",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-a59/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-a59",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-e1/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-e1",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-e27/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-e27",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ekc-202-ak-cc-210-e29/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-e29",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ak-cc-210-250-e25/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-e25",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ak-cc-210-250-e26/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-e26",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ak-cc-210-250-a16/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-a16",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/ak-cc-210-250-a60/?$",
+        "destination": "/danfoss/ekc-202-ak-cc-210-alarm-codes/#code-a60",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/optyma-plus-condensing-unit-controller-a2/?$",
+        "destination": "/danfoss/optyma-plus-alarm-codes/#code-a2",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/optyma-plus-condensing-unit-controller-a17/?$",
+        "destination": "/danfoss/optyma-plus-alarm-codes/#code-a17",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/optyma-plus-condensing-unit-controller-a45/?$",
+        "destination": "/danfoss/optyma-plus-alarm-codes/#code-a45",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/optyma-plus-condensing-unit-controller-a80/?$",
+        "destination": "/danfoss/optyma-plus-alarm-codes/#code-a80",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/optyma-plus-condensing-unit-controller-a96/?$",
+        "destination": "/danfoss/optyma-plus-alarm-codes/#code-a96",
+        "type": 301
+      },
+      {
+        "regex": "^/danfoss/optyma-plus-condensing-unit-controller-e1/?$",
+        "destination": "/danfoss/optyma-plus-alarm-codes/#code-e1",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-al01/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-al01",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-al02/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-al02",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-al03/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-al03",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-al04/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-al04",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-al06/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-al06",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-al12/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-al12",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er01/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er01",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er02/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er02",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er03/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er03",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er04/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er04",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er11/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er11",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er14/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er14",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er15/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er15",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er16/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er16",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er19/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er19",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er22/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er22",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er23/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er23",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er25/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er25",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-er32/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-er32",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/intelligen-if-irc-controller-in01/?$",
+        "destination": "/heatcraft-bohn-larkin/intelligen-alarm-codes/#code-in01",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a1/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-a1",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a2/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-a2",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a3/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-a3",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a4/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-a4",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e1/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-e1",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e2/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-e2",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e3/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-e3",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e4/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-e4",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e6/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-e6",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e7/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-e7",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e9/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-e9",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-smart-controller-lcd-display-module-comm/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-comm",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-smart-controller-lcd-display-module-boxhi/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-boxhi",
+        "type": 301
+      },
+      {
+        "regex": "^/heatcraft-bohn-larkin/beacon-ii-smart-controller-lcd-display-module-inflt/?$",
+        "destination": "/heatcraft-bohn-larkin/beacon-ii-alarm-codes/#code-inflt",
+        "type": 301
+      }
+    ]
   }
 }

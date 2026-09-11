@@ -1,0 +1,773 @@
+{
+  "_note": "Retired 2026-09-10: one-page-per-code URLs consolidated into one page per controller family. generate_site.py resolves each entry to its controller page + code anchor and writes the 301s into firebase.json. Never delete entries.",
+  "redirects": [
+    {
+      "from": "/carel/ir33-ir33-re/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "rE"
+    },
+    {
+      "from": "/carel/ir33-ir33-e0/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "E0"
+    },
+    {
+      "from": "/carel/ir33-ir33-e1/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "E1"
+    },
+    {
+      "from": "/carel/ir33-ir33-e2/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "E2"
+    },
+    {
+      "from": "/carel/ir33-ir33-hi/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "HI"
+    },
+    {
+      "from": "/carel/ir33-ir33-lo/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "LO"
+    },
+    {
+      "from": "/carel/ir33-ir33-ia/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "IA"
+    },
+    {
+      "from": "/carel/ir33-ir33-da/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "dA"
+    },
+    {
+      "from": "/carel/ir33-ir33-dor/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "dor"
+    },
+    {
+      "from": "/carel/ir33-ir33-ed1/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "Ed1"
+    },
+    {
+      "from": "/carel/ir33-ir33-cht/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "cht"
+    },
+    {
+      "from": "/carel/ir33-ir33-cht-2/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "CHt"
+    },
+    {
+      "from": "/carel/ir33-ir33-lp/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "LP"
+    },
+    {
+      "from": "/carel/ir33-ir33-pd/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "Pd"
+    },
+    {
+      "from": "/carel/ir33-ir33-etc/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "Etc"
+    },
+    {
+      "from": "/carel/ir33-ir33-ee/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "EE"
+    },
+    {
+      "from": "/carel/ir33-ir33-ef/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "EF"
+    },
+    {
+      "from": "/carel/ir33-ir33-ha/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "HA"
+    },
+    {
+      "from": "/carel/ir33-ir33-afr/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "AFr"
+    },
+    {
+      "from": "/carel/ir33-ir33-def/",
+      "brand": "Carel",
+      "family": "ir33 / ir33+",
+      "code": "dEF"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-e0/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "E0"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-e1/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "E1"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-e2/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "E2"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-ia/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "IA"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-dor/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "dOr"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-lo/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "LO"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-hi/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "HI"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-ee/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "EE"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-ef/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "EF"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-ed/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "Ed"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-df/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "dF"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-cht/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "cht"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-cht-2/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "CHt"
+    },
+    {
+      "from": "/carel/pj-easy-pjez-etc/",
+      "brand": "Carel",
+      "family": "PJ Easy (PJEZ)",
+      "code": "EtC"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-high-air-temp/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "HIGH AIR TEMP"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-low-air-temp/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "LOW AIR TEMP"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-excess-defrost/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "EXCESS DEFROST"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-defr-term-on-time/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "DEFR TERM ON TIME"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-door-switch/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "DOOR SWITCH"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-t1-t2-t3-t4-sensor/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "T1 / T2 / T3 / T4 SENSOR"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-high-superheat/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "HIGH SUPERHEAT"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-low-superheat/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "LOW SUPERHEAT"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-pressure-sensor/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "PRESSURE SENSOR"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-communication-error/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "COMMUNICATION ERROR"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-ext-alarm/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "EXT ALARM"
+    },
+    {
+      "from": "/ke2-therm/ke2-evaporator-efficiency-blank-display-no-lights/",
+      "brand": "KE2 Therm",
+      "family": "KE2 Evaporator Efficiency",
+      "code": "Blank display (no lights)"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-p1/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "P1"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-p2/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "P2"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr60cx-p3/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR60CX)",
+      "code": "P3"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr60cx-p4/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR60CX)",
+      "code": "P4"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-ha/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "HA"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-la/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "LA"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr60cx-ha2/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR60CX)",
+      "code": "HA2"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr60cx-la2/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR60CX)",
+      "code": "LA2"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-da/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "dA"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-ea/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "EA"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-ca/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "CA"
+    },
+    {
+      "from": "/dixell-emerson/xr-series-xr06cx-xr60cx-of-pof/",
+      "brand": "Dixell (Emerson)",
+      "family": "XR-series (XR06CX/XR60CX)",
+      "code": "OF / PoF"
+    },
+    {
+      "from": "/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-door-ajar-alarm/",
+      "brand": "Norlake",
+      "family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+      "code": "DOOR AJAR ALARM"
+    },
+    {
+      "from": "/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-room-temp-high-alarm/",
+      "brand": "Norlake",
+      "family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+      "code": "ROOM TEMP HIGH ALARM"
+    },
+    {
+      "from": "/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-room-temp-low-alarm/",
+      "brand": "Norlake",
+      "family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+      "code": "ROOM TEMP LOW ALARM"
+    },
+    {
+      "from": "/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-room-temperature-sensor-failure/",
+      "brand": "Norlake",
+      "family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+      "code": "ROOM TEMPERATURE SENSOR FAILURE"
+    },
+    {
+      "from": "/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-air-flow-loss-1/",
+      "brand": "Norlake",
+      "family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+      "code": "AIR FLOW LOSS 1"
+    },
+    {
+      "from": "/norlake/programmable-controller-carel-pco5-based-walk-in-control-panel-power-restart/",
+      "brand": "Norlake",
+      "family": "Programmable Controller (Carel PCO5+ based walk-in control panel)",
+      "code": "POWER RESTART"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-e29/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "E29"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-e27/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "E27"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-e30/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "E30"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a01/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A01"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a02/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A02"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a99/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A99"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-aa1/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "AA1"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a61/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A61"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a80/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A80"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a04/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A04"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a15/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A15"
+    },
+    {
+      "from": "/danfoss/erc-211-213-214-a45/",
+      "brand": "Danfoss",
+      "family": "ERC 211/213/214",
+      "code": "A45"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-a1/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "A1"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-a2/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "A2"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-a4/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "A4"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-a45/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "A45"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-a59/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "A59"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-e1/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "E1"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-e27/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "E27"
+    },
+    {
+      "from": "/danfoss/ekc-202-ak-cc-210-e29/",
+      "brand": "Danfoss",
+      "family": "EKC 202 / AK-CC 210",
+      "code": "E29"
+    },
+    {
+      "from": "/danfoss/ak-cc-210-250-e25/",
+      "brand": "Danfoss",
+      "family": "AK-CC 210",
+      "code": "E25"
+    },
+    {
+      "from": "/danfoss/ak-cc-210-250-e26/",
+      "brand": "Danfoss",
+      "family": "AK-CC 210",
+      "code": "E26"
+    },
+    {
+      "from": "/danfoss/ak-cc-210-250-a16/",
+      "brand": "Danfoss",
+      "family": "AK-CC 210",
+      "code": "A16"
+    },
+    {
+      "from": "/danfoss/ak-cc-210-250-a60/",
+      "brand": "Danfoss",
+      "family": "AK-CC 210",
+      "code": "A60"
+    },
+    {
+      "from": "/danfoss/optyma-plus-condensing-unit-controller-a2/",
+      "brand": "Danfoss",
+      "family": "Optyma Plus condensing unit controller",
+      "code": "A2"
+    },
+    {
+      "from": "/danfoss/optyma-plus-condensing-unit-controller-a17/",
+      "brand": "Danfoss",
+      "family": "Optyma Plus condensing unit controller",
+      "code": "A17"
+    },
+    {
+      "from": "/danfoss/optyma-plus-condensing-unit-controller-a45/",
+      "brand": "Danfoss",
+      "family": "Optyma Plus condensing unit controller",
+      "code": "A45"
+    },
+    {
+      "from": "/danfoss/optyma-plus-condensing-unit-controller-a80/",
+      "brand": "Danfoss",
+      "family": "Optyma Plus condensing unit controller",
+      "code": "A80"
+    },
+    {
+      "from": "/danfoss/optyma-plus-condensing-unit-controller-a96/",
+      "brand": "Danfoss",
+      "family": "Optyma Plus condensing unit controller",
+      "code": "A96"
+    },
+    {
+      "from": "/danfoss/optyma-plus-condensing-unit-controller-e1/",
+      "brand": "Danfoss",
+      "family": "Optyma Plus condensing unit controller",
+      "code": "E1"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-al01/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "AL01"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-al02/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "AL02"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-al03/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "AL03"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-al04/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "AL04"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-al06/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "AL06"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-al12/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "AL12"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er01/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER01"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er02/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER02"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er03/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER03"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er04/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER04"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er11/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER11"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er14/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER14"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er15/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER15"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er16/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER16"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er19/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER19"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er22/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER22"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er23/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER23"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er25/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER25"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-er32/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "ER32"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/intelligen-if-irc-controller-in01/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "intelliGen iF/iRC controller",
+      "code": "IN01"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a1/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "A1"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a2/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "A2"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a3/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "A3"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-a4/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "A4"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e1/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "E1"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e2/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "E2"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e3/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "E3"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e4/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "E4"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e6/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "E6"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e7/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "E7"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-refrigeration-system-e9/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II refrigeration system",
+      "code": "E9"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-smart-controller-lcd-display-module-comm/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II Smart Controller (LCD display module)",
+      "code": "+COMM+"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-smart-controller-lcd-display-module-boxhi/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II Smart Controller (LCD display module)",
+      "code": "*BOXHI"
+    },
+    {
+      "from": "/heatcraft-bohn-larkin/beacon-ii-smart-controller-lcd-display-module-inflt/",
+      "brand": "Heatcraft (Bohn/Larkin)",
+      "family": "Beacon II Smart Controller (LCD display module)",
+      "code": "*INFLT"
+    }
+  ]
+}

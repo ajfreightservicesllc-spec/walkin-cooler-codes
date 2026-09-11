@@ -12,7 +12,7 @@
       "Power-cycle the unit at the breaker once; if rE returns, stop"
     ],
     "when_to_call": "Call a refrigeration tech if rE persists after a power cycle — the probe or its wiring needs testing and replacement.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -27,7 +27,7 @@
       "Power-cycle at the breaker once and see if E0 clears"
     ],
     "when_to_call": "Call a tech if E0 stays on — a failed probe means the box is running blind and product is at risk.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -42,22 +42,22 @@
       "Power-cycle once at the breaker; if E1 returns, stop"
     ],
     "when_to_call": "Call a tech if E1 persists or the coil is icing up — probe replacement is a service job.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
     "model_family": "ir33 / ir33+",
     "code": "E2",
-    "title": "Probe S3 fault (E3/E4 = probes S4/S5)",
-    "meaning": "One of the auxiliary probes (typically the condenser probe on S3; E3 and E4 are the same fault for probes S4 and S5) is faulty or disconnected. Condenser-temperature protection may not work while this alarm is active.",
+    "title": "Probe S3 fault (E3 = probe S4)",
+    "meaning": "One of the auxiliary probes (typically the condenser probe on S3; E3 is the same fault for probe S4) is faulty or disconnected. Condenser-temperature protection may not work while this alarm is active.",
     "diy_steps": [
-      "Note which code shows (E2, E3, or E4) and when it started",
+      "Note which code shows (E2 or E3) and when it started",
       "Look over the condensing unit for obvious damage to the small sensor wire (look only)",
       "Clear dust and debris from around the condenser while you're there",
       "Power-cycle once; if the code returns, stop"
     ],
     "when_to_call": "Call a tech to test and replace the auxiliary probe if the code doesn't clear.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -73,7 +73,7 @@
       "Verify the breaker for the condensing unit hasn't tripped"
     ],
     "when_to_call": "Call a tech if the temperature keeps climbing or hasn't recovered within an hour or two with the door shut.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -88,7 +88,7 @@
       "Silence the buzzer and watch whether temperature climbs back into range"
     ],
     "when_to_call": "Call a tech if the box genuinely runs colder than setpoint or the compressor won't cycle off — that's a control or refrigeration fault.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -103,7 +103,7 @@
       "Note the time and how often IA appears, for the service call"
     ],
     "when_to_call": "Call a tech if IA repeats — whatever safety device tripped it needs to be diagnosed.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -117,7 +117,7 @@
       "Note when the alarm started and whether it coincides with hot weather or heavy door traffic"
     ],
     "when_to_call": "Call a tech to identify and test the external device wired to the alarm input if dA keeps returning.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -132,7 +132,7 @@
       "See if the alarm clears within a few minutes of the door being properly shut"
     ],
     "when_to_call": "Call a tech if dor stays on with the door closed — the door switch or its wiring is faulty.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -147,7 +147,7 @@
       "Note if Ed1/Ed2 shows up after every defrost or just occasionally"
     ],
     "when_to_call": "Call a tech if it repeats — the defrost heater, defrost probe, or defrost schedule needs service before the coil ices solid.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -162,7 +162,7 @@
       "Check ambient conditions — a condenser in a hot mechanical room or direct sun runs hot"
     ],
     "when_to_call": "Call a tech for a proper coil cleaning and pressure check if the pre-alarm keeps returning after clearing airflow.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -178,7 +178,7 @@
     ],
     "when_to_call": "Call a tech promptly — a hard high-condenser alarm risks compressor damage if the unit keeps running hot.",
     "safety_flag": "Do not keep clearing this alarm to force operation; compressor damage risk.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -194,7 +194,7 @@
     ],
     "when_to_call": "Call a tech — pressure and refrigerant-side diagnosis is not a DIY task, and repeated LP trips usually mean a leak or icing problem.",
     "safety_flag": "Refrigerant-side issue; do not attempt beyond visual checks.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -208,7 +208,7 @@
       "Do not change controller parameters"
     ],
     "when_to_call": "Call a tech — pump-down faults involve the liquid-line solenoid and pressure controls, which need instruments to diagnose.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -222,7 +222,7 @@
       "Have the person who programs the controller re-set the clock parameters if they're trained to"
     ],
     "when_to_call": "Call your service company if the clock won't hold its setting — the controller's clock hardware may need replacement.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -236,7 +236,7 @@
       "Do not attempt to reload defaults yourself — factory defaults rarely match a walk-in's required program"
     ],
     "when_to_call": "Call a tech if EE returns after a power cycle — the controller may need reprogramming or replacement.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -250,7 +250,7 @@
       "Monitor box temperature independently until it's resolved"
     ],
     "when_to_call": "Call a tech if the error persists or settings look wrong — the program needs to be reloaded from a known-good record.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -266,7 +266,7 @@
     ],
     "when_to_call": "Call a tech if excursions repeat without an obvious cause — and involve your food-safety manager for product disposition.",
     "safety_flag": "Food safety event — document per HACCP procedure.",
-    "source_url": "https://everestref.com/file-downloads/service-manual/006_Carel.pdf"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -280,7 +280,7 @@
       "Note when it trips relative to defrost or nighttime setback"
     ],
     "when_to_call": "Call a tech if the alarm repeats — the antifreeze setpoint, probe placement, or system control needs professional review.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -294,7 +294,7 @@
       "If dEF never clears after well over the normal defrost window, treat it as a fault"
     ],
     "when_to_call": "Call a tech only if the display stays in dEF far beyond the normal defrost duration or the box won't recover temperature afterward.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B040000059/422dc16c-0880-492d-9d75-148829527bc1?version=1.3"
+    "source_url": "https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2"
   },
   {
     "brand": "Carel",
@@ -309,7 +309,7 @@
       "Move product away from the sensor if it's buried"
     ],
     "when_to_call": "Call a tech if E0 remains — the probe needs testing and replacement.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -323,7 +323,7 @@
       "Power-cycle once; if E1 returns, stop"
     ],
     "when_to_call": "Call a tech to replace the defrost probe if the code persists or the coil starts icing.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -337,7 +337,7 @@
       "Power-cycle once and see if E2 clears"
     ],
     "when_to_call": "Call a tech to test and replace the condenser probe if E2 stays on.",
-    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -352,13 +352,13 @@
       "Log when IA occurs for the service visit"
     ],
     "when_to_call": "Call a tech if IA repeats — the external device that tripped needs professional diagnosis.",
-    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
     "model_family": "PJ Easy (PJEZ)",
-    "code": "dOR",
-    "title": "Open door alarm (shown as 'dr' on some PJEZ models)",
+    "code": "dOr",
+    "title": "Open door alarm",
     "meaning": "The door switch wired to the digital input reports the door has been open too long. Temperature will rise and the coil will ice faster while it's open.",
     "diy_steps": [
       "Close the door fully and remove anything blocking it",
@@ -367,7 +367,7 @@
       "Confirm the alarm clears after the door has been closed a few minutes"
     ],
     "when_to_call": "Call a tech if the alarm stays on with the door verifiably closed — the switch or wiring is at fault.",
-    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -381,7 +381,7 @@
       "Watch whether the compressor ever cycles off"
     ],
     "when_to_call": "Call a tech if the unit truly runs below setpoint continuously — freeze damage to product is the risk.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -396,7 +396,7 @@
       "Check the condensing unit: fan running, coil clear of dust and debris, breaker on"
     ],
     "when_to_call": "Call a tech if temperature keeps rising or doesn't recover within a couple of hours with the door shut.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -410,7 +410,7 @@
       "Monitor the box with an independent thermometer until resolved"
     ],
     "when_to_call": "Call a tech if EE persists — the controller may need its program reloaded or the unit replaced.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -424,7 +424,7 @@
       "Watch box temperature independently in the meantime"
     ],
     "when_to_call": "Call a tech if EF returns or settings look wrong — the parameter set needs to be reloaded from records.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -439,7 +439,7 @@
       "Note whether Ed shows after every defrost"
     ],
     "when_to_call": "Call a tech if Ed repeats — the defrost heater, probe, or schedule needs service before the coil blocks solid.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -453,7 +453,7 @@
       "If dF never clears well beyond the normal defrost time, treat it as a fault"
     ],
     "when_to_call": "Call a tech only if the unit appears stuck in defrost or doesn't pull back down afterward.",
-    "source_url": "https://www.carel.com/documents/10191/0/%2B050004122/442fecd6-ee02-4d82-96cb-28307a24fc89?version=1.0"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -467,7 +467,7 @@
       "Confirm the condenser fan runs with the compressor"
     ],
     "when_to_call": "Call for a professional coil cleaning if the pre-alarm continues after clearing airflow.",
-    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -482,7 +482,7 @@
     ],
     "when_to_call": "Call a tech promptly — running with a hard high-condenser alarm risks compressor damage.",
     "safety_flag": "Do not repeatedly silence and keep running; compressor damage risk.",
-    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   },
   {
     "brand": "Carel",
@@ -496,6 +496,6 @@
       "Have your trained operator re-set the clock parameters if applicable"
     ],
     "when_to_call": "Call your service company if the clock won't hold time — the controller may need replacement.",
-    "source_url": "https://festive.co.nz/wp-content/uploads/2015/08/Carel-Easy-Programming-Guide-and-Fault-Codes.pdf"
+    "source_url": "https://www.carel.com/documents/10191/0/+030220791/172eda78-6c81-4ca8-aa3d-50190c4736ba?version=1.1"
   }
 ]

@@ -21,9 +21,10 @@ This is NOT a regular directory. Every content page is framed as the question a
 real person types, and the page is the direct answer:
 
 - H1 and title tag ARE the question. Live examples from this site:
-  "What does A1 mean on a Heatcraft (Bohn/Larkin) Beacon II refrigeration
-  system walk-in cooler?", "Why does my KE2 controller say EXT ALARM?",
-  "What does EA mean on a Dixell (Emerson) XR-series?"
+  "What do Heatcraft intelliGen (Bohn / Larkin) AL, ER and IN codes mean?",
+  "What do KE2 Evaporator Efficiency (KE2 Evap) alarms mean?",
+  "What do Dixell (Emerson) XR06CX and XR60CX alarm codes mean?" — and every
+  code on the page gets its own section and its own FAQPage question.
 - The page opens with a short answer, then earns depth: what it means, which
   units show it (new vs old), what causes it, can you fix it yourself and how,
   and when/why it takes a technician.
@@ -38,16 +39,31 @@ real person types, and the page is the direct answer:
 
 When adding brands: write the question first, then the page.
 
-## What's built (as of 2026-08-29)
+## What's built (as of 2026-09-10)
 
 | | |
 |---|---|
-| Verified fault codes | **128** |
-| Brands | Carel 34, Heatcraft (Bohn/Larkin) 34, Danfoss 30, KE2 Therm 12, Dixell (Emerson) 12, Norlake 6 |
-| Generated files | **147** (145 URLs in sitemap.xml, plus robots.txt) |
-| Brand hubs / city pages / guides | 6 / 2 / 7 |
+| Controller pages | **10** — one per controller family |
+| Code-table rows | **218** (128 with full verified sections, 90 transcribed from the manuals) |
+| Brands | Carel, Heatcraft (Bohn/Larkin), Danfoss, KE2 Therm, Dixell (Emerson), Norlake |
+| Sitemap URLs | **24** (was 145 until the 2026-09-10 consolidation) |
+| Retired URLs | 128, all 301 -> controller page `#code` anchor |
+| Brand hubs / city pages / guides | 6 (3 of them are the controller page) / 2 / 7 |
 | Verified local companies | 13 (Nashville 7, Birmingham 6) |
-| Live | https://walkincoolercodes.com — deployed 2026-08-29 |
+| Live | https://walkincoolercodes.com — deployed 2026-08-29, consolidated 2026-09-10 |
+
+## 2026-09-10 indexation fix
+
+Week ending 2026-09-07: 0 clicks, 0 impressions, 0 of 10 sampled pages
+indexed. Cause: 128 of 145 URLs were one page per code — the same
+fragmentation found on the sibling ice-machine site, where hubs index and
+deep per-symptom pages don't. Consolidated to one rich page per controller
+family; details in `INDEXATION_AUDIT_2026-09-10.md`.
+
+Acceptance: sitemap down from 145 (now 24 — met); every page carries a
+resolvable primary-source citation (met, build-enforced); sampled indexation
+above 30% within 4 weeks and at least 10 distinct pages with impressions
+(check 2026-10-08). **Publish nothing new until indexation passes 30%.**
 
 Money markets: **Nashville, TN** and **Birmingham, AL**. No new metros without
 Rufus's say-so.
@@ -60,7 +76,7 @@ Rufus's say-so.
    from it?" CallRail number + monthly fee or per-call price. The city-page
    company lists ARE the prospect list (contact info already researched in
    `data/cities.json`).
-2. **Parts affiliate** on every code page (PARTS_LINK config) — parts-buying
+2. **Parts affiliate** on every controller page (PARTS_LINK config) — parts-buying
    intent is native to code searches.
 3. **Featured placement** on city pages once traffic is provable.
 
@@ -71,7 +87,7 @@ number.
 
 By 2027-02-23 this site must show:
 - Live on its real domain, fully indexed (Search Console coverage report
-  showing the code pages in the index)
+  showing the controller pages in the index)
 - Ranking data: top-10 positions for a meaningful set of long-tail code
   queries (this is winnable; "#1 for walk in cooler repair nashville" is NOT
   the metric)
@@ -93,7 +109,8 @@ If none of that is true at 6 months, kill it and take the lesson.
 **Month 2-3 — cost: $0 plus time**
 - Watch Search Console: which codes get impressions first → write 2-3 more
   guides targeting whatever Google already shows demand for
-- Add the next controller brand — same JSON schema, re-run the generator
+- Add the next controller — ONE page in `data/controller_pages.json` — and
+  only once sampled indexation has passed 30%
 - Start partner conversations in whichever metro shows impressions first,
   using Search Console screenshots as the pitch deck
 

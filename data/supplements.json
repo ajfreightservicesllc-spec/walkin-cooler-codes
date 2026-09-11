@@ -778,7 +778,7 @@
     "fixable": "Barely. Power-cycle once and inspect the probe for visible damage. If E29 returns, regulation and temperature alarms are unreliable until a tech replaces the sensor — the box is running blind.",
     "why_tech": "The sensor circuit needs live electrical testing, and with no trustworthy air reading, neither control nor the alarms protecting your product can be relied on — monitor with a separate thermometer and move product if it drifts."
   },
-  "AK-CC 210/250||E25": {
+  "AK-CC 210||E25": {
     "causes": [
       "The S3 air sensor (typically mounted before the evaporator) has failed",
       "A lost connection between the sensor and the controller",
@@ -787,7 +787,7 @@
     "fixable": "Staff can verify box temperature with a separate thermometer, power-cycle once at the breaker, and record the code and time for the tech. That's the limit.",
     "why_tech": "Confirming whether the sensor or its wiring failed takes live electrical measurement at the controller — and until it's fixed, temperature control on that sensor can't be trusted."
   },
-  "AK-CC 210/250||E26": {
+  "AK-CC 210||E26": {
     "causes": [
       "The S4 air sensor (typically mounted after the evaporator) has failed",
       "A lost connection between the sensor and the controller",
@@ -796,7 +796,7 @@
     "fixable": "Same as any failed sensor: verify the real temperature independently, power-cycle once, note the code for the service visit. Replacement is not a staff job.",
     "why_tech": "Sensor and wiring testing is live electrical work, and with S4 out, some of the controller's alarm functions are blind — problems can develop without warning until it's repaired."
   },
-  "AK-CC 210/250||A16": {
+  "AK-CC 210||A16": {
     "causes": [
       "An external device wired to the DI2 digital input tripped and held past the configured delay",
       "Often a protective switch that opened for a reason — what it means depends on what the installer wired to DI2"
@@ -804,7 +804,7 @@
     "fixable": "No. Check the box is still cooling, note any other alarms on nearby equipment, and record the code and time — that's real help for the tech, not a fix.",
     "why_tech": "Only someone who can trace the installation can identify the device on DI2, and if it's a pressure or safety switch, the root cause behind the trip needs professional diagnosis before the unit is trusted again."
   },
-  "AK-CC 210/250||A60": {
+  "AK-CC 210||A60": {
     "causes": [
       "Temperature exceeded the food-safety limit the controller's HACCP function tracks",
       "The same drivers as any high-temperature event: door and gasket leaks letting humid air in, recent loading, evaporator ice, or a dirty condenser that can't reject heat"
@@ -896,11 +896,11 @@
   },
   "ir33 / ir33+||E2": {
     "causes": [
-      "An auxiliary probe is faulty or disconnected — S3 (typically the condenser probe) for E2; E3 and E4 are the same fault on probes S4 and S5",
+      "An auxiliary probe is faulty or disconnected — S3 (typically the condenser probe) for E2; E3 is the same fault on probe S4",
       "Damage to the small sensor wire at the condensing unit",
       "While it's active, condenser-temperature protection may not be working"
     ],
-    "fixable": "Note which code shows (E2, E3, or E4), look over the sensor wire without opening anything, clear dust from around the condenser since its protection is offline, and power-cycle once. That's the extent of it.",
+    "fixable": "Note which code shows (E2 or E3), look over the sensor wire without opening anything, clear dust from around the condenser since its protection is offline, and power-cycle once. That's the extent of it.",
     "why_tech": "Auxiliary probe testing and replacement is live electrical work, and with the condenser probe out, a dust-matted coil that can't reject heat has nothing watching it."
   },
   "ir33 / ir33+||HI": {
@@ -1085,9 +1085,9 @@
     "fixable": "Confirm the condensing unit runs, check the breaker, clear condenser airflow, find out from your installer what's wired to the input, and log occurrences. Diagnosing the device itself isn't DIY.",
     "why_tech": "A repeating external alarm means a protective device keeps finding a reason to open — identifying and testing it takes someone who knows the installation, and if it's a pressure safety, certified refrigerant-side diagnosis."
   },
-  "PJ Easy (PJEZ)||dOR": {
+  "PJ Easy (PJEZ)||dOr": {
     "causes": [
-      "The door switch reports the door open too long ('dr' on some PJEZ models) — open-door time raises temperature and ices the coil faster with humid air",
+      "The door switch reports the door open too long — open-door time raises temperature and ices the coil faster with humid air",
       "Something blocking the door, or a torn/iced gasket preventing a seal",
       "A misaligned door switch that doesn't actuate when the door shuts"
     ],

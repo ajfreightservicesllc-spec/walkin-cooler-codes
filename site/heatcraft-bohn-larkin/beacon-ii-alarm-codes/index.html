@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Do Heatcraft Beacon II Codes Mean? A1-A4, E1-E9, *BOXHI</title>
+<meta name="description" content="Every Heatcraft Beacon II code: board alarms A1-A4, errors E1-E9 and Smart Controller messages like *BOXHI, *INFLT and +COMM+. Meaning, checks and fixes.">
+<link rel="canonical" href="https://walkincoolercodes.com/heatcraft-bohn-larkin/beacon-ii-alarm-codes/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does A1 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "High box temperature alarm. Room temperature has exceeded the programmed Alarm High (ALH, default 50F cooler / 5F freezer) value for longer than the Alarm Time (ALt, default 60 minutes). The alarm clears automatically once box temperature drops back below the setpoint."}}, {"@type": "Question", "name": "What does A2 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Low box temperature alarm. Room temperature has dropped below the programmed Alarm Low (ALL, default 30F cooler / -15F freezer) value for longer than the Alarm Time. Clears automatically when temperature rises back above the setpoint."}}, {"@type": "Question", "name": "What does A3 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "System start-up failure. The compressor pumped down and tried to restart every 4 minutes; after 4 unsuccessful attempts the A3 code is displayed while the system keeps trying. Per the manual, placing the system in Service mode or turning off power clears the alarm once the cause is fixed."}}, {"@type": "Question", "name": "What does A4 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Input fault (sensor or transducer failure). The box temperature sensor, suction temperature sensor, or pressure transducer is open or not installed. Per the manual the alarm clears only when the failed room sensor, suction sensor, or pressure transducer is replaced, and the system will not restart until the fault is cleared."}}, {"@type": "Question", "name": "What does E1 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Room temperature sensor error. The room (box) temperature sensor is shorted, open, or not installed. Per the manual the system pumps down and will not restart until this fault is cleared."}}, {"@type": "Question", "name": "What does E2 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Defrost temperature sensor error. The defrost (coil) temperature sensor is shorted, open, or not installed. Defrost cycles may not terminate properly, which can let the evaporator coil ice over."}}, {"@type": "Question", "name": "What does E3 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Suction temperature sensor error. The suction temperature sensor is shorted, open, or not installed. The system pumps down and will not restart until the fault is cleared, because this sensor is needed for superheat control of the expansion valve."}}, {"@type": "Question", "name": "What does E4 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Suction pressure transducer error. The suction pressure transducer is shorted, open, or not installed. Like E3 this stops normal operation until fixed \u2014 the system pumps down and stays off."}}, {"@type": "Question", "name": "What does E6 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Low superheat error. Measured superheat fell below the safe minimum; the system shuts down briefly, displays the error, then restarts itself. The manual's causes include an iced coil, expansion valve trouble, defrost problems, or bad sensor readings."}}, {"@type": "Question", "name": "What does E7 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Compressor shut down (safety switch open). A compressor safety opened \u2014 the manual lists the high pressure switch, low pressure switch, or oil pressure switch. The system pumps down and retries up to four times before closing the alarm contacts."}}, {"@type": "Question", "name": "What does E9 mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Multi-in/multi-out communication wiring error. On multi-evaporator systems, the communication wiring between boards (MULTI OUT to MULTI IN) is broken, disconnected, or miswired. Which boards show E9 indicates where in the daisy chain the fault is."}}, {"@type": "Question", "name": "What does +COMM+ mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Smart Controller communication wiring error. The Beacon II Smart Controller LCD shows +COMM+ when its communication wiring to the evaporator boards is broken, disconnected, or wired OUT-to-OUT / IN-to-IN instead of OUT-to-IN. Which connected unit shows the error indicates which wires are faulty."}}, {"@type": "Question", "name": "What does *BOXHI mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Box temperature too high (Smart Controller). The Smart Controller LCD flashes *BOXHI with \"CALL FOR SERVICE\" and the system number, and sounds its buzzer, when box temperature exceeds the alarm setpoint for the programmed alarm time. The code clears once the condition is corrected."}}, {"@type": "Question", "name": "What does *INFLT mean on a Heatcraft Beacon II system?", "acceptedAnswer": {"@type": "Answer", "text": "Input fault (Smart Controller). The Smart Controller reports an input fault when the box temperature sensor, suction temperature sensor, or pressure transducer is open or not installed; the affected system pumps down and will not restart until the fault is cleared."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://walkincoolercodes.com/"}, {"@type": "ListItem", "position": 2, "name": "Heatcraft (Bohn/Larkin)", "item": "https://walkincoolercodes.com/heatcraft-bohn-larkin/"}, {"@type": "ListItem", "position": 3, "name": "Heatcraft Beacon II"}]}</script>
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p,.card p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a> &rsaquo; Heatcraft Beacon II</div>
+<article class="card">
+<span class="family-tag">Heatcraft (Bohn/Larkin) &middot; 20 codes and messages</span>
+<h1 class="page-h1">What do Heatcraft Beacon II (Bohn / Larkin) alarm and error codes mean?</h1>
+<p><b>Short answer:</b> Beacon II reports on the evaporator board's LED readout with <b>A-codes</b> (alarms about box conditions and start-up) and <b>E-codes</b> (sensor, superheat, compressor-safety and wiring errors). If the optional wall-mounted <b>Smart Controller</b> is fitted, it repeats alarms as text — *BOXHI, *INFLT, +COMM+ — shows "CALL FOR SERVICE" with the system number, and sounds a buzzer.</p>
+<h2>Which machines use it?</h2>
+<p> <b>Beacon II</b> is Heatcraft's previous-generation smart refrigeration system, shipped for years on walk-in evaporators and condensing units branded <b>Bohn</b> and <b>Larkin</b> (plus Climate Control and Chandler). Huge numbers of these are still running in restaurants and stores, so these codes come up constantly on older boxes. The evaporator control board reports through a simple two-digit readout: <b>A-codes</b> (A1–A4) are alarms about box conditions, <b>E-codes</b> (E1–E9) are equipment faults like failed sensors or tripped compressor safeties. On multi-evaporator installs, which board shows the code tells you where the problem is. Practical tip: write down the exact code and whether the compressor is running before resetting anything — several Beacon II faults pump the system down and keep it off until repaired.</p><p> The Beacon II <b>Smart Controller</b> is the optional wall-mounted LCD display that ties into Beacon II evaporator boards on <b>Bohn</b> and <b>Larkin</b> walk-in systems, letting staff monitor several coolers and freezers from one panel outside the box. Instead of two-digit codes it shows scrolling text messages — like *BOXHI or *INFLT with "CALL FOR SERVICE" — plus the system number affected, and sounds a buzzer. Remember it is a messenger: the fault it reports lives at the evaporator board or refrigeration system it monitors, not in the display itself. Practical tip: press CLEAR to silence the buzzer, but write down the message and system number first — that pairing tells the technician exactly which unit to walk to.</p>
+<h2>How do you read and clear the display?</h2>
+<p>What matters most is whether the system is still allowed to run. With a failed suction sensor, room sensor (on the master board) or pressure transducer, Beacon II <b>pumps down and stays off</b> until the fault is cleared. With an oil-pressure or high/low-pressure cutout it pumps down and <b>retries three times</b>, each after the 4-minute hold-off; after the fourth try the alarm contacts close and the alarm is displayed. Once the repair is done, clear it by cycling the system through <b>SERVICE</b> mode.</p>
+<h2 id="code-table">Every Heatcraft Beacon II code at a glance</h2>
+<div class="tbl"><table class="codes"><thead><tr><th>Code</th><th>What it means</th><th>Applies to</th></tr></thead><tbody><tr><td><a href="#code-a1"><b>A1</b></a></td><td>High box temperature alarm</td><td>Board LED</td></tr><tr><td><a href="#code-a2"><b>A2</b></a></td><td>Low box temperature alarm</td><td>Board LED</td></tr><tr><td><a href="#code-a3"><b>A3</b></a></td><td>System start-up failure</td><td>Board LED</td></tr><tr><td><a href="#code-a4"><b>A4</b></a></td><td>Input fault (sensor or transducer failure)</td><td>Board LED</td></tr><tr><td><a href="#code-e1"><b>E1</b></a></td><td>Room temperature sensor error</td><td>Board LED</td></tr><tr><td><a href="#code-e2"><b>E2</b></a></td><td>Defrost temperature sensor error</td><td>Board LED</td></tr><tr><td><a href="#code-e3"><b>E3</b></a></td><td>Suction temperature sensor error</td><td>Board LED</td></tr><tr><td><a href="#code-e4"><b>E4</b></a></td><td>Suction pressure transducer error</td><td>Board LED</td></tr><tr id="code-e5"><td><b>E5</b></td><td>Outdoor temperature sensor shorted</td><td>Board LED</td></tr><tr><td><a href="#code-e6"><b>E6</b></a></td><td>Low superheat error</td><td>Board LED</td></tr><tr><td><a href="#code-e7"><b>E7</b></a></td><td>Compressor shut down (safety switch open)</td><td>Board LED</td></tr><tr><td><a href="#code-e9"><b>E9</b></a></td><td>Multi-in/multi-out communication wiring error</td><td>Board LED</td></tr><tr><td><a href="#code-comm"><b>+COMM+</b></a></td><td>Smart Controller communication wiring error</td><td>Smart Controller LCD</td></tr><tr><td><a href="#code-boxhi"><b>*BOXHI</b></a></td><td>Box temperature too high (Smart Controller)</td><td>Smart Controller LCD</td></tr><tr id="code-boxlo"><td><b>*BOXLO</b></td><td>Box temperature too low</td><td>Smart Controller LCD</td></tr><tr id="code-strup"><td><b>*STRUP</b></td><td>System start-up failure — the compressor pumps down and tries to restart after 4 minutes (not on QRC systems)</td><td>Smart Controller LCD</td></tr><tr><td><a href="#code-inflt"><b>*INFLT</b></a></td><td>Input fault (Smart Controller)</td><td>Smart Controller LCD</td></tr><tr id="code-loc"><td><b>Loc</b></td><td>Board is locked — settings cannot be changed <span class="kind">message</span></td><td>Board LED</td></tr><tr id="code-unl"><td><b>UnL</b></td><td>Unlock the board settings <span class="kind">message</span></td><td>Board LED</td></tr><tr id="code-power-failure"><td><b>Power failure</b></td><td>Power to the system was lost</td><td>Smart Controller LCD</td></tr></tbody></table></div>
+<p class="note">14 codes link to a full section below. The other 6 are listed as the manufacturer's manual gives them. Every row comes from the manual cited at the end of this page.</p>
+<h2>What does each code mean — and what should you do?</h2>
+<section class="code-sec" id="code-a1">
+<h3>A1 — High box temperature alarm</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>Room temperature has exceeded the programmed Alarm High (ALH, default 50F cooler / 5F freezer) value for longer than the Alarm Time (ALt, default 60 minutes). The alarm clears automatically once box temperature drops back below the setpoint.</p>
+<p><b>What causes it:</b></p><ul><li>A door open or gaskets not sealing, loading the box with warm humid air</li><li>Warm product just loaded</li><li>Heavy ice on the evaporator coil blocking airflow</li><li>Condensing unit down or struggling — breaker, fans, or a dirty blocked condenser coil</li></ul>
+<p><b>Can staff fix it?</b> Often. Doors, gaskets, recent loading, and blocked condenser airflow are staff-level checks and fixes, and the alarm clears itself once box temperature drops back below the setpoint.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check doors are closed and gaskets seal</li><li>Ask whether warm product was just loaded</li><li>Look for heavy ice on the evaporator coil</li><li>Check the condensing unit breaker, fans, and that the condenser coil is clean with clear airflow</li></ol>
+<p><b>Why it takes a technician:</b> If the box isn't pulling down within an hour of those checks, the fault is refrigerant-side or mechanical — gauge work that requires EPA Section 608 certification — and warming product turns this into a money-loss clock.</p>
+<div class="callout"><b>When to call:</b> If the box does not start pulling down within an hour, call a refrigeration technician.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-a2">
+<h3>A2 — Low box temperature alarm</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>Room temperature has dropped below the programmed Alarm Low (ALL, default 30F cooler / -15F freezer) value for longer than the Alarm Time. Clears automatically when temperature rises back above the setpoint.</p>
+<p><b>What causes it:</b></p><ul><li>The box setpoint was changed on the controller</li><li>The room sensor or control board misreading, so the system keeps overcooling</li><li>Product parked in the evaporator airstream freezing even when the box average is fine</li></ul>
+<p><b>Can staff fix it?</b> Partially. Staff can verify the setpoint, compare the display against a separate thermometer, and move product out of the discharge air. The alarm clears itself when temperature comes back up.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Verify the box setpoint on the controller was not changed</li><li>Move product away from the evaporator airstream if it is freezing</li><li>Compare the displayed temperature with a separate thermometer</li></ol>
+<p><b>Why it takes a technician:</b> If the setpoint is right and the box still overcools, the room sensor or board is at fault — testing and replacing it is technician work, and in a cooler, sustained overcooling freezes product.</p>
+<div class="callout"><b>When to call:</b> Call a technician if the setpoint is correct but the system keeps overcooling — the room sensor or board may be faulty.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-a3">
+<h3>A3 — System start-up failure</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>The compressor pumped down and tried to restart every 4 minutes; after 4 unsuccessful attempts the A3 code is displayed while the system keeps trying. Per the manual, placing the system in Service mode or turning off power clears the alarm once the cause is fixed.</p>
+<p><b>What causes it:</b></p><ul><li>A pressure or oil safety tripping on every restart attempt — the compressor pumped down and failed to restart four times</li><li>Condensing unit power off at the breaker or disconnect</li><li>Dirty condenser coil or blocked airflow keeping pressures out of range</li></ul>
+<p><b>Can staff fix it?</b> Only the outside layer: confirm power, clean coil, running fans, clear airflow, and listen for the compressor retrying. The manual notes Service mode or a power cycle clears the alarm — but only after the cause is fixed.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condensing unit has power (breaker/disconnect on)</li><li>Check the condenser coil for dirt and blocked airflow and confirm the fans run</li><li>Listen for the compressor repeatedly attempting to start</li></ol>
+<p><b>Why it takes a technician:</b> Working out which safety keeps tripping requires gauges on the system and electrical checks at the compressor. The system keeps retrying but isn't reliably cooling, so treat it as urgent.</p>
+<div class="callout"><b>When to call:</b> Call a technician — repeated restart failures usually mean a pressure or oil safety is tripping and needs diagnosis.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-a4">
+<h3>A4 — Input fault (sensor or transducer failure)</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>The box temperature sensor, suction temperature sensor, or pressure transducer is open or not installed. Per the manual the alarm clears only when the failed room sensor, suction sensor, or pressure transducer is replaced, and the system will not restart until the fault is cleared.</p>
+<p><b>What causes it:</b></p><ul><li>Room temperature sensor open or not installed (companion code E1)</li><li>Suction temperature sensor failed (companion code E3)</li><li>Suction pressure transducer failed (companion code E4)</li></ul>
+<p><b>Can staff fix it?</b> No — and this one stops the system. The manual says the alarm clears only when the failed part is replaced and the system won't restart until then. Staff should monitor box temperature and move sensitive product to backup cold storage.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note the box temperature and start monitoring it — the system may be down</li><li>Check the display for a companion E-code (E1, E3, or E4) identifying which sensor failed</li><li>Move sensitive product to backup refrigeration if the box is warming</li></ol>
+<p><b>Why it takes a technician:</b> The system is down until a technician tests and replaces the failed sensor or transducer — transducer work is refrigerant-side and EPA Section 608 territory. With no cooling, product loss is a matter of hours: same-day call.</p>
+<div class="callout"><b>When to call:</b> Call a technician the same day — a sensor or transducer must be tested and replaced before the system will run.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-e1">
+<h3>E1 — Room temperature sensor error</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>The room (box) temperature sensor is shorted, open, or not installed. Per the manual the system pumps down and will not restart until this fault is cleared.</p>
+<p><b>What causes it:</b></p><ul><li>The room (box) temperature sensor is shorted, open, or not installed</li><li>System pumped down and won't restart until the fault clears — so the box will warm</li><li>A transient fault a breaker reset may clear, per the manual</li></ul>
+<p><b>Can staff fix it?</b> Barely. Reset the breaker once — the manual allows that — monitor box temperature with a separate thermometer, and move product if it's warming. The sensor itself must be replaced.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Monitor box temperature with a separate thermometer</li><li>Reset the circuit breaker once — the manual notes the system restarts when the fault is cleared or the breaker reset</li><li>Move product if the box is warming</li></ol>
+<p><b>Why it takes a technician:</b> Cooling is stopped until the sensor and its board connection are tested and replaced, so this is a same-day service call with product on the clock.</p>
+<div class="callout"><b>When to call:</b> Call a technician to check the sensor and board connection and replace as needed.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-e2">
+<h3>E2 — Defrost temperature sensor error</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>The defrost (coil) temperature sensor is shorted, open, or not installed. Defrost cycles may not terminate properly, which can let the evaporator coil ice over.</p>
+<p><b>What causes it:</b></p><ul><li>The defrost (coil) temperature sensor is shorted, open, or not installed</li><li>Defrosts no longer terminate on coil temperature, so the evaporator can progressively ice over</li></ul>
+<p><b>Can staff fix it?</b> No. Staff can check the coil for ice, watch the box temperature trend over the next few hours, and record the code — the sensor has to be checked and replaced.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Visually check the evaporator coil for ice buildup</li><li>Note how the box temperature trends over the next few hours</li><li>Record the code for the service call</li></ol>
+<p><b>Why it takes a technician:</b> The manual's remedy is sensor and connection testing and replacement. Untreated, an icing coil eventually stops cooling the box, so schedule the visit before it becomes a high-temp alarm.</p>
+<div class="callout"><b>When to call:</b> Call a technician to check the sensor and board connection and replace as needed.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-e3">
+<h3>E3 — Suction temperature sensor error</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>The suction temperature sensor is shorted, open, or not installed. The system pumps down and will not restart until the fault is cleared, because this sensor is needed for superheat control of the expansion valve.</p>
+<p><b>What causes it:</b></p><ul><li>The suction temperature sensor is shorted, open, or not installed</li><li>The system pumps down and stays off because superheat control of the expansion valve depends on this sensor</li></ul>
+<p><b>Can staff fix it?</b> No — the system is likely off. Reset the breaker once in case it was transient, monitor box temperature, and move product to backup cold storage if needed.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Monitor box temperature — the system is likely off</li><li>Reset the breaker once to see if it was a transient fault</li><li>Move product to backup cold storage if needed</li></ol>
+<p><b>Why it takes a technician:</b> No cooling until the sensor is replaced makes this a same-day call, and verifying superheat after replacement is gauge work for a refrigeration technician.</p>
+<div class="callout"><b>When to call:</b> Call a technician the same day to replace the sensor.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-e4">
+<h3>E4 — Suction pressure transducer error</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>The suction pressure transducer is shorted, open, or not installed. Like E3 this stops normal operation until fixed — the system pumps down and stays off.</p>
+<p><b>What causes it:</b></p><ul><li>The suction pressure transducer is shorted, open, or not installed</li><li>The system pumps down and stays off until the transducer is fixed — same stop-everything consequence as E3</li></ul>
+<p><b>Can staff fix it?</b> No. Reset the breaker once, monitor box temperature, plan product protection, and do not touch the refrigerant lines or the transducer.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Monitor box temperature and plan for product protection</li><li>Reset the breaker once</li><li>Do not touch refrigerant lines or the transducer</li></ol>
+<p><b>Why it takes a technician:</b> Transducer replacement opens the refrigerant side of the system — legally EPA Section 608 certified work. With the system pumped down and off, product loss urgency makes this a same-day call.</p>
+<div class="callout"><b>When to call:</b> Call a technician the same day — transducer replacement is refrigerant-side work.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-e6">
+<h3>E6 — Low superheat error</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>Measured superheat fell below the safe minimum; the system shuts down briefly, displays the error, then restarts itself. The manual's causes include an iced coil, expansion valve trouble, defrost problems, or bad sensor readings.</p>
+<p><b>What causes it:</b></p><ul><li>An iced evaporator coil</li><li>Expansion valve trouble keeping superheat below the safe minimum</li><li>Defrost problems leaving the coil compromised</li><li>Bad sensor readings feeding the superheat calculation</li></ul>
+<p><b>Can staff fix it?</b> Partially. Check the coil for ice, confirm the evaporator fans run in cooling, and note whether the unit keeps cycling off and restarting. If E6 repeats, stop there and call.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the evaporator coil for ice</li><li>Note whether the unit repeatedly stops and restarts</li><li>Confirm evaporator fans run in cooling mode</li></ol>
+<p><b>Why it takes a technician:</b> Chronic low superheat floods liquid refrigerant back to the compressor and destroys it — the most expensive single failure on the system. Valve and sensor diagnosis is gauge work requiring EPA Section 608 certification.</p>
+<div class="callout"><b>When to call:</b> If E6 repeats, call a technician — chronic low superheat can flood the compressor with liquid refrigerant and destroy it.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-e7">
+<h3>E7 — Compressor shut down (safety switch open)</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>A compressor safety opened — the manual lists the high pressure switch, low pressure switch, or oil pressure switch. The system pumps down and retries up to four times before closing the alarm contacts.</p>
+<p><b>What causes it:</b></p><ul><li>The high pressure switch tripped — most often a dirty or airflow-blocked condenser coil or dead condenser fans</li><li>The low pressure switch tripped</li><li>The oil pressure switch tripped</li><li>Heavy evaporator icing upsetting system pressures</li></ul>
+<p><b>Can staff fix it?</b> Sometimes. The classic staff-fixable case is a condenser coil buried in dust or boxes: clear the airflow, let it retry (it attempts up to four restarts). If it trips again after airflow is cleared, it's a service call.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condenser coil is clean and its fans are running — a dirty or blocked condenser trips the high pressure switch</li><li>Remove anything blocking airflow around the condensing unit</li><li>Check the evaporator coil for heavy icing</li><li>Note whether the compressor is hot or repeatedly clicking on and off</li></ol>
+<p><b>Why it takes a technician:</b> Telling a pressure trip from an oil trip, and finding what's driving either, requires gauges on the refrigerant circuit — EPA Section 608 certified diagnosis, not something to guess at while the compressor takes repeated hits.</p>
+<div class="callout"><b>When to call:</b> If it trips again after airflow is cleared, call a technician — pressure and oil safeties need gauge diagnosis.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-e9">
+<h3>E9 — Multi-in/multi-out communication wiring error</h3>
+<p class="applies">Applies to: Board LED</p>
+<p>On multi-evaporator systems, the communication wiring between boards (MULTI OUT to MULTI IN) is broken, disconnected, or miswired. Which boards show E9 indicates where in the daisy chain the fault is.</p>
+<p><b>What causes it:</b></p><ul><li>Communication wiring between evaporator boards (MULTI OUT to MULTI IN) broken, disconnected, or miswired</li><li>Comm cabling disturbed during recent work inside the box</li><li>The pattern of which boards show E9 points to where in the daisy chain the fault sits</li></ul>
+<p><b>Can staff fix it?</b> Partially. Power-cycle once, look for cabling obviously disturbed by recent work, and write down which evaporators show E9 — that pattern is genuinely useful to the technician. Rewiring is not a staff job.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the system once</li><li>Check whether communication cabling was disturbed during recent work in the box</li><li>Note which evaporators display E9 — that pattern locates the bad segment for the technician</li></ol>
+<p><b>Why it takes a technician:</b> Tracing a multi-board daisy chain and repairing the MULTI IN/OUT wiring takes a meter and the wiring diagram — controls work for a technician, though cooling usually continues meanwhile.</p>
+<div class="callout"><b>When to call:</b> Call a technician to trace and repair the multi-in/multi-out communication wiring.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> (H-IM-79G, June 2020)</p>
+</section>
+<section class="code-sec" id="code-comm">
+<h3>+COMM+ — Smart Controller communication wiring error</h3>
+<p class="applies">Applies to: Smart Controller LCD</p>
+<p>The Beacon II Smart Controller LCD shows +COMM+ when its communication wiring to the evaporator boards is broken, disconnected, or wired OUT-to-OUT / IN-to-IN instead of OUT-to-IN. Which connected unit shows the error indicates which wires are faulty.</p>
+<p><b>What causes it:</b></p><ul><li>Communication wiring between the Smart Controller display and the evaporator boards broken or disconnected</li><li>Wiring installed OUT-to-OUT or IN-to-IN instead of OUT-to-IN</li><li>The display or its cable bumped or unplugged — which connected unit shows the error points at the faulty wires</li></ul>
+<p><b>Can staff fix it?</b> Partially. Power-cycle the controller, check whether the display or cable was recently bumped or unplugged, and note which system number carries the error. Actual wiring verification is a tech task.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the controller once</li><li>Check whether the display or its cable was recently bumped or unplugged</li><li>Note which system number the error appears against</li></ol>
+<p><b>Why it takes a technician:</b> Verifying MULTI IN/OUT polarity and continuity between the controller and evaporator boards is meter-and-diagram work. The refrigeration systems themselves usually keep running — you've lost monitoring, not cooling.</p>
+<div class="callout"><b>When to call:</b> Call a technician to verify the MULTI IN/OUT communication wiring between the controller and evaporator boards.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf">Heatcraft Refrigeration Products — Beacon II Smart Controller — installation and operation manual</a> (H-IM-80F, July 2017)</p>
+</section>
+<section class="code-sec" id="code-boxhi">
+<h3>*BOXHI — Box temperature too high (Smart Controller)</h3>
+<p class="applies">Applies to: Smart Controller LCD</p>
+<p>The Smart Controller LCD flashes *BOXHI with &quot;CALL FOR SERVICE&quot; and the system number, and sounds its buzzer, when box temperature exceeds the alarm setpoint for the programmed alarm time. The code clears once the condition is corrected.</p>
+<p><b>What causes it:</b></p><ul><li>Box temperature over the alarm setpoint past the alarm time — same root causes as any high-temp alarm</li><li>A door open or gasket not sealing, or warm product just loaded</li><li>Iced evaporator coil, or a condensing unit that is off, fan-dead, or airflow-blocked</li></ul>
+<p><b>Can staff fix it?</b> Often. Press CLEAR to silence the buzzer, then work the list: doors, gaskets, recent loading, coil ice, condensing unit power and airflow. The code clears itself once the box recovers.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Press CLEAR to silence the buzzer while you investigate</li><li>Check doors, gaskets, and recent product loading</li><li>Check the evaporator coil for ice and the condensing unit for power, running fans, and a clean coil</li></ol>
+<p><b>Why it takes a technician:</b> If temperature hasn't started recovering within an hour, the display's own &quot;CALL FOR SERVICE&quot; advice stands — the remaining causes are refrigerant-side, which means gauges and EPA Section 608 certification, with product warming the whole time.</p>
+<div class="callout"><b>When to call:</b> If temperature does not recover within an hour, call a refrigeration technician.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf">Heatcraft Refrigeration Products — Beacon II Smart Controller — installation and operation manual</a> (H-IM-80F, July 2017)</p>
+</section>
+<section class="code-sec" id="code-inflt">
+<h3>*INFLT — Input fault (Smart Controller)</h3>
+<p class="applies">Applies to: Smart Controller LCD</p>
+<p>The Smart Controller reports an input fault when the box temperature sensor, suction temperature sensor, or pressure transducer is open or not installed; the affected system pumps down and will not restart until the fault is cleared.</p>
+<p><b>What causes it:</b></p><ul><li>Box temperature sensor open or not installed on the flagged system</li><li>Suction temperature sensor failed on that system</li><li>Suction pressure transducer failed — any of the three pumps that system down and keeps it off until fixed</li></ul>
+<p><b>Can staff fix it?</b> No. Press CLEAR to silence the buzzer, note the system number shown with the fault, and start protecting product — that system is likely off and staying off.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Press CLEAR to silence the buzzer</li><li>Note the system number displayed with the fault</li><li>Monitor box temperature and protect product — that system is likely off</li></ol>
+<p><b>Why it takes a technician:</b> The affected system won't restart until the failed sensor or transducer is tested and replaced; transducer work is refrigerant-side, EPA Section 608 certified. A pumped-down system with product inside is a same-day call.</p>
+<div class="callout"><b>When to call:</b> Call a technician the same day to test and replace the failed sensor or transducer.</div>
+<p class="src">Source: <a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf">Heatcraft Refrigeration Products — Beacon II Smart Controller — installation and operation manual</a> (H-IM-80F, July 2017)</p>
+</section>
+<h2>How do you diagnose a Heatcraft Beacon II alarm, step by step?</h2>
+<ol class="steps"><li><b>Write down the code, the system number and whether the compressor is running</b> before resetting anything.</li><li><b>Check sensors with the monitor button.</b> It displays what the suction (SCt), defrost (dFt) and room sensors are reading — compare each against a thermometer at the same point. Or test in stirred ice water: 32,650 Ω at 32 °F; roughly 1,000 Ω higher or lower means replace the sensor. Don't remove sensors from the evaporators to check them.</li><li><b>E6 low superheat — Heatcraft's sequence:</b> check the refrigerant type setting; check the coil for ice (defrost settings, defrost sensor, heater amps); check the board's valve step position; check that the expansion valve closes (pump down — does the low-pressure switch open?); check the compressor is actually running; compare the suction sensor with the real suction-line temperature and the transducer with gauges.</li><li><b>E7 compressor shut down — which safety?</b> A low-pressure trip points at the refrigerant type, charge, the LPS setting (freezers: 0 psig cut-out, 10 psig cut-in), a stuck or blocked valve, an iced coil or line sizing. A high-pressure trip points at overcharge, non-condensables, the condenser fan motor or blade, a dirty condenser coil, head-pressure or fan-cycling controls, or a liquid-line restriction.</li><li><b>+COMM+ and E9 are wiring.</b> The communication wiring runs MULTI OUT to MULTI IN between boards — never OUT to OUT or IN to IN.</li><li><b>LED not lit at all:</b> check the disconnect, fuses and breakers, the transformer's primary and secondary voltage, and 24 V at the control board before replacing the board.</li><li><b>After service:</b> at start-up the system may cycle off at 2 minutes with a low-superheat error a few times while the expansion valve finds its setting — Heatcraft's instruction is to let it run.</li></ol>
+<div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
+If the same fault returns after a single reset, the underlying condition is real —
+stop resetting and deal with the cause.</div>
+<h2>Which parts are usually involved?</h2>
+<div class="tbl"><table class="parts"><thead><tr><th>Part</th><th>Codes that point to it</th><th>Note</th></tr></thead><tbody><tr><td>Room temperature sensor</td><td><a href="#code-e1">E1</a>, <a href="#code-a1">A1</a>, <a href="#code-a2">A2</a>, <a href="#code-a4">A4</a>, <a href="#code-boxhi">*BOXHI</a></td><td></td></tr><tr><td>Defrost temperature sensor</td><td><a href="#code-e2">E2</a></td><td></td></tr><tr><td>Suction temperature sensor</td><td><a href="#code-e3">E3</a>, <a href="#code-e6">E6</a>, <a href="#code-a4">A4</a></td><td></td></tr><tr><td>Suction pressure transducer</td><td><a href="#code-e4">E4</a>, <a href="#code-e6">E6</a>, <a href="#code-a4">A4</a>, <a href="#code-inflt">*INFLT</a></td><td></td></tr><tr><td>Outdoor temperature sensor</td><td><a href="#code-e5">E5</a></td><td></td></tr><tr><td>Electronic expansion valve</td><td><a href="#code-e6">E6</a></td><td></td></tr><tr><td>Low- and high-pressure safety switches, compressor contactor and overloads</td><td><a href="#code-e7">E7</a>, <a href="#code-a3">A3</a>, <a href="#code-strup">*STRUP</a></td><td></td></tr><tr><td>MULTI IN / MULTI OUT communication wiring</td><td><a href="#code-e9">E9</a>, <a href="#code-comm">+COMM+</a></td><td></td></tr><tr><td>Defrost heaters</td><td><a href="#code-e2">E2</a>, <a href="#code-e6">E6</a></td><td></td></tr><tr><td>Evaporator transformer and 24 VAC board supply</td><td>&mdash;</td><td>The first suspects when the board LED is not lit at all.</td></tr></tbody></table></div>
+<h2>What refrigeration is behind these codes?</h2><p>Every code here is the controller reporting a reading from the refrigeration system. The background is explained once, for every controller on this site: <a href="/guides/walk-in-cooler-alarm-codes-guide/#superheat">what superheat is and why controllers alarm on it</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#subcooling">what subcooling is</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#defrost">how defrost works and what goes wrong</a>.</p>
+
+<p>If it does come to a service call and you're in <a href="/nashville-tn/">Nashville, TN</a> or <a href="/birmingham-al/">Birmingham, AL</a>, we maintain independently compiled lists of local companies that service walk-in coolers — real businesses with verified contact information, none of whom paid to be listed.</p>
+
+</article>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-79G.pdf">Heatcraft Refrigeration Products — Beacon II Refrigeration Systems — installation and operation manual</a> <span class="doc">(H-IM-79G, June 2020)</span></li><li><a href="https://assets.heatcraftrpd.com/literature/installation-and-operation-manual/controls-and-other-products/current/H-IM-80F.pdf">Heatcraft Refrigeration Products — Beacon II Smart Controller — installation and operation manual</a> <span class="doc">(H-IM-80F, July 2017)</span></li></ul></div>
+<h2>Other Heatcraft (Bohn/Larkin) controllers</h2><div class='grid'><a href="/heatcraft-bohn-larkin/intelligen-alarm-codes/"><span class="c">Heatcraft intelliGen</span><div class="t">OLED display with a green / yellow / red light bar; AL, ER and IN codes.</div></a></div>
+</div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>

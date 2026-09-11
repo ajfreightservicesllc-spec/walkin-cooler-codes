@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Do Carel ir33 Alarm Codes Mean? E0, HI, LO, dor, CHt</title>
+<meta name="description" content="Every Carel ir33 / ir33+ alarm code: probe faults E0-E3, HI/LO, IA/dA, dor, cht/CHt, LP, Pd, EE/EF, HA/HF. What it means, what to check, when to call.">
+<link rel="canonical" href="https://walkincoolercodes.com/carel/ir33-alarm-codes/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does rE mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Control (virtual) probe fault. The virtual regulation probe the controller uses for temperature control has failed or is giving an invalid reading. The controller can no longer control on real temperature and the display alternates rE with the reading."}}, {"@type": "Question", "name": "What does E0 mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Room probe S1 fault. The room (air) temperature probe S1 is faulty, disconnected, or out of range. Depending on setup the controller may fall back to timed compressor cycling until the probe is fixed."}}, {"@type": "Question", "name": "What does E1 mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Defrost probe S2 fault. The evaporator/defrost probe S2 is faulty or disconnected. Defrosts may end on time instead of temperature, which can lead to iced coils or over-long defrosts."}}, {"@type": "Question", "name": "What does E2 mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Probe S3 fault (E3 = probe S4). One of the auxiliary probes (typically the condenser probe on S3; E3 is the same fault for probe S4) is faulty or disconnected. Condenser-temperature protection may not work while this alarm is active."}}, {"@type": "Question", "name": "What does HI mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "High temperature alarm. The controlled temperature has exceeded the high alarm threshold (parameter AH) for longer than the alarm delay (Ad). The display alternates HI with the temperature. It resets automatically once the box pulls back down."}}, {"@type": "Question", "name": "What does LO mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Low temperature alarm. The controlled temperature has dropped below the low alarm threshold (parameter AL) for longer than the alarm delay. The display alternates LO with the temperature and it resets automatically when temperature recovers."}}, {"@type": "Question", "name": "What does IA mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Immediate external alarm. The multifunction digital input configured as an immediate external alarm has tripped \u2014 an external device (e.g. a pressure switch or monitoring contact) opened the contact. Resets automatically when the contact closes."}}, {"@type": "Question", "name": "What does dA mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Delayed external alarm. The external alarm contact has been open for longer than the configured delay (parameter A7). Same as IA but with a time delay before it announces."}}, {"@type": "Question", "name": "What does dor mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Door open too long. The door switch input reports the walk-in door has been open longer than the allowed time. Control behavior may change while the door is open, and temperature will climb."}}, {"@type": "Question", "name": "What does Ed1 mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Defrost ended by timeout (evaporator 1; Ed2 = evaporator 2). The defrost on evaporator 1 ended because it hit the maximum time limit (dP1) instead of reaching the end-defrost temperature. This often means heavier-than-normal ice on the coil."}}, {"@type": "Question", "name": "What does cht mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "High condenser temperature pre-alarm. The condenser probe reads above the pre-alarm threshold \u2014 an early 'dirty condenser' warning. Control continues normally, but the system is running hotter than it should."}}, {"@type": "Question", "name": "What does CHt mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "High condenser temperature alarm. Condenser temperature has exceeded the alarm threshold; per the Carel manual this alarm requires a manual reset. Prolonged operation in this state can trip safeties or damage the compressor."}}, {"@type": "Question", "name": "What does LP mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Low pressure alarm. The low-pressure input (from an external pressure switch wired to the controller) has tripped. Commonly caused by low refrigerant charge, an iced coil, or fan/airflow problems."}}, {"@type": "Question", "name": "What does Pd mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Pump-down timeout alarm. On systems using pump-down shutoff, the low-pressure condition was not reached within the maximum allowed time. Often points to a valve, pressure switch, or refrigerant issue."}}, {"@type": "Question", "name": "What does Etc mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Real-time clock fault. The controller's real-time clock has failed or lost its settings. Scheduled (time-of-day) defrosts and HACCP time-stamping won't run correctly until the clock is reset."}}, {"@type": "Question", "name": "What does EE mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "EEPROM error \u2014 unit parameters. The controller detected a memory error in its unit (machine) parameters. Its stored configuration may be corrupted, so control behavior can't be trusted."}}, {"@type": "Question", "name": "What does EF mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "EEPROM error \u2014 operating parameters. Memory error in the controller's operating parameters (setpoints and working values). Like EE, it means stored settings may be corrupted."}}, {"@type": "Question", "name": "What does HA mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "HACCP alarm type HA (HF = power-failure type). A HACCP temperature-excursion event was recorded: HA logs time above the high-temperature threshold during normal operation, HF logs a high-temperature condition following a power failure. These are food-safety log alarms, not equipment faults by themselves."}}, {"@type": "Question", "name": "What does AFr mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Antifreeze alarm. The antifreeze protection function has tripped (temperature at the antifreeze probe fell below its threshold). Per the Carel manual this alarm is manual-reset."}}, {"@type": "Question", "name": "What does dEF mean on a Carel ir33?", "acceptedAnswer": {"@type": "Answer", "text": "Defrost running (status, not a fault). The display shows dEF while a defrost cycle is running, if the controller is set to lock the display during defrost. This is normal operation, not an error."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://walkincoolercodes.com/"}, {"@type": "ListItem", "position": 2, "name": "Carel", "item": "https://walkincoolercodes.com/carel/"}, {"@type": "ListItem", "position": 3, "name": "Carel ir33 / ir33+"}]}</script>
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#16232e;--sub:#5b6b78;--brand:#0a6ebd;
+--accent:#e8f3fb;--warn:#b34700;--line:#dde6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--brand)}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+header{background:#0d3c61;color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+header nav a{font-weight:400;font-size:.92rem;margin-left:13px;opacity:.9}
+.hero{background:linear-gradient(180deg,#0d3c61,#0a6ebd);color:#fff;padding:44px 0 50px;text-align:center}
+.hero h1{font-size:1.9rem;margin-bottom:10px}
+.hero p{opacity:.92;max-width:600px;margin:0 auto}
+main{padding:30px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;margin:16px 0}
+.crumbs{font-size:.85rem;color:var(--sub);margin:14px 0 4px}
+.crumbs a{color:var(--sub)}
+h1.page-h1{font-size:1.55rem;margin:8px 0 2px}
+.family-tag{display:inline-block;background:var(--accent);color:var(--brand);
+border-radius:20px;padding:2px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+.meaning{font-size:1.05rem}
+h2{font-size:1.18rem;margin:22px 0 8px}
+h3{font-size:1.02rem;margin:16px 0 6px}
+article p,.card p{margin:10px 0}
+article ul,article ol{padding-left:24px;margin:10px 0}
+article li{margin:6px 0}
+ol.steps{padding-left:22px}
+ol.steps li{margin:8px 0}
+.callout{border-left:4px solid var(--warn);background:#fdf3ec;padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.tipbox{border-left:4px solid var(--brand);background:var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.cta{background:#0d3c61;color:#fff;border-radius:10px;padding:22px;text-align:center;margin:22px 0}
+.cta a{color:#cfe6f7}
+.cta a.phone{display:inline-block;background:#ffb32c;color:#16232e;font-weight:800;
+font-size:1.25rem;text-decoration:none;padding:12px 26px;border-radius:8px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:8px;
+padding:14px;text-decoration:none;color:var(--ink)}
+.grid a:hover{border-color:var(--brand)}
+.grid .c{font-weight:800;color:var(--brand)}
+.grid .t{font-size:.9rem;color:var(--sub)}
+.brand-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:-26px}
+.brand-row a{flex:1;min-width:230px;max-width:340px;background:var(--card);border:1px solid var(--line);
+border-radius:12px;padding:22px;text-align:center;text-decoration:none;color:var(--ink);
+box-shadow:0 4px 14px rgba(13,60,97,.08)}
+.brand-row a b{display:block;font-size:1.15rem;color:var(--brand)}
+.brand-row.sub{margin-top:0}
+.biz{border-top:1px solid var(--line);padding:16px 0}
+.biz:first-of-type{border-top:none}
+.biz b{font-size:1.05rem}
+.biz .svc{font-size:.85rem;color:var(--sub)}
+.biz a.tel{font-weight:700;text-decoration:none}
+.src{font-size:.8rem;color:var(--sub);margin-top:12px}
+.tbl{overflow-x:auto;margin:12px 0}
+table.codes,table.parts{border-collapse:collapse;width:100%;font-size:.92rem}
+table.codes th,table.codes td,table.parts th,table.parts td{border-bottom:1px solid var(--line);
+padding:7px 9px;text-align:left;vertical-align:top}
+table.codes th,table.parts th{background:var(--accent);font-size:.84rem}
+table.codes td:first-child{white-space:nowrap}
+tr:target,section:target{background:#fff8e1}
+.kind{display:inline-block;font-size:.72rem;color:var(--sub);border:1px solid var(--line);
+border-radius:10px;padding:0 7px;margin-left:6px;white-space:nowrap}
+.code-sec{border-top:1px solid var(--line);padding-top:6px;margin-top:20px}
+.code-sec h3{font-size:1.08rem}
+.applies,.note{font-size:.85rem;color:var(--sub)}
+.sources .src-list{padding-left:20px}
+.sources li{margin:7px 0;font-size:.9rem}
+.sources .doc{color:var(--sub)}
+.chips a{display:inline-block;border:1px solid var(--line);border-radius:14px;padding:1px 9px;
+margin:3px 2px;text-decoration:none;font-size:.85rem;background:#fff}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:.85rem;color:var(--sub)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:.78rem;color:var(--sub);margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="/">&#10052; Walk-In Cooler Code Lookup</a>
+<nav><a href="/carel/">Carel</a><a href="/danfoss/">Danfoss</a><a href="/dixell-emerson/">Dixell (Emerson)</a><a href="/heatcraft-bohn-larkin/">Heatcraft (Bohn/Larkin)</a><a href="/ke2-therm/">KE2 Therm</a><a href="/norlake/">Norlake</a><a href="/guides/">Guides</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/carel/">Carel</a> &rsaquo; Carel ir33 / ir33+</div>
+<article class="card">
+<span class="family-tag">Carel &middot; 34 codes and messages</span>
+<h1 class="page-h1">What do Carel ir33 / ir33+ alarm codes mean?</h1>
+<p><b>Short answer:</b> an ir33 announces a fault by showing its code on the display; when several alarms are active they are shown in sequence. <b>rE and E0–E3</b> are probe faults, <b>HI/LO</b> are temperature alarms, <b>IA, dA and dor</b> come from contacts wired to the controller, <b>cht/CHt</b> watch the condenser, <b>LP, Pd and AtS</b> are refrigerant-side pressure and pump-down alarms, <b>EE/EF</b> are memory errors that shut the controller down, and <b>HA/HF</b> are HACCP temperature records. Carel's full table is below, with a detailed section for every code people most often see.</p>
+<h2>Which machines use it?</h2>
+<p> The Carel <b>ir33</b> and <b>ir33+</b> are among the most widely used electronic refrigeration controllers in the world, fitted by walk-in box and case OEMs and installed by contractors as replacement controls on coolers and freezers of every brand. The display normally shows temperature; a fault alternates a short code with the reading — <b>E-codes</b> for probe failures, <b>HI/LO</b> for temperature alarms, <b>dor</b> for the door, <b>cht/CHt</b> for the condenser, <b>HA/HF</b> for HACCP excursion logs. Practical tip: lowercase and uppercase matter — <b>cht</b> is an early dirty-condenser warning you can act on with a coil cleaning, while <b>CHt</b> is the escalated manual-reset alarm that means the warning stage was missed.</p>
+<h2>How do you read and clear the display?</h2>
+<p>Many ir33 alarms switch on the alarm relay and buzzer — but <b>not all of them</b>. Probe faults E0–E3, the condenser pre-alarm cht, the clock fault Etc, the memory errors EE/EF and the HACCP records HA/HF stay silent, so a quiet controller can still be showing a fault. The table's relay column shows which is which.</p><p>Press <b>Prg/mute</b> to silence the buzzer. That clears nothing: the code and the alarm relay stay active until the reading is back inside its threshold. Alarms with <b>manual reset</b> are cleared by pressing <b>Prg/mute and UP together for more than 5 seconds</b> — do that only after fixing the cause. Status messages are not faults: <b>dEF</b> means a defrost is running; <b>Ed1/Ed2</b> means a defrost on evaporator 1 or 2 ended on time instead of temperature.</p>
+<h2 id="code-table">Every Carel ir33 / ir33+ code at a glance</h2>
+<div class="tbl"><table class="codes"><thead><tr><th>Code</th><th>What it means</th><th>Relay &amp; buzzer</th><th>Reset</th></tr></thead><tbody><tr><td><a href="#code-re"><b>rE</b></a></td><td>Control (virtual) probe fault</td><td>On</td><td>Automatic</td></tr><tr><td><a href="#code-e0"><b>E0</b></a></td><td>Room probe S1 fault</td><td>Off</td><td>Automatic</td></tr><tr><td><a href="#code-e1"><b>E1</b></a></td><td>Defrost probe S2 fault</td><td>Off</td><td>Automatic</td></tr><tr><td><a href="#code-e2"><b>E2</b></a></td><td>Probe S3 fault (E3 = probe S4)</td><td>Off</td><td>Automatic</td></tr><tr id="code-e3"><td><b>E3</b></td><td>Probe S4 fault — the same fault as E2, on the fourth probe input</td><td>Off</td><td>Automatic</td></tr><tr><td><a href="#code-hi"><b>HI</b></a></td><td>High temperature alarm</td><td>On</td><td>Automatic</td></tr><tr><td><a href="#code-lo"><b>LO</b></a></td><td>Low temperature alarm</td><td>On</td><td>Automatic</td></tr><tr><td><a href="#code-ia"><b>IA</b></a></td><td>Immediate external alarm</td><td>On</td><td>Automatic</td></tr><tr><td><a href="#code-da"><b>dA</b></a></td><td>Delayed external alarm</td><td>On</td><td>Automatic</td></tr><tr><td><a href="#code-dor"><b>dor</b></a></td><td>Door open too long</td><td>On</td><td>Automatic</td></tr><tr><td><a href="#code-ed1"><b>Ed1</b></a></td><td>Defrost ended by timeout (evaporator 1; Ed2 = evaporator 2)</td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-ed2"><td><b>Ed2</b></td><td>Defrost on evaporator 2 ended by timeout <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr><td><a href="#code-cht"><b>cht</b></a></td><td>High condenser temperature pre-alarm</td><td>Off</td><td>Automatic or manual</td></tr><tr><td><a href="#code-cht-high-condenser-temperature-alarm"><b>CHt</b></a></td><td>High condenser temperature alarm</td><td>On</td><td>Manual</td></tr><tr><td><a href="#code-lp"><b>LP</b></a></td><td>Low pressure alarm</td><td>On</td><td>Automatic or manual</td></tr><tr><td><a href="#code-pd"><b>Pd</b></a></td><td>Pump-down timeout alarm</td><td>On</td><td>Automatic or manual</td></tr><tr id="code-ats"><td><b>AtS</b></td><td>Autostart in pump down</td><td>On</td><td>Automatic or manual</td></tr><tr><td><a href="#code-etc"><b>Etc</b></a></td><td>Real-time clock fault</td><td>Off</td><td>Automatic or manual</td></tr><tr><td><a href="#code-ee"><b>EE</b></a></td><td>EEPROM error — unit parameters</td><td>Off</td><td>Automatic</td></tr><tr><td><a href="#code-ef"><b>EF</b></a></td><td>EEPROM error — operating parameters</td><td>Off</td><td>Automatic</td></tr><tr><td><a href="#code-ha"><b>HA</b></a></td><td>HACCP alarm type HA (HF = power-failure type)</td><td>Off</td><td>Manual</td></tr><tr id="code-hf"><td><b>HF</b></td><td>Type HF HACCP alarm — high temperature after a power failure (blackout); logged with date, time and duration</td><td>Off</td><td>Manual</td></tr><tr><td><a href="#code-afr"><b>AFr</b></a></td><td>Antifreeze alarm</td><td>On</td><td>Manual</td></tr><tr><td><a href="#code-def"><b>dEF</b></a></td><td>Defrost running (status, not a fault)</td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-n1-n6"><td><b>n1…n6</b></td><td>A unit (1 to 6) in a networked group of controllers has an alarm</td><td>On</td><td>Automatic</td></tr><tr id="code-dfb"><td><b>dFb</b></td><td>Start defrost call <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-dfe"><td><b>dFE</b></td><td>End defrost call <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-cc"><td><b>cc</b></td><td>Continuous cycle running <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-ccb"><td><b>ccb</b></td><td>Start continuous cycle call <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-cce"><td><b>ccE</b></td><td>End continuous cycle call <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-hcp"><td><b>HcP</b></td><td>HACCP menu accessed <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-res"><td><b>rES</b></td><td>Manual-reset alarms, HACCP alarms or temperature monitoring have been reset <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-on-off"><td><b>On / OFF</b></td><td>Controller switched on / switched off <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr><tr id="code-x"><td><b>---</b></td><td>Probe not enabled <span class="kind">status message</span></td><td>&mdash;</td><td>&mdash;</td></tr></tbody></table></div>
+<p class="note">20 codes link to a full section below. The other 14 are listed as the manufacturer's manual gives them. Every row comes from the manual cited at the end of this page.</p>
+<h2>What does each code mean — and what should you do?</h2>
+<section class="code-sec" id="code-re">
+<h3>rE — Control (virtual) probe fault</h3>
+<p>The virtual regulation probe the controller uses for temperature control has failed or is giving an invalid reading. The controller can no longer control on real temperature and the display alternates rE with the reading.</p>
+<p><b>What causes it:</b></p><ul><li>The virtual regulation probe the controller regulates on has failed or is returning an invalid reading</li><li>An air sensor bulb encased in ice or knocked out of position</li><li>A pinched or cut probe cable where it enters the controller</li></ul>
+<p><b>Can staff fix it?</b> Partly. Check whether the displayed temperature is frozen, blank, or wildly wrong, clear ice from the sensor bulb, look over the visible cable, and power-cycle once. If rE returns, stop.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note whether the displayed temperature is frozen, blank, or wildly wrong</li><li>Look inside the box for the air sensor bulb and check it is not encased in ice or knocked out of position</li><li>Visually check the probe cable where it enters the controller for pinches or cuts (look only, do not open the panel)</li><li>Power-cycle the unit at the breaker once; if rE returns, stop</li></ol>
+<p><b>Why it takes a technician:</b> Testing and replacing the probe means live electrical work inside the panel, and while rE is active the controller can't control on real temperature — product is exposed the whole time.</p>
+<div class="callout"><b>When to call:</b> Call a refrigeration tech if rE persists after a power cycle — the probe or its wiring needs testing and replacement.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-e0">
+<h3>E0 — Room probe S1 fault</h3>
+<p>The room (air) temperature probe S1 is faulty, disconnected, or out of range. Depending on setup the controller may fall back to timed compressor cycling until the probe is fixed.</p>
+<p><b>What causes it:</b></p><ul><li>The S1 room (air) probe is faulty, disconnected, or reading out of range</li><li>Ice built up around the probe, or the probe knocked loose by product or a pallet</li><li>Damaged probe wiring</li></ul>
+<p><b>Can staff fix it?</b> The visual checks are: clear ice from around the probe, make sure it hasn't been hit, inspect the visible wire, power-cycle once. Depending on setup the controller may limp along on timed compressor cycling, but that's a stopgap, not a fix.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check whether the temperature display still makes sense or shows dashes</li><li>Look at the air probe inside the box — clear any ice buildup around it and make sure it hasn't been hit by product or a pallet</li><li>Visually inspect the visible probe wire for damage</li><li>Power-cycle at the breaker once and see if E0 clears</li></ol>
+<p><b>Why it takes a technician:</b> A failed room probe means the box is running blind and product is at risk — probe testing and replacement is live electrical work at the controller that shouldn't wait.</p>
+<div class="callout"><b>When to call:</b> Call a tech if E0 stays on — a failed probe means the box is running blind and product is at risk.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-e1">
+<h3>E1 — Defrost probe S2 fault</h3>
+<p>The evaporator/defrost probe S2 is faulty or disconnected. Defrosts may end on time instead of temperature, which can lead to iced coils or over-long defrosts.</p>
+<p><b>What causes it:</b></p><ul><li>The S2 evaporator/defrost probe is faulty or disconnected</li><li>Defrosts ending on time instead of coil temperature — leading to iced coils or over-long defrosts</li><li>Ice encasing the probe on the coil</li></ul>
+<p><b>Can staff fix it?</b> Staff can spot the symptoms — an iced evaporator coil, defrosts running much longer or shorter than usual — and power-cycle once. Probe replacement is a service job.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the evaporator coil for heavy ice — a bad defrost probe often shows up as an iced coil</li><li>Check the probe area on the coil for ice encasing the sensor</li><li>Watch for defrosts that seem to run much longer or shorter than usual</li><li>Power-cycle once at the breaker; if E1 returns, stop</li></ol>
+<p><b>Why it takes a technician:</b> The probe has to be tested and replaced at the controller under power, and a coil icing up behind a dead defrost probe will eventually block airflow and take the box down.</p>
+<div class="callout"><b>When to call:</b> Call a tech if E1 persists or the coil is icing up — probe replacement is a service job.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-e2">
+<h3>E2 — Probe S3 fault (E3 = probe S4)</h3>
+<p>One of the auxiliary probes (typically the condenser probe on S3; E3 is the same fault for probe S4) is faulty or disconnected. Condenser-temperature protection may not work while this alarm is active.</p>
+<p><b>What causes it:</b></p><ul><li>An auxiliary probe is faulty or disconnected — S3 (typically the condenser probe) for E2; E3 is the same fault on probe S4</li><li>Damage to the small sensor wire at the condensing unit</li><li>While it's active, condenser-temperature protection may not be working</li></ul>
+<p><b>Can staff fix it?</b> Note which code shows (E2 or E3), look over the sensor wire without opening anything, clear dust from around the condenser since its protection is offline, and power-cycle once. That's the extent of it.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note which code shows (E2 or E3) and when it started</li><li>Look over the condensing unit for obvious damage to the small sensor wire (look only)</li><li>Clear dust and debris from around the condenser while you're there</li><li>Power-cycle once; if the code returns, stop</li></ol>
+<p><b>Why it takes a technician:</b> Auxiliary probe testing and replacement is live electrical work, and with the condenser probe out, a dust-matted coil that can't reject heat has nothing watching it.</p>
+<div class="callout"><b>When to call:</b> Call a tech to test and replace the auxiliary probe if the code doesn't clear.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-hi">
+<h3>HI — High temperature alarm</h3>
+<p>The controlled temperature has exceeded the high alarm threshold (parameter AH) for longer than the alarm delay (Ad). The display alternates HI with the temperature. It resets automatically once the box pulls back down.</p>
+<p><b>What causes it:</b></p><ul><li>Door open or gasket not sealing — an open door loads the box with warm, humid air</li><li>Warm product just loaded or heavy door traffic during stocking</li><li>A defrost that just ended — temperatures run higher right after one</li><li>A dust-blocked condenser coil or a condenser fan that isn't running</li><li>A tripped breaker on the condensing unit</li></ul>
+<p><b>Can staff fix it?</b> Often, yes — this alarm resets itself once the box pulls back down. Door, gasket, recent loading, post-defrost recovery, condenser airflow, and the breaker are all staff checks.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check that the door is fully closed and nothing is holding it open; inspect the gasket for gaps</li><li>Ask whether warm product was just loaded or the door was open for stocking — allow recovery time</li><li>Check if a defrost just ran; temperatures are normally higher right after defrost</li><li>Check the condensing unit: fan running, coil not blocked by dust, boxes, or debris</li><li>Verify the breaker for the condensing unit hasn't tripped</li></ol>
+<p><b>Why it takes a technician:</b> If temperature keeps climbing or hasn't recovered within an hour or two with the door shut, the fault is mechanical — refrigerant-side diagnosis needs EPA Section 608 certification, and warm product doesn't wait.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the temperature keeps climbing or hasn't recovered within an hour or two with the door shut.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-lo">
+<h3>LO — Low temperature alarm</h3>
+<p>The controlled temperature has dropped below the low alarm threshold (parameter AL) for longer than the alarm delay. The display alternates LO with the temperature and it resets automatically when temperature recovers.</p>
+<p><b>What causes it:</b></p><ul><li>A probe drifting cold and triggering a false alarm — verify with an independent thermometer</li><li>Product stacked against the air sensor or in the discharge air stream</li><li>A compressor that runs nonstop and never cycles off</li></ul>
+<p><b>Can staff fix it?</b> Partly. Confirm the real temperature independently, move product off the sensor, silence the buzzer, and watch whether temperature climbs back — the alarm resets automatically when it recovers.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Confirm the actual temperature with an independent thermometer — a probe drifting cold can trigger false LO alarms</li><li>Check that product isn't stacked directly against the air sensor or discharge air stream</li><li>Note whether the compressor seems to run nonstop</li><li>Silence the buzzer and watch whether temperature climbs back into range</li></ol>
+<p><b>Why it takes a technician:</b> A box genuinely running colder than setpoint, or a compressor that won't cycle off, is a control or refrigeration fault needing live testing — and in the meantime it's freezing product.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the box genuinely runs colder than setpoint or the compressor won't cycle off — that's a control or refrigeration fault.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-ia">
+<h3>IA — Immediate external alarm</h3>
+<p>The multifunction digital input configured as an immediate external alarm has tripped — an external device (e.g. a pressure switch or monitoring contact) opened the contact. Resets automatically when the contact closes.</p>
+<p><b>What causes it:</b></p><ul><li>The digital input configured as an immediate external alarm tripped — an external device like a pressure switch or monitoring contact opened</li><li>A dirty or blocked condenser tripping an external pressure safety</li><li>A condensing unit that's stopped — tripped breaker</li></ul>
+<p><b>Can staff fix it?</b> The side checks are: confirm the condensing unit runs, check its breaker, clear condenser airflow, and log when and how often IA appears. It resets itself when the contact closes — but repeats mean a real problem.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Find out what device is wired to the alarm input on your installation</li><li>Check the condensing unit is running and its breaker is on</li><li>Check condenser airflow — a dirty or blocked coil can trip external pressure safeties</li><li>Note the time and how often IA appears, for the service call</li></ol>
+<p><b>Why it takes a technician:</b> Identifying which safety device tripped requires tracing the installation's wiring, and a pressure safety that keeps opening points to a refrigerant-side fault needing certified diagnosis.</p>
+<div class="callout"><b>When to call:</b> Call a tech if IA repeats — whatever safety device tripped it needs to be diagnosed.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-da">
+<h3>dA — Delayed external alarm</h3>
+<p>The external alarm contact has been open for longer than the configured delay (parameter A7). Same as IA but with a time delay before it announces.</p>
+<p><b>What causes it:</b></p><ul><li>The external alarm contact held open longer than the A7 delay — same trigger as IA, just time-delayed</li><li>A condensing unit that isn't running — tripped breaker</li><li>Condenser airflow choked by dust, cardboard, or debris, tripping an external safety</li></ul>
+<p><b>Can staff fix it?</b> Same staff scope as IA: verify the condensing unit runs, clear the condenser area, and note whether the alarm lines up with hot weather or heavy door traffic. The device that tripped isn't staff-serviceable.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condensing unit is running and its breaker hasn't tripped</li><li>Clear dust, cardboard, and debris from the condenser coil area</li><li>Note when the alarm started and whether it coincides with hot weather or heavy door traffic</li></ol>
+<p><b>Why it takes a technician:</b> The external device on the alarm input has to be identified and tested by someone who knows the installation — repeated dA trips mean a protective device keeps finding a reason to open.</p>
+<div class="callout"><b>When to call:</b> Call a tech to identify and test the external device wired to the alarm input if dA keeps returning.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-dor">
+<h3>dor — Door open too long</h3>
+<p>The door switch input reports the walk-in door has been open longer than the allowed time. Control behavior may change while the door is open, and temperature will climb.</p>
+<p><b>What causes it:</b></p><ul><li>The walk-in door genuinely open longer than allowed — every open minute loads the box with warm, humid air</li><li>Product, a hose, a pallet, or a strip curtain blocking the door</li><li>A torn gasket or ice holding the door off its seal</li><li>A dirty, misaligned, or faulty door switch (plunger or magnet)</li></ul>
+<p><b>Can staff fix it?</b> Usually, yes. Close the door properly, clear whatever blocks it, check the gasket, and check the switch clicks when the door shuts — the alarm should clear within a few minutes.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Close the door fully; check nothing is blocking it — product, hose, pallet, strip curtain</li><li>Inspect the door gasket for tears or gaps and for ice holding the door off its seal</li><li>Check the door switch (plunger or magnet) is clean, aligned, and clicks when the door closes</li><li>See if the alarm clears within a few minutes of the door being properly shut</li></ol>
+<p><b>Why it takes a technician:</b> If dor stays on with the door verifiably closed, the door switch or its wiring is faulty — that's live testing at the controller, and control behavior may be altered the whole time the unit thinks the door is open.</p>
+<div class="callout"><b>When to call:</b> Call a tech if dor stays on with the door closed — the door switch or its wiring is faulty.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-ed1">
+<h3>Ed1 — Defrost ended by timeout (evaporator 1; Ed2 = evaporator 2)</h3>
+<p>The defrost on evaporator 1 ended because it hit the maximum time limit (dP1) instead of reaching the end-defrost temperature. This often means heavier-than-normal ice on the coil.</p>
+<p><b>What causes it:</b></p><ul><li>The defrost on evaporator 1 hit its maximum time (dP1) before reaching end-defrost temperature — usually heavier-than-normal ice on the coil (Ed2 is the same on evaporator 2)</li><li>Humid air infiltration through a leaking door gasket — the most common cause of coil icing</li><li>A weak defrost heater, bad defrost probe, or an undersized defrost schedule</li><li>Ice or standing water in the drain pan and line</li></ul>
+<p><b>Can staff fix it?</b> The detective work is: look at the coil right after the next defrost for leftover ice, check the door gasket and closure, eyeball the drain pan, and note whether Ed1 shows after every defrost or just occasionally.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the evaporator coil after the next defrost — is ice still visible?</li><li>Check the door gasket and door closure; humid air infiltration is the most common cause of coil icing</li><li>Check the drain pan and line for ice or standing water (visual only)</li><li>Note if Ed1/Ed2 shows up after every defrost or just occasionally</li></ol>
+<p><b>Why it takes a technician:</b> If it repeats, the defrost heater, probe, or schedule needs service — heater testing is live electrical work — and left alone the coil ices solid and the box stops cooling.</p>
+<div class="callout"><b>When to call:</b> Call a tech if it repeats — the defrost heater, defrost probe, or defrost schedule needs service before the coil ices solid.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-cht">
+<h3>cht — High condenser temperature pre-alarm</h3>
+<p>The condenser probe reads above the pre-alarm threshold — an early 'dirty condenser' warning. Control continues normally, but the system is running hotter than it should.</p>
+<p><b>What causes it:</b></p><ul><li>Condenser temperature past the pre-alarm level — an early 'dirty condenser' warning while control still runs normally</li><li>Dust, lint, cardboard, or grease matting the coil fins so it can't reject heat</li><li>Items stored against or on top of the condensing unit blocking its airflow</li><li>A hot location — a baking mechanical room or direct sun</li></ul>
+<p><b>Can staff fix it?</b> Yes, mostly — that's the point of a pre-alarm. Clear everything off and around the unit, check the fan spins with the compressor, and deal with the dirt before this escalates to the hard CHt alarm.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the condenser coil: dust, lint, cardboard, or grease blocking the fins is the usual cause</li><li>Clear anything stored against or on top of the condensing unit; it needs free airflow</li><li>Confirm the condenser fan spins when the compressor runs</li><li>Check ambient conditions — a condenser in a hot mechanical room or direct sun runs hot</li></ol>
+<p><b>Why it takes a technician:</b> If the pre-alarm keeps returning after airflow is cleared, the coil needs a proper professional cleaning and a pressure check — running hot is steadily stressing the compressor.</p>
+<div class="callout"><b>When to call:</b> Call a tech for a proper coil cleaning and pressure check if the pre-alarm keeps returning after clearing airflow.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-cht-high-condenser-temperature-alarm">
+<h3>CHt — High condenser temperature alarm</h3>
+<p>Condenser temperature has exceeded the alarm threshold; per the Carel manual this alarm requires a manual reset. Prolonged operation in this state can trip safeties or damage the compressor.</p>
+<p><b>What causes it:</b></p><ul><li>Condenser temperature over the alarm threshold — the escalated, manual-reset version of the cht warning</li><li>A condenser fan that has stopped</li><li>A heavily dirt-matted coil or blocked airflow that the earlier warning stage didn't get fixed</li></ul>
+<p><b>Can staff fix it?</b> The airflow causes are staff-fixable — fan check, clear blockages, spot a filthy coil — but do not repeatedly reset this alarm to keep the box running. It's manual-reset for a reason.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check the condenser fan is actually running</li><li>Clear all airflow blockages around the condensing unit and look for a visibly dirty coil</li><li>Do not repeatedly reset the alarm to keep the box running — that masks a real problem</li><li>Note ambient temperature at the condenser location</li></ol>
+<div class="callout"><b>Safety:</b> Do not keep clearing this alarm to force operation; compressor damage risk.</div>
+<p><b>Why it takes a technician:</b> Prolonged running against a hard high-condenser alarm trips safeties and damages the compressor — a tech needs to clean the coil properly and verify pressures before the unit racks up real damage.</p>
+<div class="callout"><b>When to call:</b> Call a tech promptly — a hard high-condenser alarm risks compressor damage if the unit keeps running hot.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-lp">
+<h3>LP — Low pressure alarm</h3>
+<p>The low-pressure input (from an external pressure switch wired to the controller) has tripped. Commonly caused by low refrigerant charge, an iced coil, or fan/airflow problems.</p>
+<p><b>What causes it:</b></p><ul><li>The external low-pressure switch wired to the controller tripped</li><li>Low refrigerant charge</li><li>A heavily iced evaporator coil starving the system and dropping pressure</li><li>Evaporator fans not running, or door-gasket infiltration icing the coil</li></ul>
+<p><b>Can staff fix it?</b> Only the visuals: check the evaporator for heavy ice, confirm the fans run, check the door and gaskets, and log how often LP trips. Nothing on the refrigerant side is DIY.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Look at the evaporator coil for heavy ice — an iced coil starves the system and drops pressure</li><li>Check evaporator fans are running</li><li>Check the door and gaskets; infiltration icing is a frequent root cause</li><li>Log how often LP trips for the technician</li></ol>
+<div class="callout"><b>Safety:</b> Refrigerant-side issue; do not attempt beyond visual checks.</div>
+<p><b>Why it takes a technician:</b> Pressure diagnosis takes gauges and EPA Section 608 certification, and repeated LP trips usually mean a leak or an icing problem — both get worse, not better, while unaddressed.</p>
+<div class="callout"><b>When to call:</b> Call a tech — pressure and refrigerant-side diagnosis is not a DIY task, and repeated LP trips usually mean a leak or icing problem.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-pd">
+<h3>Pd — Pump-down timeout alarm</h3>
+<p>On systems using pump-down shutoff, the low-pressure condition was not reached within the maximum allowed time. Often points to a valve, pressure switch, or refrigerant issue.</p>
+<p><b>What causes it:</b></p><ul><li>On pump-down systems, low pressure wasn't reached within the maximum allowed time at shutoff</li><li>A liquid-line solenoid valve, pressure switch, or refrigerant-side problem</li></ul>
+<p><b>Can staff fix it?</b> No. Note when the alarm occurs — every compressor stop, or occasionally — check the breaker, and leave the parameters alone. That's the useful staff contribution.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Note when the alarm occurs (e.g. at every compressor stop or occasionally)</li><li>Check the condensing unit breaker and that the unit appears to run normally otherwise</li><li>Do not change controller parameters</li></ol>
+<p><b>Why it takes a technician:</b> Pump-down faults involve the liquid-line solenoid and pressure controls, which need instruments and refrigerant-side access to diagnose — EPA Section 608 territory, not a reset-and-hope situation.</p>
+<div class="callout"><b>When to call:</b> Call a tech — pump-down faults involve the liquid-line solenoid and pressure controls, which need instruments to diagnose.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-etc">
+<h3>Etc — Real-time clock fault</h3>
+<p>The controller's real-time clock has failed or lost its settings. Scheduled (time-of-day) defrosts and HACCP time-stamping won't run correctly until the clock is reset.</p>
+<p><b>What causes it:</b></p><ul><li>The controller's real-time clock failed or lost its settings — commonly after a long power outage</li><li>Until it's reset, scheduled time-of-day defrosts and HACCP time-stamping won't run correctly</li></ul>
+<p><b>Can staff fix it?</b> Sometimes. If the site just had an outage and someone on staff is trained to program the controller, re-setting the clock parameters may be all it takes. Check whether scheduled defrosts still happen on time.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check whether the site recently had a power outage — clock loss after long outages is common</li><li>Note whether scheduled defrosts are still happening at their usual times</li><li>Have the person who programs the controller re-set the clock parameters if they're trained to</li></ol>
+<p><b>Why it takes a technician:</b> A clock that won't hold its setting points to failed clock hardware in the controller — that's a service replacement, and until then defrost scheduling and food-safety time-stamps can't be trusted.</p>
+<div class="callout"><b>When to call:</b> Call your service company if the clock won't hold its setting — the controller's clock hardware may need replacement.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-ee">
+<h3>EE — EEPROM error — unit parameters</h3>
+<p>The controller detected a memory error in its unit (machine) parameters. Its stored configuration may be corrupted, so control behavior can't be trusted.</p>
+<p><b>What causes it:</b></p><ul><li>A memory (EEPROM) error in the controller's unit/machine parameters</li><li>Stored configuration possibly corrupted — control behavior can't be trusted while this is active</li></ul>
+<p><b>Can staff fix it?</b> One power cycle, then hands off. Don't attempt to reload defaults — factory defaults rarely match what a walk-in actually needs, and a wrong program is worse than the alarm. Watch box temperature with an independent thermometer.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle the controller once at the breaker</li><li>Watch box temperature closely with an independent thermometer while the alarm is active</li><li>Do not attempt to reload defaults yourself — factory defaults rarely match a walk-in's required program</li></ol>
+<p><b>Why it takes a technician:</b> If EE returns, the controller needs reprogramming from a known-good record or outright replacement — and until a tech does that, the box is running on settings that may be corrupt.</p>
+<div class="callout"><b>When to call:</b> Call a tech if EE returns after a power cycle — the controller may need reprogramming or replacement.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-ef">
+<h3>EF — EEPROM error — operating parameters</h3>
+<p>Memory error in the controller's operating parameters (setpoints and working values). Like EE, it means stored settings may be corrupted.</p>
+<p><b>What causes it:</b></p><ul><li>A memory error in the controller's operating parameters — setpoints and working values</li><li>Stored settings possibly corrupted, same class of fault as EE</li></ul>
+<p><b>Can staff fix it?</b> Power-cycle once, press SET briefly to check the setpoint still reads correctly, and monitor box temperature independently. If the error persists or settings look wrong, that's the end of the staff steps.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Power-cycle once at the breaker and see if EF clears</li><li>Verify the setpoint still reads correctly (press SET briefly)</li><li>Monitor box temperature independently until it's resolved</li></ol>
+<p><b>Why it takes a technician:</b> The program has to be reloaded from a known-good record by someone who has it — running a walk-in on corrupted setpoints risks both warm product and freeze damage, in either direction.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the error persists or settings look wrong — the program needs to be reloaded from a known-good record.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-ha">
+<h3>HA — HACCP alarm type HA (HF = power-failure type)</h3>
+<p>A HACCP temperature-excursion event was recorded: HA logs time above the high-temperature threshold during normal operation, HF logs a high-temperature condition following a power failure. These are food-safety log alarms, not equipment faults by themselves.</p>
+<p><b>What causes it:</b></p><ul><li>A HACCP temperature excursion was recorded: HA logs time above the high-temperature threshold in normal operation, HF logs a high-temperature condition after a power failure</li><li>Behind it, the usual HI drivers: a door or loading event, a tripped breaker or outage, or blocked condenser airflow</li><li>These are food-safety log alarms — not equipment faults by themselves</li></ul>
+<p><b>Can staff fix it?</b> The response is staff work: check current box temperature and whether product is still safe, identify the outage or door event, record everything per your food-safety procedure before resetting, then fix the underlying cause as you would a HI alarm.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Check current box temperature and whether product is still in safe range</li><li>Check for a recent power outage (HF) or a door/loading event (HA)</li><li>Record the event per your food-safety procedure before resetting</li><li>Address the underlying cause (door, breaker, condenser airflow) as with a HI alarm</li></ol>
+<div class="callout"><b>Safety:</b> Food safety event — document per HACCP procedure.</div>
+<p><b>Why it takes a technician:</b> Repeated excursions with no obvious cause mean the equipment needs professional diagnosis — and product disposition after an excursion is a call for your food-safety manager, documented for HACCP records.</p>
+<div class="callout"><b>When to call:</b> Call a tech if excursions repeat without an obvious cause — and involve your food-safety manager for product disposition.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-afr">
+<h3>AFr — Antifreeze alarm</h3>
+<p>The antifreeze protection function has tripped (temperature at the antifreeze probe fell below its threshold). Per the Carel manual this alarm is manual-reset.</p>
+<p><b>What causes it:</b></p><ul><li>Temperature at the antifreeze probe fell below its threshold and the manual-reset antifreeze protection tripped</li><li>Product or an airflow blockage creating an abnormally cold spot at the sensor</li><li>A pattern tied to defrost or nighttime setback timing</li></ul>
+<p><b>Can staff fix it?</b> The checks are: confirm the real temperature with an independent thermometer, look for what's making that spot abnormally cold, and note when it trips relative to defrost or setback. The reset is manual, so don't just clear it blindly.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Confirm actual temperature with an independent thermometer</li><li>Check whether product or airflow blockage is causing an abnormally cold spot at the sensor</li><li>Note when it trips relative to defrost or nighttime setback</li></ol>
+<p><b>Why it takes a technician:</b> If it repeats, the antifreeze setpoint, probe placement, or system control needs professional review — a protection that keeps tripping is either misconfigured or catching a real freeze risk.</p>
+<div class="callout"><b>When to call:</b> Call a tech if the alarm repeats — the antifreeze setpoint, probe placement, or system control needs professional review.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<section class="code-sec" id="code-def">
+<h3>dEF — Defrost running (status, not a fault)</h3>
+<p>The display shows dEF while a defrost cycle is running, if the controller is set to lock the display during defrost. This is normal operation, not an error.</p>
+<p><b>What causes it:</b></p><ul><li>A defrost cycle is running and the controller is set to lock the display during defrost — this is normal operation, not an error</li><li>Only a concern if it never clears: a typical walk-in defrost runs roughly 30-60 minutes including recovery</li></ul>
+<p><b>Can staff fix it?</b> Yes — by waiting. Keep the door closed as much as possible during defrost. If dEF is still showing well past the normal defrost window, treat it as a fault.</p>
+<p><b>What to check, in order:</b></p><ol class="steps"><li>Wait — typical walk-in defrosts run roughly 30-60 minutes including recovery</li><li>Don't open the door more than needed during defrost</li><li>If dEF never clears after well over the normal defrost window, treat it as a fault</li></ol>
+<p><b>Why it takes a technician:</b> A display stuck in dEF far beyond normal, or a box that won't recover temperature after defrost, points to a defrost termination or control fault — heater and probe testing is live electrical work.</p>
+<div class="callout"><b>When to call:</b> Call a tech only if the display stays in dEF far beyond the normal defrost duration or the box won't recover temperature afterward.</div>
+<p class="src">Source: <a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> (+0300028EN rel. 1.1, 05.05.2017)</p>
+</section>
+<h2>How do you diagnose a Carel ir33 / ir33+ alarm, step by step?</h2>
+<ol class="steps"><li><b>Write down every code before touching anything.</b> If several alarms are active the display shows them in sequence. Read the box temperature on an independent thermometer too.</li><li><b>Sort the code.</b> Probe (rE, E0–E3) · temperature (HI, LO, AFr) · inputs (IA, dA, dor) · condenser (cht, CHt) · refrigerant side (LP, Pd, AtS) · controller (EE, EF, Etc) · HACCP record (HA, HF).</li><li><b>Probe faults mean the box is running blind.</b> With rE or E0 the compressor runs on the fixed duty cycle set by parameter c4 instead of on temperature, so the box keeps cooling but can drift warm or freeze product. Check the probe cable and its terminal connection (NTC probes have no polarity), then compare the displayed reading against your thermometer.</li><li><b>Temperature alarms are delayed on purpose.</b> HI and LO trigger only after the temperature has stayed past the AH/AL threshold for the delay set in parameter Ad, so by the time HI shows the box has been warm for a while. They reset automatically once the temperature is back inside the threshold.</li><li><b>IA and dA come from whatever is wired to the digital input.</b> What the compressor does during them is set by parameter A6 (0 = compressor always off, 100 = always on). Find out which device is connected to that input before suspecting the controller.</li><li><b>Fix, then reset.</b> AFr (frost protection), CHt (high condenser temperature) and LP (low pressure) switch the compressor off. AFr, CHt, HA and HF need the manual reset — Prg/mute + UP for more than 5 seconds — and clearing CHt without cleaning the condenser just brings it back.</li><li><b>EE and EF stop everything.</b> The memory errors shut the controller down — compressor, defrost and fans off. One power cycle is a fair test; if the code returns, the controller needs reprogramming or replacement by a technician.</li><li><b>Read the HACCP record.</b> The HACCP menu shows the year, month, day, hour, minute and duration of the last three HA/HF events — the record a health inspector will ask for.</li></ol>
+<div class="tipbox"><b>One reset is diagnosis, repeated resets are damage.</b>
+If the same fault returns after a single reset, the underlying condition is real —
+stop resetting and deal with the cause.</div>
+<h2>Which parts are usually involved?</h2>
+<div class="tbl"><table class="parts"><thead><tr><th>Part</th><th>Codes that point to it</th><th>Note</th></tr></thead><tbody><tr><td>Control probe S1 (NTC or PTC thermistor)</td><td><a href="#code-re">rE</a>, <a href="#code-e0">E0</a>, <a href="#code-hi">HI</a>, <a href="#code-lo">LO</a></td><td>A probe that drifts without failing outright can produce false HI/LO alarms.</td></tr><tr><td>Defrost probe S2 on the evaporator</td><td><a href="#code-e1">E1</a>, <a href="#code-ed1">Ed1</a>, <a href="#code-ed2">Ed2</a></td><td>When a defrost can't reach its end temperature it ends on time and Ed1/Ed2 is shown.</td></tr><tr><td>Probes S3 / S4 (condenser or auxiliary, as configured)</td><td><a href="#code-e2">E2</a>, <a href="#code-e3">E3</a>, <a href="#code-cht">cht</a>, <a href="#code-cht-high-condenser-temperature-alarm">CHt</a></td><td></td></tr><tr><td>Condenser coil and condenser fan</td><td><a href="#code-cht">cht</a>, <a href="#code-cht-high-condenser-temperature-alarm">CHt</a></td><td></td></tr><tr><td>Door switch on the digital input</td><td><a href="#code-dor">dor</a></td><td></td></tr><tr><td>Device wired to the external-alarm input</td><td><a href="#code-ia">IA</a>, <a href="#code-da">dA</a></td><td></td></tr><tr><td>Low-pressure switch and pump-down circuit</td><td><a href="#code-lp">LP</a>, <a href="#code-pd">Pd</a>, <a href="#code-ats">AtS</a></td><td>Refrigerant-side work for an EPA 608-certified technician.</td></tr><tr><td>The controller itself (parameter memory, real-time clock)</td><td><a href="#code-ee">EE</a>, <a href="#code-ef">EF</a>, <a href="#code-etc">Etc</a></td><td></td></tr></tbody></table></div>
+<h2>What refrigeration is behind these codes?</h2><p>Every code here is the controller reporting a reading from the refrigeration system. The background is explained once, for every controller on this site: <a href="/guides/walk-in-cooler-alarm-codes-guide/#temperature-control">how a controller holds temperature — and how its sensors are tested</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#defrost">how defrost works and what goes wrong</a>; <a href="/guides/walk-in-cooler-alarm-codes-guide/#condenser">why the condenser matters</a>.</p>
+
+<p>If it does come to a service call and you're in <a href="/nashville-tn/">Nashville, TN</a> or <a href="/birmingham-al/">Birmingham, AL</a>, we maintain independently compiled lists of local companies that service walk-in coolers — real businesses with verified contact information, none of whom paid to be listed.</p>
+
+</article>
+<div class="card sources"><h2>Sources</h2><ul class="src-list"><li><a href="https://www.carel.com/documents/10191/0/+0300028EN/8a64ec19-23b8-4c0e-83da-7d7b4bea4280?version=1.2">Carel — ir33+ platform electronic controller — user manual</a> <span class="doc">(+0300028EN rel. 1.1, 05.05.2017)</span></li></ul></div>
+<h2>Other Carel controllers</h2><div class='grid'><a href="/carel/pj-easy-alarm-codes/"><span class="c">Carel PJ Easy (PJEZ)</span><div class="t">Small Carel thermostat; E0/E1/E2, dOr and cht/CHt alternate with the temperature.</div></a></div>
+</div></main>
+<footer><div class="wrap">
+<div>&copy; 2026 Walk-In Cooler Code Lookup &middot; <a href="/nashville-tn/">Nashville</a> &middot; <a href="/birmingham-al/">Birmingham</a></div>
+<div><a href="mailto:ajfreightservicesllc@gmail.com">Contact</a></div>
+</div>
+<div class="wrap disclaimer">Reference information compiled from manufacturer service
+documentation. Not affiliated with any equipment manufacturer. Repairs involving refrigerant, pressurized
+systems, electrical components, or disassembly should be performed by a qualified,
+certified technician. Company listings are provided for reference; verify details
+before hiring.</div>
+</footer>
+</body></html>
