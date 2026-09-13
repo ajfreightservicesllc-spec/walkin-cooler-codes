@@ -1,8 +1,9 @@
-{
+﻿{
   "hosting": {
     "target": "walkincooler-codes",
     "public": "site",
     "ignore": [
+      "CLAUDE.md",
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
