@@ -6,10 +6,10 @@ Newest at the top.
 
 ## 2026-09-14 (late - GA check)
 
-- **Done:** Checked for Google Analytics. None anywhere: 0 hits for gtag / googletagmanager / G- / GTM- / UA- in the repo (generate_site.py, data, site/), and 0 on the live /, /carel/, /guides/walk-in-cooler-not-cooling/ (all HTTP 200). No other analytics either. No files changed except this log.
-- **Half-finished:** nothing.
-- **Next:** If Rufus sends a GA4 measurement ID (G-XXXXXXX), add the gtag snippet to the page head template in generate_site.py, rebuild, commit, hand him the deploy command.
-- **Blocked / waiting on Rufus:** GA4 property + measurement ID (only he can create it). Never insert a placeholder ID.
+- **Done:** Found no analytics of any kind in the repo or on the live site. Rufus supplied GA4 ID G-F1JND80XJ1. Added `GA_ID` / `GA_TAG` / `GA_NOTE` config to generate_site.py; the tag goes at the top of `<head>` in `page()`, the footer disclaimer gained a one-line "uses Google Analytics, which sets cookies" disclosure. Rebuilt: all self-checks passed, 24 of 24 pages carry the tag exactly once plus the note (verified by grep of site/). Committed + pushed. Fewest-words page now 518 (/guides/), still over 400.
+- **Half-finished:** NOT DEPLOYED. The live site still has no tag until Rufus deploys.
+- **Next:** After Rufus deploys: hard-refresh a live page, confirm `gtag/js?id=G-F1JND80XJ1` is in the source, and check that GA4 > Reports > Realtime shows the visit.
+- **Blocked / waiting on Rufus:** the deploy (`firebase deploy --only hosting:walkincooler-codes --project aiansweragency-main`).
 
 ---
 
