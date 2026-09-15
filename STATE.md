@@ -4,6 +4,15 @@ Newest at the top.
 
 ---
 
+## 2026-09-14 (late - GA check)
+
+- **Done:** Checked for Google Analytics. None anywhere: 0 hits for gtag / googletagmanager / G- / GTM- / UA- in the repo (generate_site.py, data, site/), and 0 on the live /, /carel/, /guides/walk-in-cooler-not-cooling/ (all HTTP 200). No other analytics either. No files changed except this log.
+- **Half-finished:** nothing.
+- **Next:** If Rufus sends a GA4 measurement ID (G-XXXXXXX), add the gtag snippet to the page head template in generate_site.py, rebuild, commit, hand him the deploy command.
+- **Blocked / waiting on Rufus:** GA4 property + measurement ID (only he can create it). Never insert a placeholder ID.
+
+---
+
 ## 2026-09-14 (session closed ~6:40 PM; Rufus back in the morning)
 
 - **Done:** Read-only checks of the gsc-qc job for this site (sc-domain:walkincoolercodes.com). Only file changed in this repo: STATE.md (created today - it did not exist before).
