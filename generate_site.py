@@ -60,6 +60,18 @@ CTA_PHONE = ""        # e.g. "615-555-0100" (CallRail) — blank = hidden
 CTA_PHONE_LABEL = "Talk to a technician now"
 PARTS_LINK = ""       # parts affiliate URL — blank = hidden
 CONTACT_EMAIL = "ajfreightservicesllc@gmail.com"
+GA_ID = "G-F1JND80XJ1"   # Google Analytics 4 measurement ID — blank = no tag
+GA_TAG = ("" if not GA_ID else
+          '<!-- Google tag (gtag.js) -->\n'
+          f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n'
+          '<script>\n'
+          '  window.dataLayer = window.dataLayer || [];\n'
+          '  function gtag(){dataLayer.push(arguments);}\n'
+          "  gtag('js', new Date());\n"
+          f"  gtag('config', '{GA_ID}');\n"
+          '</script>')
+GA_NOTE = ("" if not GA_ID else
+           " This site uses Google Analytics, which sets cookies, to measure visits.")
 CONTENT_UPDATED = "2026-09-10"   # sitemap <lastmod> — bump when page content changes
 # The one canonical home of the refrigeration-cycle explanations (superheat,
 # subcooling, defrost, condenser, refrigerants). Controller pages link into
@@ -202,6 +214,7 @@ def page(title, desc, body, canonical, schema=None):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+{GA_TAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
@@ -224,7 +237,7 @@ def page(title, desc, body, canonical, schema=None):
 documentation. {esc(DISCLAIMER_BRANDS)} Repairs involving refrigerant, pressurized
 systems, electrical components, or disassembly should be performed by a qualified,
 certified technician. Company listings are provided for reference; verify details
-before hiring.</div>
+before hiring.{GA_NOTE}</div>
 </footer>
 </body></html>"""
 
