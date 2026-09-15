@@ -7,9 +7,11 @@ Newest at the top.
 ## 2026-09-14 (late - GA check)
 
 - **Done:** Found no analytics of any kind in the repo or on the live site. Rufus supplied GA4 ID G-F1JND80XJ1. Added `GA_ID` / `GA_TAG` / `GA_NOTE` config to generate_site.py; the tag goes at the top of `<head>` in `page()`, the footer disclaimer gained a one-line "uses Google Analytics, which sets cookies" disclosure. Rebuilt: all self-checks passed, 24 of 24 pages carry the tag exactly once plus the note (verified by grep of site/). Committed + pushed. Fewest-words page now 518 (/guides/), still over 400.
-- **Half-finished:** NOT DEPLOYED. The live site still has no tag until Rufus deploys.
-- **Next:** After Rufus deploys: hard-refresh a live page, confirm `gtag/js?id=G-F1JND80XJ1` is in the source, and check that GA4 > Reports > Realtime shows the visit.
-- **Blocked / waiting on Rufus:** the deploy (`firebase deploy --only hosting:walkincooler-codes --project aiansweragency-main`).
+- **Deployed by Rufus same evening** (29 files). Verified live with cache-busted fetches: 24 of 24 sitemap URLs carry the tag exactly once + the footer note. Sample retired URLs still 301 to the right anchor (/carel/ir33-ir33-re/ -> /carel/ir33-alarm-codes/#code-re; Beacon II A1 likewise). IndexNow key file 200.
+- **Surprise, pre-existing, not changed:** both Google verification files 301 to a trailing-slash URL (/googleaf127d96642b3615.html -> /googleaf127d96642b3615/) because firebase.json has `cleanUrls` + `trailingSlash` true since 2026-08-29. The final URL serves 200 with the correct content. Left alone - GSC data has been flowing - but if Google ever reports a verification failure on the HTML-file method, this is the first suspect.
+- **Half-finished:** nothing.
+- **Next:** Not verified in GA itself (Claude can't see GA). Rufus: GA4 > Reports > Realtime should show a visit after opening the site. Morning 2026-09-15: the gsc-qc nightly check listed in the entry below still stands.
+- **Blocked / waiting on Rufus:** confirm Realtime shows a hit.
 
 ---
 
